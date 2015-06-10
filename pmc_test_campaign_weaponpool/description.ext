@@ -1,0 +1,70 @@
+class Campaign
+{
+	briefingName = "PMC Test Campaign Weaponpool";
+	author = "Snake Man";
+	overviewText = "This PMC demo campaign";
+	firstBattle = Beginning;
+	weaponPool = true;
+
+	// MissionDefault class is now inside class Campaign
+	class MissionDefault
+	{
+	 	lives = -1;
+
+		lost = ;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+
+		// this allows you to jump across all these mission classes
+		// by calling them with BIS_fnc_endMission
+		pmc1 = pmc1;
+		pmc2 = pmc2;
+		pmc3 = pmc3;
+		pmc4 = pmc4;
+	};
+
+	class Beginning
+	{
+		name = "The Beginning";
+		cutscene = ;
+		firstMission = pmc0;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		lost = ;
+
+		// this is the initialization for weapon pool ammo box
+		class pmc0: MissionDefault
+		{
+			template = mission0.vr;
+		};
+
+		class pmc1: MissionDefault
+		{
+			// no end and next missions are defined here
+			template = mission1.vr;
+		};
+
+		class pmc2: MissionDefault
+		{
+			template = mission2.vr;
+		};
+
+		class pmc3: MissionDefault
+		{
+			template = mission3.vr;
+		};
+
+		class pmc4: MissionDefault
+		{
+			template = mission4.vr;
+		};
+	};
+};
