@@ -1,12 +1,10 @@
-// if run on server
-if (isServer) then
-{
-	//[] execVM PMC\PMC_init.sqf;
-}
-else
-{
-	// client stuff
-	// set our weather using multiplayer parameter array
-	//[] execVM "PMC\PMC_weather_with_mp_parameter.sqf";
-	player setVariable ["BIS_noCoreConversations", true];
-};
+player setVariable ["BIS_noCoreConversations", true];
+[] execVM "PMC\PMC_weather.sqf";
+
+[[
+	["PMC_objective1", "Hilltop compound", "Clear <marker name='pmc_markertask1'>hilltop compound</marker> from enemy presence.", true, ["pmc_markertask1", getPosASL pmc_1]],
+	["PMC_objective2", "Capture Vikos", "Capture <marker name='pmc_markertask2'>Vikos</marker> and the surrounding buildings.", true, ["pmc_markertask2", getPosASL pmc_2]]
+],[
+	["Orders", "You start from <marker name='start'>Sfaka</marker>, north side of it."],
+	["Credits", "Addons used: None.<br/>Mission design, scripts: Snake Man, PMC."]
+]] call compile preprocessFileLineNumbers "PMC\shk_taskmaster.sqf";

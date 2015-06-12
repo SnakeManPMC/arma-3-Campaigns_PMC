@@ -20,7 +20,7 @@ sleep 3;
 
 playMusic ["Ambient08_Reforger", 0];
 
-titleText ["Kamino has fallen", "plain", 3];
+titleText ["Another day, another town", "plain", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Like so many before", "plain", 3];
+titleText ["Therisa, looks like a crappy place to live...", "plain", 3];
 sleep 5;
 
 // some shots

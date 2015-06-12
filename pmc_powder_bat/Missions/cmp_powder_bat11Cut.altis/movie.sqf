@@ -20,7 +20,7 @@ sleep 3;
 
 playMusic ["Ambient08_Reforger", 0];
 
-titleText ["Kamino has fallen", "plain", 3];
+titleText ["We got a foothold on this new piece of rock", "plain", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Like so many before", "plain", 3];
+titleText ["Welcome to new region", "plain", 3];
 sleep 5;
 
 // some shots
