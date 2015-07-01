@@ -1,10 +1,4 @@
-player setVariable ["BIS_enableRandomization", false];
-player setVariable ["BIS_noCoreConversations", true];
-[] execVM "PMC\PMC_weather.sqf";
-
-private["_ok"];
-_ok = player loadStatus "pmc_player";
-diag_log format["PMC player status: %1", _ok];
+[] execVM "PMC\PMC_LoadOnEveryMission.sqf";
 
 [[
 //	["PMC_objective1","obj1", "<marker name='pmc_markertask1'>obj1</marker>.", true, ["pmc_markertask1", getPosASL pmc_1]],
@@ -13,3 +7,15 @@ diag_log format["PMC player status: %1", _ok];
 	["Orders", "Your <marker name='start'>start</marker>"],
 	["Credits", "Addons used: RHS.<br/>Mission design, scripts: Snake Man, PMC."]
 ]] call compile preprocessFileLineNumbers "PMC\shk_taskmaster.sqf";
+
+PMC_loc = call compile preprocessFileLineNumbers "PMC\PMC_locationFinder_test.sqf";
+
+// put player randomly to some position on class names list :)
+//_newPos = [(PMC_loc select floor random (count PMC_loc)), 0, 500, 5, 0, 20, 0] call BIS_fnc_findSafePos;
+//player setPos _newPos;
+
+[] execVM "PMC\PMC_Create_Sides.sqf";
+
+sleep 1;
+
+[] execVM "PMC_Create_Bad_Guys.sqf";
