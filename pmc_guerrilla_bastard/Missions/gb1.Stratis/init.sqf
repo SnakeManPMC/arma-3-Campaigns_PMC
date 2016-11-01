@@ -5,7 +5,7 @@
 //	["PMC_objective2","obj2", "<marker name='pmc_markertask2'>obj2</marker>.", true, ["pmc_markertask2", getPosASL pmc_2]]
 ],[
 	["Orders", "Your <marker name='start'>start</marker>"],
-	["Credits", "Addons used: RHS.<br/>Mission design, scripts: Snake Man, PMC."]
+	["Credits", "Addons used: CUP.<br/>Mission design, scripts: Snake Man, PMC."]
 ]] call compile preprocessFileLineNumbers "PMC\shk_taskmaster.sqf";
 
 PMC_loc = call compile preprocessFileLineNumbers "PMC\PMC_locationFinder_test.sqf";

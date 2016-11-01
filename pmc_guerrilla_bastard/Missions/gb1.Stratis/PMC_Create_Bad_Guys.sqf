@@ -6,8 +6,8 @@
 */
 private["_tmpList", "_a", "_b", "_ran", "_myPos", "_newPos", "_grp"];
 
-call compile preprocessFileLineNumbers "PMC\PMC_Create_RHS_US_Army_Squad.sqf";
-call compile preprocessFileLineNumbers "PMC\PMC_Create_RHS_Soviet_Army_Squad.sqf";
+call compile preprocessFileLineNumbers "PMC\PMC_Create_CUP_US_Army_Rifle_Squad.sqf";
+call compile preprocessFileLineNumbers "PMC\PMC_Create_Russian_MSV_Squad_Flora.sqf";
 call compile preprocessFileLineNumbers "PMC\PMC_Waypoints_Patrol.sqf";
 
 // haha mayhem :)
@@ -29,7 +29,7 @@ while {_a < 10 && (count _tmpList > 1)} do
 	// create objective string variable
 	_myObj = format["pmc_objective%1", _b];
 
-	_grp = [_newPos] call PMC_Create_RHS_US_Army_Squad;
+	_grp = [_newPos] call PMC_Create_CUP_US_Army_Rifle_Squad;
 	[_grp, _newPos, 200] call PMC_Waypoints_Patrol;
 	[_newPos, _myObj] execVM "PMC\PMC_Create_Trigger_Guerrilla_Seized.sqf";
 	[_newPos, _myObj, _b] execVM "PMC\PMC_Create_Single_Task.sqf";
@@ -48,7 +48,7 @@ while {_a < 10 && (count _tmpList > 1)} do
 	// create objective string variable
 	_myObj = format["pmc_objective%1", _b];
 
-	_grp = [_newPos] call PMC_Create_RHS_Soviet_Army_Squad;
+	_grp = [_newPos] call PMC_Create_Russian_MSV_Squad_Flora;
 	[_grp, _newPos, 200] call PMC_Waypoints_Patrol;
 	[_newPos, _myObj] execVM "PMC\PMC_Create_Trigger_Guerrilla_Seized.sqf";
 	[_newPos, _myObj, _b] execVM "PMC\PMC_Create_Single_Task.sqf";
