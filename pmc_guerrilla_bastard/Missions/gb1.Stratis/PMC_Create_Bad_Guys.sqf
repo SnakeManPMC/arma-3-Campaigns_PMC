@@ -31,7 +31,7 @@ while {_a < 10 && (count _tmpList > 1)} do
 
 	_grp = [_newPos] call PMC_Create_CUP_US_Army_Rifle_Squad;
 	[_grp, _newPos, 200] call PMC_Waypoints_Patrol;
-	[_newPos, _myObj] execVM "PMC\PMC_Create_Trigger_Guerrilla_Seized.sqf";
+	[_newPos, _myObj, _b] execVM "PMC\PMC_Create_Trigger_Guerrilla_Seized.sqf";
 	[_newPos, _myObj, _b] execVM "PMC\PMC_Create_Single_Task.sqf";
 	_b = _b + 1;
 
@@ -50,7 +50,7 @@ while {_a < 10 && (count _tmpList > 1)} do
 
 	_grp = [_newPos] call PMC_Create_Russian_MSV_Squad_Flora;
 	[_grp, _newPos, 200] call PMC_Waypoints_Patrol;
-	[_newPos, _myObj] execVM "PMC\PMC_Create_Trigger_Guerrilla_Seized.sqf";
+	[_newPos, _myObj, _b] execVM "PMC\PMC_Create_Trigger_Guerrilla_Seized.sqf";
 	[_newPos, _myObj, _b] execVM "PMC\PMC_Create_Single_Task.sqf";
 	_b = _b + 1;
 
