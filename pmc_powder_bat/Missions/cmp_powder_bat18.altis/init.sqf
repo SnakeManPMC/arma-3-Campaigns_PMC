@@ -6,5 +6,5 @@ player setVariable ["BIS_noCoreConversations", true];
 	["PMC_objective2", "Capture Neochori", "Capture <marker name='pmc_markertask2'>Neochori</marker> city.", true, ["pmc_markertask2", getPosASL pmc_2]]
 ],[
 	["Orders", "You start from <marker name='start'>outskirts of Poliakko</marker>, today you capture two objectives, street by street."],
-	["Credits", "Addons used: None.<br/>Mission design, scripts: Snake Man, PMC."]
+	["Credits", "Addons used: Community Upgrade Project (CUP).<br/>Campaign story, Mission design, scripts: Snake Man, PMC."]
 ]] call compile preprocessFileLineNumbers "PMC\shk_taskmaster.sqf";

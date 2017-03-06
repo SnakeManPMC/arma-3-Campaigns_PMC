@@ -7,7 +7,7 @@ player setVariable ["BIS_noCoreConversations", true];
 	["PMC_objective2","Kill Farm", "Clear <marker name='pmc_markertask2'>Kill Farm</marker> from any tangos.", true, ["pmc_markertask2", getPosASL pmc_2]]
 ],[
 	["Orders", "You start from <marker name='start'>Kamino</marker>, proceed to clear the two assignmed objectives."],
-	["Credits", "Addons used: None.<br/>Mission design, scripts: Snake Man, PMC."]
+	["Credits", "Addons used: Community Upgrade Project (CUP).<br/>Campaign story, Mission design, scripts: Snake Man, PMC."]
 ]] call compile preprocessFileLineNumbers "PMC\shk_taskmaster.sqf";
 
 /*

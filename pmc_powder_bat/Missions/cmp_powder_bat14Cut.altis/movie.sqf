@@ -18,7 +18,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep 3;
 
-playMusic ["Ambient08_Reforger", 0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titleText ["Look mom! I got myself an airfield!", "plain", 3];
 sleep 5;

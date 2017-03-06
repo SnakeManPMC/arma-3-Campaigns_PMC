@@ -6,5 +6,5 @@ player setVariable ["BIS_noCoreConversations", true];
 	["PMC_objective2", "Capture Vikos", "Capture <marker name='pmc_markertask2'>Vikos</marker> and the surrounding buildings.", true, ["pmc_markertask2", getPosASL pmc_2]]
 ],[
 	["Orders", "You start from <marker name='start'>Sfaka</marker>, north side of it."],
-	["Credits", "Addons used: None.<br/>Mission design, scripts: Snake Man, PMC."]
+	["Credits", "Addons used: Community Upgrade Project (CUP).<br/>Campaign story, Mission design, scripts: Snake Man, PMC."]
 ]] call compile preprocessFileLineNumbers "PMC\shk_taskmaster.sqf";

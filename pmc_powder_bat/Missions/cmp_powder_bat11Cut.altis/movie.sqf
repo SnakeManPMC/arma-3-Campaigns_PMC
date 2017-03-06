@@ -18,7 +18,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep 3;
 
-playMusic ["Ambient08_Reforger", 0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titleText ["We got a foothold on this new piece of rock", "plain", 3];
 sleep 5;

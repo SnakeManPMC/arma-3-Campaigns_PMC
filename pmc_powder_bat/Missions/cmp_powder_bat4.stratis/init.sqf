@@ -8,7 +8,7 @@ player setVariable ["BIS_noCoreConversations", true];
 	["PMC_objective3","Return to Maxwell", "Return to <marker name='pmc_markertask3'>Camp Maxwell</marker> to accomplish your mission.", true, ["pmc_markertask3", getPosASL pmc_3]]
 ],[
 	["Orders", "You start from <marker name='start'>The Sparta</marker>. Sweep and clear, thats your objective today. When you're done, return to <marker name='maxwell'>Camp Maxwell</marker> for much needed rest."],
-	["Credits", "Addons used: None.<br/>Mission design, scripts: Snake Man, PMC."]
+	["Credits", "Addons used: Community Upgrade Project (CUP).<br/>Campaign story, Mission design, scripts: Snake Man, PMC."]
 ]] call compile preprocessFileLineNumbers "PMC\shk_taskmaster.sqf";
 
 /*
