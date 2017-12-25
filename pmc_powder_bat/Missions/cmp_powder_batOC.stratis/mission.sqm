@@ -1,46 +1,51 @@
-version=12;
-class Mission
+version=53;
+class EditorData
 {
-	addOns[]=
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
 	{
-		"a3_map_stratis"
+		nextID=598;
 	};
-	addOnsAuto[]=
+	class MarkerIDProvider
 	{
-		"a3_map_stratis"
+		nextID=9;
 	};
-	randomSeed=8727422;
-	class Intel
+	class Camera
 	{
-		startWeather=0.25;
-		startWind=0.1;
-		forecastWeather=0.25;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		year=2008;
-		month=10;
-		day=11;
-		hour=9;
-		minute=20;
-		startFogDecay=0.0049333;
-		forecastFogDecay=0.0049333;
+		pos[]={2638.166,89.705193,636.62451};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"CUP_Creatures_Military_USMC"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=1;
+		class Item0
+		{
+			className="CUP_Creatures_Military_USMC";
+			name="CUP_Creatures_Military_USMC";
+		};
+	};
+};
+randomSeed=14233510;
+class ScenarioData
+{
+	author="PMC Since 1984";
 };
 class Intro
 {
-	addOns[]=
-	{
-		"A3_Characters_F_BLUFOR",
-		"a3_characters_f",
-		"a3_map_stratis"
-	};
-	addOnsAuto[]=
-	{
-		"A3_Characters_F_BLUFOR",
-		"a3_characters_f",
-		"a3_map_stratis"
-	};
-	randomSeed=663035;
 	class Intel
 	{
 		briefingName="PMC Powder Bat Opening Cutscene";
@@ -57,59 +62,62 @@ class Intro
 		startFogDecay=0.0049333;
 		forecastFogDecay=0.0049333;
 	};
-	class Groups
+	class Entities
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Trigger";
+			position[]={2649.3616,61.581661,698.61523};
+			class Attributes
+			{
+				text="END";
+				condition="endcut";
+				sizeA=0;
+				sizeB=0;
+				interuptable=1;
+				type="END1";
+			};
+			id=595;
+			type="EmptyDetector";
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="West";
+			class Entities
 			{
 				items=1;
 				class Item0
 				{
-					position[]={2632.592,63.352043,682.69531};
-					id=0;
-					side="WEST";
-					vehicle="CUP_B_USMC_Soldier";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
-					init="this = execVM ""movie.sqf"";";
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2632.592,63.351856,682.79529};
+						angles[]={0.032487731,0,6.2656889};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this = execVM ""movie.sqf"";";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=597;
+					type="CUP_B_USMC_Soldier";
 				};
 			};
-		};
-	};
-	class Sensors
-	{
-		items=1;
-		class Item0
-		{
-			position[]={2649.3616,61.581661,698.61523};
-			a=0;
-			b=0;
-			interruptable=1;
-			type="END1";
-			age="UNKNOWN";
-			text="END";
-			expCond="endcut";
-			class Effects
+			class Attributes
 			{
 			};
+			id=596;
 		};
 	};
 };
-class OutroWin
+class Mission
 {
-	addOns[]=
-	{
-		"a3_map_stratis"
-	};
-	addOnsAuto[]=
-	{
-		"a3_map_stratis"
-	};
-	randomSeed=7501682;
 	class Intel
 	{
 		startWeather=0.25;
@@ -128,15 +136,24 @@ class OutroWin
 };
 class OutroLoose
 {
-	addOns[]=
+	class Intel
 	{
-		"a3_map_stratis"
+		startWeather=0.25;
+		startWind=0.1;
+		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
 	};
-	addOnsAuto[]=
-	{
-		"a3_map_stratis"
-	};
-	randomSeed=9667824;
+};
+class OutroWin
+{
 	class Intel
 	{
 		startWeather=0.25;
