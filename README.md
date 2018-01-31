@@ -1,11 +1,12 @@
 # arma-3-Campaigns_PMC
 
-ArmA 3 all PMC campaigns.
+ArmA 3 all PMC campaigns, these campaign missions use CUP.
 
-Addons used: many, AiA Terrain Pack and RHS mod to mention just two.
+See [CUP download](http://cup-arma3.org/download) and [PMC Tactical ArmA 3](https://www.pmctactical.org/arma3/index.php)
 
 Campaigns:
 * PMC Guerrilla Bastard
+* PMC Heros Path
 * PMC Powder Bat
 * 4 various test campaigns
 
