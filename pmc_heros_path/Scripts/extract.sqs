@@ -1,0 +1,45 @@
+_team = _this select 0;
+_helo = _this select 1;
+
+_helo sideradio "Rextract";
+
+;
+; get people out
+;
+_helo land "land";
+
+#landing
+~.2
+
+;
+; loop until helo height is 2 meters.
+;
+?(getpos _helo select 2 > 2): goto "landing"
+
+_helo flyinheight 0;
+
+; try to keep him the engine on...
+_helo action["ENGINE ON"];
+
+;
+; wait until whole squad is on board.
+;
+_A = 0;
+
+#WAITING
+_listunits = units _team;
+_B = count _listunits
+~.2
+?(_listunits select _A in _helo): _A=_A+1
+?(_B > _A): goto "WAITING"
+
+_helo flyinheight 50;
+_helo sideradio "Rliftoff";
+
+~3
+
+0 fademusic 1;
+; temporarily disabled for ArmA 2
+;playmusic ["7thlifeless",0];
+
+exit

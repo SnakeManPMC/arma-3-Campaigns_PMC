@@ -1,0 +1,11 @@
+
+; disabled for ArmA 2
+exit;
+
+
+_unit = _this select 0
+
+?("Helicopter" countType [_unit] > 0): _unit exec "fx\heliFX\rotorwashInit.sqs"; exit;
+?("Tank" countType [_unit] > 0): _unit addEventHandler [{killed}, {_this exec "fx\fx_init.sqs"}]; exit;
+
+exit

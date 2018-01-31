@@ -1,0 +1,24 @@
+
+; this is for mission start
+pweather = .5;
+publicvariable "pweather";
+~.01
+0 setovercast pweather;
+
+; random weather
+pztime = -1;
+if (!isServer) then { goto "WeatherSkipper"; };
+
+pztime = (60*20);
+pweather = random 1;
+~.01
+
+publicvariable "pweather";
+publicvariable "pztime";
+~.01
+
+#WeatherSkipper
+~.01
+if (pztime < 0) then { goto "WeatherSkipper"; };
+
+pztime setovercast pweather;

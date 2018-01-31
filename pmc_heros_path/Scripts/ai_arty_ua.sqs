@@ -1,0 +1,121 @@
+
+; disabled for ArmA 2
+exit;
+
+
+
+;----------------------------------------------------------
+; Easy AI Unified Artillery
+;
+; By General Barron
+; aw_barron@hotmail.com
+; 8/11/04   v1.0
+;----------------------------------------------------------
+;
+; NOTE: THIS SCRIPT REQUIRES THE CHAIN OF COMMAND'S UNIFIED ARTILLERY ADDON
+; 
+; This script lets the specified AI call for artillery fire automatically. 
+;The AI will try to call arty whenever enemies are detected. They will 
+;only call a strike if no friendlies are within 75 meters of the target.
+;
+; To adjust how many rounds are fired per strike, as well as the radio 
+;chatter used, go to the bottom of this script.
+;
+; Note that this is a simple script, and the AI won't do things like adjust
+;their aimpoints. I suggest you use the "zero bias error" gamelogic with this 
+;script, or else the arty strikes won't be very accurate. I also suggest you
+;set the skill of the artillery units to 100%.
+;
+;      TO USE THE SCRIPT:
+;
+;Place a CoC Obelisk for whichever side(s) will be using the artillery.
+;
+;Place the following files in your mission directory:
+;   ai_arty_ua.sqs
+;   findUnits.sqf
+;   knownUnits.sqf
+;
+;Place these lines in your init.sqs:
+;   knownUnits = preprocessFile "knownUnits.sqf"
+;   findUnits = preprocessFile "findUnits.sqf"
+;
+;Place this line in the init field of each AI artillery spotter:
+;   [this, "enemy array name", "friendly array name", arty group name] exec "ai_arty_ua.sqs"
+;
+;"enemy/friendly array name" - the name of the arrays that will be considered
+;   friendly/enemy to this observer. NOTE: This is the variable name IN QUOTES.
+;   Note that you could also put civilians in the friendly array, to prevent AI from
+;   causing civilian casulties.
+;   I suggest that you DO NOT add your artillery units to the enemy array. Doing so could cause the AI to call
+;   artillery down on the opposing side's artillery, without actually seeing where it is.
+;   For info on why it must be in quotes, check here: http://www.ofpec.com/editors/comref.php?letter=3#Array%20assignment
+;
+;arty group name - group that is in the artillery guns. MAKE SURE TO PLACE THIS GROUP BEFORE
+;    PLACING OTHER UNITS. Otherwise, the group might not "exist" yet before the script is executed.
+;
+;EXAMPLE: Place a trigger, activation: west present. On activation: west_units = thislist
+;   Place another trigger, activation: east present. On activation: east_units = thislist
+;   Place a howitzer, and put this in his init field: west_arty = group this
+;   Place a west soldier, and put this in his init field:
+;      [this, "aieast", "aiwest", usmor1] exec "ai_arty_ua.sqs";
+;
+;----------------------------------------------------------
+
+_observer = _this select 0
+_enemies = _this select 1
+_friends = _this select 2
+_arty = _this select 3
+
+;wait for UA to initialize
+~60 + random 5
+_Artyposture = ((leader _arty) call CoCfIFFindAsset) + "p"
+
+#Loop
+~5 + random 5
+;loop until enemy detected or unit is killed
+? !(alive _observer) : exit
+? ("Land" countType ([_observer, call _enemies, false] call knownUnits)) > 0 : goto "Next"
+goto "Loop"
+
+#Next
+;go back if arty is unavailable
+? (Call _ArtyPosture) > 0 : goto "Loop"
+_knownEnemies = [_observer, call _enemies, true] call knownUnits
+_i = 0
+_max = count _knownEnemies
+
+;loop until a target is found with no friendlies nearby
+#FindTarget
+     _target = _knownEnemies select _i
+;    The number below (after _target) is the distance around the target that must be clear of friendlies to call the strike
+;    EG: 75 means no strike can be called on that target if any friends are within 75 meters of the target.
+;    This number should be increased if the arty you are using covers a larger strike area (such as MLRS)
+     ?  count ([_target, 75, call _friends, false] call findUnits) == 0 AND "Land" countType [_target] == 1 : goto "CallStrike"
+     _i = _i + 1
+     ? _i < _max : goto "FindTarget"
+
+;if no safe targets, wait, then go back to beginning
+~60 + random 10
+goto "Loop"
+
+
+;----------------------------------------------------------
+; EDITABLE PORTION OF SCRIPT BELOW
+;----------------------------------------------------------
+
+#CallStrike
+
+;Replace this with the text of your choosing.
+;I suggest you use this function to display the actual grid coords of the strike:
+; http://www.ofpec.com/editors/funcref.php?filter_func=11
+;_observer sidechat format ["Requesting artillery support at grid %1.", [getpos _target] call GridCoord]
+_observer sidechat "Requesting artillery support!"
+
+;The number after [getpos _target] is how many rounds each unit will fire for the strike.
+;EG: Putting a '5' here will make each arty unit fire 5 rounds each time the AI calls for fire.
+;Check your UA documentation for a description of the other parameters.
+[_arty, [getpos _target], 3, 0, 0, 0, false] Call CoCfIFCallFire
+
+~240 + random 60
+goto "Loop"
+;----------------------------------------------------------

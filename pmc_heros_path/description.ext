@@ -1,0 +1,325 @@
+//
+// 		PMC Hero's Path campaign
+// 
+
+class CfgIdentities
+{
+	// SEAL team leader
+	class carlos
+	{
+		name = "Carlos Edwards";
+		face = "face24";
+		glasses="None";
+		speaker = "Rob";
+		pitch = 1.0;
+	};
+
+	// Ranger team leader: 
+	class steve
+	{
+		name = "Steve Gross";
+		face = "face13";
+		glasses="none";
+		speaker = "George";
+		pitch = 1.0;
+	};
+
+	// Army squad leader: 
+	class gordon
+	{
+		name = "Gordon McKenzie";
+		face = "face39";
+		glasses="none";
+		speaker = "Jonah";
+		pitch = 1.0;
+	};
+
+	// Bradley commander: 
+	class roger
+	{
+		name = "Roger Tuchek";
+		face = "face25";
+		glasses="Spectacles";
+		speaker = "Greg";
+		pitch = 1.0;
+	};
+
+	// Abrams commander: 
+	class david
+	{
+		name = "David Ruby";
+		face = "face34";
+		glasses="none";
+		speaker = "John";
+		pitch = 1.0;
+	};
+
+	// Apache pilot: 
+	class bob
+	{
+		name = "Bob Walton";
+		face = "face6";
+		glasses="none";
+		speaker = "Marc";
+		pitch = 1.0;
+	};
+};
+
+exitScore = -100;
+weaponPool = true;
+
+class MissionDefault 
+{ 
+lives = -1; 
+
+lost = ; 
+end1 = ; 
+end2 = ; 
+end3 = ; 
+end4 = ; 
+end5 = ; 
+end6 = ; 
+}; 
+
+class Campaign
+{
+	name = "PMC Heros Path";
+	firstBattle = Prologue;
+
+	class Prologue
+	{
+		name = "PROLOGUE";
+		
+		cutscene = eu00_cutscene0.PMC_Rugen;
+
+		firstMission = eu01_strength_through_joy;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		lost = ;
+
+		class eu01_strength_through_joy: MissionDefault
+		{
+			end1 = eu02_lizard_tooth;
+			lost = eu01_strength_through_joy;
+			template = eu01_strength_through_joy.PMC_rugen;
+		};
+		class eu02_lizard_tooth: MissionDefault
+		{
+			end1 = eu02a_cutscene1;
+			lost = eu02_lizard_tooth;
+			template = eu02_lizard_tooth.PMC_rugen;
+		};
+		class eu02a_cutscene1: MissionDefault
+		{
+			end1 = eu03_black_shepherd;
+			lost = eu03_black_shepherd;
+			template = eu02a_cutscene1.PMC_rugen;
+		};
+		class eu03_black_shepherd: MissionDefault
+		{
+			end1 = eu04_ninjas_song;
+			lost = eu03_black_shepherd;
+			template = eu03_black_shepherd.PMC_rugen;
+		};
+		class eu04_ninjas_song: MissionDefault
+		{
+			end1 = eu05_mt_brokenheart;
+			lost = eu04_ninjas_song;
+			template = eu04_ninjas_song.PMC_rugen;
+		};
+		class eu05_mt_brokenheart: MissionDefault
+		{
+			end1 = eu06_venom_for_blood;
+			lost = eu05_mt_brokenheart;
+			template = eu05_mt_brokenheart.PMC_rugen;
+		};
+		class eu06_venom_for_blood: MissionDefault
+		{
+			end1 = eu07_ranger_path;
+			lost = eu06_venom_for_blood;
+			template = eu06_venom_for_blood.PMC_rugen;
+		};
+		class eu07_ranger_path: MissionDefault
+		{
+			end1 = eu08_hornet_sting;
+			lost = eu07_ranger_path;
+			template = eu07_ranger_path.PMC_rugen;
+		};
+		class eu08_hornet_sting: MissionDefault
+		{
+			end1 = eu08a_surf_this_beach;
+			lost = eu08_hornet_sting;
+			template = eu08_hornet_sting.PMC_rugen;
+		};
+		class eu08a_surf_this_beach: MissionDefault
+		{
+			end1 = eu09_hungry_bear;
+			lost = eu08a_surf_this_beach;
+			template = eu08a_surf_this_beach.PMC_rugen;
+		};
+		class eu09_hungry_bear: MissionDefault
+		{
+			end1 = eu10_ghost_cross;
+			lost = eu09_hungry_bear;
+			template = eu09_hungry_bear.PMC_rugen;
+		};
+		class eu10_ghost_cross: MissionDefault
+		{
+			end1 = eu11_shallow_grave;
+			lost = eu10_ghost_cross;
+			template = eu10_ghost_cross.PMC_rugen;
+		};
+		class eu11_shallow_grave: MissionDefault
+		{
+			end1 = eu12_going_downtown;
+			lost = eu11_shallow_grave;
+			template = eu11_shallow_grave.PMC_rugen;
+		};
+		class eu12_going_downtown: MissionDefault
+		{
+			end1 = eu13_condition_red;
+			lost = eu12_going_downtown;
+			template = eu12_going_downtown.PMC_rugen;
+		};
+		class eu13_condition_red: MissionDefault
+		{
+			end1 = eu14_war_plan_orange;
+			lost = eu13_condition_red;
+			template = eu13_condition_red.PMC_rugen;
+		};
+		class eu14_war_plan_orange: MissionDefault
+		{
+			end1 = eu15_yellow_hordes;
+			lost = eu14_war_plan_orange;
+			template = eu14_war_plan_orange.PMC_rugen;
+		};
+		class eu15_yellow_hordes: MissionDefault
+		{
+			end1 = eu16_green_blades;
+			lost = eu15_yellow_hordes;
+			template = eu15_yellow_hordes.PMC_rugen;
+		};
+		class eu16_green_blades: MissionDefault
+		{
+			end1 = eu17_blue_eagle;
+			lost = eu16_green_blades;
+			template = eu16_green_blades.PMC_rugen;
+		};
+		class eu17_blue_eagle: MissionDefault
+		{
+			end1 = eu18_purple_heart;
+			lost = eu17_blue_eagle;
+			template = eu17_blue_eagle.PMC_rugen;
+		};
+		class eu18_purple_heart: MissionDefault
+		{
+			end1 = eu19_ultraviolent_flight;
+			lost = eu18_purple_heart;
+			template = eu18_purple_heart.PMC_rugen;
+		};
+		class eu19_ultraviolent_flight: MissionDefault
+		{
+			end1 = eu20_lz_x_ray;
+			lost = eu19_ultraviolent_flight;
+			template = eu19_ultraviolent_flight.PMC_rugen;
+		};
+		class eu20_lz_x_ray: MissionDefault
+		{
+			end1 = eu21_dark_crown;
+			lost = eu20_lz_x_ray;
+			template = eu20_lz_x_ray.PMC_rugen;
+		};
+		class eu21_dark_crown: MissionDefault
+		{
+			end1 = eu22_flaming_jewel;
+			lost = eu21_dark_crown;
+			template = eu21_dark_crown.PMC_rugen;
+		};
+		class eu22_flaming_jewel: MissionDefault
+		{
+			end1 = eu23_nebelwerfer_85;
+			lost = eu22_flaming_jewel;
+			template = eu22_flaming_jewel.PMC_rugen;
+		};
+		class eu23_nebelwerfer_85: MissionDefault
+		{
+			end1 = eu24_rue_sans_joie;
+			lost = eu23_nebelwerfer_85;
+			template = eu23_nebelwerfer_85.PMC_rugen;
+		};
+		class eu24_rue_sans_joie: MissionDefault
+		{
+			end1 = eu25_faces_of_battle;
+			lost = eu24_rue_sans_joie;
+			template = eu24_rue_sans_joie.PMC_rugen;
+		};
+		class eu25_faces_of_battle: MissionDefault
+		{
+			end1 = eu26_bergher_meat;
+			lost = eu25_faces_of_battle;
+			template = eu25_faces_of_battle.PMC_rugen;
+		};
+		class eu26_bergher_meat: MissionDefault
+		{
+			end1 = eu27_special_weapons;
+			lost = eu26_bergher_meat;
+			template = eu26_bergher_meat.PMC_rugen;
+		};
+		class eu27_special_weapons: MissionDefault
+		{
+			end1 = eu28_tired_bear;
+			lost = eu27_special_weapons;
+			template = eu27_special_weapons.PMC_rugen;
+		};
+		class eu28_tired_bear: MissionDefault
+		{
+			end1 = eu29_silver_bullets;
+			lost = eu28_tired_bear;
+			template = eu28_tired_bear.PMC_rugen;
+		};
+		class eu29_silver_bullets: MissionDefault
+		{
+			end1 = eu30_blood_on_the_tracks;
+			lost = eu29_silver_bullets;
+			template = eu29_silver_bullets.PMC_rugen;
+		};
+		class eu30_blood_on_the_tracks: MissionDefault
+		{
+			end1 = eu31_magnificent_bastards;
+			lost = eu30_blood_on_the_tracks;
+			template = eu30_blood_on_the_tracks.PMC_rugen;
+		};
+		class eu31_magnificent_bastards: MissionDefault
+		{
+			end1 = eu32_to_the_brink;
+			lost = eu31_magnificent_bastards;
+			template = eu31_magnificent_bastards.PMC_rugen;
+		};
+		class eu32_to_the_brink: MissionDefault
+		{
+			end1 = eu33_defcon_zero;
+			lost = eu32_to_the_brink;
+			template = eu32_to_the_brink.PMC_rugen;
+		};
+		class eu33_defcon_zero: MissionDefault
+		{
+			end1 = eu34_star_response;
+			lost = eu33_defcon_zero;
+			template = eu33_defcon_zero.PMC_rugen;
+		};
+		class eu34_star_response: MissionDefault
+		{
+			end1 = eu35_cutscene_end;
+			lost = eu34_star_response;
+			template = eu34_star_response.PMC_rugen;
+		};
+		class eu35_cutscene_end: MissionDefault
+		{
+			template = eu35_cutscene_end.PMC_Rugen;
+		};
+	};	
+};
