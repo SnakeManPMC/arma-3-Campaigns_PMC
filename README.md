@@ -8,6 +8,7 @@ Campaigns:
 * PMC Guerrilla Bastard
 * PMC Heros Path
 * PMC Powder Bat
+* PMC Tank Hunter
 * 4 various test campaigns
 
 I don't like having several campaigns / missions in one big blob repo, but its also crazy to have 100's of single mission dirs in github root.

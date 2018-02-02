@@ -1,0 +1,377 @@
+//
+//	PMC Tank Hunter campaign
+//
+
+exitScore = -100;
+weaponPool = true;
+
+class MissionDefault
+{
+	lives = -1;
+	noAward=true;
+	lost = ;
+	end1 = ;
+	end2 = ;
+	end3 = ;
+	end4 = ;
+	end5 = ;
+	end6 = ;
+};
+
+class Campaign
+{
+	briefingName = "PMC Tank Hunter v0.3";
+	author = "Snake Man";
+	overviewText = "Hunt for Tokarev trophy pistols while killing as many Russians as you can.";
+	firstBattle = Part1;
+
+	class Part1
+	{
+        	name = "Lets Rock!";
+
+		cutscene = ;
+
+		firstMission = t1;
+	        lost = ;
+	        end1 = ;
+	        end2 = ;
+	        end3 = ;
+	        end4 = ;
+	        end5 = ;
+	        end6 = ;
+
+// init mission, it all begins here
+		class t1: MissionDefault
+		{
+			end1 = t2;
+			template = XX_T01_start.PMC_rugen;
+		};
+
+// talk to US CO guy mission. Connect mission.
+		class t2: MissionDefault
+		{
+			end1 = t3;
+			lost = t2;
+			template = XX_T02_talk_to_co.PMC_rugen;
+		};
+
+
+// ------------------------------------------------------------------------------------
+// CONNECT MISSION, ALL OTHERS ARE SPAWN FROM THIS MAIN ONE
+// ------------------------------------------------------------------------------------
+// 1st mission. Connect mission.
+		class t3: MissionDefault
+		{
+			end1 = t4;  // T04 Trophy Lite
+			end2 = t7;  // T07 Trophy Heavy
+			end3 = t10; // T10 Ammo
+			end4 = t11; // T11 Weapons
+			end5 = t12; // T12 Vehicles
+			end6 = t13; // T13 Reinforcements
+			lost = t14; // T14 hidden selector for helo/tank section.
+			template = XX_T03_connect.PMC_rugen;
+		};
+
+
+
+
+// ------------------------------------------------------------------------------------
+// LIGHT TROPHY MISSIONS HERE
+// ------------------------------------------------------------------------------------
+// T04 Trophy Lite A
+		class t4: MissionDefault
+		{
+			end1 = t5;
+			lost = t4;
+			template = XX_T04_trophy_lite_a.PMC_rugen;
+		};
+// T05 Trophy Lite B
+		class t5: MissionDefault
+		{
+			end1 = t6;
+			lost = t5;
+			template = XX_T05_trophy_lite_b.PMC_rugen;
+		};
+// T06 Trophy Lite C
+		class t6: MissionDefault
+		{
+			end1 = t4;  // T04 Trophy Lite
+			end2 = t7;  // T07 Trophy Heavy
+			end3 = t10; // T10 Ammo
+			end4 = t11; // T11 Weapons
+			end5 = t12; // T12 Vehicles
+			end6 = t13; // T13 Reinforcements
+			lost = t14; // T14 hidden selector for helo/tank section.
+			template = XX_T06_trophy_lite_c.PMC_rugen;
+		};
+
+
+
+// ------------------------------------------------------------------------------------
+// HEAVY TROPHY MISSIONS HERE
+// ------------------------------------------------------------------------------------
+// T07 Trophy Heavy Mission A
+		class t7: MissionDefault
+		{
+			end1 = t8;
+			lost = t7;
+			template = XX_T07_trophy_heavy_a.PMC_rugen;
+		};
+// T08 Trophy Heavy Mission B
+		class t8: MissionDefault
+		{
+			end1 = t9;
+			lost = t10;
+			template = XX_T08_trophy_heavy_b.PMC_rugen;
+		};
+// T09 Trophy Heavy Mission C
+		class t9: MissionDefault
+		{
+			end1 = t4;  // T04 Trophy Lite
+			end2 = t7;  // T07 Trophy Heavy
+			end3 = t10; // T10 Ammo
+			end4 = t11; // T11 Weapons
+			end5 = t12; // T12 Vehicles
+			end6 = t13; // T13 Reinforcements
+			lost = t14; // T14 hidden selector for helo/tank section.
+			template = XX_T09_trophy_heavy_c.PMC_rugen;
+		};
+
+// ------------------------------------------------------------------------------------
+// AMMO, WEAPON, VEHICLES AND REINFORCEMENTS MISSIONS HERE
+// ------------------------------------------------------------------------------------
+// T10 Ammo
+		class t10: MissionDefault
+		{
+			end1 = t4;  // T04 Trophy Lite
+			end2 = t7;  // T07 Trophy Heavy
+			end3 = t10; // T10 Ammo
+			end4 = t11; // T11 Weapons
+			end5 = t12; // T12 Vehicles
+			end6 = t13; // T13 Reinforcements
+			lost = t14; // T14 hidden selector for helo/tank section.
+			template = XX_T10_ammo.PMC_rugen;
+		};
+// T11 Weapons
+		class t11: MissionDefault
+		{
+			end1 = t4;  // T04 Trophy Lite
+			end2 = t7;  // T07 Trophy Heavy
+			end3 = t10; // T10 Ammo
+			end4 = t11; // T11 Weapons
+			end5 = t12; // T12 Vehicles
+			end6 = t13; // T13 Reinforcements
+			lost = t14; // T14 hidden selector for helo/tank section.
+			template = XX_T11_weapons.PMC_rugen;
+		};
+// T12 Vehicles
+		class t12: MissionDefault
+		{
+			end1 = t4;  // T04 Trophy Lite
+			end2 = t7;  // T07 Trophy Heavy
+			end3 = t10; // T10 Ammo
+			end4 = t11; // T11 Weapons
+			end5 = t12; // T12 Vehicles
+			end6 = t13; // T13 Reinforcements
+			lost = t14; // T14 hidden selector for helo/tank section.
+			template = XX_T12_vehicles.PMC_rugen;
+		};
+// T13 Reinforcements
+		class t13: MissionDefault
+		{
+			end1 = t4;  // T04 Trophy Lite
+			end2 = t7;  // T07 Trophy Heavy
+			end3 = t10; // T10 Ammo
+			end4 = t11; // T11 Weapons
+			end5 = t12; // T12 Vehicles
+			end6 = t13; // T13 Reinforcements
+			lost = t14; // T14 hidden selector for helo/tank section.
+			template = XX_T13_reinforcements.PMC_rugen;
+		};
+
+
+// ------------------------------------------------------------------------------------
+// CHANCE MISSIONS / TO CHANGE FOR HEAVY SECTION !
+// ------------------------------------------------------------------------------------
+// T14 hidden selector for helo/tank section.
+		class t14: MissionDefault
+		{
+			end1 = t3;  // back to T3 Connect
+			end2 = t15; // first helo/tank
+			lost = t15; // hum?
+			template = XX_T14_selector_cutscene.PMC_rugen;
+		};
+
+
+// ------------------------------------------------------------------------------------
+// THE HEAVY STUFF BEGINS HERE. FLOWCHART PART SECOND, HOOYAH!
+// ------------------------------------------------------------------------------------
+// T15 Talk To CO Again
+		class t15: MissionDefault
+		{
+			end1 = t16;
+			lost = t15;
+			template = XX_T15_talk_to_co.PMC_rugen;
+		};
+
+
+// ------------------------------------------------------------------------------------
+// CONNECT MISSION, ALL OTHERS ARE SPAWN FROM THIS MAIN ONE
+// ------------------------------------------------------------------------------------
+// T16 Connect Mission
+		class t16: MissionDefault
+		{
+			end1 = t17; // T17 Trophy Lite
+			end2 = t20; // T20 Trophy Heavy
+			end3 = t23; // T23 Ammo
+			end4 = t24; // T24 Weapons
+			end5 = t25; // T25 Vehicles
+			end6 = t26; // T26 Reinforcements
+			lost = t27; // T27 hidden selector for helo/tank section.
+			template = XX_T16_connect.PMC_rugen;
+		};
+
+// ------------------------------------------------------------------------------------
+// LIGHT TROPHY MISSIONS HERE
+// ------------------------------------------------------------------------------------
+// T17 Trophy Lite Mission A
+		class t17: MissionDefault
+		{
+			end1 = t18;
+			lost = t17;
+			template = XX_T17_trophy_lite_a.PMC_rugen;
+		};
+// T18 Trophy Lite Mission B
+		class t18: MissionDefault
+		{
+			end1 = t19;
+			lost = t18;
+			template = XX_T18_trophy_lite_b.PMC_rugen;
+		};
+// T19 Trophy Lite Mission C
+		class t19: MissionDefault
+		{
+			end1 = t17; // T17 Trophy Lite
+			end2 = t20; // T20 Trophy Heavy
+			end3 = t23; // T23 Ammo
+			end4 = t24; // T24 Weapons
+			end5 = t25; // T25 Vehicles
+			end6 = t26; // T26 Reinforcements
+			lost = t27; // T27 hidden selector for helo/tank section.
+			template = XX_T19_trophy_lite_c.PMC_rugen;
+		};
+
+// ------------------------------------------------------------------------------------
+// HEAVY TROPHY MISSIONS HERE
+// ------------------------------------------------------------------------------------
+// T20 Trophy Heavy Mission A
+		class t20: MissionDefault
+		{
+			end1 = t21;
+			lost = t20;
+			template = XX_T20_trophy_heavy_a.PMC_rugen;
+		};
+// T21 Trophy Heavy Mission B
+		class t21: MissionDefault
+		{
+			end1 = t22;
+			lost = t21;
+			template = XX_T21_trophy_heavy_b.PMC_rugen;
+		};
+// T22 Trophy Heavy Mission C
+		class t22: MissionDefault
+		{
+			end1 = t17; // T17 Trophy Lite
+			end2 = t20; // T20 Trophy Heavy
+			end3 = t23; // T23 Ammo
+			end4 = t24; // T24 Weapons
+			end5 = t25; // T25 Vehicles
+			end6 = t26; // T26 Reinforcements
+			lost = t27; // T27 hidden selector for helo/tank section.
+			template = XX_T22_trophy_heavy_c.PMC_rugen;
+		};
+
+// ------------------------------------------------------------------------------------
+// AMMO, WEAPON, VEHICLES AND REINFORCEMENTS MISSIONS HERE
+// ------------------------------------------------------------------------------------
+// T23 Ammo Mission
+		class t23: MissionDefault
+		{
+			end1 = t17; // T17 Trophy Lite
+			end2 = t20; // T20 Trophy Heavy
+			end3 = t23; // T23 Ammo
+			end4 = t24; // T24 Weapons
+			end5 = t25; // T25 Vehicles
+			end6 = t26; // T26 Reinforcements
+			lost = t27; // T27 hidden selector for helo/tank section.
+			template = XX_T23_ammo.PMC_rugen;
+		};
+// T24 Weapons Mission
+		class t24: MissionDefault
+		{
+			end1 = t17; // T17 Trophy Lite
+			end2 = t20; // T20 Trophy Heavy
+			end3 = t23; // T23 Ammo
+			end4 = t24; // T24 Weapons
+			end5 = t25; // T25 Vehicles
+			end6 = t26; // T26 Reinforcements
+			lost = t27; // T27 hidden selector for helo/tank section.
+			template = XX_T24_weapons.PMC_rugen;
+		};
+// T25 Vehicles Mission
+		class t25: MissionDefault
+		{
+			end1 = t17; // T17 Trophy Lite
+			end2 = t20; // T20 Trophy Heavy
+			end3 = t23; // T23 Ammo
+			end4 = t24; // T24 Weapons
+			end5 = t25; // T25 Vehicles
+			end6 = t26; // T26 Reinforcements
+			lost = t27; // T27 hidden selector for helo/tank section.
+			template = XX_T25_vehicles.PMC_rugen;
+		};
+// T26 Reinforcements Mission
+		class t26: MissionDefault
+		{
+			end1 = t17; // T17 Trophy Lite
+			end2 = t20; // T20 Trophy Heavy
+			end3 = t23; // T23 Ammo
+			end4 = t24; // T24 Weapons
+			end5 = t25; // T25 Vehicles
+			end6 = t26; // T26 Reinforcements
+			lost = t27; // T27 hidden selector for helo/tank section.
+			template = XX_T26_reinforcements.PMC_rugen;
+		};
+
+// ------------------------------------------------------------------------------------
+// HIDDEN SELECTOR MISSION FOR FIND GIRLFRIEND / CAMPAIGN END
+// ------------------------------------------------------------------------------------
+// T27 hidden selector for find girlfriend / end of campaign
+		class t27: MissionDefault
+		{
+			end1 = t15; // go back to talk to CO
+			end2 = t28; // go to gf mission
+			template = XX_T27_selector_cutscene.PMC_rugen;
+		};
+
+// ------------------------------------------------------------------------------------
+// FIND GIRLFRIEND MISSION HERE
+// ------------------------------------------------------------------------------------
+// T28 End: Find Girfriend
+		class t28: MissionDefault
+		{
+			end1 = t29;
+			lost = t28;
+			template = XX_T28_end_find_gf.PMC_rugen;
+		};
+
+// ------------------------------------------------------------------------------------
+// FINAL ENDING CUTSCENE - CONGRATULATIONS !
+// ------------------------------------------------------------------------------------
+// Ending Cutscene
+		class t29: MissionDefault
+		{
+			template = XX_T29_cutscene1.PMC_rugen;
+		};
+	};
+};
