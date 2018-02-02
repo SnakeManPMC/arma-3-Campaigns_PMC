@@ -1,0 +1,81 @@
+/*
+
+	PMC Real War 1 campaign
+
+*/
+
+class CfgIdentities
+{
+	// SF squad leader
+	class carlos
+	{
+		name = "Carlos Edwards";
+		face = "face24";
+		glasses = "None";
+		speaker = "Rob";
+		pitch = 1;
+	};
+// etc
+};
+
+exitScore = -100;
+weaponPool = true;
+
+class MissionDefault
+{
+ 	lives = -1;
+
+	lost = ;
+	end1 = ;
+	end2 = ;
+	end3 = ;
+	end4 = ;
+	end5 = ;
+	end6 = ;
+};
+
+class Campaign
+{
+	briefingName = "PMC Real War 1 v0.?";
+	author = "Snake Man";
+	overviewText = "Not really sure, cant remember how this was on arma1 HEHE, stay tuned HEHE :)";
+	firstBattle = Beginning;
+
+	class Beginning
+	{
+		name = "Beginning";
+		cutscene = ;
+		firstMission = pmc0;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		lost = ;
+
+		// initialize the campaign variables and stuff.
+		class pmc0: MissionDefault
+		{
+			end1 = pmc1;
+			lost = pmc1;
+			template = snake_CEX_realwar_3_init.PMC_51km_desert;
+		};
+
+		// first real mission, destroy few city targets.
+		class pmc1: MissionDefault
+		{
+			end1 = pmc2;
+			lost = pmc1;
+			template = snake_CEX_realwar_3.PMC_51km_desert;
+		};
+
+		// artillery hunt.
+		class pmc2: MissionDefault
+		{
+			end1 = pmc1;
+			lost = pmc2;
+			template = snake_CEX_realwar_arty.PMC_51km_desert;
+		};
+	};
+};

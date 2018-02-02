@@ -8,6 +8,7 @@ Campaigns:
 * PMC Guerrilla Bastard
 * PMC Heros Path
 * PMC Powder Bat
+* PMC Real War 1
 * PMC Tank Hunter
 * 4 various test campaigns
 

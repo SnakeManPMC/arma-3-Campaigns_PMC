@@ -1,0 +1,279 @@
+
+class CEX
+{
+	// Global CEX Settings
+	DebugLevel         = 0;
+	DebugLogLevel      = 0;
+	ColorUnit          = "Blue";
+	EnemiesResistance[]= {"east"};
+	UnitServerUpdateInterval = 1;
+	
+	// Global CEX UI Settings
+	LaunchOnStart      = 0;
+	CamEnabled         = 1;
+	HudEnabled         = 1;
+	SwitchEnabled      = 1;
+	CamMaxHeight       = 100;
+	CamMaxDistance     = 100000;
+	CamMaxAngle        = "45";  // "-atan(_this/100)";
+	HudViewRange       = 1000;
+	ColorHighlight     = "Orange";
+	ColorEnemy         = "Red";
+	UseArmAMap         = 1;
+	PlayerChatMessagesEnabled = 1;
+	InterfaceUpdateInterval = 1;
+
+	class Battalion
+	{
+		IconMap  = "COC_NATO_HQ_BASIC";
+		CallSign = "BATTALION";
+
+	class Company
+	{
+		IconMap  = "COC_NATO_INF_STANDARD_COMPANY";
+		CallSign = "COMPANY"; 
+		
+		class PlatoonA
+		{
+			Name     = "Inf. Platoon";
+			CallSign = "%3";
+			NameMap  = "INF";
+			IconMap  = "COC_NATO_INF_STANDARD_PLATOON";
+			
+			class racs1
+			{
+				Leader   = "racs1";
+				Name     = "Squad %1";
+				CallSign = "%5-%4";
+				NameMap  = "%1";
+				IconMap  = "COC_NATO_INF_STANDARD_SQUAD";
+			};
+			class racs2: racs1
+			{
+				leader = "racs2";
+			};
+			class racs3: racs1
+			{
+				leader = "racs3";
+			};
+		};
+
+		class jeeps
+		{
+			Name     = "Veh. Platoon";
+			CallSign = "%3";
+			NameMap  = "Vehicles";
+			IconMap  = "COC_NATO_INF_WHEELEDFV_PLATOON";
+			
+			class racsjeep1
+			{
+				Leader   = "racsjeep1";
+				Name     = "4x4 %1";
+				CallSign = "%5-%4";
+				NameMap  = "%1";
+				IconMap  = "COC_NATO_INF_WHEELEDFV";
+			};
+			class racsjeep2: racsjeep1
+			{
+				leader = "racsjeep2";
+			};
+			class racsjeep3: racsjeep1
+			{
+				leader = "racsjeep3";
+			};
+		};
+
+		class support
+		{
+			Name     = "Supp. Platoon";
+			CallSign = "%3";
+			NameMap  = "Support";
+			IconMap  = "COC_NATO_INF_WHEELEDFV_PLATOON";
+			
+			class racssupp1
+			{
+				Leader   = "racssupp1";
+				Name     = "Ammo %1";
+				CallSign = "%5-%4";
+				NameMap  = "%1";
+				IconMap  = "COC_NATO_INF_WHEELED";
+			};
+			class racssupp2: racssupp1
+			{
+				leader = "racssupp2";
+				Name = "Refuel %1";
+			};
+			class racssupp3: racssupp1
+			{
+				leader = "racssupp3";
+				Name = "Repair %1";
+			};
+			class racssupp4: racssupp1
+			{
+				leader = "racssupp4";
+				Name = "Medic M113 %1";
+			};
+		};
+
+		class helos
+		{
+			Name     = "Air. Platoon";
+			CallSign = "%3";
+			NameMap  = "Air";
+			IconMap  = "COC_NATO_AVIATION_HELO";
+			
+			class racshelo1
+			{
+				Leader   = "racshelo1";
+				Name     = "Utility %1";
+				NameMap  = "Blackhawk %1";
+				CallSign = "%5-%4";
+				IconMap  = "COC_NATO_AVIATION_HELOLIFT_MED";
+			};
+			class racshelo2: racshelo1
+			{
+				leader = "racshelo2";
+			};
+		};
+	};
+	};
+};
+
+class CEX_CustomUI
+{
+	title    = "Mission Menu";	// Default Widget Title
+	enabled  = "true";		// Custom Menu enabled
+	onEnter  = "";   // Executed when starting CE interface
+
+	class Menus
+	{
+		colorText[]         = {0,0,0,1};	// Default Text Color
+		colorTextHighlight[]= {0.8,0.3,0,1};
+		colorTextDisabled[] = {0.5,0.5,0.5,1};
+		fontSize         = 1.1;
+		width            = 0.25;
+			
+		class MainMenu
+		{
+			title   = "External Support";
+			onEnter = "";
+			onExit  = "";
+			
+			class Support
+			{
+				text    = "Support>";
+				action  = "'Support'call _openMenu";
+				tooltip = "Call various combat support assets";  
+			};
+		};
+		
+		class Support
+		{
+			title="Support";
+			width=0.15;
+			class Mortar
+			{
+				text    = "Mortar";
+				action  = "['Pick Position',{player sidechat format['Mortar Strike on Grid %1',_pos call cei_pos2grid]}]call _pickPos";
+				tooltip = "Call for Company mortar strike";
+			};
+			class Artillery
+			{
+				text    = "Artillery";
+				action  = "['Pick Position',{player sidechat format['Artillery Strike on Grid %1',_pos call cei_pos2grid]}]call _pickPos";
+				tooltip = "Call for battalion artillery strike";
+			};
+			class MLRS
+			{
+				text    = "MLRS";
+				action  = "['Pick Position',{player sidechat format['MLRS Strike on Grid %1',_pos call cei_pos2grid]}]call _pickPos";
+				tooltip = "Call for MLRS strike";
+			};
+		};
+	};
+	
+	class Text
+	{
+		title="";
+		colorBackground[]={1,1,1,1};
+		colorText[]      ={0,0,0,1};
+		width            =0.3;
+		height           =0.4;
+		fontSize         =0.02;
+	};
+	
+	class ContextMenu
+	{
+		title  ="Support";
+		width  =0.15;
+		show   ="true";
+		enabled="true";
+		pic    ="";
+		
+		class Mortar
+		{
+			text    = "Mortar";
+			action  = "player sidechat format['Mortar Strike on Grid %1,%2',_pos call cei_pos2grid,_units]; [_pos] execVM 'PMC\PMC_mortar.sqf';";
+		};
+		class Artillery
+		{
+			text    = "Artillery";
+			action  = "player sidechat format['Artillery Strike on Grid %1',_pos call cei_pos2grid]; [_pos] execVM 'PMC\PMC_artillery.sqf';";
+		};
+		class MLRS
+		{
+			text    = "MLRS";
+			action  = "player sidechat format['MLRS Strike on Grid %1',_pos call cei_pos2grid]; [_pos] execVM 'PMC\PMC_mlrs.sqf';";
+		};
+		class Airsupport_A10
+		{
+			text    = "Airsupport - A10";
+			action  = "player sidechat format['A10 airsupport on Grid %1',_pos call cei_pos2grid]; [_pos,PMC_blufor_start_1,'A10'] execVM 'PMC\PMC_airsupport.sqf';";
+		};
+		class Airsupport_AH1
+		{
+			text    = "Airsupport - AH1";
+			action  = "player sidechat format['AH1 airsupport on Grid %1',_pos call cei_pos2grid]; [_pos,PMC_blufor_start_1,'AH1'] execVM 'PMC\PMC_airsupport.sqf';";
+		};
+	};
+	
+	class StartMenu
+	{
+		title      ="Support";
+		width      =0.2;
+		buttonwidth=0.09;
+		show       ="true";
+		enabled    ="true";
+		
+		class Support
+		{
+			text="Support";
+			width=0.10;
+			class Mortar
+			{
+				text    = "Mortar";
+				action  = "['Pick Position',{player sidechat format['Mortar Strike on Grid %1',_pos call cei_pos2grid]}]call _pickPos";
+			};
+			class Artillery
+			{
+				text    = "Artillery";
+				action  = "['Pick Position',{player sidechat format['Artillery Strike on Grid %1',_pos call cei_pos2grid]}]call _pickPos";
+			};
+			class MLRS
+			{
+				text    = "MLRS";
+				action  = "['Pick Position',{player sidechat format['MLRS Strike on Grid %1',_pos call cei_pos2grid]}]call _pickPos";
+			};
+			class Airsupport_A10
+			{
+				text    = "Airsupport - A10";
+				action  = "player sidechat format['A10 airsupport on Grid %1',_pos call cei_pos2grid]; [_pos,PMC_blufor_start_1,'A10'] execVM 'PMC\PMC_airsupport.sqf';";
+			};
+			class Airsupport_AH1
+			{
+				text    = "Airsupport - AH1";
+				action  = "player sidechat format['AH1 airsupport on Grid %1',_pos call cei_pos2grid]; [_pos,PMC_blufor_start_1,'AH1'] execVM 'PMC\PMC_airsupport.sqf';";
+			};
+		};
+	};
+};
