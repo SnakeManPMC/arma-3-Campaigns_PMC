@@ -5,6 +5,7 @@ ArmA 3 all PMC campaigns, these campaign missions use CUP.
 See [CUP download](http://cup-arma3.org/download) and [PMC Tactical ArmA 3](https://www.pmctactical.org/arma3/index.php)
 
 Campaigns:
+* PMC Brave Hammer
 * PMC Guerrilla Bastard
 * PMC Heros Path
 * PMC Powder Bat

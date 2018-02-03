@@ -1,0 +1,2 @@
+
+player createDiaryRecord ["Diary", ["Situation", "Our war against the insurgent army of Chedaki is about to begin. Chernarus is no mans land, United States have no friends or intelligence about this place.<br/><br/>The Chedaki is terrorizing the local population, they have seized all the villages and cities, including airfields and harbors.<br/><br/>US government finally decided to step in. This campaign begins with Marine Force Recon team entering into Chernarus mainland to conduct reconnaissance.<br/><br/>Arm your team for long deployment on the field."]];
