@@ -8,6 +8,7 @@ Campaigns:
 * PMC Brave Hammer
 * PMC Guerrilla Bastard
 * PMC Heros Path
+* PMC Joint Justice
 * PMC Powder Bat
 * PMC Real War 1
 * PMC Tank Hunter

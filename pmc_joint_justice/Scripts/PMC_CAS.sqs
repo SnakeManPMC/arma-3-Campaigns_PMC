@@ -1,0 +1,113 @@
+
+onMapSingleClick "";
+
+1 setradiomsg "null";
+
+_pos = _this select 0;
+_sp = "CUP_B_USMC_Pilot";
+_s = getMarkerPos "spawn";
+_t = "target";
+
+;[_pos, "TARGET AT GRID COORDINATES ", ". OVER.", ["SideChat", player]] exec "gridcoordinates_pipe.sqs";
+
+_t setMarkerPos _pos;
+_t setMarkerColor "ColorRed";
+_t setMarkerType "destroy";
+
+_splane = "CUP_B_A10_CAS_USA" createvehicle _s;
+_splane setPos [(getPos _splane select 0),(getPos _splane select 1),(getPos _splane select 2)+800];
+_splane setDir 315;
+
+_sp createunit [_s, usinf1, "e1=this", 1, "SERGEANT"];
+[e1] join grpnull;
+_tmpgrp = group e1;
+
+e1 moveInDriver _splane;
+e1 doMove _pos;
+e1 setbehaviour "careless";
+e1 setspeedmode "full";
+e1 setcombatmode "blue";
+e1 sidechat "ON MY WAY. OVER.";
+~3
+
+
+#OnMyWay
+~.3
+if (!unitReady e1) then { goto "OnMyWay"; };
+
+e1 sidechat "BOMBS AWAY! BOMBS AWAY!";
+
+_num=random 5;_num=_num-(_num mod 1);
+_i=0;
+
+#loop
+_bomb = "LaserGuidedBomb" createvehicle [(getPos _splane select 0)+((random 10)-7),(getPos _splane select 1)+((random 10)-7),(getPos _splane select 2)-5];
+_bomb setDir (getDir _splane);
+_bomb setVelocity [(velocity _splane select 0)*0.2,(velocity _splane select 1)*0.2,(velocity _splane select 2)*0.2];
+_i=_i+1;
+~0.25
+?_i< _num: goto "loop";
+
+e1 doMove _s;
+~2
+e1 sidechat "RETURNING TO LOITER POS.";
+
+_t setMarkerColor "ColorGreen";
+
+#RTB
+~2
+if (!unitReady e1) then { goto "RTB"; };
+
+_t setMarkerType "empty";
+deleteVehicle _splane;
+deleteVehicle e1;
+
+1 setradiomsg "Call - Airstrike";
+
+exit
+
+
+
+
+
+
+
+_pilot = "CUP_B_USMC_Crew";
+
+_pilot createunit [_s, usinf1, "e1 = this", 1, "SERGEANT"];
+[e1] join grpnull;
+_tmpgrp = group e1;
+
+_pilot createunit [getPos leader _tmpgrp, _tmpgrp, "e2 = this", 1, "CORPORAL"];
+[e2] join _tmpgrp;
+
+_poo = ["CUP_B_AH1Z_AT","CUP_B_AH64D_MR_USA"];
+_r1=0;
+_r1= random count _poo;
+_r1=_r1 - (_r1 mod 1);
+_rtmptnk = _poo select _r1;
+
+_helo = _rtmptnk createvehicle _s;
+
+e1 moveinDriver _helo;
+e2 moveinGunner _helo;
+
+; 0 start, 1 S&D, 2 cycle.
+[_tmpgrp, 0] setwppos _pos;
+[_tmpgrp, 1] setwppos _pos;
+[_tmpgrp, 2] setwppos _pos;
+
+
+
+
+
+;----
+"CUP_B_USMC_Crew" createunit [getpos west_helostart, usinf1, "e1 = this", 1, "SERGEANT"];
+[e1] join grpnull;
+_tmpgrp = group e1;
+e1 addEventHandler ["killed",{_this exec "killed.sqs"}]
+
+"CUP_B_USMC_Crew" createunit [getpos west_helostart, usinf1, "e2 = this", 1, "CORPORAL"];
+[e2] join grpnull;
+[e2] join _tmpgrp;
+e2 addEventHandler ["killed",{_this exec "killed.sqs"}]
