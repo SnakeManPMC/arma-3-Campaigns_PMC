@@ -1,0 +1,217 @@
+OnMapSingleClick {if (Count _units == 0) then {[_pos, _shift, _alt] exec (rRadioFolder + "\markeraction.sqs"); true} else {false}};
+
+_pos = _this select 0;
+
+OnMapSingleClick {if (Count _units == 0) then {[_pos, _shift, _alt] exec (rRadioFolder + "\markeraction.sqs"); true} else {false}}
+
+; long waypoint distance, was 6400.
+_lwp=6400;
+
+"target" setMarkerPos _pos;
+"target" setMarkerType "destroy";
+
+_t = "Logic" createVehicle _pos;
+
+strikePlane = "CUP_B_A10_CAS_USA" createvehicle (getMarkerPos "spawn");
+strikePlane setPos [(getPos strikePlane select 0),(getPos strikePlane select 1),(getPos strikePlane select 2)+800];
+strikePlane setDir 180;
+
+strikePilot assignAsDriver strikePlane;
+strikePilot moveInDriver strikePlane;
+strikePilot setbehaviour "careless";
+strikePilot setcombatmode "blue";
+strikePilot setspeedmode "full";
+strikePilot sideChat "A-10 on the way, stand by.";
+strikePilot flyinheight 85;
+
+;
+; if the target is too far away
+;
+if (strikePlane distance _t > _lwp) then { goto "BigMotherFuckerMovingShit"; };
+
+strikePilot doMove getpos _t;
+~3
+
+; we are back
+#EndAlive
+
+@unitReady strikePilot;
+strikePilot sideChat "BOMBS AWAY! BOMBS AWAY!";
+
+_num = 4;
+_i = 0;
+
+#loop
+_bomb = "laserGuidedBomb" createvehicle [(getPos strikePlane select 0)+((random 10)-5),(getPos strikePlane select 1)+((random 10)-5),(getPos strikePlane select 2)-3]
+_bomb setDir (getDir strikePlane)
+_bomb setVelocity [(velocity strikePlane select 0)*0.2,(velocity strikePlane select 1)*0.2,(velocity strikePlane select 2)*0.2]
+_i = _i + 1
+~0.3
+? _i < _num : goto "loop"
+
+
+;
+; fly back home
+;
+_t setpos (getMarkerPos "spawn");
+strikePilot sideChat "Heading back to base.";
+"target" setMarkerType "empty";
+
+;
+; if the target is too far away
+;
+if (strikePlane distance _t > _lwp) then { goto "BigMotherFuckerMovingShit2"; };
+
+strikePilot doMove getpos _t;
+
+; we are back
+#EndAlive2
+
+#RTBLoop
+~2
+if (!unitReady strikePilot) then { goto "RTBLoop"; };
+
+deleteVehicle strikePlane;
+strikePilot setdammage 0;
+strikePilot setVelocity [0,0,0];
+strikePilot setPos (getMarkerPos "safe");
+strikePilot sideChat "Reporting back at the base and ready for re-tasking.";
+
+deleteVehicle _t;
+
+exit
+
+
+
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+; balls are sweating
+;
+;
+; plot waypoints by Snake Man & Zeneth
+;
+; give this script a 
+; [groupname,destination object] exec "patrol.sqs";
+
+#BigMotherFuckerMovingShit
+
+_targetP = _t;
+
+_Xend = getpos _targetP select 0
+_Yend = getpos _targetP select 1
+_Xstart = getpos strikePlane select 0
+_Ystart = getpos strikePlane select 1
+
+; umm this tries to make the substeps little less, 
+; but still dynamic according to the distance to travel.
+_r1=( (strikePlane distance _t) / _lwp );
+_r1=_r1-(_r1 mod 1);
+_sT = _r1;
+
+_dX = _Xend - _Xstart
+_dY = _Yend - _Ystart
+_SubSteps = _sT;
+_ActStep = 1;
+_posX=0;
+_posY=0;
+
+
+#WPLoop
+_posX = _Xstart + (_dX * _ActStep / _SubSteps);
+_posY = _Ystart + (_dY * _ActStep / _SubSteps);
+goto "MoveTheGroup";
+#ReturnFromMove
+_ActStep=_ActStep+1;
+?(_ActStep < _SubSteps): goto "WPLoop";
+
+
+strikePilot doMove getpos _targetP;
+#WaitMyDamnGuys
+~3
+if (!unitready strikePilot) then { goto "WaitMyDamnGuys"; };
+
+; plotting has completely ended, return our command to the fight part of this script
+goto "EndAlive";
+
+
+#MoveTheGroup
+strikePilot doMove [_posX,_posY];
+#MoveLoop
+~2
+if (!unitready strikePilot) then { goto "MoveLoop"; };
+goto "ReturnFromMove";
+
+
+
+
+
+
+
+;
+; flying back home
+;
+#BigMotherFuckerMovingShit2
+
+_targetP = _t;
+
+_Xend = getpos _targetP select 0
+_Yend = getpos _targetP select 1
+_Xstart = getpos strikePlane select 0
+_Ystart = getpos strikePlane select 1
+
+; umm this tries to make the substeps little less, 
+; but still dynamic according to the distance to travel.
+_r1=( (strikePlane distance _t) / _lwp);
+_r1=_r1-(_r1 mod 1);
+_sT = _r1;
+
+_dX = _Xend - _Xstart
+_dY = _Yend - _Ystart
+_SubSteps = _sT;
+_ActStep = 1;
+_posX=0;
+_posY=0;
+
+
+#WPLoop2
+_posX = _Xstart + (_dX * _ActStep / _SubSteps);
+_posY = _Ystart + (_dY * _ActStep / _SubSteps);
+goto "MoveTheGroup2";
+#ReturnFromMove2
+_ActStep=_ActStep+1;
+?(_ActStep < _SubSteps): goto "WPLoop2";
+
+
+strikePilot doMove getpos _targetP;
+#WaitMyDamnGuys2
+~3
+if (!unitready strikePilot) then { goto "WaitMyDamnGuys2"; };
+
+; plotting has completely ended, return our command to the fight part of this script
+goto "EndAlive2";
+
+
+#MoveTheGroup2
+strikePilot doMove [_posX,_posY];
+#MoveLoop2
+~2
+if (!unitready strikePilot) then { goto "MoveLoop2"; };
+goto "ReturnFromMove2";

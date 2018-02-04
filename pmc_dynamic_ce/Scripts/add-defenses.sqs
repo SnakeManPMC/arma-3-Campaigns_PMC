@@ -1,0 +1,162 @@
+_marker = _this select 0;
+
+PMC_EastTanks = ["BMP_INS","CUP_O_BMP2_CHDKZ","CUP_O_ZSU23_TK","CUP_O_T55_TK","CUP_O_T72_RU","CUP_O_T72_RU"];
+PMC_WestTanks = ["CUP_B_M2Bradley_USA_D","CUP_B_M2Bradley_USA_D","CUP_B_M1A2_TUSK_MG_USMC","CUP_B_M1A2_TUSK_MG_USMC"];
+
+_city = getmarkerpos _marker
+if (getmarkercolor _marker == "ColorRed") then { goto "Rusforces"; };
+if (getmarkercolor _marker == "ColorGreen") then { goto "USforces"; };
+
+exit;
+
+
+
+#USforces
+;
+; US
+;
+_usdgrp=[];
+
+_ran = random(1);
+"CUP_B_USMC_Soldier_SL" createunit [_city, usinf1, "d1 = this", _ran, "SERGEANT"]
+[d1] join grpnull
+_usdgrp = group d1;
+
+_ran = random(1);
+"CUP_B_USMC_Soldier" createunit [_city, _usdgrp, "", _ran, "CORPORAL"]
+
+_ran = random(1);
+"CUP_B_USMC_Soldier_GL" createunit [_city, _usdgrp, "", _ran, "CORPORAL"]
+
+_ran = random(1);
+"CUP_B_USMC_Soldier_AT" createunit [_city, _usdgrp, "", _ran, "PRIVATE"]
+
+"CUP_B_USMC_Soldier_MG" createunit [_city, _usdgrp, "", 1, "PRIVATE"]
+
+_ran = random(1);
+"CUP_B_USMC_Medic" createunit [_city, _usdgrp, "", _ran, "PRIVATE"]
+
+_usdgrp setbehaviour "safe";
+_usdgrp setcombatmode "green";
+_usdgrp setspeedmode "limited";
+_usdgrp setformation "wedge";
+
+{_x addEventHandler [{killed}, {_this exec "killed.sqs"}]} forEach units _usdgrp;
+{[_x] exec "init_addTracers.sqs"} foreach units _usdgrp;
+
+_usbox = "CUP_USBasicAmmunitionBox" createvehicle _city;
+_ran=2 + random 5;
+_ran=_ran-(_ran mod 1);
+_usbox addMagazineCargo ["CUP_MineE", _ran]
+_ran=2 + random 5;
+_ran=_ran-(_ran mod 1);
+_usbox addMagazineCargo ["CUP_PipeBomb_M", _ran]
+
+_gun0 = "JAM_M2StaticMGHD" createVehicle _city;
+_gun0 addEventHandler [{killed}, {_this exec "killed.sqs"}]
+[_gun0,3]call loadfile"\bn_tracer\addtracerunit.sqf";
+_gun0 setdir random 360;
+(units _usdgrp select 1) moveingunner _gun0;
+
+
+; this will most likely poop badly on positioning as I have no idea where the houses are :(
+_usmedtent = "MASH" createVehicle _city;
+
+;
+; random chance of armor
+;
+if (random 100 < 50) then { goto "WestExtraArmor"; };
+
+westguys=westguys+6;
+exit
+
+#WestExtraArmor
+_r1= random (count PMC_WestTanks);
+_r1=_r1 - (_r1 mod 1);
+_rtmptnk = PMC_WestTanks select _r1;
+
+_m2a2 = _rtmptnk createvehicle _city;
+_m2a2 addEventHandler ["killed",{_this exec "killed.sqs";_this exec "fx\fx_init.sqs"}]
+
+"CUP_B_USMC_Crew" createunit [_city, _usdgrp, "this moveincommander _m2a2", 1, "PRIVATE"];
+"CUP_B_USMC_Crew" createunit [_city, _usdgrp, "this moveingunner _m2a2", 1, "PRIVATE"];
+"CUP_B_USMC_Crew" createunit [_city, _usdgrp, "this moveindriver _m2a2", 1, "PRIVATE"];
+
+westguys=westguys+9;
+exit
+
+
+
+;
+; Russians
+;
+#Rusforces
+
+_rusdgrp=[];
+
+_ran = random(1);
+"CUP_O_RU_Soldier_SL" createunit [_city, rusinf1, "d2 = this", _ran, "SERGEANT"]
+[d2] join grpnull
+_rusdgrp = group d2;
+
+_ran = random(1);
+"CUP_O_RU_Soldier" createunit [_city, _rusdgrp, "", _ran, "CORPORAL"]
+
+_ran = random(1);
+"CUP_O_RU_Soldier_GL" createunit [_city, _rusdgrp, "", _ran, "CORPORAL"]
+
+_ran = random(1);
+"JAM_CAVS_EBSoldierRPGALL" createunit [_city, _rusdgrp, "", _ran, "CORPORAL"]
+
+"CUP_O_RU_Soldier_MG" createunit [_city, _rusdgrp, "", 1, "PRIVATE"]
+
+_ran = random(1);
+"CUP_O_RU_Medic" createunit [_city, _rusdgrp, "", _ran, "PRIVATE"]
+
+_rusdgrp setbehaviour "safe";
+_rusdgrp setcombatmode "green";
+_rusdgrp setspeedmode "limited";
+_rusdgrp setformation "wedge";
+
+{_x addEventHandler [{killed}, {_this exec "killed.sqs"}]} forEach units _rusdgrp;
+{[_x] exec "init_addTracers.sqs"} foreach units _rusdgrp;
+
+_rusbox = "CUP_RUBasicAmmunitionBox" createvehicle _city;
+_ran=2 + random 5;
+_ran=_ran-(_ran mod 1);
+_rusbox addMagazineCargo ["CUP_MineE", _ran]
+_ran=2 + random 5;
+_ran=_ran-(_ran mod 1);
+_rusbox addMagazineCargo ["CUP_PipeBomb_M", _ran]
+
+_gun1 = "CUP_O_DSHKM_ChDKZ" createVehicle _city;
+_gun1 addEventHandler [{killed}, {_this exec "killed.sqs"}]
+[_gun1,3]call loadfile"\bn_tracer\addtracerunit.sqf";
+_gun1 setdir random 360;
+(units _rusdgrp select 1) moveingunner _gun1;
+
+; this will most likely poop badly on positioning as I have no idea where the houses are :(
+_rusmedtent = "MASH" createVehicle _city;
+
+;
+; random chance of armor
+;
+if (random 100 < 50) then { goto "EastExtraArmor"; };
+
+eastguys=eastguys+6;
+exit
+
+#EastExtraArmor
+_r1= random (count PMC_EastTanks);
+_r1=_r1 - (_r1 mod 1);
+_rtmptnk = PMC_EastTanks select _r1;
+
+_m2a2 = _rtmptnk createvehicle _city;
+_m2a2 addEventHandler ["killed",{_this exec "killed.sqs";_this exec "fx\fx_init.sqs"}]
+
+"CUP_O_RU_Crew" createunit [_city, _rusdgrp, "this moveincommander _m2a2", 1, "PRIVATE"];
+"CUP_O_RU_Crew" createunit [_city, _rusdgrp, "this moveingunner _m2a2", 1, "PRIVATE"];
+"CUP_O_RU_Crew" createunit [_city, _rusdgrp, "this moveindriver _m2a2", 1, "PRIVATE"];
+
+eastguys=eastguys+9;
+exit

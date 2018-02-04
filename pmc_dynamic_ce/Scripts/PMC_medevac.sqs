@@ -1,0 +1,235 @@
+_helo = vehicle leader transp1;
+_h = getpos vehicle leader transp1;
+_pos = _this select 0
+_selectMarkers = []
+
+OnMapSingleClick {if (Count _units == 0) then {[_pos, _shift, _alt] exec (rRadioFolder + "\markeraction.sqs"); true} else {false}}
+
+;this determines the ID of clicked group
+{_selectMarkers = _selectMarkers + [(rSquadParameters select _x) select 4]} forEach rCommandedSquads
+
+_selectedID = [_pos, 50, _selectMarkers] call loadFile "func\getClickedMarker.sqf";
+
+;if player does not click a marker, cancel sequence
+?_selectedID < 0: exit;
+
+; radio message confirming helo is on way
+_helo sidechat "This is MedEvac, we are on our way. Stay put. Over.";
+
+;this is the groupname corresponding to the clicked marker
+_group = (rSquadParameters select _selectedID) select 0
+
+; long waypoint distance, was 6400.
+_lwp=6400;
+
+_t = "Logic" createVehicle (getpos leader _group);
+
+;
+; if the target is too far away
+;
+if (_helo distance _t > _lwp) then { goto "BigMotherFuckerMovingShit"; };
+
+_helo move getpos _t;
+
+; we are back
+#EndAlive
+
+
+
+#Outbound
+~1
+if (!alive _helo) then { exit; };
+if (!unitReady _helo) then { goto "Outbound"; };
+
+; radio message about medevac landing.
+_helo sidechat "MedEvac landing to pickup troops. Over.";
+
+_helo land "get in";
+
+{_x assignAsCargo _helo} foreach units _group;
+{[_x] orderGetIn true} foreach units _group;
+
+#Loop
+~1
+_cargo1 = (crew _helo) - [driver _helo, gunner _helo];
+_cargo2 = units _group;
+if (!alive _helo) then { exit; };
+if (count _cargo1 != count _cargo2) then { goto "Loop"; };
+
+; radio message medevac heading back to base.
+_helo sidechat "MedEvac reporting everyone is onboard, RTB. Over.";
+
+
+_t setpos _h;
+
+;
+; if the target is too far away
+;
+if (_helo distance _t > _lwp) then { goto "BigMotherFuckerMovingShit2"; };
+
+_helo move getpos _t;
+
+; we are back
+#EndAlive2
+
+#Inbound
+~1
+if (!alive _helo) then { exit; };
+if (!unitready _helo) then { goto "Inbound"; };
+
+;
+; get people out
+;
+_helo land "land";
+
+#Landing
+~1
+if (getpos _helo select 2 > 2) then { goto "Landing"; };
+
+{unassignvehicle _x} foreach units _group;
+
+; radio message medevac at the base, wounded unloaded.
+_helo sidechat "MedEvac back at the base, cargo unloading. Over.";
+~5
+
+leader _group sidechat "We are back at the base. Over.";
+leader _group move getpos US_hospital;
+_helo setdammage 0; _helo setfuel 1;
+deleteVehicle _t;
+
+exit
+
+
+
+
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+; balls are sweating
+;
+;
+; plot waypoints by Snake Man & Zeneth
+;
+; give this script a 
+; [groupname,destination object] exec "patrol.sqs";
+
+#BigMotherFuckerMovingShit
+
+_targetP = _t;
+
+_Xend = getpos _targetP select 0
+_Yend = getpos _targetP select 1
+_Xstart = getpos _helo select 0
+_Ystart = getpos _helo select 1
+
+; umm this tries to make the substeps little less, 
+; but still dynamic according to the distance to travel.
+_r1=( (_helo distance _t) / _lwp );
+_r1=_r1-(_r1 mod 1);
+_sT = _r1;
+
+_dX = _Xend - _Xstart
+_dY = _Yend - _Ystart
+_SubSteps = _sT;
+_ActStep = 1;
+_posX=0;
+_posY=0;
+
+
+#WPLoop
+_posX = _Xstart + (_dX * _ActStep / _SubSteps);
+_posY = _Ystart + (_dY * _ActStep / _SubSteps);
+goto "MoveTheGroup";
+#ReturnFromMove
+_ActStep=_ActStep+1;
+?(_ActStep < _SubSteps): goto "WPLoop";
+
+
+_helo move getpos _targetP;
+#WaitMyDamnGuys
+~3
+if (!unitready _helo) then { goto "WaitMyDamnGuys"; };
+
+; plotting has completely ended, return our command to the fight part of this script
+goto "EndAlive";
+
+
+#MoveTheGroup
+_helo move [_posX,_posY];
+#MoveLoop
+~2
+if (!unitready _helo) then { goto "MoveLoop"; };
+goto "ReturnFromMove";
+
+
+
+
+
+
+;
+; fly back home
+;
+#BigMotherFuckerMovingShit2
+
+_targetP = _t;
+
+_Xend = getpos _targetP select 0
+_Yend = getpos _targetP select 1
+_Xstart = getpos _helo select 0
+_Ystart = getpos _helo select 1
+
+; umm this tries to make the substeps little less, 
+; but still dynamic according to the distance to travel.
+_r1=( (_helo distance _t) / _lwp );
+_r1=_r1-(_r1 mod 1);
+_sT = _r1;
+
+_dX = _Xend - _Xstart
+_dY = _Yend - _Ystart
+_SubSteps = _sT;
+_ActStep = 1;
+_posX=0;
+_posY=0;
+
+
+#WPLoop2
+_posX = _Xstart + (_dX * _ActStep / _SubSteps);
+_posY = _Ystart + (_dY * _ActStep / _SubSteps);
+goto "MoveTheGroup2";
+#ReturnFromMove2
+_ActStep=_ActStep+1;
+?(_ActStep < _SubSteps): goto "WPLoop2";
+
+
+_helo move getpos _targetP;
+#WaitMyDamnGuys2
+~3
+if (!unitready _helo) then { goto "WaitMyDamnGuys2"; };
+
+; plotting has completely ended, return our command to the fight part of this script
+goto "EndAlive2";
+
+
+#MoveTheGroup2
+_helo move [_posX,_posY];
+#MoveLoop2
+~2
+if (!unitready _helo) then { goto "MoveLoop2"; };
+goto "ReturnFromMove2";
