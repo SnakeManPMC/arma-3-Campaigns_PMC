@@ -1,0 +1,55 @@
+
+class MissionDefault
+{
+	lives = -1;
+
+	lost = ;
+	end1 = ;
+	end2 = ;
+	end3 = ;
+	end4 = ;
+	end5 = ;
+	end6 = ;
+};
+
+class Campaign
+{
+	briefingName = "PMC Dynamic CE 51km";
+	author = "Snake Man";
+	overviewText = "OFP Chain of Command: Command Engine campaign.";
+	firstBattle = Part1;
+
+	class Part1
+	{
+		name = "Start";
+
+		cutscene = XXXXX_snake_wrk_dyn_CE_cmp_cut1.PMC_51km_desert;
+
+		firstMission = PMC1;
+		lost = ;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+
+		class PMC1: MissionDefault
+		{
+			end1 = PMC2;
+			end2 = PMC3;
+			lost = PMC1;
+			template = XXXXX_snake_wrk_dyn_CE_cmp1.PMC_51km_desert;
+		};
+		class PMC2: MissionDefault
+		{
+			end1 = PMC1;
+			lost = PMC2;
+			template = XXXXX_snake_wrk_dyn_CE_cmp2.PMC_51km_desert;
+		};
+		class PMC3: MissionDefault
+		{
+			template = XXXXX_snake_wrk_dyn_CE_cmp_cut2.PMC_51km_desert;
+		};
+	};
+};

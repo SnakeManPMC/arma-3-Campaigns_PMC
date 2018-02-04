@@ -1,0 +1,57 @@
+@CoCIFInit
+~30
+_Assets = [group mortarg1, group howitzer1]
+_assetnames = [(vehicle leader mortarg1) call CoCfIFFindAsset, (vehicle leader howitzer1) call CoCfIFFindAsset]
+enemytargets = []
+targlocs = []
+#newcounter
+_n = 0
+CurrentTargets = []
+#ScanTargets
+; check if they are dead
+if (!alive leader group mortarg1 || !alive leader group howitzer1) then { exit; };
+~13
+?(!IsNull CoC_IFShellInFlight) && (West Countside [CoC_IFTubeInFlight])> 0:goto "CBTargeting"
+?{call (_x + "p") > 5} count _assetnames == 2:exit
+_n = _n + 1
+? count enemytargets > 0:goto "CommitMortar"
+?_n < 8:goto "ScanTargets"
+goto "newCounter"
+
+#commitmortar
+_mortarname = _assetnames select 0
+_mortarposture = _mortarname + "p"
+?((call _mortarposture) > 0) or ((call _mortarname) distance (enemytargets select 0)> 5000):goto "CommitHowitzer"
+[(call _mortarname), [(enemytargets select 0)]] Call CoCfIFCallFire
+MortarCall = [(call _mortarname), [(enemytargets select 0)]]
+enemytargets set [0, "DELETEME"]
+enemytargets = enemytargets - ["DELETEME"]
+targlocs set [0, "DELETEME"]
+targlocs = targlocs - ["DELETEME"]
+
+_n = 0
+?count enemytargets == 0:goto "ScanTargets"
+
+#commithowitzer
+_howitzer1 = _assetnames select 1
+_howitzer1posture = _howitzer1 + "p"
+?(call _howitzer1posture > 1):goto "ScanTargets"
+[(call _howitzer1), enemytargets, 6,0,0,1] Call CoCfIFCallFire
+h1call = [(call _howitzer1), targlocs , (count enemytargets) *3,6,0,0,1, true]
+
+currenttargets = currenttargets + (enemytargets )
+enemytargets = []
+targlocs = []
+_n = 0
+goto "scantargets"
+
+
+#CBTargeting
+_enemyassets = []
+#NextTubeInFlight
+_tif = CoC_IFTubeInFlight
+?side _tif == EAST:goto "ScanTargets"
+_leader = leader _tif
+?!((_leader in enemytargets) or (_leader in currenttargets)):enemytargets = enemytargets + [_leader];targlocs = targlocs + [getpos _leader]
+?count enemytargets > 0: goto "CommitHowitzer"
+goto "ScanTargets"

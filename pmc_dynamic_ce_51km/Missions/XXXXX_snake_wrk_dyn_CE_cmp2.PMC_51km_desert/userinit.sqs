@@ -1,0 +1,164 @@
+;Initialization file for mission designer input
+
+;groupcolor definitions, do not edit-------------------------------
+	_none = "Groupcolor0"; _black = "Groupcolor1"; _red = "Groupcolor2"; _green = "Groupcolor3"
+	_blue = "Groupcolor4"; _yellow = "Groupcolor5"; _orange = "Groupcolor6"; _pink = "Groupcolor7"
+
+;behaviour sets, do not edit-----------------------------------------
+	_nc = rBehavList_NoChange
+	_assault = rBehavList_Assault
+	_travel = rBehavList_Travel
+	_march = rBehavList_March
+	_cautious = rBehavList_Cautious
+	_stealth = rBehavList_Stealth
+	_safe = rBehavList_Safe
+	_careless = rBehavList_Careless
+
+;waypoint actions, do not edit---------------------------------------
+	_proceed = "WP_NONE"
+	_for = "WP_WAITFOR"
+	_till = "WP_WAITTILL"
+	_wait = "WP_WAIT"
+	_unload = "WP_UNLOAD"
+	_cycle = "WP_CYCLE"
+
+;support asset and mission types, do not edit-----------------------------------
+	_virtual_arty = 0
+		_strike = 0
+	_helo = 1
+		_cas = 0
+		_patrol = 1
+	_custom = 2
+		_support = 0
+
+;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;Command Engine settings
+	;map (world) size in meters, 12800, 25600, 51200
+	rMapSize = 25600
+
+;defining the opposing sides-------------------------------------
+	;Resistance must not appear in both sides
+	;blue side can be [West], [Resistance], [West, Resistance]
+	rBlueSide = [West]
+
+	;red side can be [East], [Resistance], [East, Resistance]
+	rRedSide = [East]
+
+	;side of the player, either rBlueSide or rRedSide
+	rFriendlySide = rBlueSide
+
+;Save game options------------------------------------------------
+	rAllowSave = true
+	rMaxNumSave = 666
+	rTimeLastSave = -99999999
+	rMinSaveInterval = 0
+
+;definition of subordinate groups------------------------------
+	;_groupdescription = [groupname, "NAME", ["Callsign", _color], courage, "markername", ["initmode"(, initbehaviour, initcombatmode)], assignedtransport, [WPs]]
+	_assault1 = [assault1, "Inf Ab", ["Alpha1", _none], 1, "assault1", [""],-1,[]]
+	_assault2 = [assault2, "Inf Bb", ["Alpha2", _none], 1, "assault2", [""],-1,[]]
+	_assault3 = [assault3, "Inf Cb", ["Alpha3", _none], 1, "assault3", [""],-1,[]]
+	_assault4 = [assault4, "Inf Db", ["Alpha4", _none], 1, "assault4", [""],-1,[]]
+	_assault5 = [assault5, "Inf Eb", ["Alpha5", _none], 1, "assault5", [""],-1,[]]
+
+	_ranger1 = [ranger1, "Ranger 1", ["Ranger1", _none], 1, "ranger1", [""],-1,[]]
+	_ranger2 = [ranger2, "Ranger 2", ["Ranger2", _none], 1, "ranger2", [""],-1,[]]
+	_ranger3 = [ranger3, "Ranger 3", ["Ranger3", _none], 1, "ranger3", [""],-1,[]]
+	_seal1 = [seal1, "SEAL 1", ["SEAL1", _none], 1, "seal1", [""],-1,[]]
+	_seal2 = [seal2, "SEAL 2", ["SEAL2", _none], 1, "seal2", [""],-1,[]]
+
+	_ustanks1 = [ustanks1, "M1A1 1", ["M1A11", _none], 1, "ustanks1", [""],-1,[]]
+	_ustanks2 = [ustanks2, "M1A1 2", ["M1A12", _none], 1, "ustanks2", [""],-1,[]]
+	_ustanks3 = [ustanks3, "M2A2 1", ["M2A21", _none], 1, "ustanks3", [""],-1,[]]
+	_ustanks4 = [ustanks4, "M2A2 2", ["M2A22", _none], 1, "ustanks4", [""],-1,[]]
+	_ustanks5 = [ustanks5, "M2A2 3", ["M2A23", _none], 1, "ustanks5", [""],-1,[]]
+
+	_gunships1 = [gunships1, "AH64 1", ["AH641", _none], 1, "gunships1", [""],-1,[]]
+	_gunships2 = [gunships2, "AH64 2", ["AH642", _none], 1, "gunships2", [""],-1,[]]
+	_transp1 = [transp1, "UH60 1", ["UH601", _none], 1, "transp1", [""],-1,[]]
+	_transp2 = [transp2, "UH60 2", ["UH602", _none], 1, "transp2", [""],-1,[]]
+	_transp3 = [transp3, "UH60 3", ["UH603", _none], 1, "transp3", [""],-1,[]]
+
+	rSquadParameters = [_assault1,_assault2,_assault3,_assault4,_assault5,_ranger1,_ranger2,_ranger3,_seal1,_seal2,_ustanks1,_ustanks2,_ustanks3,_ustanks4,_ustanks5,_gunships1,_gunships2,_transp1,_transp2,_transp3]
+
+	rPlatoonCommandStructure = [[0,1,2,3,4], [5,6,7,8,9], [10,11,12,13,14], [15,16,17,18,19], [], [], []]
+	rTeamFormations = [[], [], [], [], [], [], []]
+
+
+;command settings--------------------------------------------------
+	rPlatoonDetectionThreshold = 1500
+	rPlatoonMaxDisplay = 2000
+
+	rShowGroupName = true
+	rRemoteCameraMode = "GROUP"
+
+	rShowActionMenu = false
+
+	rUseHierarchicalStructure = true
+
+	rAllowUserTransfer = true
+	rAllowUserTranportAssignment = true
+	rAllowUserTeamAssignment = true
+	rAllowUserTakeCommand = true
+
+;time slowdown-----------------------------------------------------
+	rAllowTimeSlowdown = true
+	rSlowdownFactor = 0.1
+
+;support settings---------------------------------------------------
+	rShowSupportMenu = true
+	rSupportHQ = "Base"
+
+	rSupportAssets = []
+	rSupportPlayerVisible = []
+
+	rSupportSchedule = []
+
+	rSupportPlayerPreplan = []
+
+;special menu settings--------------------------------------------
+	rShowSpecialMenu = true
+	rSpecialMenuMain = ["End mission", "Airstrike", "Medevac", "Airmobile OPS", "Ammo Drop", "null", "null"]
+		rSpecialMenuSub1 = ["null", "null", "null", "null", "null", "null", "null"]
+		rSpecialMenuSub2 = ["null", "null", "null", "null", "null", "null", "null"]
+		rSpecialMenuSub3 = ["null", "null", "null", "null", "null", "null", "null"]
+		rSpecialMenuSub4 = ["Helo LZ 1", "Helo LZ 2", "Helo LZ 3", "null", "null", "null", "null"]
+		rSpecialMenuSub5 = ["null", "null", "null", "null", "null", "null", "null"]
+		rSpecialMenuSub6 = ["null", "null", "null", "null", "null", "null", "null"]
+		rSpecialMenuSub7 = ["null", "null", "null", "null", "null", "null", "null"]
+
+;map display settings---------------------------------------
+	rUpdatePlatoonDisplay = true
+	rUpdateWaypointDisplay = true
+	rUpdateEnemyDisplay = true
+	rUpdateSpecialDisplay = false
+
+	rSpecialMarkers = []
+	
+	rPlatoonMarkerSize = [0.5, 0.5]
+	rWaypointMarkerSize = [0.75, 0.75]
+	rEnemyMarkerSize = [0.75, 0.75]
+	rSpecialMarkerSize = [0.75, 0.75]
+
+;custom vehicles-----------------------------------------------------
+	rAllowVehicleUsage = true
+	rCustomVehicles = []
+
+;custom vehicle classes (for addons used)-------------------
+	rClassListCarUser = []
+	rClassListTankUser = []
+	rClassListMixedUser = []
+	rClassListHeliUser = []
+	rClassListPlaneUser = []
+	rClassListSmallShipUser = []
+	rClassListBigShipUser = []
+
+;custom soldier classes (for addons used)-------------------
+	rWestSoldiersUser = []
+	rEastSoldiersUser = []
+	rResistanceSoldiersUser = []
+
+;do not edit below this line xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[] exec "prebriefingstuff.sqs"
+
+

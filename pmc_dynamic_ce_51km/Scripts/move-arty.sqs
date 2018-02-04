@@ -1,0 +1,21 @@
+OnMapSingleClick {if (Count _units == 0) then {[_pos, _shift, _alt] exec (rRadioFolder + "\markeraction.sqs"); true} else {false}} 
+
+_pos = _this select 0;
+_m = _this select 1;
+
+OnMapSingleClick {if (Count _units == 0) then {[_pos, _shift, _alt] exec (rRadioFolder + "\markeraction.sqs"); true} else {false}} 
+
+vehicle (units _m select 0) setpos [(_pos select 0),(_pos select 1)];
+vehicle (units _m select 1) setpos [(_pos select 0)+20,(_pos select 1)];
+vehicle (units _m select 2) setpos [(_pos select 0)-20,(_pos select 1)+20];
+vehicle (units _m select 3) setpos [(_pos select 0)+40,(_pos select 1)+20];
+
+if (count units _m == 4) then { exit; };
+vehicle (units _m select 4) setpos [(_pos select 0)+60,(_pos select 1)+20];
+vehicle (units _m select 5) setpos [(_pos select 0)+80,(_pos select 1)+40];
+
+PAPABEAR sideChat "Your artillery units have now been relocated.";
+
+exit
+
+onMapSingleClick {[_pos,usarty1] exec "move-arty.sqs"};

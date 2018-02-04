@@ -1,0 +1,287 @@
+OnMapSingleClick {if (Count _units == 0) then {[_pos, _shift, _alt] exec (rRadioFolder + "\markeraction.sqs"); true} else {false}} 
+
+_pos1=_this select 0;
+_helo=_this select 1;
+_lz=_this select 2;
+_h=_this select 3;
+
+; long waypoint distance, was 6400.
+_lwp=6400;
+
+_t = "Logic" createVehicle _pos1;
+
+_lz setMarkerType "marker";
+_lz setMarkerPos _pos1;
+
+_helo sidechat "Moving into LZ, stand by.";
+
+_helo flyinheight 85;
+_helo setbehaviour "aware";
+_helo setcombatmode "yellow";
+_helo setspeedmode "full";
+
+;
+; if the target is too far away
+;
+if (_helo distance _t > _lwp) then { goto "BigMotherFuckerMovingShit"; };
+
+_helo doMove getpos _t;
+
+; we are back
+#EndAlive
+
+
+#FlyLoop
+~1
+;ok very brute exit if the helo is dead, works for now...
+; is this proper way to check if helo is dead?
+if (!canMove _helo || !alive _helo) then { goto "HeloIsDown"; };
+;if (!alive _helo) then { _lz setMarkerType "empty"; goto "TotalEnd"; };
+if (!unitReady _helo) then { goto "FlyLoop"; };
+
+_helo sidechat "At LZ.";
+_helo land "land";
+
+#LandLoop
+~.5
+; is this proper way to check if helo is dead?
+if (!canMove _helo || !alive _helo) then { goto "HeloIsDown"; };
+;if (!alive _helo) then { _lz setMarkerType "empty"; goto "TotalEnd"; };
+if (getpos _helo select 2 > 2) then { goto "LandLoop"; };
+_helo flyinheight 0;
+
+_cargo1=(crew _helo)-[driver _helo, gunner _helo]
+"unassignvehicle _x" foreach _cargo1
+{_x domove [(_pos1 select 0),(_pos1 select 1)+30,0]} foreach _cargo1
+
+_helo sideChat "Disembarking cargo"
+
+
+;
+; wait until whole squad is out
+;
+_A = 0;
+ejc="EJECT";
+
+{unassignvehicle _x} foreach _cargo1;
+
+_SayGoArray = ["Eng13","Eng14","Eng20","Eng21"];
+(_cargo1 select 0) say (_SayGoArray select random (count _SayGoArray))
+
+#WAITING
+_listunits = _cargo1;
+_B = count _listunits
+~.2
+_listunits select _A action [ejc,_helo];
+_A=_A+1
+?(_B > _A): goto "WAITING"
+
+;
+; fly back home
+;
+_t setpos getpos _h;
+_helo flyinheight 85;
+_lz setMarkerType "empty"
+
+;
+; if the target is too far away
+;
+if (_helo distance _t > _lwp) then { goto "BigMotherFuckerMovingShit2"; };
+
+_helo doMove getpos _t;
+
+; we are back
+#EndAlive2
+
+~2
+#RTBLoop
+~1
+; is this proper way to check if helo is dead?
+if (!canMove _helo || !alive _helo) then { goto "HeloIsDown"; };
+;if (!alive _helo) then { goto "TotalEnd"; };
+if (!unitReady _helo) then { goto "RTBLoop"; };
+
+_helo land "land"
+
+#InBaseLandLoop
+~1
+if (!alive _helo) then { goto "TotalEnd"; };
+if (getpos _helo select 2 > 2) then { goto "InBaseLandLoop"; };
+
+_helo setdammage 0; _helo setfuel 1;
+_helo sidechat "Reporting back at the base, ready for tasking.";
+
+#TotalEnd
+deleteVehicle _t;
+
+exit
+
+
+
+;
+; helo is shot down
+;
+#HeloIsDown
+;helo - helicopter marker
+;unknown - question marker
+;pilot - downed pilot marker
+;if (_helo == "helo1") then { _DownHeloMarker="helodown1"; _HqRadioComms="WE HAVE BLACKHAWK DOWN. WE HAVE BLACKHAWK DOWN. UH60 1 IS DOWN, MARKER PLACED ON THE MAP. GET OUR FORCES THERE IMMEDIATELY TO RESCUE SURVIVORS. OVER."; };
+;if (_helo == "helo2") then { _DownHeloMarker="helodown2"; _HqRadioComms="WE HAVE BLACKHAWK DOWN. WE HAVE BLACKHAWK DOWN. UH60 2 IS DOWN, MARKER PLACED ON THE MAP. GET OUR FORCES THERE IMMEDIATELY TO RESCUE SURVIVORS. OVER."; };
+;if (_helo == "helo3") then { _DownHeloMarker="helodown3"; _HqRadioComms="WE HAVE BLACKHAWK DOWN. WE HAVE BLACKHAWK DOWN. UH60 3 IS DOWN, MARKER PLACED ON THE MAP. GET OUR FORCES THERE IMMEDIATELY TO RESCUE SURVIVORS. OVER."; };
+;?({_x==ACE_Anim}count ACE_SprintAnims > 0):
+_helonames=[_helo];
+?({_x==helo1}count _helonames > 0): _DownHeloMarker="helodown1"; _HqRadioComms="WE HAVE BLACKHAWK DOWN. WE HAVE BLACKHAWK DOWN. UH60 1 IS DOWN, MARKER PLACED ON THE MAP. GET OUR FORCES THERE IMMEDIATELY TO RESCUE SURVIVORS. OVER.";
+?({_x==helo2}count _helonames > 0): _DownHeloMarker="helodown2"; _HqRadioComms="WE HAVE BLACKHAWK DOWN. WE HAVE BLACKHAWK DOWN. UH60 2 IS DOWN, MARKER PLACED ON THE MAP. GET OUR FORCES THERE IMMEDIATELY TO RESCUE SURVIVORS. OVER.";
+?({_x==helo3}count _helonames > 0): _DownHeloMarker="helodown3"; _HqRadioComms="WE HAVE BLACKHAWK DOWN. WE HAVE BLACKHAWK DOWN. UH60 3 IS DOWN, MARKER PLACED ON THE MAP. GET OUR FORCES THERE IMMEDIATELY TO RESCUE SURVIVORS. OVER.";
+_DownHeloMarker setMarkerType "unknown";
+_DownHeloMarker setMarkerPos getpos _helo;
+
+PAPABEAR sideChat _HqRadioComms
+hint "Blackhawk shot down, marker placed on the map...";
+
+deleteVehicle _t;
+exit
+
+
+
+
+
+
+
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+; balls are sweating
+;
+;
+; plot waypoints by Snake Man & Zeneth
+;
+; give this script a 
+; [groupname,destination object] exec "patrol.sqs";
+
+#BigMotherFuckerMovingShit
+
+_targetP = _t;
+
+_Xend = getpos _targetP select 0
+_Yend = getpos _targetP select 1
+_Xstart = getpos _helo select 0
+_Ystart = getpos _helo select 1
+
+; umm this tries to make the substeps little less, 
+; but still dynamic according to the distance to travel.
+_r1=( (_helo distance _t) / _lwp );
+_r1=_r1-(_r1 mod 1);
+_sT = _r1;
+
+_dX = _Xend - _Xstart
+_dY = _Yend - _Ystart
+_SubSteps = _sT;
+_ActStep = 1;
+_posX=0;
+_posY=0;
+
+
+#WPLoop
+_posX = _Xstart + (_dX * _ActStep / _SubSteps);
+_posY = _Ystart + (_dY * _ActStep / _SubSteps);
+goto "MoveTheGroup";
+#ReturnFromMove
+_ActStep=_ActStep+1;
+?(_ActStep < _SubSteps): goto "WPLoop";
+
+
+_helo doMove getpos _targetP;
+#WaitMyDamnGuys
+~3
+; is this proper way to check if helo is dead?
+if (!canMove _helo || !alive _helo) then { goto "HeloIsDown"; };
+if (!unitready _helo) then { goto "WaitMyDamnGuys"; };
+
+; plotting has completely ended, return our command to the fight part of this script
+goto "EndAlive";
+
+
+#MoveTheGroup
+_helo doMove [_posX,_posY];
+#MoveLoop
+~2
+; is this proper way to check if helo is dead?
+if (!canMove _helo || !alive _helo) then { goto "HeloIsDown"; };
+if (!unitready _helo) then { goto "MoveLoop"; };
+goto "ReturnFromMove";
+
+
+
+
+;
+; fly back home
+;
+#BigMotherFuckerMovingShit2
+
+_targetP = _t;
+
+_Xend = getpos _targetP select 0
+_Yend = getpos _targetP select 1
+_Xstart = getpos _helo select 0
+_Ystart = getpos _helo select 1
+
+; umm this tries to make the substeps little less, 
+; but still dynamic according to the distance to travel.
+_r1=( (_helo distance _t) / _lwp);
+_r1=_r1-(_r1 mod 1);
+_sT = _r1;
+
+_dX = _Xend - _Xstart
+_dY = _Yend - _Ystart
+_SubSteps = _sT;
+_ActStep = 1;
+_posX=0;
+_posY=0;
+
+
+#WPLoop2
+_posX = _Xstart + (_dX * _ActStep / _SubSteps);
+_posY = _Ystart + (_dY * _ActStep / _SubSteps);
+goto "MoveTheGroup2";
+#ReturnFromMove2
+_ActStep=_ActStep+1;
+?(_ActStep < _SubSteps): goto "WPLoop2";
+
+
+_helo doMove getpos _targetP;
+#WaitMyDamnGuys2
+~3
+; is this proper way to check if helo is dead?
+if (!canMove _helo || !alive _helo) then { goto "HeloIsDown"; };
+if (!unitready _helo) then { goto "WaitMyDamnGuys2"; };
+
+; plotting has completely ended, return our command to the fight part of this script
+goto "EndAlive2";
+
+
+#MoveTheGroup2
+_helo doMove [_posX,_posY];
+#MoveLoop2
+~2
+; is this proper way to check if helo is dead?
+if (!canMove _helo || !alive _helo) then { goto "HeloIsDown"; };
+if (!unitready _helo) then { goto "MoveLoop2"; };
+goto "ReturnFromMove2";
