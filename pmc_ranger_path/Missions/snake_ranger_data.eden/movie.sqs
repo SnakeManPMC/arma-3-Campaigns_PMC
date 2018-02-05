@@ -1,0 +1,66 @@
+; camera basic initialization
+_camera = "camera" camCreate [0,0,0]
+_camera camSetTarget [0,0,0]
+_camera cameraEffect ["internal","back"]
+_camera camSetFOV 0.700
+
+offi1 dowatch leader assault1;
+offi2 dowatch leader assault1;
+
+;=== 5:17:41
+_camera camSetTarget [-40321.24,100435.41,-8992.37]
+_camera camSetPos [4882.81,11692.59,2.00]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+playmusic ["rtrack8",0]
+
+titlecut ["","BLACK IN",2];
+offi1 playmove "effectstandtalk";
+~4
+offi1 playmove "effectstand";
+offi2 playmove "effectstandtalk";
+~1
+
+;=== 5:17:49
+_camera camSetTarget [-40321.24,100435.41,-8992.53]
+_camera camSetPos [4872.41,11712.99,2.00]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+~1
+offi2 playmove "effectstand";
+leader assault1 playmove "effectstandtalk";
+~2
+
+;=== 5:17:49
+_camera camSetTarget leader assault1
+_camera camSetRelPos [0,1,1]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+;=== 5:17:49
+_camera camSetTarget leader assault1
+_camera camSetRelPos [-2,7,3]
+_camera camSetFOV 0.700
+_camera camCommit 3
+@camCommitted _camera
+~2
+
+titlecut ["","BLACK OUT",3];
+4 fademusic 0;
+~3
+
+; destroy camera - if we use mission cutscene
+;_camera cameraEffect ["terminate","back"]
+
+; Destroy the camera
+camDestroy _camera
+
+; end the intro
+endcut=true
+
+; Exit this script
+exit

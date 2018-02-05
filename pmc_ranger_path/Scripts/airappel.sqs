@@ -1,0 +1,48 @@
+_helo = _this select 0
+_rappelunits = _this select 1
+_rappelheight = _this select 2
+_exitheight = (getPos (driver _helo)) select 2
+?(_this select 3)>-1: _exitheight = _this select 3
+
+_helo flyInHeight _rappelheight
+
+_helo sideradio "Rlzinsight";
+
+@(((getPos (driver _helo)) select 2))<=(_rappelheight+2)
+@(speed _helo < 0.3)
+
+_rope = "BASCargoRopeAnim" createvehicle [0,0,0]
+
+_helo animate ["backramp", 0.6]
+_helo sideradio "Rramp";
+
+~1
+_dir = (getdir _helo - 270)
+_posx = (getpos  _helo select 0)+(7.2 * cos _dir)
+_posy = (getpos _helo select 1) -(7.2 * sin _dir)
+_rope setpos [_posx,_posy,(getpos driver _helo select 2)]
+
+_helo sideradio "Rgogogo";
+~1
+
+
+#loop
+[_helo,(_rappelunits select 0)] exec "\BAS_MH47E_185\FX\AIGO.sqs"
+_rappelunits = _rappelunits - [_rappelunits select 0]
+~1.9
+? count _rappelunits !=0:goto "loop"
+
+~3
+deletevehicle _rope
+
+_helo animate ["backramp", 0]
+
+?! (player in _helo):_helo animate ["switch",0]
+
+_helo flyInHeight _exitheight
+
+FastRopeOver=true;
+
+_helo sideradio "Rhome";
+
+exit

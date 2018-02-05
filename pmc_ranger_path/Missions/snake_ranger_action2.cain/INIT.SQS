@@ -1,0 +1,44 @@
+PAPABEAR=[West,"HQ"];
+
+aa = s1 loadStatus "04s1";
+aa = s2 loadStatus "04s2";
+aa = s3 loadStatus "04s3";
+aa = s4 loadStatus "04s4";
+aa = s5 loadStatus "04s5";
+aa = s6 loadStatus "04s6";
+aa = s7 loadStatus "04s7";
+aa = s8 loadStatus "04s8";
+aa = s9 loadStatus "04s9";
+
+if (!alive s2) then { deletevehicle s2 }
+if (!alive s3) then { deletevehicle s3 }
+if (!alive s4) then { deletevehicle s4 }
+if (!alive s5) then { deletevehicle s5 }
+if (!alive s6) then { deletevehicle s6 }
+if (!alive s7) then { deletevehicle s7 }
+if (!alive s8) then { deletevehicle s8 }
+if (!alive s9) then { deletevehicle s9 }
+
+{_x setdammage 0} foreach units assault1;
+
+; some PMC poo for scripts
+ADropC=0;
+PMCastrk=0;
+
+;[] exec "\COC_Mines\scripts\InitMines.sqs"
+
+~5
+[patrol1,[],[bmps1],[],[rusinf1,patrol5],1,1] exec "ai.sqs"
+[rusinf1,[],[bmps1],[],[],1,1] exec "ai.sqs"
+[patrol2,[],[bmps2],[],[rusinf2,patrol6],1,1] exec "ai.sqs"
+[rusinf2,[],[bmps2,rustanks1],[],[],1,1] exec "ai.sqs"
+[patrol3,[],[bmps3],[],[rusinf3,patrol8],1,1] exec "ai.sqs"
+[rusinf3,[],[bmps3,rustanks2],[],[],1,1] exec "ai.sqs"
+[patrol4,[],[bmps3],[],[rusinf4,patrol8],1,1] exec "ai.sqs"
+[rusinf4,[],[bmps3,rustanks2],[],[],1,1] exec "ai.sqs"
+[atteam1,[],[bmps1],[],[patrol6],1,1] exec "ai.sqs"
+[atteam2,[],[bmps2],[],[gbackup3],1,1] exec "ai.sqs"
+[guards1,[],[bmps1],[],[gbackup1,patrol6],1,1] exec "ai.sqs"
+[guards2,[],[bmps2],[],[gbackup2,patrol7],1,1] exec "ai.sqs"
+
+{[_x] exec "init_addTracers.sqs"} foreach aiwest+aieast;

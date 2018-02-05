@@ -1,0 +1,29 @@
+PAPABEAR=[West,"HQ"];
+
+;[] exec "\COC_Mines\scripts\InitMines.sqs"
+
+"_x addweapon ""CUP_NVG_PVS7""" foreach units assault2;
+"_x addweapon ""CUP_NVG_PVS7""" foreach units assault3;
+"_x addweapon ""CUP_NVG_PVS7""" foreach units mgunners1;
+
+~5
+reinfstuff = units reinf1 + units reinf2 + units reinf3 + units reinf4 + units reinf5 + units rustanks1;
+
+[assault2,[],[],[],[],1,1] exec "ai.sqs"
+[assault3,[],[],[],[],1,1] exec "ai.sqs"
+[mgunners1,[],[],[],[],1,1] exec "ai.sqs"
+
+[reinf1,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[reinf2,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[reinf3,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[reinf4,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[reinf5,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol1,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol2,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol3,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol4,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol5,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[officers1,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[rusinf1,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+
+{[_x] exec "init_addTracers.sqs"} foreach aiwest+aieast;

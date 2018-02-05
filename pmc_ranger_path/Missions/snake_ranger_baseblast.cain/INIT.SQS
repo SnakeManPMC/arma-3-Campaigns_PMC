@@ -1,0 +1,38 @@
+PAPABEAR=[West,"HQ"];
+
+aa = s1 loadStatus "02s1";
+aa = s2 loadStatus "02s2";
+aa = s3 loadStatus "02s3";
+aa = s4 loadStatus "02s4";
+aa = s5 loadStatus "02s5";
+aa = s6 loadStatus "02s6";
+aa = s7 loadStatus "02s7";
+aa = s8 loadStatus "02s8";
+aa = s9 loadStatus "02s9";
+
+if (!alive s2) then { deletevehicle s2 }
+if (!alive s3) then { deletevehicle s3 }
+if (!alive s4) then { deletevehicle s4 }
+if (!alive s5) then { deletevehicle s5 }
+if (!alive s6) then { deletevehicle s6 }
+if (!alive s7) then { deletevehicle s7 }
+if (!alive s8) then { deletevehicle s8 }
+if (!alive s9) then { deletevehicle s9 }
+
+{_x setdammage 0} foreach units assault1;
+
+;[] exec "\COC_Mines\scripts\InitMines.sqs"
+
+~5
+[reinf1,[],[],[],[],1,1] exec "ai.sqs"
+[rusinf1,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+[rusinf2,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+[rusinf3,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+[rusinf4,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+[rusinf5,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+[rusinf6,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+[rusinf7,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+[rusinf8,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+[rusinf9,[],[],[],[rusinf10],1,1] exec "ai.sqs"
+
+{[_x] exec "init_addTracers.sqs"} foreach aiwest+aieast;

@@ -20,6 +20,7 @@ Campaigns untested, probably not working:
 * PMC First Fight
 * PMC Heros Path
 * PMC Joint Justice
+* PMC Ranger Path
 * PMC Real War 1
 * PMC Silent Bat
 * PMC Tank Hunter

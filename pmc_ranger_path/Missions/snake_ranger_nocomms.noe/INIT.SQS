@@ -1,0 +1,28 @@
+PAPABEAR=[West,"HQ"];
+
+;;[] exec "\COC_Mines\scripts\InitMines.sqs"
+
+herc1 setpos [(getpos herc1 select 0),(getpos herc1 select 1),200];
+transp1 setbehaviour "careless";
+transp1 setcombatmode "white";
+transp1 setspeedmode "full";
+transp1 setformation "column";
+herc1 flyinheight 200;
+
+"_x moveincargo herc1" foreach units assault1;
+
+~5
+[rusinf1,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[rusinf2,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[rusinf3,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol1,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol2,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol3,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol4,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol5,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol6,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[patrol7,[],[],[],[backup1,backup2],1,1] exec "ai.sqs"
+[backup1,[],[],[],[],1,1] exec "ai.sqs"
+[backup2,[],[],[],[],1,1] exec "ai.sqs"
+
+{[_x] exec "init_addTracers.sqs"} foreach aiwest+aieast + crew herc1;

@@ -1,0 +1,539 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=23;
+	};
+	class Camera
+	{
+		pos[]={7690,44.910149,4403};
+		dir[]={0,0,1};
+		up[]={0,1,0};
+		aside[]={1,0,0};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"CUP_Creatures_Military_USMC",
+	"CUP_AirVehicles_C130J",
+	"CUP_Creatures_Military_USArmy",
+	"A3_Modules_F"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=4;
+		class Item0
+		{
+			className="CUP_Creatures_Military_USMC";
+			name="CUP_Creatures_Military_USMC";
+		};
+		class Item1
+		{
+			className="CUP_AirVehicles_C130J";
+			name="CUP_AirVehicles_C130J";
+		};
+		class Item2
+		{
+			className="CUP_Creatures_Military_USArmy";
+			name="CUP_Creatures_Military_USArmy";
+		};
+		class Item3
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=15346791;
+class ScenarioData
+{
+	author="PMC Since 1984";
+};
+class Intro
+{
+	class Intel
+	{
+		startWind=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		month=7;
+		day=22;
+		hour=11;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+	class Entities
+	{
+		items=8;
+		class Item0
+		{
+			dataType="Trigger";
+			position[]={1597.1636,24.974998,5207.4063};
+			class Attributes
+			{
+				text="endcut";
+				condition="endcut";
+				sizeA=0;
+				sizeB=0;
+				type="END1";
+			};
+			id=0;
+			type="EmptyDetector";
+			atlOffset=2.9749985;
+		};
+		class Item1
+		{
+			dataType="Trigger";
+			position[]={3019.6777,21.959999,5950.6167};
+			angle=-1.5729153;
+			class Attributes
+			{
+				text="drop";
+				condition="herc1 in thislist";
+				onActivation="[] exec ""airdrop.sqs"";";
+				sizeB=500;
+				activationBy="WEST";
+				isRectangle=1;
+			};
+			id=1;
+			type="EmptyDetector";
+			atlOffset=3.0581436;
+		};
+		class Item2
+		{
+			dataType="Trigger";
+			position[]={2708.728,9.9784613,3138.7336};
+			angle=-1.5616487;
+			class Attributes
+			{
+				text="drop";
+				condition="herc1 in thislist";
+				onActivation="InTheCoast=true;";
+				sizeB=2000;
+				activationBy="WEST";
+				isRectangle=1;
+			};
+			id=2;
+			type="EmptyDetector";
+			atlOffset=5.0277743;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3027.4182,49.702206,107.29045};
+						angles[]={0,5.8475485,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						name="herc1D";
+					};
+					id=5;
+					type="CUP_B_USMC_Pilot";
+					atlOffset=79.668343;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3027.4182,49.702206,107.29045};
+						angles[]={0,5.8475485,0};
+					};
+					side="West";
+					class Attributes
+					{
+					};
+					id=6;
+					type="CUP_B_USMC_Pilot";
+					atlOffset=79.668343;
+				};
+				class Item2
+				{
+					dataType="Waypoint";
+					position[]={3017.783,21.872276,6161.0181};
+					combatMode="YELLOW";
+					formation="COLUMN";
+					speed="FULL";
+					combat="AWARE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=7;
+					type="Move";
+					atlOffset=3.645998;
+				};
+				class Item3
+				{
+					dataType="Waypoint";
+					position[]={709.9577,2.120827,9822.0205};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=8;
+					type="Move";
+					atlOffset=45.915752;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=5;
+						item1=4;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=6;
+						item1=4;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=3;
+			atlOffset=79.668343;
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3027.6404,54.439003,104.15414};
+				angles[]={0,5.8475485,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				skill=1;
+				rank="LIEUTENANT";
+				init="transp1=group this;";
+				name="herc1";
+			};
+			id=4;
+			type="CUP_B_C130J_USMC";
+			atlOffset=79.668343;
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1573.5115,22.001438,5185.7236};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=1;
+						rank="LIEUTENANT";
+						init="titlecut["""",""black out"",0.001]; this exec ""movie.sqs"";";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=10;
+					type="CUP_B_USMC_Soldier";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=9;
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=10;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3036.7166,19.608372,6063.5664};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.73333299;
+						rank="CAPTAIN";
+						init="assault1=group this;";
+						name="s1";
+					};
+					id=12;
+					type="CUP_B_US_SpecOps_TL";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3041.7102,19.608372,6058.6099};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.80686301;
+						rank="SERGEANT";
+						name="s5";
+					};
+					id=13;
+					type="CUP_B_US_SpecOps_Medic";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3031.7102,19.608372,6058.6226};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.81677097;
+						rank="CORPORAL";
+						name="s4";
+					};
+					id=14;
+					type="CUP_B_US_SpecOps_M";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3046.7039,19.608372,6053.6035};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=1;
+						name="s3";
+					};
+					id=15;
+					type="CUP_B_US_SpecOps_MG";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3026.7039,19.608372,6053.6289};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.80877298;
+						name="s2";
+					};
+					id=16;
+					type="CUP_B_US_SpecOps_AR";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3051.6975,19.608372,6048.5972};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.796956;
+						rank="LIEUTENANT";
+						name="s6";
+					};
+					id=17;
+					type="CUP_B_US_SpecOps_JTAC";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3021.6975,19.608372,6048.6353};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.79886597;
+						rank="CORPORAL";
+						name="s7";
+					};
+					id=18;
+					type="CUP_B_US_SpecOps_M";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3056.6912,19.608372,6043.5908};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=1;
+						name="s8";
+					};
+					id=19;
+					type="CUP_B_US_SpecOps_MG";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3016.6914,19.608372,6043.6416};
+						angles[]={-0,0.0012631472,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.80000001;
+						name="s9";
+					};
+					id=20;
+					type="CUP_B_US_SpecOps_MG";
+				};
+				class Item9
+				{
+					dataType="Waypoint";
+					position[]={3036.7673,21.959999,6066.7939};
+					combatMode="YELLOW";
+					formation="STAG COLUMN";
+					speed="LIMITED";
+					combat="SAFE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=21;
+					type="Move";
+					atlOffset=2.3530655;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=11;
+		};
+		class Item7
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2977.8657,19.083139,6116.3613};
+			};
+			name="WatchDrop";
+			id=22;
+			type="Logic";
+		};
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="PMC Ranger Airdrop (cutscene)";
+		startWind=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		month=7;
+		day=22;
+		hour=11;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroLoose
+{
+	class Intel
+	{
+		startWind=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroWin
+{
+	class Intel
+	{
+		startWind=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};

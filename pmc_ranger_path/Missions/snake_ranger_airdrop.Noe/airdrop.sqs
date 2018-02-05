@@ -1,0 +1,18 @@
+DropInProgress=true;
+DropComplete=false;
+
+_pln = herc1;
+
+_chute1 = "Steerable_Parachute_F" createvehicle [(getpos _pln select 0)-15,(getpos _pln select 1),(getpos _pln select 2)-5];
+box1 = "CUP_USBasicAmmunitionBox" createvehicle getpos _chute1;
+
+#Loop
+~0.01
+
+box1 setpos [(getpos _chute1 select 0),(getpos _chute1 select 1),(getpos _chute1 select 2)];
+box1 setdir getdir _chute1;
+
+?(getpos box1 select 2 < .1): DropComplete=true; exit;
+goto "Loop";
+
+exit
