@@ -12,6 +12,7 @@ Campaigns working:
 * 4 various test campaigns
 
 Campaigns untested, probably not working:
+* PMC Aqua Lima
 * PMC Brave Hammer
 * PMC Dynamic CE
 * PMC Dynamic CE 51km

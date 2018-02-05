@@ -1,0 +1,60 @@
+//
+// 		PMC Aqua Lima campaign
+// 
+
+exitScore = -100;
+weaponPool = true;
+
+class MissionDefault
+{
+ 	lives = -1;
+
+	lost = ;
+	end1 = ;
+	end2 = ;
+	end3 = ;
+	end4 = ;
+	end5 = ;
+	end6 = ;
+};
+
+class Campaign
+{
+	briefingName = "PMC Aqua Lima";
+	author = "Snake Man";
+	overviewText = "ArmA 1 ported tank campaign.";
+	firstBattle = Beginning;
+
+	class Beginning
+	{
+		name = "Beginning";
+		cutscene = ;
+		firstMission = pmc0;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		lost = ;
+
+		class pmc0: MissionDefault
+		{
+			end1 = pmc1;
+			template = tank_cmp_01.Sara;
+		};
+		class pmc1: MissionDefault
+		{
+			template = tank_cmp_02.Sara;
+		};
+
+/* campaign is over, final cutscene
+		class pmc_outro: MissionDefault
+		{
+			end1 = ;
+			lost = ;
+			template = ?.Intro;
+		};
+*/
+	};
+};
