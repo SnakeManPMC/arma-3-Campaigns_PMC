@@ -1,0 +1,92 @@
+//
+// 		PMC Dirty Raven campaign
+// 
+
+exitScore = -100;
+weaponPool = true;
+
+class MissionDefault
+{
+ 	lives = -1;
+
+	lost = ;
+	end1 = ;
+	end2 = ;
+	end3 = ;
+	end4 = ;
+	end5 = ;
+	end6 = ;
+};
+
+class Campaign
+{
+	briefingName = "PMC Dirty Raven";
+	author = "Snake Man";
+	overviewText = "ArmA 1 ported helicopter (gunship) campaign.";
+	firstBattle = Beginning;
+
+	class Beginning
+	{
+		name = "Beginning";
+		cutscene = ;
+		firstMission = pmc0;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		lost = ;
+
+		class pmc0: MissionDefault
+		{
+			end1 = pmc1;
+			end2 = pmc2;
+			end3 = pmc3;
+			end4 = pmc4;
+			end5 = pmc5;
+			end6 = pmc6;
+			template = helo_cmp_sector_select1.Sara;
+		};
+		class pmc1: MissionDefault
+		{
+			end1 = pmc0;
+			template = helo_cmp_sector1.Sara;
+		};
+		class pmc2: MissionDefault
+		{
+			end1 = pmc0;
+			template = helo_cmp_sector2.Sara;
+		};
+		class pmc3: MissionDefault
+		{
+			end1 = pmc0;
+			template = helo_cmp_sector3.Sara;
+		};
+		class pmc4: MissionDefault
+		{
+			end1 = pmc0;
+			template = helo_cmp_sector4.Sara;
+		};
+		class pmc5: MissionDefault
+		{
+			end1 = pmc0;
+			template = helo_cmp_sector5.Sara;
+		};
+		class pmc6: MissionDefault
+		{
+			end1 = pmc0;
+			template = helo_cmp_sector6.Sara;
+		};
+
+// campaign is over, final cutscene
+/*
+		class pmc_outro: MissionDefault
+		{
+			end1 = ;
+			lost = ;
+			template = ?.Intro;
+		};
+*/
+	};
+};

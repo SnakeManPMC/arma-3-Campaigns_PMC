@@ -14,6 +14,7 @@ Campaigns working:
 Campaigns untested, probably not working:
 * PMC Aqua Lima
 * PMC Brave Hammer
+* PMC Dirty Raven
 * PMC Dynamic CE
 * PMC Dynamic CE 51km
 * PMC First Fight
