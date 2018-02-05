@@ -1,0 +1,80 @@
+
+onLoadIntro = "PMC Cmp1";
+onLoadMission = "";
+
+class CEX
+{
+	// Global CEX Settings
+	DebugLevel         = 0;
+	DebugLogLevel      = 0;
+	ColorUnit          = "Blue";
+	EnemiesResistance[]= {"west","east"};
+	UnitServerUpdateInterval=1;
+	
+	// Global CEX UI Settings
+	LaunchOnStart      = 0;
+	CamEnabled         = 1;
+	HudEnabled         = 1;
+	SwitchEnabled      = 1;
+	CamMaxHeight       = 100;
+	CamMaxDistance     = 100000;
+	CamMaxAngle        = "45";  // "-atan(_this/100)";
+	HudViewRange       = 1000;
+	ColorHighlight     = "Orange";
+	ColorEnemy         = "Red";
+	UseArmAMap         = 1;
+	PlayerChatMessagesEnabled = 1;
+	InterfaceUpdateInterval = 1;
+
+	class Battalion
+	{
+		IconMap  = "COC_NATO_HQ_BASIC";
+		CallSign = "BATTALION";
+
+	class Company
+	{
+		IconMap  = "COC_NATO_INF_STANDARD_COMPANY";
+		CallSign = "COMPANY"; 
+		
+		class PlatoonA
+		{
+			Name    = "SF Squad";
+			NameMap = "SF";
+			IconMap = "COC_NATO_SF_STANDARD";
+			SizeMap = 1.0;
+			class Team1
+			{
+				Leader   = "usspecops1";
+				Name     = "Team %2";
+				NameMap  = "SF%2";
+				CallSign = "%5-%4";
+				IconMap  = "COC_NATO_SF_STANDARD_SQUAD";
+				SizeMap  = 0.8;
+			};
+			class Team2:Team1{Leader = "usspecops2";};
+			class Team3:Team1{Leader = "usspecops3";};
+			class Team4:Team1{Leader = "usspecops4";};
+		};
+		class AirSquadron:PlatoonA
+		{
+			Leader  = "ushelo1";
+			Name    = "Air Squadron";
+			NameMap = "AIR";
+			IconMap = "COC_NATO_AVIATION_HELO";
+			SizeMap = 1.5;
+
+			class gunships1
+			{
+				Leader   = "ushelo1";
+				Name     = "Helo %1";
+				NameMap  = "MH-6 %1";
+				CallSign = "%5-%4";
+				IconMap  = "COC_NATO_AVIATION_HELORECON";
+			};
+			class gunships2:gunships1{leader="ushelo2";};
+			class gunships3:gunships1{leader="ushelo3";};
+			class gunships4:gunships1{leader="ushelo4";};
+		};
+	};
+	};
+};

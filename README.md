@@ -19,6 +19,7 @@ Campaigns untested, probably not working:
 * PMC Heros Path
 * PMC Joint Justice
 * PMC Real War 1
+* PMC Silent Bat
 * PMC Tank Hunter
 
 I don't like having several campaigns / missions in one big blob repo, but its also crazy to have 100's of single mission dirs in github root.
