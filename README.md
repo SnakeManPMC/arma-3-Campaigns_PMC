@@ -2,7 +2,7 @@
 
 ArmA 3 all PMC campaigns, these campaign missions use CUP.
 
-2018-02-04 note: porting from ofp-arma2 era is still work in progress and most of these do not work yet, they do load in eden editor without errors but playing these is another matter. Campaigns are listed in working and probably not working lists.
+2018-02-05 note: porting from ofp-arma2 era is still work in progress and most of these do not work yet, they do load in eden editor without errors but playing these is another matter. Campaigns are listed in working and probably not working lists.
 
 See [CUP download](http://cup-arma3.org/download) and [PMC Tactical ArmA 3](https://www.pmctactical.org/arma3/index.php)
 
@@ -15,6 +15,7 @@ Campaigns untested, probably not working:
 * PMC Brave Hammer
 * PMC Dynamic CE
 * PMC Dynamic CE 51km
+* PMC First Fight
 * PMC Heros Path
 * PMC Joint Justice
 * PMC Real War 1
