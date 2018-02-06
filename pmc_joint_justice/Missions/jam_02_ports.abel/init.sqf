@@ -21,3 +21,6 @@ PMC_a12 loadStatus "m1s12";
 		deletevehicle _x;
 	};
 } forEach [PMC_a2,PMC_a3,PMC_a4,PMC_a5,PMC_a6,PMC_a7,PMC_a8,PMC_a9,PMC_a10,PMC_a11,PMC_a12];
+
+// add communications menu for player
+0 = [player, "PMC_Airstrike_A10", nil, nil, ""] call BIS_fnc_addCommMenuItem;

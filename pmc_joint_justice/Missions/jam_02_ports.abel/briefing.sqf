@@ -32,6 +32,9 @@ Alpha team <marker name = 'start'>start</marker> from base. Capture <marker name
 <br/><br/>
 
 4. SERVICE AND SUPPORT<br/>
+mortars, artillery, MLRS, UAV and airstrikes.
+<br/><br/>
+You need to take UAV terminal and laser designator from the eastern most ammo box to be able to guide both the UAV and laser guided bombs from airstrike aircraft. Support is available from the support menu, 0-8.
 <br/><br/>
 
 5. COMMAND AND SIGNAL<br/>
