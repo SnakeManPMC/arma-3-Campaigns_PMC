@@ -141,11 +141,13 @@ if (leader _group distance _target > 6400) then
 {
 	// goto "BigMotherFuckerMovingShit";
 	_tmp = [_target, _group] call _PMC_plotWaypoints_Manual;
+/* _tmp gives error undefined variable
 	waitUntil
 	{
 		sleep 5;
 		scriptDone _tmp;
 	};
+*/
 }
 else
 {
