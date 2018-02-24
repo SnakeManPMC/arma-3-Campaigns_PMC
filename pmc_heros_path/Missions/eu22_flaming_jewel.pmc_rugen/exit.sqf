@@ -13,5 +13,3 @@ xx= m2crew5 SaveStatus "mcrew5_22";
 xx= m2crew6 SaveStatus "mcrew6_22";
 xx= tnk1 SaveStatus "brad1_22";
 xx= tnk2 SaveStatus "brad2_22";
-
-exit

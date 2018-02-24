@@ -5,5 +5,3 @@ xx= SEAL3 SaveStatus "sea3_03";
 xx= SEAL4 SaveStatus "sea4_03";
 xx= SEAL5 SaveStatus "sea5_03";
 xx= SEAL6 SaveStatus "sea6_03";
-
-exit

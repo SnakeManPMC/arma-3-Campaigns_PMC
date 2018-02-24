@@ -1,69 +1,67 @@
-;
-; this is for the captured towns stuff.
-;
-PMC_City01=getMarkerColor "pmc1"
-PMC_City02=getMarkerColor "pmc2"
-PMC_City03=getMarkerColor "pmc3"
-PMC_City04=getMarkerColor "pmc4"
-PMC_City05=getMarkerColor "pmc5"
-PMC_City06=getMarkerColor "pmc6"
-PMC_City07=getMarkerColor "pmc7"
-PMC_City08=getMarkerColor "pmc8"
-PMC_City09=getMarkerColor "pmc9"
-PMC_City10=getMarkerColor "pmc10"
-PMC_City11=getMarkerColor "pmc11"
-PMC_City12=getMarkerColor "pmc12"
-PMC_City13=getMarkerColor "pmc13"
-PMC_City14=getMarkerColor "pmc14"
-PMC_City15=getMarkerColor "pmc15"
-PMC_City16=getMarkerColor "pmc16"
-PMC_City17=getMarkerColor "pmc17"
-PMC_City18=getMarkerColor "pmc18"
-PMC_City19=getMarkerColor "pmc19"
-PMC_City20=getMarkerColor "pmc20"
-PMC_City21=getMarkerColor "pmc21"
-PMC_City22=getMarkerColor "pmc22"
-PMC_City23=getMarkerColor "pmc23"
-PMC_City24=getMarkerColor "pmc24"
-PMC_City25=getMarkerColor "pmc25"
-PMC_City26=getMarkerColor "pmc26"
-PMC_City27=getMarkerColor "pmc27"
-PMC_City28=getMarkerColor "pmc28"
-PMC_City29=getMarkerColor "pmc29"
-PMC_City30=getMarkerColor "pmc30"
+// this is for the captured towns stuff.
+PMC_City01=getMarkerColor "pmc1";
+PMC_City02=getMarkerColor "pmc2";
+PMC_City03=getMarkerColor "pmc3";
+PMC_City04=getMarkerColor "pmc4";
+PMC_City05=getMarkerColor "pmc5";
+PMC_City06=getMarkerColor "pmc6";
+PMC_City07=getMarkerColor "pmc7";
+PMC_City08=getMarkerColor "pmc8";
+PMC_City09=getMarkerColor "pmc9";
+PMC_City10=getMarkerColor "pmc10";
+PMC_City11=getMarkerColor "pmc11";
+PMC_City12=getMarkerColor "pmc12";
+PMC_City13=getMarkerColor "pmc13";
+PMC_City14=getMarkerColor "pmc14";
+PMC_City15=getMarkerColor "pmc15";
+PMC_City16=getMarkerColor "pmc16";
+PMC_City17=getMarkerColor "pmc17";
+PMC_City18=getMarkerColor "pmc18";
+PMC_City19=getMarkerColor "pmc19";
+PMC_City20=getMarkerColor "pmc20";
+PMC_City21=getMarkerColor "pmc21";
+PMC_City22=getMarkerColor "pmc22";
+PMC_City23=getMarkerColor "pmc23";
+PMC_City24=getMarkerColor "pmc24";
+PMC_City25=getMarkerColor "pmc25";
+PMC_City26=getMarkerColor "pmc26";
+PMC_City27=getMarkerColor "pmc27";
+PMC_City28=getMarkerColor "pmc28";
+PMC_City29=getMarkerColor "pmc29";
+PMC_City30=getMarkerColor "pmc30";
 
-saveVar "PMC_City01"
-saveVar "PMC_City02"
-saveVar "PMC_City03"
-saveVar "PMC_City04"
-saveVar "PMC_City05"
-saveVar "PMC_City06"
-saveVar "PMC_City07"
-saveVar "PMC_City08"
-saveVar "PMC_City09"
-saveVar "PMC_City10"
-saveVar "PMC_City11"
-saveVar "PMC_City12"
-saveVar "PMC_City13"
-saveVar "PMC_City14"
-saveVar "PMC_City15"
-saveVar "PMC_City16"
-saveVar "PMC_City17"
-saveVar "PMC_City18"
-saveVar "PMC_City19"
-saveVar "PMC_City20"
-saveVar "PMC_City21"
-saveVar "PMC_City22"
-saveVar "PMC_City23"
-saveVar "PMC_City24"
-saveVar "PMC_City25"
-saveVar "PMC_City26"
-saveVar "PMC_City27"
-saveVar "PMC_City28"
-saveVar "PMC_City29"
-saveVar "PMC_City30"
+saveVar "PMC_City01";
+saveVar "PMC_City02";
+saveVar "PMC_City03";
+saveVar "PMC_City04";
+saveVar "PMC_City05";
+saveVar "PMC_City06";
+saveVar "PMC_City07";
+saveVar "PMC_City08";
+saveVar "PMC_City09";
+saveVar "PMC_City10";
+saveVar "PMC_City11";
+saveVar "PMC_City12";
+saveVar "PMC_City13";
+saveVar "PMC_City14";
+saveVar "PMC_City15";
+saveVar "PMC_City16";
+saveVar "PMC_City17";
+saveVar "PMC_City18";
+saveVar "PMC_City19";
+saveVar "PMC_City20";
+saveVar "PMC_City21";
+saveVar "PMC_City22";
+saveVar "PMC_City23";
+saveVar "PMC_City24";
+saveVar "PMC_City25";
+saveVar "PMC_City26";
+saveVar "PMC_City27";
+saveVar "PMC_City28";
+saveVar "PMC_City29";
+saveVar "PMC_City30";
 
-; infantry
+// infantry
 assault1_x=getpos leader assault1 select 0;
 assault1_y=getpos leader assault1 select 1;
 saveVar "assault1_x";
@@ -85,7 +83,7 @@ assault5_y=getpos leader assault5 select 1;
 saveVar "assault5_x";
 saveVar "assault5_y";
 
-; abrams and bradleys
+// abrams and bradleys
 ustanks1_x=getpos leader ustanks1 select 0;
 ustanks1_y=getpos leader ustanks1 select 1;
 saveVar "ustanks1_x";
@@ -107,7 +105,7 @@ ustanks5_y=getpos leader ustanks5 select 1;
 saveVar "ustanks5_x";
 saveVar "ustanks5_y";
 
-; rangers and seals
+// rangers and seals
 ranger1_x=getpos leader ranger1 select 0;
 ranger1_y=getpos leader ranger1 select 1;
 saveVar "ranger1_x";
@@ -129,7 +127,7 @@ seal2_y=getpos leader seal2 select 1;
 saveVar "seal2_x";
 saveVar "seal2_y";
 
-; mortars and M109's
+// mortars and M109's
 usarty1_x=getpos leader usarty1 select 0;
 usarty1_y=getpos leader usarty1 select 1;
 saveVar "usarty1_x";
@@ -143,7 +141,7 @@ usarty3_y=getpos leader usarty3 select 1;
 saveVar "usarty3_x";
 saveVar "usarty3_y";
 
-; Our own squad posit + status
+// Our own squad posit + status
 hqteam1_x = getpos leader hqteam select 0;
 hqteam1_y = getpos leader hqteam select 1;
 saveVar "hqteam1_x";
@@ -158,19 +156,17 @@ units hqteam select 6 saveStatus "hqt7";
 units hqteam select 7 saveStatus "hqt8";
 units hqteam select 8 saveStatus "hqt9";
 
-; time changes between missions.
-PMC_passTime = 3 + random 4
-; this is the time used in this mission.
-; time = seconds. skiptime = hours.
+// time changes between missions.
+PMC_passTime = (3 + random 4);
+// this is the time used in this mission.
+// time = seconds. skiptime = hours.
 PMC_AllTimeUsed=((PMC_AllTimeUsed + PMC_passTime) + (time/3600));
 
 saveVar "PMC_passTime";
 saveVar "PMC_AllTimeUsed";
 
-; bn880 weather
+// bn880 weather
 saveVar "startOvercast";
 saveVar "endOvercast";
 saveVar "fogStart";
 saveVar "fogEnd";
-
-exit

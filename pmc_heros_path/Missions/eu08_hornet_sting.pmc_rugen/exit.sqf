@@ -8,5 +8,3 @@ xx= rngr6 SaveStatus "rng6_08";
 xx= rngr7 SaveStatus "rng7_08";
 xx= rngr8 SaveStatus "rng8_08";
 xx= rngr9 SaveStatus "rng9_08";
-
-exit

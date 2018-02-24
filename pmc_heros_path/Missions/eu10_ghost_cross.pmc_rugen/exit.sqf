@@ -11,5 +11,3 @@ xx= rngr9 SaveStatus "rng9_10";
 
 clearMagazinePool;
 clearWeaponPool;
-
-exit

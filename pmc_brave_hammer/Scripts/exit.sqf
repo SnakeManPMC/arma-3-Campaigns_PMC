@@ -1,10 +1,10 @@
-;/*
-;
-;	campaign init for MFR team
-;
-;*/
+/*
 
-;// our team status (not needed for first mission, but what the hell).
+	campaign init for MFR team
+
+*/
+
+// our team status (not needed for first mission, but what the hell).
 deleteStatus "mfr1";
 deleteStatus "mfr2";
 deleteStatus "mfr3";

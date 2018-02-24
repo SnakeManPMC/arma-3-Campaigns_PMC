@@ -8,5 +8,3 @@ xx= s6 SaveStatus "sol6_26";
 xx= s7 SaveStatus "sol7_26";
 xx= s8 SaveStatus "sol8_26";
 xx= s9 SaveStatus "sol9_26";
-
-exit

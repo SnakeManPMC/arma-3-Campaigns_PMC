@@ -1,4 +1,2 @@
 
 clearWeaponPool;
-
-exit

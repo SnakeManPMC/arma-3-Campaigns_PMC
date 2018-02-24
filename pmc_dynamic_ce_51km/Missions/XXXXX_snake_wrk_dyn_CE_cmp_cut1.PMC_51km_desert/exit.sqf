@@ -1,6 +1,4 @@
-;
-; this is for the captured towns stuff.
-;
+// this is for the captured towns stuff.
 PMC_City01="Default";
 PMC_City02="Default";
 PMC_City03="Default";
@@ -32,38 +30,38 @@ PMC_City28="Default";
 PMC_City29="Default";
 PMC_City30="Default";
 
-saveVar "PMC_City01"
-saveVar "PMC_City02"
-saveVar "PMC_City03"
-saveVar "PMC_City04"
-saveVar "PMC_City05"
-saveVar "PMC_City06"
-saveVar "PMC_City07"
-saveVar "PMC_City08"
-saveVar "PMC_City09"
-saveVar "PMC_City10"
-saveVar "PMC_City11"
-saveVar "PMC_City12"
-saveVar "PMC_City13"
-saveVar "PMC_City14"
-saveVar "PMC_City15"
-saveVar "PMC_City16"
-saveVar "PMC_City17"
-saveVar "PMC_City18"
-saveVar "PMC_City19"
-saveVar "PMC_City20"
-saveVar "PMC_City21"
-saveVar "PMC_City22"
-saveVar "PMC_City23"
-saveVar "PMC_City24"
-saveVar "PMC_City25"
-saveVar "PMC_City26"
-saveVar "PMC_City27"
-saveVar "PMC_City28"
-saveVar "PMC_City29"
-saveVar "PMC_City30"
+saveVar "PMC_City01";
+saveVar "PMC_City02";
+saveVar "PMC_City03";
+saveVar "PMC_City04";
+saveVar "PMC_City05";
+saveVar "PMC_City06";
+saveVar "PMC_City07";
+saveVar "PMC_City08";
+saveVar "PMC_City09";
+saveVar "PMC_City10";
+saveVar "PMC_City11";
+saveVar "PMC_City12";
+saveVar "PMC_City13";
+saveVar "PMC_City14";
+saveVar "PMC_City15";
+saveVar "PMC_City16";
+saveVar "PMC_City17";
+saveVar "PMC_City18";
+saveVar "PMC_City19";
+saveVar "PMC_City20";
+saveVar "PMC_City21";
+saveVar "PMC_City22";
+saveVar "PMC_City23";
+saveVar "PMC_City24";
+saveVar "PMC_City25";
+saveVar "PMC_City26";
+saveVar "PMC_City27";
+saveVar "PMC_City28";
+saveVar "PMC_City29";
+saveVar "PMC_City30";
 
-; infantry
+// infantry
 assault1_x=getpos leader assault1 select 0;
 assault1_y=getpos leader assault1 select 1;
 saveVar "assault1_x";
@@ -85,7 +83,7 @@ assault5_y=getpos leader assault5 select 1;
 saveVar "assault5_x";
 saveVar "assault5_y";
 
-; abrams and bradleys
+// abrams and bradleys
 ustanks1_x=getpos leader ustanks1 select 0;
 ustanks1_y=getpos leader ustanks1 select 1;
 saveVar "ustanks1_x";
@@ -107,7 +105,7 @@ ustanks5_y=getpos leader ustanks5 select 1;
 saveVar "ustanks5_x";
 saveVar "ustanks5_y";
 
-; rangers and seals
+// rangers and seals
 ranger1_x=getpos leader ranger1 select 0;
 ranger1_y=getpos leader ranger1 select 1;
 saveVar "ranger1_x";
@@ -129,7 +127,7 @@ seal2_y=getpos leader seal2 select 1;
 saveVar "seal2_x";
 saveVar "seal2_y";
 
-; mortars and M109's
+// mortars and M109's
 usarty1_x=getpos leader usarty1 select 0;
 usarty1_y=getpos leader usarty1 select 1;
 saveVar "usarty1_x";
@@ -143,11 +141,9 @@ usarty3_y=getpos leader usarty3 select 1;
 saveVar "usarty3_x";
 saveVar "usarty3_y";
 
-PMC_Weather=0.5;saveVar "PMC_Weather";
-PMC_Campaign_End=0;saveVar "PMC_Campaign_End";
-PMC_East_KIA=0;saveVar "PMC_East_KIA";
-PMC_West_KIA=0;saveVar "PMC_West_KIA";
-PMC_AllTimeUsed=0;saveVar "PMC_AllTimeUsed";
-PMC_passTime=0;saveVar "PMC_passTime";
-
-exit
+PMC_Weather=0.5; saveVar "PMC_Weather";
+PMC_Campaign_End=0; saveVar "PMC_Campaign_End";
+PMC_East_KIA=0; saveVar "PMC_East_KIA";
+PMC_West_KIA=0; saveVar "PMC_West_KIA";
+PMC_AllTimeUsed=0; saveVar "PMC_AllTimeUsed";
+PMC_passTime=0; saveVar "PMC_passTime";
