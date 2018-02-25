@@ -50,7 +50,7 @@ switch (side player) do
 			"Diary",
 			[
 				"2. YOUR MISSION:",
-				"You and your tank platoon ""Alpha"" <marker name='start'>start</marker> near the town of Haelen. Defend <marker name='target1'>Haelen</marker>.<br/><br/>Your tanks <marker name='start'>start</marker> near the port town of Haelen. The enemy is planning a hasty attack from the north. Your task: defend <marker name='target1'>Haelen</marker> against all comers. Don't make any moves north; stay within city limits or very close to it.<br/><br/>Rules of Engagement: <b>Condition Red, weapons free.</b> We've got 'em on the run everywhere; this is just a last gasp effort on their part to skeedaddle. You'll almost certainly be allowed to stand down after this battle.<br/><br/>Learn those boys some manners.<br/><br/>"
+				"You and your tank platoon ""Alpha"" <marker name='start'>start</marker> near the town of Haelen. Defend <marker name='target1'>Haelen</marker>.<br/><br/>Your tanks <marker name='start'>start</marker> near the port town of Haelen. The enemy is planning a hasty attack from the north. Your task: defend <marker name='target1'>Haelen</marker> against all comers. Don't make any moves north; stay within city limits or very close to it.<br/><br/>Rules of Engagement: Condition Red, weapons free. We've got 'em on the run everywhere; this is just a last gasp effort on their part to skeedaddle. You'll almost certainly be allowed to stand down after this battle.<br/><br/>Learn those boys some manners.<br/><br/>"
 			]
 		];
 
