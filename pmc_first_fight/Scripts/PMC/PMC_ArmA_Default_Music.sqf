@@ -43,7 +43,7 @@ _ArmA_Tracks =
 	"ATrack27"
 ];
 
-// all ArmA + Queens Gambit tracks
+// all ArmA + Queens Gambit + BAF tracks
 _ArmA_QG_Tracks =
 [
 	"ATrack1",
@@ -86,7 +86,13 @@ _ArmA_QG_Tracks =
 	"WithCare_Smile",
 	"WithCare_Suicide",
 	"WithCare_War",
-	"WithCare_What"
+	"WithCare_What",
+	"BAF_Track01",
+	"BAF_Track02",
+	"BAF_Track03",
+	"BAF_Track04",
+	"BAF_Track05",
+	"BAF_Track06"
 ];
 
 _ran = (round random (count _ArmA_Tracks));
