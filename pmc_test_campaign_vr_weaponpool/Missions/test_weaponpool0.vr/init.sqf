@@ -9,3 +9,6 @@ removeAllItems player;
 
 // make everyone shoot me
 player addRating -9000;
+
+addWeaponPool ["arifle_MX_ACO_pointer_F", 2];
+addMagazinePool ["30Rnd_65x39_caseless_mag", 10];
