@@ -1,12 +1,15 @@
 
+// add weaponpool for our Spec Ops
+[] execVM "PMC\PMC_weaponPool.sqf";
+
 // from earlier missions only sf1-4 exists, 5 and 6 were added on this mission!
-PMC_sf1 loadStatus "sf1_03";
+PMC_sf1 loadStatus "pmc_sf1_arming2";
 PMC_sf1 setDamage 0;
-PMC_sf2 loadStatus "sf2_03";
-PMC_sf3 loadStatus "sf3_03";
-PMC_sf4 loadStatus "sf4_03";
-PMC_sf5 loadStatus "sf5_03";
-PMC_sf6 loadStatus "sf6_03";
+PMC_sf2 loadStatus "pmc_sf2_arming2";
+PMC_sf3 loadStatus "pmc_sf3_arming2";
+PMC_sf4 loadStatus "pmc_sf4_arming2";
+PMC_sf5 loadStatus "pmc_sf5_arming2";
+PMC_sf6 loadStatus "pmc_sf6_arming2";
 
 {
 	if (!alive _x) then

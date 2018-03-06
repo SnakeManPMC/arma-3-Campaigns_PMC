@@ -27,11 +27,11 @@ class CfgIdentities
 
 class Campaign
 {
-	briefingName = "PMC First Fight v0.1.3";
+	briefingName = "PMC First Fight v0.1.4";
 	author = "Snake Man";
 	overviewText = "First user name armed assault (arma1) campaign ever. Cool infantry action! Campaign where you take part as several US unit types when invading the Sahrani. v0.7 Sep 17th, 2009.";
 	firstBattle = Beginning;
-	weaponPool = true;
+	weaponPool = 1;
 
 	class MissionDefault
 	{
@@ -59,10 +59,12 @@ class Campaign
 		end6 = ;
 		lost = ;
 
+// arm Spec Ops
 		class pmc0: MissionDefault
 		{
 			end1 = pmc1;
-			template = snake_ff_000_weaponinit.Sara;
+			template = arming_mfr_team_1.utes;
+			//template = snake_ff_000_weaponinit.Sara;
 		};
 
 		class pmc1: MissionDefault
@@ -107,11 +109,18 @@ class Campaign
 			template = snake_ff_006_night_shift.Sara;
 		};
 
+// arm Spec Ops
 		class pmc6_cut: MissionDefault
 		{
-			end1 = pmc7;
-			lost = pmc7;
+			end1 = pmc_arming_mfr_team_2;
+			lost = pmc_arming_mfr_team_2;
 			template = snake_ff_006a_cutscene.Sara;
+		};
+
+		class pmc_arming_mfr_team_2: MissionDefault
+		{
+			end1 = pmc7;
+			template = arming_mfr_team_2.sara;
 		};
 
 		class pmc7: MissionDefault

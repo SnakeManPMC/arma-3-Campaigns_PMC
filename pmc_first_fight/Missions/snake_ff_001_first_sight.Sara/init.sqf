@@ -1,6 +1,12 @@
 
 [] execVM "PMC\PMC_Mission_Start.sqf";
 
+// load status from arming mission
+PMC_sf1 loadStatus "pmc_sf1_00";
+PMC_sf2 loadStatus "pmc_sf2_00";
+PMC_sf3 loadStatus "pmc_sf3_00";
+PMC_sf4 loadStatus "pmc_sf4_00";
+
 sleep 0.1;
 (units assault1 select 0) moveInDriver shp1;
 (units assault1 select 1) moveInCargo shp1;
