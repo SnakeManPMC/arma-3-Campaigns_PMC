@@ -73,7 +73,7 @@ addMagazinePool ["CUP_15Rnd_9x19_M9",50];
 addMagazinePool ["CUP_10Rnd_127x99_M107",50];
 addMagazinePool ["M136",50];
 addMagazinePool ["JAVELIN",50];
-addMagazinePool ["STINGER",50];
+addMagazinePool ["CUP_Stinger_M",50];
 ;east
 addMagazinePool ["CUP_30Rnd_545x39_AK_M",50];
 addMagazinePool ["CUP_FlareWhite_GP25_M",50];
@@ -118,7 +118,7 @@ addWeaponPool ["CUP_M9",12];
 addWeaponPool ["CUP_M9SD",12];
 addWeaponPool ["M136",12];
 addWeaponPool ["JAVELIN",12];
-addWeaponPool ["STINGER",12];
+addWeaponPool ["CUP_launch_FIM92Stinger",12];
 ;east
 addWeaponPool ["AK74",12];
 addWeaponPool ["AK74GL",12];
