@@ -124,7 +124,6 @@ addWeaponPool ["CUP_launch_RPG7V",12];
 addWeaponPool ["CUP_launch_9K32Strela",12];
 
 // equipment
-addMagazinePool ["CUP_MineE",12];
 addMagazinePool ["CUP_PipeBomb_M",12];
 addMagazinePool ["CUP_HandGrenade_M67",12];
 addMagazinePool ["Laserbatteries",50];
