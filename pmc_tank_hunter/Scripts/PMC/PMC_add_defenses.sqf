@@ -103,7 +103,7 @@ if (getMarkerColor _marker == "ColorRed") then
 	} forEach units _grp;
 
 	// some defensive and action related trickery for them
-	handle = [_grp, _city] execVM "PMC\BIN_taskDefend.sqf";
+	[_grp, _city] call BIS_fnc_taskDefend;
 
 	eastguys = eastguys + 6;
 };
@@ -211,7 +211,7 @@ if (getMarkerColor _marker == "ColorGreen") then
 	} forEach units _grp;
 
 	// some defensive and action related trickery for them
-	handle = [_grp, _city] execVM "PMC\BIN_taskDefend.sqf";
+	[_grp, _city] call BIS_fnc_taskDefend;
 
 	westguys = westguys + 6;
 };
