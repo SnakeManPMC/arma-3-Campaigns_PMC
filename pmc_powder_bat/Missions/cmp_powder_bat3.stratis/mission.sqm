@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=176;
+		nextID=178;
 	};
 	class MarkerIDProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
 		pos[]={2978.939,196.39999,1847.188};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -63,9 +63,6 @@ randomSeed=11504703;
 class ScenarioData
 {
 	author="PMC Since 1984";
-};
-class CustomAttributes
-{
 };
 class Intro
 {
@@ -112,7 +109,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=13;
+		items=15;
 		class Item0
 		{
 			dataType="Marker";
@@ -131,7 +128,8 @@ class Mission
 			{
 				name="pmc_1";
 				text="opfor dead 1";
-				onActivation="pmc_opfordead1 = true; [""PMC_objective1"", ""succeeded""] call SHK_Taskmaster_Upd;";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective1.sqf"";}";
 				sizeA=100;
 				sizeB=100;
 				timeout[]={3,5,7};
@@ -184,12 +182,13 @@ class Mission
 		class Item4
 		{
 			dataType="Trigger";
-			position[]={2632.6589,65.647224,622.37354};
+			position[]={2632.6589,65.64724,622.37402};
 			class Attributes
 			{
 				name="pmc_2";
 				text="opfor dead 2";
-				onActivation="pmc_opfordead2 = true; [""PMC_objective2"", ""succeeded""] call SHK_Taskmaster_Upd;";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective2.sqf"";}";
 				sizeA=100;
 				sizeB=100;
 				timeout[]={3,5,7};
@@ -206,7 +205,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3296.8472,231.38824,2919.52};
-				angles[]={-0,2.5521383,0};
+				angles[]={0,2.5521383,0};
 			};
 			side="Empty";
 			flags=4;
@@ -301,7 +300,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3277.9043,229.18668,2933.4583};
-						angles[]={-0,0,6.2806959};
+						angles[]={0,0,6.2806959};
 					};
 					side="West";
 					flags=4;
@@ -1131,6 +1130,24 @@ class Mission
 			{
 			};
 			id=172;
+		};
+		class Item13
+		{
+			dataType="Marker";
+			position[]={2980.1831,171.39999,1872.032};
+			name="pmc_marker_obj_1";
+			type="mil_objective";
+			colorName="ColorRed";
+			id=176;
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={2629.884,65.357628,622.25};
+			name="pmc_marker_obj_2";
+			type="mil_objective";
+			colorName="ColorRed";
+			id=177;
 		};
 	};
 };

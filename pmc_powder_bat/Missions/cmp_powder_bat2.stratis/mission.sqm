@@ -19,7 +19,7 @@ class EditorData
 		pos[]={3288.3901,254.19568,2912.2554};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -106,12 +106,13 @@ class Mission
 		class Item1
 		{
 			dataType="Trigger";
-			position[]={3292.0759,229.10866,2937.4268};
+			position[]={3292.0759,229.10864,2937.427};
 			class Attributes
 			{
 				name="pmc_1";
 				text="opfor dead 1";
-				onActivation="pmc_opfordead1 = true; [""PMC_objective1"", ""succeeded""] call SHK_Taskmaster_Upd;";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective1.sqf"";}";
 				sizeA=500;
 				sizeB=500;
 				timeout[]={3,5,7};
@@ -191,7 +192,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3293.3901,229.28569,2932.3054};
-						angles[]={-0,0,0.074860021};
+						angles[]={0,0,0.074860021};
 					};
 					side="West";
 					flags=4;
@@ -258,7 +259,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3303.3901,229.19991,2922.3054};
-						angles[]={-0,0,0.0024897563};
+						angles[]={0,0,0.0024897563};
 					};
 					side="West";
 					flags=4;
@@ -307,7 +308,6 @@ class Mission
 			{
 			};
 			id=17;
-			atlOffset=142.91;
 		};
 		class Item5
 		{
@@ -490,7 +490,6 @@ class Mission
 			{
 			};
 			id=26;
-			atlOffset=142.91;
 		};
 		class Item6
 		{
@@ -515,6 +514,7 @@ class Mission
 					};
 					id=38;
 					type="CUP_I_GUE_Commander";
+					atlOffset=7.6293945e-006;
 				};
 				class Item1
 				{
@@ -532,6 +532,7 @@ class Mission
 					};
 					id=39;
 					type="CUP_I_GUE_Soldier_MG";
+					atlOffset=-7.6293945e-006;
 				};
 				class Item2
 				{
@@ -567,6 +568,7 @@ class Mission
 					};
 					id=41;
 					type="CUP_I_GUE_Sniper";
+					atlOffset=-7.6293945e-006;
 				};
 				class Item4
 				{
@@ -585,6 +587,7 @@ class Mission
 					};
 					id=42;
 					type="CUP_I_GUE_Soldier_AT";
+					atlOffset=7.6293945e-006;
 				};
 				class Item5
 				{
@@ -673,7 +676,7 @@ class Mission
 			{
 			};
 			id=37;
-			atlOffset=142.91;
+			atlOffset=7.6293945e-006;
 		};
 		class Item7
 		{
@@ -856,7 +859,6 @@ class Mission
 			{
 			};
 			id=48;
-			atlOffset=142.91;
 		};
 		class Item8
 		{
@@ -1039,7 +1041,6 @@ class Mission
 			{
 			};
 			id=59;
-			atlOffset=142.91;
 		};
 	};
 };

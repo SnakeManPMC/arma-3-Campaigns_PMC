@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=261;
+		nextID=263;
 	};
 	class MarkerIDProvider
 	{
-		nextID=4;
+		nextID=5;
 	};
 	class Camera
 	{
 		pos[]={2626.9194,90.036896,599.18915};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -104,7 +104,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=16;
+		items=18;
 		class Item0
 		{
 			dataType="Marker";
@@ -118,8 +118,8 @@ class Mission
 		class Item1
 		{
 			dataType="Marker";
-			position[]={3290.104,229.17999,2934.4849};
-			name="maxwell";
+			position[]={3290.104,229.17999,2934.4851};
+			name="pmc_marker_obj_3";
 			type="mil_flag";
 			colorName="ColorBlue";
 			id=200;
@@ -127,12 +127,13 @@ class Mission
 		class Item2
 		{
 			dataType="Trigger";
-			position[]={2163.7192,9.5336637,1942.5};
+			position[]={2163.719,9.5336676,1942.5};
 			class Attributes
 			{
 				name="pmc_1";
 				text="opfor dead 1";
-				onActivation="pmc_opfordead1 = true; [""PMC_objective1"", ""succeeded""] call SHK_Taskmaster_Upd;";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective1.sqf"";}";
 				sizeA=100;
 				sizeB=100;
 				timeout[]={3,5,7};
@@ -183,12 +184,13 @@ class Mission
 		class Item5
 		{
 			dataType="Trigger";
-			position[]={2029.5732,2.7793787,2736.2017};
+			position[]={2029.573,2.7793791,2736.2019};
 			class Attributes
 			{
 				name="pmc_2";
 				text="opfor dead 2";
-				onActivation="pmc_opfordead2 = true; [""PMC_objective2"", ""succeeded""] call SHK_Taskmaster_Upd;";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective2.sqf"";}";
 				sizeA=100;
 				sizeB=100;
 				timeout[]={3,5,7};
@@ -202,18 +204,20 @@ class Mission
 		class Item6
 		{
 			dataType="Trigger";
-			position[]={3295.7676,229.34941,2933.7412};
+			position[]={3295.7681,229.34941,2933.741};
 			class Attributes
 			{
 				name="pmc_3";
-				condition="pmc_opfordead1 && pmc_opfordead2 && this";
-				onActivation="pmc_boysathome = true;";
+				text="returned to camp maxwell, HQ";
+				condition="call{pmc_opfordead1 && pmc_opfordead2 && this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective3.sqf"";}";
 				timeout[]={3,5,7};
 				interuptable=1;
 				activationBy="WEST";
 			};
 			id=205;
 			type="EmptyDetector";
+			atlOffset=-1.5258789e-005;
 		};
 		class Item7
 		{
@@ -417,7 +421,6 @@ class Mission
 			{
 			};
 			id=209;
-			atlOffset=142.91;
 		};
 		class Item11
 		{
@@ -586,7 +589,6 @@ class Mission
 			{
 			};
 			id=218;
-			atlOffset=142.91;
 		};
 		class Item12
 		{
@@ -736,7 +738,6 @@ class Mission
 			{
 			};
 			id=228;
-			atlOffset=142.91;
 		};
 		class Item13
 		{
@@ -886,7 +887,6 @@ class Mission
 			{
 			};
 			id=237;
-			atlOffset=142.91;
 		};
 		class Item14
 		{
@@ -985,7 +985,6 @@ class Mission
 			{
 			};
 			id=246;
-			atlOffset=142.91;
 		};
 		class Item15
 		{
@@ -1135,7 +1134,26 @@ class Mission
 			{
 			};
 			id=252;
-			atlOffset=142.91;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={2161.9839,7.7340002,1935.845};
+			name="pmc_marker_obj_1";
+			type="mil_objective";
+			colorName="ColorRed";
+			id=261;
+			atlOffset=0.00025367737;
+		};
+		class Item17
+		{
+			dataType="Marker";
+			position[]={2033.3452,2.8040843,2737.98};
+			name="pmc_marker_obj_2";
+			type="mil_objective";
+			colorName="ColorRed";
+			id=262;
+			atlOffset=0.00025367737;
 		};
 	};
 };
