@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=69;
+		nextID=71;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2876.2493,24.81259,5862.5942};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={3343.8108,347.21118,2971.6167};
+		dir[]={-0.63648981,-0.54387683,-0.54689246};
+		up[]={-0.41251862,0.83916521,-0.35444918};
+		aside[]={-0.6517095,1.4429679e-007,0.75847936};
 	};
 };
 binarizationWanted=0;
@@ -28,13 +28,14 @@ addons[]=
 	"A3_Ui_F",
 	"CUP_Creatures_Military_NAPA",
 	"CUP_Creatures_Military_USMC",
-	"CUP_WheeledVehicles_MTVR"
+	"CUP_WheeledVehicles_MTVR",
+	"CUP_Weapons_AmmoBoxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -56,6 +57,11 @@ class AddonsMetaData
 		{
 			className="CUP_WheeledVehicles_MTVR";
 			name="CUP_WheeledVehicles_MTVR";
+		};
+		class Item4
+		{
+			className="CUP_Weapons_AmmoBoxes";
+			name="CUP_Weapons_AmmoBoxes";
 		};
 	};
 };
@@ -89,11 +95,15 @@ class Mission
 		briefingName="PMC Powder Bat 10";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0.25;
+		startWeather=1;
 		startWind=0.099999994;
-		forecastWeather=0.25;
+		forecastWeather=1;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2008;
 		month=10;
 		day=11;
@@ -104,7 +114,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=13;
+		items=15;
 		class Item0
 		{
 			dataType="Marker";
@@ -124,8 +134,6 @@ class Mission
 				name="pmc_1";
 				text="independent dead 1";
 				onActivation="0 = [] execVM ""PMC\PMC_Objective1.sqf"";";
-				sizeA=50;
-				sizeB=50;
 				timeout[]={3,5,7};
 				interuptable=1;
 				activationBy="WEST SEIZED";
@@ -181,8 +189,6 @@ class Mission
 				name="pmc_2";
 				text="independent dead 2";
 				onActivation="0 = [] execVM ""PMC\PMC_Objective2.sqf"";";
-				sizeA=50;
-				sizeB=50;
 				timeout[]={3,5,7};
 				interuptable=1;
 				activationBy="WEST SEIZED";
@@ -1100,6 +1106,41 @@ class Mission
 			};
 			id=68;
 			type="CUP_B_MTVR_USMC";
+			atlOffset=-4.7683716e-007;
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3279.334,229.74414,2913.3381};
+				angles[]={6.2631865,0,0.052450236};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="pmc_ammobox_base_1";
+			};
+			id=69;
+			type="CUP_LocalBasicAmmunitionBox";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3280.7671,229.41324,2911.5488};
+				angles[]={0.0025135824,1.8440276,0.019996032};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="pmc_ammobox_base_2";
+			};
+			id=70;
+			type="CUP_LocalBasicWeaponsBox";
 		};
 	};
 };

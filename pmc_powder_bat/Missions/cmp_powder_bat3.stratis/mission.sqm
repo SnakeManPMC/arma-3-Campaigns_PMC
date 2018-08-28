@@ -98,13 +98,17 @@ class Mission
 		briefingName="PMC Powder Bat 3";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0.29999998;
+		startWeather=1;
 		startWind=0.099999994;
 		startWaves=0.099999994;
-		forecastWeather=0.29999998;
+		forecastWeather=1;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		month=7;
 		day=6;
@@ -136,8 +140,6 @@ class Mission
 				text="opfor dead 1";
 				condition="call{this}";
 				onActivation="call{0 = [] execVM ""PMC\PMC_Objective1.sqf"";}";
-				sizeA=50;
-				sizeB=50;
 				timeout[]={3,5,7};
 				interuptable=1;
 				activationBy="WEST SEIZED";
@@ -194,8 +196,6 @@ class Mission
 				text="opfor dead 2";
 				condition="call{this}";
 				onActivation="call{0 = [] execVM ""PMC\PMC_Objective2.sqf"";}";
-				sizeA=50;
-				sizeB=50;
 				timeout[]={3,5,7};
 				interuptable=1;
 				activationBy="WEST SEIZED";
@@ -1250,6 +1250,7 @@ class Mission
 			};
 			id=192;
 			type="CUP_LocalBasicAmmunitionBox";
+			atlOffset=-0.00035095215;
 		};
 		class Item16
 		{
@@ -1267,7 +1268,7 @@ class Mission
 			};
 			id=193;
 			type="CUP_LocalBasicWeaponsBox";
-			atlOffset=1.5258789e-005;
+			atlOffset=-6.1035156e-005;
 		};
 	};
 };
