@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Enough Rogain for one day, don't you think", "plain", 3];
+titleText ["Enough Rogain for one day, don't you think", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Wonder whats in store for us tomorrow...", "plain", 3];
+titleText ["Wonder whats in store for us tomorrow...", "plain down", 3];
 sleep 5;
 
 // some shots

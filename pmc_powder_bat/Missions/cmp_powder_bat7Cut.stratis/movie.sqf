@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Kamino has fallen", "plain", 3];
+titleText ["Kamino has fallen", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Like so many before", "plain", 3];
+titleText ["Like so many before", "plain down", 3];
 sleep 5;
 
 // some shots

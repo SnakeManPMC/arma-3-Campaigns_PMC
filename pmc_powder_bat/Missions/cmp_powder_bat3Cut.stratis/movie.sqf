@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Objectives met", "plain", 3];
+titleText ["Objectives met", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["So much death...", "plain", 3];
+titleText ["So much death...", "plain down", 3];
 sleep 5;
 
 4 fademusic 0;

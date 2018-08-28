@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Zaros, with a football field...", "plain", 3];
+titleText ["Zaros, with a football field...", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Too bad I dont play football, I kill bad guys!", "plain", 3];
+titleText ["Too bad I dont play football, I kill bad guys!", "plain down", 3];
 sleep 5;
 
 // some shots

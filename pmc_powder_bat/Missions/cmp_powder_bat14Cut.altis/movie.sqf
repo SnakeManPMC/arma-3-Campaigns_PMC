@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Look mom! I got myself an airfield!", "plain", 3];
+titleText ["Look mom! I got myself an airfield!", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Hopefully our flyboys appreciate our efforts here", "plain", 3];
+titleText ["Hopefully our flyboys appreciate our efforts here", "plain down", 3];
 sleep 5;
 
 // some shots

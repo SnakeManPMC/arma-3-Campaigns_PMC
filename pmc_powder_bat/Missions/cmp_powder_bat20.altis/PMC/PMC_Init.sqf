@@ -1,6 +1,6 @@
 
 // year, month, day, hour, minute
-setDate [2010, 3, 6, 9, 0];
+setDate [2008, 11, 8, 12, 0];
 
 PMCHQ = [ West, "BASE" ];
 

@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Neochori, ugh", "plain", 3];
+titleText ["Neochori, ugh", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["But rather here than hell!", "plain", 3];
+titleText ["But rather here than hell!", "plain down", 3];
 sleep 5;
 
 // some shots

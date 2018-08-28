@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Stavros, another town taken down", "plain", 3];
+titleText ["Stavros, another town taken down", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Look mom! top of the world!", "plain", 3];
+titleText ["Look mom! top of the world!", "plain down", 3];
 sleep 5;
 
 // some shots

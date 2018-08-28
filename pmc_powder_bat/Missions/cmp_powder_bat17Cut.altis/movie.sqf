@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["These towns fall easy", "plain", 3];
+titleText ["These towns fall easy", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Like taking candy from a baby", "plain", 3];
+titleText ["Like taking candy from a baby", "plain down", 3];
 sleep 5;
 
 // some shots

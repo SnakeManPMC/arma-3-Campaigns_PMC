@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["We got Agia Marine today", "plain", 3];
+titleText ["We got Agia Marine today", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["I'm scared of what's next for us", "plain", 3];
+titleText ["I'm scared of what's next for us", "plain down", 3];
 sleep 5;
 
 // some shots

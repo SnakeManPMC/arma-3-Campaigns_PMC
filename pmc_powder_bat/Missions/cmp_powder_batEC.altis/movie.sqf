@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Our campaign is over!", "plain", 3];
+titleText ["Our campaign is over!", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
@@ -33,7 +33,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["We have captured our objectives!", "plain", 3];
+titleText ["We have captured our objectives!", "plain down", 3];
 sleep 5;
 
 // some shots
@@ -43,7 +43,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Wictory is ours!!", "plain", 3];
+titleText ["Wictory is ours!!", "plain down", 3];
 sleep 5;
 
 // some shots
@@ -55,10 +55,10 @@ sleep _d;
 
 titleCut ["", "black out", 2];
 sleep 1.5;
-titleText ["Thank you for playing PMC Powder Bat", "plain", 3];
+titleText ["Thank you for playing PMC Powder Bat", "plain down", 3];
 sleep 5;
 
-titleText ["This has been PMC production\n\nhttps://www.pmctactical.org", "plain", 3];
+titleText ["This has been PMC production\n\nhttps://www.pmctactical.org", "plain down", 3];
 sleep 5;
 
 4 fademusic 0;
