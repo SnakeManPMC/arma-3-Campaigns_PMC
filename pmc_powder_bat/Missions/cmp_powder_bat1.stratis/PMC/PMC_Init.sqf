@@ -6,4 +6,4 @@ PMCHQ = [ West, "BASE" ];
 
 [] execVM "PMC\PMC_Briefing.sqf";
 [] execVM "PMC\PMC_Tasks.sqf";
-[] execVM "PMC\PMC_weather.sqf";
+[1.1] execVM "PMC\PMC_weather_SP.sqf";
