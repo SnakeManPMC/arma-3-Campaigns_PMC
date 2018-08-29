@@ -9,3 +9,5 @@ PMCHQ = [ West, "BASE" ];
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
 [] execVM "PMC\PMC_WeaponPoolTruck.sqf";
 [] execVM "PMC\PMC_WeaponPoolAmmoBox.sqf";
+
+[player, "PMC_WeatherForecast", nil, nil, ""] call BIS_fnc_addCommMenuItem;

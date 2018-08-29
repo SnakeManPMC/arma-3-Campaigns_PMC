@@ -10,6 +10,10 @@ _camera cameraEffect ["internal", "back"];
 
 _d = 7;
 
+setDate PMC_LastMissionDateTime;
+0 setOvercast PMC_LastMissionOvercast;
+forceWeatherChange;
+
 // start
 _camera camPrepareTarget leader pmcinf1;
 _camera camPreparePos [(getPosASL leader pmcinf1 select 0), (getPosASL leader pmcinf1 select 1) + 7, 3];
