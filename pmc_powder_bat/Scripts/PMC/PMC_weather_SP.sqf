@@ -3,8 +3,11 @@
 
 private _Overcast_Random_Amount = _this select 0;
 
-0 setOvercast (random _Overcast_Random_Amount);
+private _ran = 1;//(random _Overcast_Random_Amount);
+0 setOvercast _ran;
 forceWeatherChange;
+
+[_ran] spawn { sleep 3; player sidechat format["Initial weather: %1", _this select 0] };
 
 // this is run on server only
 [_Overcast_Random_Amount] spawn
@@ -28,9 +31,7 @@ forceWeatherChange;
 	while {true} do
 	{
 		_duration = random (60 * 7);
-		_minimum_change_time = (60 * 3) + random (60 * 10);
-
-		_PMC_WeatherChangeTime = _minimum_change_time;
+		_minimum_change_time = 1799;
 
 		_PMC_do_overcast = random _Overcast_Random_Amount;
 
@@ -38,14 +39,16 @@ forceWeatherChange;
 
 		PMC_Weather_forecast = format
 		[
-			"Weather report: %1, change time %2 min, duration %3 min.",
+			"Weather report: %1 change time %2 min, duration %3 min. setOvercast: %4",
 			_ForeCast,
-			(floor (_PMC_WeatherChangeTime / 60)),
-			(floor (_duration / 60))
+			(floor (_minimum_change_time / 60)),
+			(floor (_duration / 60)),
+			_PMC_do_overcast
 		];
-		_PMC_WeatherChangeTime setOvercast _PMC_do_overcast;
+		_minimum_change_time setOvercast _PMC_do_overcast;
+		simulWeatherSync;
 
 		PMCHQ sideChat PMC_Weather_forecast;
-		sleep (_PMC_WeatherChangeTime + _duration);
+		sleep (_minimum_change_time + _duration);
 	};
 };
