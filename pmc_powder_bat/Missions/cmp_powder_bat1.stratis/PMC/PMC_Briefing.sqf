@@ -8,4 +8,4 @@ player createDiaryRecord ["Diary", ["Execution", ""]];
 player createDiaryRecord ["Diary", ["Intel", ""]];
 */
 player createDiaryRecord ["Diary", ["Mission", "Your <marker name='start'>insert</marker> position is on the beach. Proceed to eliminate the two assigned objectives."]];
-player createDiaryRecord ["Diary", ["Situation", "2010-03-06T::00Z, weather. <marker name='pmc_marker_start'>HQ</marker>"]];
+//player createDiaryRecord ["Diary", ["Situation", ""]];

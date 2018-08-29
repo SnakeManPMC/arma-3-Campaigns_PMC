@@ -20,7 +20,7 @@ sleep 3;
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
-titleText ["Taking down Strafka was easy", "plain down", 3];
+titleText ["Taking down Sfaka was easy", "plain down", 3];
 sleep 5;
 
 titleCut ["", "black in", 3];
