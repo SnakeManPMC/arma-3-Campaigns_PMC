@@ -3,7 +3,7 @@
 
 private _Overcast_Random_Amount = _this select 0;
 
-private _ran = 1;//(random _Overcast_Random_Amount);
+private _ran = (random _Overcast_Random_Amount);
 0 setOvercast _ran;
 forceWeatherChange;
 
@@ -24,14 +24,12 @@ forceWeatherChange;
 
 	_Overcast_Random_Amount = _this select 0;
 
-	sleep 1;
-
 	call compile preProcessFileLineNumbers "PMC\PMC_weather_to_string.sqf";
 
 	while {true} do
 	{
-		_duration = random (60 * 7);
-		_minimum_change_time = 1799;
+		_duration = random (60 * 10);
+		_minimum_change_time = 5400;
 
 		_PMC_do_overcast = random _Overcast_Random_Amount;
 
