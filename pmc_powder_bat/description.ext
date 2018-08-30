@@ -10,11 +10,11 @@ weaponPool = 0;
 class Campaign
 {
 	// required, you get error if this is missing
-	briefingName = "PMC Powder Bat v0.2.5";
+	briefingName = "PMC Powder Bat v0.2.6";
 	author = "Snake Man";
 	overviewText = "US Marine Corps clears Stratis and Altis of insurgent bastards. Uses CUP units/weapons/vehicles.";
 	//overviewPicture = ""; // PAA Image
-	firstBattle = Beginning;
+	firstBattle = pmc_stratis;
 
 	class MissionDefault
 	{
@@ -28,10 +28,10 @@ class Campaign
 		end6 = ;
 	};
 
-	// first chapter
-	class Beginning
+	// first chapter - Stratis
+	class pmc_stratis
 	{
-		name = "Beginning";
+		name = "Stratis";
 		cutscene = cmp_powder_batOC;
 		firstMission = cmp_powder_bat1;
 		end1 = ;
@@ -41,8 +41,6 @@ class Campaign
 		end5 = ;
 		end6 = ;
 		lost = ;
-
-		// campaign missions
 
 		// Opening Cutscene
 		class cmp_powder_batOC: MissionDefault
@@ -188,6 +186,21 @@ class Campaign
 			lost = cmp_powder_bat11;
 			template = cmp_powder_bat10Cut.stratis;
 		};
+	};
+
+	// seconds chapter - Altis
+	class pmc_altis
+	{
+		name = "Altis";
+		cutscene = ;
+		firstMission = cmp_powder_bat11;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		lost = ;
 
 		class cmp_powder_bat11: MissionDefault
 		{
@@ -315,7 +328,6 @@ class Campaign
 			template = cmp_powder_bat19Cut.altis;
 		};
 
-		//Final mission!
 		class cmp_powder_bat20: MissionDefault
 		{
 			end1 = cmp_powder_batEC;
@@ -328,5 +340,92 @@ class Campaign
 		{
 			template = cmp_powder_batEC.altis;
 		};
+/*
+	};
+
+	// third chapter - Tanoa
+	class pmc_tanoa
+	{
+		name = "Tanoa";
+		cutscene = ;
+		firstMission = cmp_powder_bat11;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		lost = ;
+
+		class cmp_powder_bat21: MissionDefault
+		{
+			end1 = cmp_powder_bat22;
+			lost = cmp_powder_bat22;
+			template = cmp_powder_bat21.tanoa;
+		};
+
+		class cmp_powder_bat22: MissionDefault
+		{
+			end1 = cmp_powder_bat23;
+			lost = cmp_powder_bat23;
+			template = cmp_powder_bat22.tanoa;
+		};
+
+		class cmp_powder_bat23: MissionDefault
+		{
+			end1 = cmp_powder_bat24;
+			lost = cmp_powder_bat24;
+			template = cmp_powder_bat23.tanoa;
+		};
+
+		class cmp_powder_bat24: MissionDefault
+		{
+			end1 = cmp_powder_bat25;
+			lost = cmp_powder_bat25;
+			template = cmp_powder_bat24.tanoa;
+		};
+
+		class cmp_powder_bat25: MissionDefault
+		{
+			end1 = cmp_powder_bat26;
+			lost = cmp_powder_bat26;
+			template = cmp_powder_bat25.tanoa;
+		};
+
+		class cmp_powder_bat26: MissionDefault
+		{
+			end1 = cmp_powder_bat27;
+			lost = cmp_powder_bat27;
+			template = cmp_powder_bat26.tanoa;
+		};
+
+		class cmp_powder_bat27: MissionDefault
+		{
+			end1 = cmp_powder_bat28;
+			lost = cmp_powder_bat28;
+			template = cmp_powder_bat27.tanoa;
+		};
+
+		class cmp_powder_bat28: MissionDefault
+		{
+			end1 = cmp_powder_bat29;
+			lost = cmp_powder_bat29;
+			template = cmp_powder_bat28.tanoa;
+		};
+
+		class cmp_powder_bat29: MissionDefault
+		{
+			end1 = cmp_powder_bat30;
+			lost = cmp_powder_bat30;
+			template = cmp_powder_bat29.tanoa;
+		};
+
+		class cmp_powder_bat30: MissionDefault
+		{
+			end1 = cmp_powder_batEC;
+			lost = cmp_powder_batEC;
+			template = cmp_powder_bat30.tanoa;
+		};
+*/
 	};
 };
