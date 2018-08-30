@@ -1,4 +1,6 @@
 
+/* disabled until we get weaponPool fixed :(
+
 // mission start we fill camp maxwell ammo boxes with weaponPool goodies
 {
 	// clear them from default stuff
@@ -9,3 +11,4 @@
 	// fill from weaponPool
 	putWeaponPool _x;
 } forEach [pmc_ammobox_base_1, pmc_ammobox_base_2];
+*/

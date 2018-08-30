@@ -9,7 +9,10 @@ PMCHQ = [ West, "BASE" ];
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
 // special initialization for truck, so we can add some juicy cargo for it. script in *MISSION* PMC\ scripts dir
 [] execVM "PMC\PMC_WeaponPoolTruckInit.sqf";
-[] execVM "PMC\PMC_WeaponPoolAmmoBox.sqf";
+pmc_ammobox_base_1 loadStatus "PMC_AmmoBoxBase1";
+pmc_ammobox_base_2 loadStatus "PMC_AmmoBoxBase2";
+[pmc_ammobox_base_1] execVM "PMC\PMC_AmmoBoxResupply.sqf";
+[pmc_ammobox_base_2] execVM "PMC\PMC_AmmoBoxResupply.sqf";
 
 [player, "PMC_WeatherForecast", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 

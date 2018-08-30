@@ -1,4 +1,6 @@
 
+/* disabled until we get weaponPool fixed :(
+
 // mission start we fill truck with weaponPool goodies
 
 // clear default stuff
@@ -9,3 +11,4 @@ clearBackpackCargo pmc_truck1;
 
 // fill from weaponPool
 putWeaponPool pmc_truck1;
+*/
