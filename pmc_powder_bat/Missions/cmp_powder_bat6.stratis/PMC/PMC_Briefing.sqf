@@ -5,5 +5,5 @@ player createDiaryRecord ["Diary", ["Command and Signal", ""]];
 player createDiaryRecord ["Diary", ["Support", ""]];
 player createDiaryRecord ["Diary", ["Execution", ""]];
 player createDiaryRecord ["Diary", ["Intel", ""]];*/
-player createDiaryRecord ["Diary", ["Mission", "You start from <marker name='start'>Air Station Mike-26</marker>, some buildings for you to clear today."]];
+player createDiaryRecord ["Diary", ["Mission", "You start from <marker name='start'>Air Station Mike-26</marker>, some radio masts for you to clear today."]];
 //player createDiaryRecord ["Diary", ["Situation", ""]];
