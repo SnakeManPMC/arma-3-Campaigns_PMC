@@ -4,6 +4,8 @@
 private _Overcast_Random_Amount = _this select 0;
 
 private _ran = (random _Overcast_Random_Amount);
+// apparently rain doesnt work if overcast value is above 1 :)
+if (_ran > 1) then { _ran = 1; };
 0 setOvercast _ran;
 forceWeatherChange;
 
