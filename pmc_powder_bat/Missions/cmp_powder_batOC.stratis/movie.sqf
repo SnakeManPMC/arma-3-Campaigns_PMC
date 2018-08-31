@@ -8,7 +8,7 @@ titleCut ["", "black out", 0.00000001];
 _camera = "camera" camCreate [0, 0, 0];
 _camera cameraEffect ["internal", "back"];
 
-_d = 7;
+_d = 7; enableRadio false;
 
 // start
 _camera camPrepareTarget [61212.32,79833.27,-12525.39];

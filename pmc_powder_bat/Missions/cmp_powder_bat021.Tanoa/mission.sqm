@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=29;
+		nextID=30;
 	};
 	class Camera
 	{
@@ -82,7 +82,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=15;
+		items=16;
 		class Item0
 		{
 			dataType="Group";
@@ -108,6 +108,7 @@ class Mission
 					};
 					id=1;
 					type="CUP_B_USMC_Soldier_SL_FROG_WDL";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item1
 				{
@@ -381,6 +382,7 @@ class Mission
 			{
 			};
 			id=0;
+			atlOffset=-4.7683716e-007;
 		};
 		class Item1
 		{
@@ -560,6 +562,23 @@ class Mission
 			name="pmc_location_3";
 			id=28;
 			type="Logic";
+		};
+		class Item15
+		{
+			dataType="Trigger";
+			position[]={3221.125,-2.2385266,14003.553};
+			class Attributes
+			{
+				text="mission complete - music";
+				condition="call{pmc_opfordead1 && pmc_opfordead2 && pmc_opfordead3 && pmc_opfordead4 && pmc_opfordead5}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_EndMission.sqf"";}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={3,5,7};
+				interuptable=1;
+			};
+			id=29;
+			type="EmptyDetector";
 		};
 	};
 };

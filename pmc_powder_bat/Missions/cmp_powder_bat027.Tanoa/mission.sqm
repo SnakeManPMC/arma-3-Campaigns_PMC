@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=27;
+		nextID=28;
 	};
 	class Camera
 	{
 		pos[]={13226.063,27.549999,12490.742};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -82,7 +82,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			dataType="Group";
@@ -311,7 +311,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6954.334,2.6614389,7173.1021};
-						angles[]={-0,3.2228706,0};
+						angles[]={0,3.2228706,0};
 					};
 					side="West";
 					flags=4;
@@ -504,6 +504,25 @@ class Mission
 			name="pmc_location_4";
 			id=26;
 			type="Logic";
+			atlOffset=7.6293945e-006;
+		};
+		class Item12
+		{
+			dataType="Trigger";
+			position[]={13587.672,-24.998209,12618.719};
+			class Attributes
+			{
+				text="mission complete - music";
+				condition="call{pmc_opfordead1 && pmc_opfordead2 && pmc_opfordead3}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_EndMission.sqf"";}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={3,5,7};
+				interuptable=1;
+			};
+			id=27;
+			type="EmptyDetector";
+			atlOffset=-1.9073486e-006;
 		};
 	};
 };

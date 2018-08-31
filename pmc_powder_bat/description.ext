@@ -24,35 +24,32 @@ class MissionDefault: NoEndings
 
 class Campaign
 {
-	briefingName = "PMC Powder Bat v0.2.9";
+	briefingName = "PMC Powder Bat v0.3.1";
 	author = "Snake Man, PMC.";
 	overviewText = "US Marine Corps clears Stratis, Altis and Tanoa of insurgent bastards. Uses CUP units/weapons/vehicles.";
 	overviewPicture = "\campaigns\pmc_powder_bat\overviewPicture_ca.paa";
 	firstBattle = pmc_stratis;
 
-	/*
-		Stratis
-	*/
 	class pmc_stratis: NoEndings
 	{
-		// does not play
-		cutscene = cmp_powder_bat001Cut; // cmp_powder_batOC
+		cutscene = ;
 		firstMission = cmp_powder_batOC;
 		// next chapter class name
 		end1 = pmc_altis;
-		overviewText = "pmc_stratis overviewText";
 
-		// Opening Cutscene
+		// opening cutscene for stratis
 		class cmp_powder_batOC: MissionDefault
 		{
 			end1 = cmp_powder_bat001;
 			lost = cmp_powder_bat001;
+			pmc_end1 = cmp_powder_bat001;
 			template = cmp_powder_batOC.stratis;
 		};
 
 		class cmp_powder_bat001: MissionDefault
 		{
 			end1 = cmp_powder_bat001Cut;
+			pmc_end1 = cmp_powder_bat001Cut;
 			template = cmp_powder_bat001.stratis;
 		};
 
@@ -60,12 +57,14 @@ class Campaign
 		{
 			end1 = cmp_powder_bat002;
 			lost = cmp_powder_bat002;
+			pmc_end1 = cmp_powder_bat002;
 			template = cmp_powder_bat001Cut.stratis;
 		};
 
 		class cmp_powder_bat002: MissionDefault
 		{
 			end1 = cmp_powder_bat002Cut;
+			pmc_end1 = cmp_powder_bat002Cut;
 			template = cmp_powder_bat002.stratis;
 		};
 
@@ -73,6 +72,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat003;
 			lost = cmp_powder_bat003;
+			pmc_end1 = cmp_powder_bat003;
 			template = cmp_powder_bat002Cut.stratis;
 		};
 
@@ -80,6 +80,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat003Cut;
 			lost = cmp_powder_bat003;
+			pmc_end1 = cmp_powder_bat003Cut;
 			template = cmp_powder_bat003.stratis;
 		};
 
@@ -87,6 +88,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat004;
 			lost = cmp_powder_bat004;
+			pmc_end1 = cmp_powder_bat004;
 			template = cmp_powder_bat003Cut.stratis;
 		};
 
@@ -94,6 +96,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat004Cut;
 			lost = cmp_powder_bat004;
+			pmc_end1 = cmp_powder_bat004Cut;
 			template = cmp_powder_bat004.stratis;
 		};
 
@@ -101,6 +104,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat005;
 			lost = cmp_powder_bat005;
+			pmc_end1 = cmp_powder_bat005;
 			template = cmp_powder_bat004Cut.stratis;
 		};
 
@@ -108,6 +112,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat005Cut;
 			lost = cmp_powder_bat005;
+			pmc_end1 = cmp_powder_bat005Cut;
 			template = cmp_powder_bat005.stratis;
 		};
 
@@ -115,6 +120,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat006;
 			lost = cmp_powder_bat006;
+			pmc_end1 = cmp_powder_bat006;
 			template = cmp_powder_bat005Cut.stratis;
 		};
 
@@ -122,6 +128,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat006Cut;
 			lost = cmp_powder_bat006;
+			pmc_end1 = cmp_powder_bat006Cut;
 			template = cmp_powder_bat006.stratis;
 		};
 
@@ -129,6 +136,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat007;
 			lost = cmp_powder_bat007;
+			pmc_end1 = cmp_powder_bat007;
 			template = cmp_powder_bat006Cut.stratis;
 		};
 
@@ -136,6 +144,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat007Cut;
 			lost = cmp_powder_bat007;
+			pmc_end1 = cmp_powder_bat007Cut;
 			template = cmp_powder_bat007.stratis;
 		};
 
@@ -143,6 +152,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat008;
 			lost = cmp_powder_bat008;
+			pmc_end1 = cmp_powder_bat008;
 			template = cmp_powder_bat007Cut.stratis;
 		};
 
@@ -150,6 +160,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat008Cut;
 			lost = cmp_powder_bat008;
+			pmc_end1 = cmp_powder_bat008Cut;
 			template = cmp_powder_bat008.stratis;
 		};
 
@@ -157,6 +168,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat009;
 			lost = cmp_powder_bat009;
+			pmc_end1 = cmp_powder_bat009;
 			template = cmp_powder_bat008Cut.stratis;
 		};
 
@@ -164,6 +176,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat009Cut;
 			lost = cmp_powder_bat009;
+			pmc_end1 = cmp_powder_bat009Cut;
 			template = cmp_powder_bat009.stratis;
 		};
 
@@ -171,38 +184,45 @@ class Campaign
 		{
 			end1 = cmp_powder_bat010;
 			lost = cmp_powder_bat010;
+			pmc_end1 = cmp_powder_bat010;
 			template = cmp_powder_bat009Cut.stratis;
 		};
 
 		class cmp_powder_bat010: MissionDefault
 		{
-			end1 = ; // cmp_powder_bat010Cut
+			end1 = cmp_powder_bat010Cut;
 			lost = cmp_powder_bat010;
+			pmc_end1 = cmp_powder_bat010Cut;
 			template = cmp_powder_bat010.stratis;
 		};
-/*
+
 		class cmp_powder_bat010Cut: MissionDefault
 		{
-			end1 = ; // cmp_powder_bat011
-			lost = ; // cmp_powder_bat011
 			template = cmp_powder_bat010Cut.stratis;
 		};
-*/	};
+	};
 
 	class pmc_altis: NoEndings
 	{
-		cutscene = cmp_powder_bat001Cut; // cmp_powder_batOC
-		firstMission = cmp_powder_bat011;
+		cutscene = ;
+		firstMission = cmp_powder_batAltisCut;
 		// next chapters class name
 		end1 = pmc_tanoa;
 
-		/*
-			Altis
-		*/
+		// opening cutscene for altis
+		class cmp_powder_batAltisCut: MissionDefault
+		{
+			end1 = cmp_powder_bat011;
+			lost = cmp_powder_bat011;
+			pmc_end1 = cmp_powder_bat011;
+			template = cmp_powder_batAltisCut.altis;
+		};
+
 		class cmp_powder_bat011: MissionDefault
 		{
 			end1 = cmp_powder_bat011Cut;
 			lost = cmp_powder_bat011;
+			pmc_end1 = cmp_powder_bat011Cut;
 			template = cmp_powder_bat011.altis;
 		};
 
@@ -210,6 +230,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat012;
 			lost = cmp_powder_bat012;
+			pmc_end1 = cmp_powder_bat012;
 			template = cmp_powder_bat011Cut.altis;
 		};
 
@@ -217,6 +238,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat012Cut;
 			lost = cmp_powder_bat012;
+			pmc_end1 = cmp_powder_bat012Cut;
 			template = cmp_powder_bat012.altis;
 		};
 
@@ -224,6 +246,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat013;
 			lost = cmp_powder_bat013;
+			pmc_end1 = cmp_powder_bat013;
 			template = cmp_powder_bat012Cut.altis;
 		};
 
@@ -231,6 +254,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat013Cut;
 			lost = cmp_powder_bat013;
+			pmc_end1 = cmp_powder_bat013Cut;
 			template = cmp_powder_bat013.altis;
 		};
 
@@ -238,6 +262,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat014;
 			lost = cmp_powder_bat014;
+			pmc_end1 = cmp_powder_bat014;
 			template = cmp_powder_bat013Cut.altis;
 		};
 
@@ -245,6 +270,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat014Cut;
 			lost = cmp_powder_bat014;
+			pmc_end1 = cmp_powder_bat014Cut;
 			template = cmp_powder_bat014.altis;
 		};
 
@@ -252,6 +278,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat015;
 			lost = cmp_powder_bat015;
+			pmc_end1 = cmp_powder_bat015;
 			template = cmp_powder_bat014Cut.altis;
 		};
 
@@ -259,6 +286,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat015Cut;
 			lost = cmp_powder_bat015;
+			pmc_end1 = cmp_powder_bat015Cut;
 			template = cmp_powder_bat015.altis;
 		};
 
@@ -266,6 +294,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat016;
 			lost = cmp_powder_bat016;
+			pmc_end1 = cmp_powder_bat016;
 			template = cmp_powder_bat015Cut.altis;
 		};
 
@@ -273,6 +302,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat016Cut;
 			lost = cmp_powder_bat016;
+			pmc_end1 = cmp_powder_bat016Cut;
 			template = cmp_powder_bat016.altis;
 		};
 
@@ -280,6 +310,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat017;
 			lost = cmp_powder_bat017;
+			pmc_end1 = cmp_powder_bat017;
 			template = cmp_powder_bat016Cut.altis;
 		};
 
@@ -287,6 +318,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat017Cut;
 			lost = cmp_powder_bat017;
+			pmc_end1 = cmp_powder_bat017Cut;
 			template = cmp_powder_bat017.altis;
 		};
 
@@ -294,6 +326,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat018;
 			lost = cmp_powder_bat018;
+			pmc_end1 = cmp_powder_bat018;
 			template = cmp_powder_bat017Cut.altis;
 		};
 
@@ -301,6 +334,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat018Cut;
 			lost = cmp_powder_bat018;
+			pmc_end1 = cmp_powder_bat018Cut;
 			template = cmp_powder_bat018.altis;
 		};
 
@@ -308,6 +342,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat019;
 			lost = cmp_powder_bat019;
+			pmc_end1 = cmp_powder_bat019;
 			template = cmp_powder_bat018Cut.altis;
 		};
 
@@ -315,6 +350,7 @@ class Campaign
 		{
 			end1 = cmp_powder_bat019Cut;
 			lost = cmp_powder_bat019;
+			pmc_end1 = cmp_powder_bat019Cut;
 			template = cmp_powder_bat019.altis;
 		};
 
@@ -322,99 +358,235 @@ class Campaign
 		{
 			end1 = cmp_powder_bat020;
 			lost = cmp_powder_bat020;
+			pmc_end1 = cmp_powder_bat020;
 			template = cmp_powder_bat019Cut.altis;
 		};
 
 		class cmp_powder_bat020: MissionDefault
 		{
+			end1 = cmp_powder_bat020Cut;
+			lost = cmp_powder_bat020;
+			pmc_end1 = cmp_powder_bat020Cut;
 			template = cmp_powder_bat020.altis;
+		};
+
+		class cmp_powder_bat020Cut: MissionDefault
+		{
+			template = cmp_powder_bat020Cut.altis;
 		};
 	};
 
 	class pmc_tanoa: NoEndings
 	{
-		cutscene = cmp_powder_bat001Cut; // cmp_powder_batOC
-		firstMission = cmp_powder_bat021;
+		cutscene = ;
+		firstMission = cmp_powder_batTanoaCut;
 		// campaign ends when this chapters missions run out
 		end1 = ;
 
-		/*
-			Tanoa
-		*/
+		// opening cutscene for tanoa
+		class cmp_powder_batTanoaCut: MissionDefault
+		{
+			end1 = cmp_powder_bat021;
+			lost = cmp_powder_bat021;
+			pmc_end1 = cmp_powder_bat021;
+			template = cmp_powder_batTanoaCut.tanoa;
+		};
+
 		class cmp_powder_bat021: MissionDefault
+		{
+			end1 = cmp_powder_bat021Cut;
+			lost = cmp_powder_bat022;
+			pmc_end1 = cmp_powder_bat021Cut;
+			template = cmp_powder_bat021.tanoa;
+		};
+
+		class cmp_powder_bat021Cut: MissionDefault
 		{
 			end1 = cmp_powder_bat022;
 			lost = cmp_powder_bat022;
-			template = cmp_powder_bat021.tanoa;
+			pmc_end1 = cmp_powder_bat022;
+			template = cmp_powder_bat021Cut.tanoa;
 		};
 
 		class cmp_powder_bat022: MissionDefault
 		{
+			end1 = cmp_powder_bat022Cut;
+			lost = cmp_powder_bat023;
+			pmc_end1 = cmp_powder_bat022Cut;
+			template = cmp_powder_bat022.tanoa;
+		};
+
+		class cmp_powder_bat022Cut: MissionDefault
+		{
 			end1 = cmp_powder_bat023;
 			lost = cmp_powder_bat023;
-			template = cmp_powder_bat022.tanoa;
+			pmc_end1 = cmp_powder_bat023;
+			template = cmp_powder_bat022Cut.tanoa;
 		};
 
 		class cmp_powder_bat023: MissionDefault
 		{
+			end1 = cmp_powder_bat023Cut;
+			lost = cmp_powder_bat024;
+			pmc_end1 = cmp_powder_bat023Cut;
+			template = cmp_powder_bat023.tanoa;
+		};
+
+		class cmp_powder_bat023Cut: MissionDefault
+		{
 			end1 = cmp_powder_bat024;
 			lost = cmp_powder_bat024;
-			template = cmp_powder_bat023.tanoa;
+			pmc_end1 = cmp_powder_bat024;
+			template = cmp_powder_bat023Cut.tanoa;
 		};
 
 		class cmp_powder_bat024: MissionDefault
 		{
+			end1 = cmp_powder_bat024Cut;
+			lost = cmp_powder_bat025;
+			pmc_end1 = cmp_powder_bat024Cut;
+			template = cmp_powder_bat024.tanoa;
+		};
+
+		class cmp_powder_bat024Cut: MissionDefault
+		{
 			end1 = cmp_powder_bat025;
 			lost = cmp_powder_bat025;
-			template = cmp_powder_bat024.tanoa;
+			pmc_end1 = cmp_powder_bat025;
+			template = cmp_powder_bat024Cut.tanoa;
 		};
 
 		class cmp_powder_bat025: MissionDefault
 		{
+			end1 = cmp_powder_bat025Cut;
+			lost = cmp_powder_bat026;
+			pmc_end1 = cmp_powder_bat025Cut;
+			template = cmp_powder_bat025.tanoa;
+		};
+
+		class cmp_powder_bat025Cut: MissionDefault
+		{
 			end1 = cmp_powder_bat026;
 			lost = cmp_powder_bat026;
-			template = cmp_powder_bat025.tanoa;
+			pmc_end1 = cmp_powder_bat026;
+			template = cmp_powder_bat025Cut.tanoa;
 		};
 
 		class cmp_powder_bat026: MissionDefault
 		{
+			end1 = cmp_powder_bat026Cut;
+			lost = cmp_powder_bat027;
+			pmc_end1 = cmp_powder_bat026Cut;
+			template = cmp_powder_bat026.tanoa;
+		};
+
+		class cmp_powder_bat026Cut: MissionDefault
+		{
 			end1 = cmp_powder_bat027;
 			lost = cmp_powder_bat027;
-			template = cmp_powder_bat026.tanoa;
+			pmc_end1 = cmp_powder_bat027;
+			template = cmp_powder_bat026Cut.tanoa;
 		};
 
 		class cmp_powder_bat027: MissionDefault
 		{
+			end1 = cmp_powder_bat027Cut;
+			lost = cmp_powder_bat028;
+			pmc_end1 = cmp_powder_bat027Cut;
+			template = cmp_powder_bat027.tanoa;
+		};
+
+		class cmp_powder_bat027Cut: MissionDefault
+		{
 			end1 = cmp_powder_bat028;
 			lost = cmp_powder_bat028;
-			template = cmp_powder_bat027.tanoa;
+			pmc_end1 = cmp_powder_bat028;
+			template = cmp_powder_bat027Cut.tanoa;
 		};
 
 		class cmp_powder_bat028: MissionDefault
 		{
+			end1 = cmp_powder_bat028Cut;
+			lost = cmp_powder_bat029;
+			pmc_end1 = cmp_powder_bat028Cut;
+			template = cmp_powder_bat028.tanoa;
+		};
+
+		class cmp_powder_bat028Cut: MissionDefault
+		{
 			end1 = cmp_powder_bat029;
 			lost = cmp_powder_bat029;
-			template = cmp_powder_bat028.tanoa;
+			pmc_end1 = cmp_powder_bat029;
+			template = cmp_powder_bat028Cut.tanoa;
 		};
 
 		class cmp_powder_bat029: MissionDefault
 		{
+			end1 = cmp_powder_bat029Cut;
+			lost = cmp_powder_bat030;
+			pmc_end1 = cmp_powder_bat029Cut;
+			template = cmp_powder_bat029.tanoa;
+		};
+
+		class cmp_powder_bat029Cut: MissionDefault
+		{
 			end1 = cmp_powder_bat030;
 			lost = cmp_powder_bat030;
-			template = cmp_powder_bat029.tanoa;
+			pmc_end1 = cmp_powder_bat030;
+			template = cmp_powder_bat029Cut.tanoa;
 		};
 
 		class cmp_powder_bat030: MissionDefault
 		{
-			end1 = cmp_powder_batEC;
-			lost = cmp_powder_batEC;
+			end1 = cmp_powder_bat30Cut;
+			lost = cmp_powder_bat30;
+			pmc_end1 = cmp_powder_bat30Cut;
 			template = cmp_powder_bat030.tanoa;
 		};
 
-		//Ending cutscene!
+		class cmp_powder_bat030Cut: MissionDefault
+		{
+			end1 = cmp_powder_batEC;
+			lost = cmp_powder_batEC;
+			pmc_end1 = cmp_powder_batEC;
+			template = cmp_powder_bat030Cut.tanoa;
+		};
+
+		// Campaign ending cutscene!
 		class cmp_powder_batEC: MissionDefault
 		{
 			template = cmp_powder_batEC.altis;
 		};
+	};
+};
+
+class CfgCommunicationMenu
+{
+	class PMC_WeatherForecast
+	{
+		text = "Weather Forecast";
+		submenu = "";
+		expression = "_this execVM 'PMC\PMC_weather_forecast_sp.sqf';";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+};
+
+class CfgDebriefing
+{
+	class pmc_end1
+	{
+		title = "Mission Accomplished!";
+		description = "All insurgents killed or running for their lives, great job!";
+		subtitle = "";
+	};
+
+	class pmc_end2
+	{
+		title = "Mission Failed!";
+		description = "We lost...";
+		subtitle = "";
 	};
 };

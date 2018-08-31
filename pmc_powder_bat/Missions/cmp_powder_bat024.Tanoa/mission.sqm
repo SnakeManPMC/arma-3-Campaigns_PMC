@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=33;
+		nextID=34;
 	};
 	class Camera
 	{
@@ -82,7 +82,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			dataType="Group";
@@ -599,6 +599,23 @@ class Mission
 			id=32;
 			type="Logic";
 			atlOffset=14.191593;
+		};
+		class Item19
+		{
+			dataType="Trigger";
+			position[]={8441.7588,-12.136177,4445.0479};
+			class Attributes
+			{
+				text="mission complete - music";
+				condition="call{pmc_opfordead1 && pmc_opfordead2 && pmc_opfordead3 && pmc_opfordead4 && pmc_opfordead5 && pmc_opfordead6}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_EndMission.sqf"";}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={3,5,7};
+				interuptable=1;
+			};
+			id=33;
+			type="EmptyDetector";
 		};
 	};
 };

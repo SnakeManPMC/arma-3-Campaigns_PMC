@@ -8,7 +8,7 @@ titleCut ["", "black out", 0.00000001];
 _camera = "camera" camCreate [0, 0, 0];
 _camera cameraEffect ["internal", "back"];
 
-_d = 7;
+_d = 7; enableRadio false;
 
 setDate PMC_LastMissionDateTime;
 0 setOvercast PMC_LastMissionOvercast;
