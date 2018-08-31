@@ -21,11 +21,10 @@ PMC_killedNum = 0;
 call compile preprocessFileLineNumbers "PMC\PMC_Create_CUP_NAPA_Random_Infantry.sqf";
 call compile preprocessFileLineNumbers "PMC\PMC_Sentry_Inf_Waypoints.sqf";
 
-// two groups to defend in sentry waypoint
+
 private _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_2, 50] call PMC_Sentry_Inf_Waypoints;
 
-// patrol groups, all random ...
 _grp = [getPos pmc_1] call PMC_Create_CUP_NAPA_Random_Infantry;
 [(getPos pmc_1), _grp, 100] execVM "PMC\PMC_defendLocation.sqf";
 {

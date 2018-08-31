@@ -59,10 +59,10 @@ sleep _d;
 
 titleCut ["", "black out", 2];
 sleep 1.5;
-titleText ["Thank you for playing PMC Powder Bat", "plain", 3];
+titleText ["Thank you for playing PMC Powder Bat", "plain down", 3];
 sleep 5;
 
-titleText ["This has been PMC production\n\nhttps://www.pmctactical.org", "plain", 3];
+titleText ["This has been PMC production\n\nhttps://www.pmctactical.org", "plain down", 3];
 sleep 5;
 
 4 fademusic 0;

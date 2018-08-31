@@ -10,7 +10,7 @@ weaponPool = 0;
 class Campaign
 {
 	// required, you get error if this is missing
-	briefingName = "PMC Powder Bat v0.2.7";
+	briefingName = "PMC Powder Bat v0.2.8";
 	author = "Snake Man";
 	overviewText = "US Marine Corps clears Stratis and Altis of insurgent bastards. Uses CUP units/weapons/vehicles.";
 	//overviewPicture = ""; // PAA Image
@@ -30,7 +30,9 @@ class Campaign
 		lost = ;
 	};
 
-	// first chapter - Stratis
+	/*
+		Stratis
+	*/
 	class pmc_stratis
 	{
 		name = "Stratis";
@@ -182,6 +184,10 @@ class Campaign
 			template = cmp_powder_bat10Cut.stratis;
 		};
 
+
+		/*
+			Altis
+		*/
 		class cmp_powder_bat11: MissionDefault
 		{
 			end1 = cmp_powder_bat11Cut;
@@ -315,21 +321,9 @@ class Campaign
 			template = cmp_powder_bat20.altis;
 		};
 
-		//Ending cutscene!
-		class cmp_powder_batEC: MissionDefault
-		{
-			template = cmp_powder_batEC.altis;
-		};
-/*
-	};
-
-	// third chapter - Tanoa
-	class pmc_tanoa: NoEndings
-	{
-		name = "Tanoa";
-		cutscene = ;
-		firstMission = cmp_powder_bat21;
-
+		/*
+			Tanoa
+		*/
 		class cmp_powder_bat21: MissionDefault
 		{
 			end1 = cmp_powder_bat22;
@@ -399,6 +393,11 @@ class Campaign
 			lost = cmp_powder_batEC;
 			template = cmp_powder_bat30.tanoa;
 		};
-*/
+
+		//Ending cutscene!
+		class cmp_powder_batEC: MissionDefault
+		{
+			template = cmp_powder_batEC.altis;
+		};
 	};
 };
