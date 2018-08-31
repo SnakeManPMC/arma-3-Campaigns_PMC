@@ -16,12 +16,10 @@ PMC_killedNum = 0;
 call compile preprocessFileLineNumbers "PMC\PMC_Create_CUP_NAPA_Random_Infantry.sqf";
 call compile preprocessFileLineNumbers "PMC\PMC_Sentry_Inf_Waypoints.sqf";
 
-
 private _grp = [getPos pmc_1] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_1, 50] call PMC_Sentry_Inf_Waypoints;
 _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_2, 20] call PMC_Sentry_Inf_Waypoints;
-
 
 {
 	_grp = [getPos pmc_1] call PMC_Create_CUP_NAPA_Random_Infantry;
@@ -32,3 +30,7 @@ _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 } forEach [400, 300, 200, 100];
 
 [] spawn {sleep 7; PMCHQ sideChat "Your insertion was spotted, radio traffic indicates enemy patrol is heading towards you from the north. Watch out. HQ out.";};
+
+// this is just convenience for me play testing and using endmission cheat which skips exit.sqf and then all my cutscenes give damn undefined variable error on the screen
+// so lets execute this now and save the current data just to prevent me for ever seeing the error while testing hehe
+[] execVM "PMC\PMC_MissionEnd.sqf";
