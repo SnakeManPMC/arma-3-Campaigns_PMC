@@ -68,4 +68,5 @@ _camera cameraeffect ["terminate", "back"];
 camDestroy _camera;
 
 // end the intro
-endcut = true;
+//endcut = true;
+"PMC_end1" call BIS_fnc_endMission;
