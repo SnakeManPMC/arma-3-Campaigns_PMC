@@ -30,3 +30,5 @@ _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 	_grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 	[(getPos pmc_2), _grp, _x] execVM "PMC\PMC_defendLocation.sqf";
 } forEach [400, 300, 200, 100];
+
+[] spawn {sleep 7; PMCHQ sideChat "Your insertion was spotted, radio traffic indicates enemy patrol is heading towards you from the north. Watch out. HQ out.";};
