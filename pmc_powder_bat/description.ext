@@ -4,40 +4,43 @@
 
 */
 
-// wont damn work, just duplicates all the stuff in weaponpool :(
 weaponPool = 0;
+
+class NoEndings
+{
+    lost = ;
+    end1 = ;
+    end2 = ;
+    end3 = ;
+    end4 = ;
+    end5 = ;
+    end6 = ;
+};
+
+class MissionDefault: NoEndings
+{
+    lives = -1;
+};
 
 class Campaign
 {
-	// required, you get error if this is missing
 	briefingName = "PMC Powder Bat v0.2.9";
-	author = "Snake Man";
-	overviewText = "US Marine Corps clears Stratis and Altis of insurgent bastards. Uses CUP units/weapons/vehicles.";
-	//overviewPicture = ""; // PAA Image
+	author = "Snake Man, PMC.";
+	overviewText = "US Marine Corps clears Stratis, Altis and Tanoa of insurgent bastards. Uses CUP units/weapons/vehicles.";
+	overviewPicture = "\campaigns\pmc_powder_bat\overviewPicture_ca.paa";
 	firstBattle = pmc_stratis;
-
-	class MissionDefault
-	{
-		lives = -1;
-		noAward = 1;
-		cutscene = ;
-		end1 = ;
-		end2 = ;
-		end3 = ;
-		end4 = ;
-		end5 = ;
-		end6 = ;
-		lost = ;
-	};
 
 	/*
 		Stratis
 	*/
-	class pmc_stratis
+	class pmc_stratis: NoEndings
 	{
-		name = "Stratis";
+		// does not play
 		cutscene = cmp_powder_batOC;
-		firstMission = cmp_powder_bat1;
+		firstMission = cmp_powder_bat001;
+		// next chapter class name
+		end1 = pmc_altis;
+		overviewText = "pmc_stratis overviewText";
 
 		// Opening Cutscene
 		class cmp_powder_batOC: MissionDefault
@@ -172,18 +175,25 @@ class Campaign
 
 		class cmp_powder_bat010: MissionDefault
 		{
-			end1 = cmp_powder_bat010Cut;
+			end1 = ; // cmp_powder_bat010Cut
 			lost = cmp_powder_bat010;
 			template = cmp_powder_bat010.stratis;
 		};
-
+/*
 		class cmp_powder_bat010Cut: MissionDefault
 		{
-			end1 = cmp_powder_bat011;
-			lost = cmp_powder_bat011;
+			end1 = ; // cmp_powder_bat011
+			lost = ; // cmp_powder_bat011
 			template = cmp_powder_bat010Cut.stratis;
 		};
+*/	};
 
+	class pmc_altis: NoEndings
+	{
+		cutscene = ;
+		firstMission = cmp_powder_bat011;
+		// next chapters class name
+		end1 = pmc_tanoa;
 
 		/*
 			Altis
@@ -316,10 +326,16 @@ class Campaign
 
 		class cmp_powder_bat020: MissionDefault
 		{
-			end1 = cmp_powder_batEC;
-			lost = cmp_powder_batEC;
 			template = cmp_powder_bat020.altis;
 		};
+	};
+
+	class pmc_tanoa: NoEndings
+	{
+		cutscene = ;
+		firstMission = cmp_powder_bat021;
+		// campaign ends when this chapters missions run out
+		end1 = ;
 
 		/*
 			Tanoa
