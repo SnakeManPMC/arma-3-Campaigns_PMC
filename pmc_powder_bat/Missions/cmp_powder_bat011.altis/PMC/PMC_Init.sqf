@@ -8,6 +8,9 @@ PMCHQ = [ West, "BASE" ];
 [] execVM "PMC\PMC_Tasks.sqf";
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
 
+// our v3s truck introductory mission and we want to clear its contents
+[pmc_truck1] execVM "PMC\PMC_ClearVehicleCargo.sqf";
+
 [player, "PMC_WeatherForecast", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 
 PMC_corpses = [];

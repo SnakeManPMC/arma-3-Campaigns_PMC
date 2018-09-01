@@ -8,16 +8,6 @@ pmc_ammobox_base_2 saveStatus "PMC_AmmoBoxBase2";
 pmc_truck1 saveStatus "PMC_AmmoTruck1";
 
 diag_log "PMC Powder Bat 3 exit.sqf executed.";
-/*
-private _scr = [] execVM "PMC\PMC_MissionEnd.sqf";
-
-waitUntil
-{
-	scriptDone _scr;
-};
-
-diag_log "PMC Powder Bat 1 exit.sqf exited after scriptDone finished.";
-*/
 
 // generic mission end for ALL the missions. do not put any mission specific stuff here
 
