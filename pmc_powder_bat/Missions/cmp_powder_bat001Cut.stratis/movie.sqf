@@ -37,6 +37,10 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
+private _pmcStr = format ["Campaign total KIAs: %1", PMC_CampaignDeaths];
+titleText [_pmcStr, "plain down", 3];
+sleep 7;
+
 titleText ["Getting ready for next one...", "plain down", 3];
 sleep 5;
 

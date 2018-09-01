@@ -12,3 +12,5 @@ pmc_ammobox_base_1 loadStatus "PMC_AmmoBoxBase1";
 pmc_ammobox_base_2 loadStatus "PMC_AmmoBoxBase2";
 
 [player, "PMC_WeatherForecast", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+
+[] execVM "PMC\PMC_MissionStart.sqf";

@@ -28,3 +28,6 @@ PMC_LastMissionOvercast = overcast;
 saveVar "PMC_LastMissionOvercast";
 
 diag_log format["PMC_LastMissionDateTime: %1, PMC_LastMissionOvercast: %2", PMC_LastMissionDateTime, PMC_LastMissionOvercast];
+
+PMC_CampaignDeaths = PMC_CampaignDeaths + PMC_CurrentMissionDeaths;
+saveVar "PMC_CampaignDeaths";

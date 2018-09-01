@@ -47,7 +47,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
-titleText ["Victory is ours!!", "plain down", 3];
+titleText ["Victory is ours!", "plain down", 3];
 sleep 5;
 
 // some shots
@@ -57,12 +57,19 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep _d;
 
+private _pmcStr = format ["Campaign total KIAs: %1", PMC_CampaignDeaths];
+titleText [_pmcStr, "plain down", 3];
+sleep 10;
+
+titleText ["Remember our fallen...", "plain down", 3];
+sleep 7;
+
 titleCut ["", "black out", 2];
 sleep 1.5;
-titleText ["Thank you for playing PMC Powder Bat", "plain down", 3];
+titleText ["Thank you for playing PMC Powder Bat", "plain", 3];
 sleep 5;
 
-titleText ["This has been PMC production\n\nhttps://www.pmctactical.org", "plain down", 3];
+titleText ["This has been PMC production\n\nhttps://www.pmctactical.org", "plain", 3];
 sleep 5;
 
 4 fademusic 0;

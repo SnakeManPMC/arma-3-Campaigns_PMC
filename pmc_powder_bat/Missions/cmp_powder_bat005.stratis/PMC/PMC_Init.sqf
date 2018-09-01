@@ -39,3 +39,5 @@ _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 // PMCTODO sniper 2 man team with a guard WP
 //_grp = [getPos pmc_location_2] execVM "PMC\SOME_COOL_SNIPA.SQF";
 //[_grp] execVM "PMC\SOME_COOL_GUARD_STEALTH_SNIPA_WAYPOINT_SHIZZLE.SQF";
+
+[] execVM "PMC\PMC_MissionStart.sqf";

@@ -38,3 +38,5 @@ _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 	_grp = [getPos pmc_location_3] call PMC_Create_CUP_NAPA_Random_Infantry;
 	[(getPos pmc_location_2), _grp, _x] execVM "PMC\PMC_defendLocation.sqf";
 } forEach [500, 400];
+
+[] execVM "PMC\PMC_MissionStart.sqf";

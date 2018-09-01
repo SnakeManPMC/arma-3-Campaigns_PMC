@@ -31,6 +31,6 @@ _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 
 [] spawn {sleep 7; PMCHQ sideChat "Your insertion was spotted, radio traffic indicates enemy patrol is heading towards you from the north. Watch out. HQ out.";};
 
-// this is just convenience for me play testing and using endmission cheat which skips exit.sqf and then all my cutscenes give damn undefined variable error on the screen
-// so lets execute this now and save the current data just to prevent me for ever seeing the error while testing hehe
-[] execVM "PMC\PMC_MissionEnd.sqf";
+[] execVM "PMC\PMC_MissionStart.sqf";
+
+[] execVM "PMC\PMC_CampaignInit.sqf";

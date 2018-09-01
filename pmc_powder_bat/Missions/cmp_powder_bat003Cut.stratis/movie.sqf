@@ -40,6 +40,10 @@ sleep _d;
 titleText ["So much death...", "plain down", 3];
 sleep 5;
 
+private _pmcStr = format ["Campaign total KIAs: %1", PMC_CampaignDeaths];
+titleText [_pmcStr, "plain down", 3];
+sleep 7;
+
 4 fademusic 0;
 titleText ["", "plain", 4];
 sleep 6;
