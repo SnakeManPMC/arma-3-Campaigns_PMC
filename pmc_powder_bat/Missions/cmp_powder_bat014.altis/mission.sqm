@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=571;
+		nextID=573;
 	};
 	class MarkerIDProvider
 	{
@@ -112,7 +112,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=35;
+		items=37;
 		class Item0
 		{
 			dataType="Trigger";
@@ -132,11 +132,11 @@ class Mission
 		class Item1
 		{
 			dataType="Trigger";
-			position[]={11426.963,0.34952366,10309.818};
+			position[]={11426.963,0.34943199,10309.818};
 			class Attributes
 			{
 				text="mission complete - music";
-				condition="pmc_opfordead1";
+				condition="call{pmc_opfordead1 && pmc_opfordead2}";
 				onActivation="call{0 = [] execVM ""PMC\PMC_EndMission.sqf"";}";
 				sizeA=0;
 				sizeB=0;
@@ -145,7 +145,7 @@ class Mission
 			};
 			id=397;
 			type="EmptyDetector";
-			atlOffset=11.000092;
+			atlOffset=11;
 		};
 		class Item2
 		{
@@ -232,7 +232,7 @@ class Mission
 					};
 					id=476;
 					type="CUP_B_USMC_Soldier_AR_FROG_WDL";
-					atlOffset=-1.5258789e-005;
+					atlOffset=-2.2888184e-005;
 				};
 				class Item3
 				{
@@ -373,6 +373,7 @@ class Mission
 					};
 					id=484;
 					type="CUP_B_USMC_Soldier_LAT_FROG_WDL";
+					atlOffset=7.6293945e-006;
 				};
 				class Item11
 				{
@@ -2244,6 +2245,33 @@ class Mission
 			colorName="ColorBlue";
 			id=570;
 			atlOffset=3.0517578e-005;
+		};
+		class Item35
+		{
+			dataType="Trigger";
+			position[]={10804.201,5.1942182,10866.77};
+			class Attributes
+			{
+				name="pmc_2";
+				text="independent dead 2";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective2.sqf"";}";
+				timeout[]={3,5,7};
+				interuptable=1;
+				activationBy="WEST SEIZED";
+			};
+			id=571;
+			type="EmptyDetector";
+			atlOffset=4.7683716e-007;
+		};
+		class Item36
+		{
+			dataType="Marker";
+			position[]={10807.52,5.3099828,10863.939};
+			name="pmc_marker_obj_2";
+			type="mil_objective";
+			colorName="ColorRed";
+			id=572;
 		};
 	};
 };

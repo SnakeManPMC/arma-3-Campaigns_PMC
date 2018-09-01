@@ -7,5 +7,5 @@ player createDiaryRecord ["Diary", ["Support", "<marker name='pmc_marker_fob_1'>
 /*
 player createDiaryRecord ["Diary", ["Execution", ""]];
 player createDiaryRecord ["Diary", ["Intel", ""]];*/
-player createDiaryRecord ["Diary", ["Mission", "You start from <marker name='pmc_marker_fob_1'>FOB 1</marker>, with only one task, capture that damned airfield."]];
+player createDiaryRecord ["Diary", ["Mission", "You start from <marker name='pmc_marker_fob_1'>FOB 1</marker>, sweep Drimea area and capture AAC airfield."]];
 //player createDiaryRecord ["Diary", ["Situation", ""]];
