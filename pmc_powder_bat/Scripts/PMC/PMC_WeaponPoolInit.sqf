@@ -1,7 +1,7 @@
 
-// must be ini init.sqf first thing if you want these to appear on briefing -> team -> inventory, do NOT use execVM to call these from a sqf
-
 // weaponPool init, add some good US stuff
+
+diag_log "PMC_WeaponPoolInit ran from %1 at %2", missionName, diag_tickTime];
 
 addMagazinePool ["CUP_100Rnd_556x45_BetaCMag", 72];
 addMagazinePool ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 50];
@@ -128,5 +128,3 @@ addWeaponPool ["CUP_srifle_M24_wdl_LeupoldMk4LRT", 50];
 addWeaponPool ["CUP_srifle_M40A3", 50];
 addWeaponPool ["CUP_srifle_Mk12SPR_LeupoldM3LR", 50];
 addWeaponPool ["CUP_srifle_Mk12SPR_LeupoldM3LR_bipod", 50];
-
-[] execVM "PMC\PMC_init.sqf";

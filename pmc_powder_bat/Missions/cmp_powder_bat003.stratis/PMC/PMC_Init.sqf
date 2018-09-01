@@ -7,8 +7,7 @@ PMCHQ = [ West, "BASE" ];
 [] execVM "PMC\PMC_Briefing.sqf";
 [] execVM "PMC\PMC_Tasks.sqf";
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
-// special initialization for truck, so we can add some juicy cargo for it. script in *MISSION* PMC\ scripts dir
-[] execVM "PMC\PMC_WeaponPoolTruckInit.sqf";
+[pmc_truck1] execVM "PMC\PMC_WeaponCargo.sqf";
 pmc_ammobox_base_1 loadStatus "PMC_AmmoBoxBase1";
 pmc_ammobox_base_2 loadStatus "PMC_AmmoBoxBase2";
 [pmc_ammobox_base_1] execVM "PMC\PMC_AmmoBoxResupply.sqf";

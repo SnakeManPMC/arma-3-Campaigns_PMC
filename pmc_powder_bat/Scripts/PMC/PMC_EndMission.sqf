@@ -13,6 +13,11 @@ sleep 7;
 private _pmcStr = format ["Mission friendly KIAs: %1, Campaign wide: %2", PMC_CurrentMissionDeaths, PMC_CampaignDeaths];
 titleText [_pmcStr, "plain down", 3];
 
+// this bullshit is required because arma3 weaponPool is BROKEN and duplicates its contents on every mission load
+[] execVM "PMC\PMC_WeaponPoolClearEveryghing.sqf";
+sleep 1;
+[] execVM "PMC\PMC_WeaponPoolInit.sqf";
+
 sleep 30 + (random 25);
 
 "PMC_end1" call BIS_fnc_endMission;
