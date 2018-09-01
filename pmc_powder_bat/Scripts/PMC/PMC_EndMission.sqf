@@ -1,7 +1,11 @@
 
 // ran when tasks are completed. note that while this sqf is running game is still going and you can scavenge weapons, get killed etc
 
-["t0", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+private _deathCheck = ["t0"] call BIS_fnc_taskState;
+if (_deathCheck == "ASSIGNED") then
+{
+	["t0", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+};
 sleep 3;
 
 titleText ["Mission Accomplished!", "plain down", 3];
@@ -14,7 +18,7 @@ private _pmcStr = format ["Mission friendly KIAs: %1, Campaign wide: %2", PMC_Cu
 titleText [_pmcStr, "plain down", 3];
 
 // this bullshit is required because arma3 weaponPool is BROKEN and duplicates its contents on every mission load
-[] execVM "PMC\PMC_WeaponPoolClearEveryghing.sqf";
+[] execVM "PMC\PMC_WeaponPoolClearEverything.sqf";
 sleep 1;
 [] execVM "PMC\PMC_WeaponPoolInit.sqf";
 
