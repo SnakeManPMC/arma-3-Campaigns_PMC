@@ -5,5 +5,5 @@ player createDiaryRecord ["Diary", ["Command and Signal", ""]];
 player createDiaryRecord ["Diary", ["Support", ""]];
 player createDiaryRecord ["Diary", ["Execution", ""]];
 player createDiaryRecord ["Diary", ["Intel", ""]];*/
-player createDiaryRecord ["Diary", ["Mission", "You start from <marker name='start'>near Cap Makrinos</marker>, proceed to clear windmill compounds and Eginio."]];
+player createDiaryRecord ["Diary", ["Mission", "You start from <marker name='start'>near Cap Makrinos</marker>, proceed to clear windmill compounds, Eginio and capture a FOB."]];
 //player createDiaryRecord ["Diary", ["Situation", ""]];

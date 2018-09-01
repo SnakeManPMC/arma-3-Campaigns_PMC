@@ -5,4 +5,6 @@
 
 [player,["t2"],["Clear <marker name='pmc_marker_obj_2'>Eginio</marker> buildings.","Capture Eginio","text2"],(getPos pmc_2),1,2,true] call BIS_fnc_taskCreate;
 
+[player,["t3"],["Capture <marker name='pmc_marker_obj_3'>FOB</marker> from the bad guys.","Capture FOB","text3"],(getPos pmc_3),1,2,true] call BIS_fnc_taskCreate;
+
 ["t1", "ASSIGNED"] call BIS_fnc_taskSetState;

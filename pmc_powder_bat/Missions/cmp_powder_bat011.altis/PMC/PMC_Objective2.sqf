@@ -1,5 +1,5 @@
 
-PMCHQ sideChat "Objective 2 cleared, nice work, I think that wraps it up boys. HQ over.";
+PMCHQ sideChat "Objective 2 cleared, nice work, keep going. HQ over.";
 
 "pmc_marker_obj_2" setMarkerColorLocal "colorblue";
 "pmc_marker_obj_2" setMarkerTypeLocal "mil_dot";

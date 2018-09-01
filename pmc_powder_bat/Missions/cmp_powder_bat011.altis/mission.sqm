@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=237;
+		nextID=243;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14042.02,26.560856,6357.7783};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={12296.608,129.19363,8869.5693};
+		dir[]={-0.55143827,-0.40871358,0.72724622};
+		up[]={-0.24695021,0.91265869,0.3256824};
+		aside[]={0.79683799,4.6362402e-008,0.60420722};
 	};
 };
 binarizationWanted=0;
@@ -29,13 +29,14 @@ addons[]=
 	"CUP_Creatures_Military_USMC",
 	"A3_Modules_F",
 	"CUP_Creatures_Military_NAPA",
-	"CUP_WheeledVehicles_V3S"
+	"CUP_WheeledVehicles_V3S",
+	"CUP_Weapons_AmmoBoxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -64,6 +65,11 @@ class AddonsMetaData
 		{
 			className="CUP_WheeledVehicles_V3S";
 			name="CUP_WheeledVehicles_V3S";
+		};
+		class Item5
+		{
+			className="CUP_Weapons_AmmoBoxes";
+			name="CUP_Weapons_AmmoBoxes";
 		};
 	};
 };
@@ -106,7 +112,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=23;
+		items=29;
 		class Item0
 		{
 			dataType="Marker";
@@ -140,7 +146,7 @@ class Mission
 			class Attributes
 			{
 				text="mission complete - music";
-				condition="call{pmc_opfordead1 && pmc_opfordead2}";
+				condition="call{pmc_opfordead1 && pmc_opfordead2 && pmc_opfordead3}";
 				onActivation="call{0 = [] execVM ""PMC\PMC_EndMission.sqf"";}";
 				sizeA=0;
 				sizeB=0;
@@ -1180,7 +1186,7 @@ class Mission
 					};
 					id=223;
 					type="CUP_I_GUE_Farmer";
-					atlOffset=0.18499756;
+					atlOffset=0.00010681152;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1238,14 +1244,14 @@ class Mission
 					};
 					showWP="NEVER";
 					id=222;
-					atlOffset=0.68499756;
+					atlOffset=0.50010681;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=220;
-			atlOffset=0.18499756;
+			atlOffset=0.00010681152;
 		};
 		class Item20
 		{
@@ -1441,6 +1447,106 @@ class Mission
 			};
 			id=236;
 			type="CUP_V3S_Open_NAPA";
+		};
+		class Item23
+		{
+			dataType="Marker";
+			position[]={12286.89,123.86285,8894.6104};
+			name="pmc_marker_obj_3";
+			type="mil_objective";
+			colorName="ColorRed";
+			id=237;
+			atlOffset=-7.6293945e-006;
+		};
+		class Item24
+		{
+			dataType="Trigger";
+			position[]={12289.463,123.92117,8892.7803};
+			class Attributes
+			{
+				name="pmc_3";
+				text="independent dead 3";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective3.sqf"";}";
+				timeout[]={3,5,7};
+				interuptable=1;
+				activationBy="WEST SEIZED";
+			};
+			id=238;
+			type="EmptyDetector";
+			atlOffset=7.6293945e-006;
+		};
+		class Item25
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12292.81,124.57717,8876.8154};
+				angles[]={0.0013439035,0,0.0053232545};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="pmc_ammobox_fob1_1";
+			};
+			id=239;
+			type="CUP_LocalBasicAmmunitionBox";
+			atlOffset=-5.3405762e-005;
+		};
+		class Item26
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12294.503,124.2283,8878.4395};
+				angles[]={0.0039968039,0,0.0026529003};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="pmc_ammobox_fob1_2";
+			};
+			id=240;
+			type="CUP_LocalBasicWeaponsBox";
+			atlOffset=-7.6293945e-006;
+		};
+		class Item27
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12291.145,124.73598,8875.6182};
+				angles[]={0.0013439035,0,6.2791882};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="pmc_ammobox_fob1_3";
+			};
+			id=241;
+			type="CUP_GuerillaCacheBox";
+			atlOffset=-4.5776367e-005;
+		};
+		class Item28
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12288.768,124.58006,8874.0313};
+				angles[]={0,0,6.2805324};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="pmc_ammobox_fob1_4";
+			};
+			id=242;
+			type="CUP_SpecialWeaponsBox";
+			atlOffset=7.6293945e-006;
 		};
 	};
 };

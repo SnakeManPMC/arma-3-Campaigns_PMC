@@ -20,6 +20,8 @@ private _grp = [getPos pmc_1] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_1, 50] call PMC_Sentry_Inf_Waypoints;
 _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_2, 20] call PMC_Sentry_Inf_Waypoints;
+_grp = [getPos pmc_3] call PMC_Create_CUP_NAPA_Random_Infantry;
+[_grp, getPos pmc_3, 20] call PMC_Sentry_Inf_Waypoints;
 
 {
 	_grp = [getPos pmc_location_1] call PMC_Create_CUP_NAPA_Random_Infantry;
@@ -36,6 +38,9 @@ _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 
 	_grp = [getPos pmc_location_5] call PMC_Create_CUP_NAPA_Random_Infantry;
 	[(getPos pmc_location_5), _grp, _x] execVM "PMC\PMC_defendLocation.sqf";
+
+	_grp = [getPos pmc_3] call PMC_Create_CUP_NAPA_Random_Infantry;
+	[(getPos pmc_3), _grp, _x] execVM "PMC\PMC_defendLocation.sqf";
 } forEach [500, 300];
 
 [] execVM "PMC\PMC_MissionStart.sqf";
