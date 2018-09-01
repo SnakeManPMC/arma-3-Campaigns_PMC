@@ -6,5 +6,11 @@ pmc_ammobox_fob1_3 saveStatus "PMC_AmmoBoxFOB13";
 pmc_ammobox_fob1_4 saveStatus "PMC_AmmoBoxFOB14";
 pmc_truck1 saveStatus "PMC_AmmoTruck1";
 
+PMC_LastMissionDateTime = date;
+saveVar "PMC_LastMissionDateTime";
+
+PMC_LastMissionOvercast = overcast;
+saveVar "PMC_LastMissionOvercast";
+
 PMC_CampaignDeaths = PMC_CampaignDeaths + PMC_CurrentMissionDeaths;
 saveVar "PMC_CampaignDeaths";
