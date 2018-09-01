@@ -1,4 +1,9 @@
 
+// ran when tasks are completed. note that while this sqf is running game is still going and you can scavenge weapons, get killed etc
+
+["t0", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+sleep 3;
+
 titleText ["Mission Accomplished!", "plain down", 3];
 //[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 

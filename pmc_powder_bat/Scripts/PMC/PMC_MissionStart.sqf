@@ -26,3 +26,15 @@ https://community.bistudio.com/wiki/BIS_fnc_typeText
 https://community.bistudio.com/wiki/BIS_fnc_typeText2
 https://community.bistudio.com/wiki/BIS_fnc_textTiles
 */
+
+// zero casualties task
+[] spawn
+{
+	waitUntil
+	{
+		sleep 10;
+		(PMC_CurrentMissionDeaths > 1);
+	};
+	
+	["t0", "FAILED", true] spawn BIS_fnc_taskSetState;
+};
