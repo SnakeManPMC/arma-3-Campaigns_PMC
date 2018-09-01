@@ -5,4 +5,6 @@
 
 [player,["t2"],["Capture <marker name='pmc_marker_obj_2'>Vikos</marker> and the surrounding buildings.","Capture Vikos","text2"],(getPos pmc_2),1,2,true] call BIS_fnc_taskCreate;
 
+[player,["t3"],["Return to <marker name='pmc_marker_fob_1'>FOB 1</marker> for operation end.","Return to FOB 1","text3"],(getPos pmc_obj_3),1,2,true] call BIS_fnc_taskCreate;
+
 ["t1", "ASSIGNED"] call BIS_fnc_taskSetState;
