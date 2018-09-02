@@ -10,6 +10,8 @@ _camera cameraEffect ["internal", "back"];
 
 _d = 7; enableRadio false;
 
+#include "..\..\scripts\PMC\PMC_Movie_Nil_Checks.sqf"
+
 setDate PMC_LastMissionDateTime;
 0 setOvercast PMC_LastMissionOvercast;
 forceWeatherChange;

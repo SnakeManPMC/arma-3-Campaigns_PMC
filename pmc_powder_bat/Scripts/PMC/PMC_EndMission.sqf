@@ -14,17 +14,50 @@ titleText ["Mission Accomplished!", "plain down", 3];
 playMusic "LeadTrack01_F";
 sleep 7;
 
-// dirty haxx0r for end mission cheater hehe
+
+// exit.sqf start
+// Stratis m001 - m010
+// camp maxwell ammo boxes
+if (!isNil "pmc_ammobox_base_1") then
+{
+	pmc_ammobox_base_1 saveStatus "PMC_AmmoBoxBase1";
+	pmc_ammobox_base_2 saveStatus "PMC_AmmoBoxBase2";
+};
+
+// Altis m011 - m020
+// FOB 1
+if (!isNil "pmc_ammobox_fob1_1") then
+{
+	private _pmcBox1 = pmc_ammobox_fob1_1 saveStatus "PMC_AmmoBoxFOB11";
+	private _pmcBox2 = pmc_ammobox_fob1_2 saveStatus "PMC_AmmoBoxFOB12";
+	private _pmcBox3 = pmc_ammobox_fob1_3 saveStatus "PMC_AmmoBoxFOB13";
+	private _pmcBox4 = pmc_ammobox_fob1_4 saveStatus "PMC_AmmoBoxFOB14";
+};
+
+// truck is on m001 - m011 as american MTVR
+// truck is on m011 - m020 as guerrilla v3s
+private _pmcTruck1 = pmc_truck1 saveStatus "PMC_AmmoTruck1";
+
+PMC_LastMissionDateTime = date;
+saveVar "PMC_LastMissionDateTime";
+
+PMC_LastMissionOvercast = overcast;
+saveVar "PMC_LastMissionOvercast";
+
 if (isNil "PMC_CampaignDeaths") then
 {
 	PMC_CampaignDeaths = 0;
-	saveVar "PMC_CampaignDeaths";
+}
+else
+{
+	PMC_CampaignDeaths = PMC_CampaignDeaths + PMC_CurrentMissionDeaths;
 };
-private _pmcStr = format ["Mission friendly KIAs: %1, Campaign wide: %2", PMC_CurrentMissionDeaths, PMC_CampaignDeaths];
-titleText [_pmcStr, "plain down", 3];
+saveVar "PMC_CampaignDeaths";
+// exit.sqf end
 
-//diag_log "PMC_EndMission.sqf is starting 'exit.sqf' ...";
-//[] execVM "exit.sqf";
+
+private _pmcStr = format ["Friendly Killed in Action\nCurrent Mission: %1, Campaign wide: %2", PMC_CurrentMissionDeaths, PMC_CampaignDeaths];
+titleText [_pmcStr, "plain down", 3];
 
 // this bullshit is required because arma3 weaponPool is BROKEN and duplicates its contents on every mission load
 [] execVM "PMC\PMC_WeaponPoolClearEverything.sqf";

@@ -10,6 +10,8 @@ _camera cameraEffect ["internal", "back"];
 
 _d = 7; enableRadio false;
 
+#include "..\..\scripts\PMC\PMC_Movie_Nil_Checks.sqf"
+
 diag_log format["PMC m001 Cutscene, PMC_LastMissionDateTime: %1, PMC_LastMissionOvercast: %2, PMC_CampaignDeaths: %3", PMC_LastMissionDateTime, PMC_LastMissionOvercast, PMC_CampaignDeaths];
 
 setDate PMC_LastMissionDateTime;
