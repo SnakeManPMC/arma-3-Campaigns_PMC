@@ -14,8 +14,6 @@ titleText ["Mission Accomplished!", "plain down", 3];
 playMusic "LeadTrack01_F";
 sleep 7;
 
-
-// exit.sqf start
 // Stratis m001 - m010
 // camp maxwell ammo boxes
 if (!isNil "pmc_ammobox_base_1") then
@@ -53,8 +51,6 @@ else
 	PMC_CampaignDeaths = PMC_CampaignDeaths + PMC_CurrentMissionDeaths;
 };
 saveVar "PMC_CampaignDeaths";
-// exit.sqf end
-
 
 private _pmcStr = format ["Friendly Killed in Action\nCurrent Mission: %1, Campaign wide: %2", PMC_CurrentMissionDeaths, PMC_CampaignDeaths];
 titleText [_pmcStr, "plain down", 3];
