@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=573;
+		nextID=577;
 	};
 	class MarkerIDProvider
 	{
@@ -99,9 +99,9 @@ class Mission
 		briefingName="PMC Powder Bat 14";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0.3;
+		startWeather=0.30000001;
 		startWind=0.099999994;
-		forecastWeather=0.3;
+		forecastWeather=0.30000001;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		month=6;
@@ -112,7 +112,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=37;
+		items=41;
 		class Item0
 		{
 			dataType="Trigger";
@@ -136,7 +136,7 @@ class Mission
 			class Attributes
 			{
 				text="mission complete - music";
-				condition="call{pmc_opfordead1 && pmc_opfordead2}";
+				condition="call{pmc_opfordead1 && pmc_opfordead2 && pmc_opfordead3 && pmc_opfordead4}";
 				onActivation="call{0 = [] execVM ""PMC\PMC_EndMission.sqf"";}";
 				sizeA=0;
 				sizeB=0;
@@ -1979,6 +1979,59 @@ class Mission
 			type="mil_objective";
 			colorName="ColorRed";
 			id=572;
+		};
+		class Item37
+		{
+			dataType="Marker";
+			position[]={11402.547,2.6667018,9966.3818};
+			name="pmc_marker_obj_3";
+			type="mil_objective";
+			colorName="ColorRed";
+			id=573;
+		};
+		class Item38
+		{
+			dataType="Trigger";
+			position[]={11399.229,2.693608,9969.2119};
+			class Attributes
+			{
+				name="pmc_3";
+				text="independent dead 3";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective3.sqf"";}";
+				timeout[]={3,5,7};
+				interuptable=1;
+				activationBy="WEST SEIZED";
+			};
+			id=574;
+			type="EmptyDetector";
+			atlOffset=-2.3841858e-007;
+		};
+		class Item39
+		{
+			dataType="Marker";
+			position[]={10965.937,8.3888845,10154.114};
+			name="pmc_marker_obj_4";
+			type="mil_objective";
+			colorName="ColorRed";
+			id=575;
+		};
+		class Item40
+		{
+			dataType="Trigger";
+			position[]={10962.618,8.4257431,10156.944};
+			class Attributes
+			{
+				name="pmc_4";
+				text="independent dead 4";
+				condition="call{this}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Objective4.sqf"";}";
+				timeout[]={3,5,7};
+				interuptable=1;
+				activationBy="WEST SEIZED";
+			};
+			id=576;
+			type="EmptyDetector";
 		};
 	};
 };
