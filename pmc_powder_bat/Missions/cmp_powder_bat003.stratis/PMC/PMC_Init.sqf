@@ -13,14 +13,11 @@ pmc_ammobox_base_2 loadStatus "PMC_AmmoBoxBase2";
 [pmc_ammobox_base_1] execVM "PMC\PMC_AmmoBoxResupply.sqf";
 [pmc_ammobox_base_2] execVM "PMC\PMC_AmmoBoxResupply.sqf";
 
-[player, "PMC_WeatherForecast", nil, nil, ""] call BIS_fnc_addCommMenuItem;
-
 PMC_corpses = [];
 PMC_killedNum = 0;
 
 call compile preprocessFileLineNumbers "PMC\PMC_Create_CUP_NAPA_Random_Infantry.sqf";
 call compile preprocessFileLineNumbers "PMC\PMC_Sentry_Inf_Waypoints.sqf";
-
 
 private _grp = [getPos pmc_1] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_1, 50] call PMC_Sentry_Inf_Waypoints;
@@ -30,7 +27,6 @@ _grp = [getPos pmc_location_1] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_location_1, 20] call PMC_Sentry_Inf_Waypoints;
 _grp = [getPos pmc_location_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_location_2, 20] call PMC_Sentry_Inf_Waypoints;
-
 
 {
 	_grp = [getPos pmc_location_1] call PMC_Create_CUP_NAPA_Random_Infantry;

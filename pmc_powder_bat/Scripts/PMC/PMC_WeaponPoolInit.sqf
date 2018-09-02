@@ -1,7 +1,7 @@
 
 // weaponPool init, add some good US stuff
 
-diag_log ["PMC_WeaponPoolInit ran from %1 at %2", missionName, diag_tickTime];
+diag_log format ["PMC_WeaponPoolInit ran from %1 at %2", missionName, diag_tickTime];
 
 addMagazinePool ["CUP_100Rnd_556x45_BetaCMag", 50];
 addMagazinePool ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 50];

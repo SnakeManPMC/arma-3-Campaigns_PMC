@@ -10,6 +10,16 @@ _camera cameraEffect ["internal", "back"];
 
 _d = 7; enableRadio false;
 
+diag_log format
+[
+	"PMC m011 Cutscene, PMC_CampaignDeaths: %1, PMC_AmmoBoxFOB11: %2, PMC_AmmoTruck1: %3, PMC_LastMissionDateTime: %4, PMC_LastMissionOvercast: %5",
+	PMC_CampaignDeaths,
+	PMC_AmmoBoxFOB11,
+	PMC_AmmoTruck1,
+	PMC_LastMissionDateTime,
+	PMC_LastMissionOvercast
+];
+
 setDate PMC_LastMissionDateTime;
 0 setOvercast PMC_LastMissionOvercast;
 forceWeatherChange;

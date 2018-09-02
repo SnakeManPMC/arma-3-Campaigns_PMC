@@ -24,7 +24,7 @@ class MissionDefault: NoEndings
 
 class Campaign
 {
-	briefingName = "PMC Powder Bat v0.3.4";
+	briefingName = "PMC Powder Bat v0.3.5";
 	author = "Snake Man, PMC.";
 	overviewText = "US Marine Corps clears Stratis, Altis and Tanoa of insurgent bastards. Uses CUP units/weapons/vehicles.";
 	overviewPicture = "\campaigns\pmc_powder_bat\overviewPicture_ca.paa";
@@ -569,6 +569,28 @@ class CfgCommunicationMenu
 		text = "Weather Forecast";
 		submenu = "";
 		expression = "_this execVM 'PMC\PMC_weather_forecast_sp.sqf';";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+
+	class PMC_DebugEndMission
+	{
+		text = "Debug End Mission";
+		submenu = "";
+		expression = "pmc_opfordead1 = true; pmc_opfordead2 = true; pmc_opfordead3 = true; pmc_opfordead4 = true; pmc_opfordead5 = true; pmc_opfordead6 = true; pmc_opfordead7 = true;";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+
+	class PMC_DebugCampaignMsg
+	{
+		text = "Debug Campaign Message";
+		submenu = "";
+		expression = "_this execVM 'PMC\PMC_Debug.sqf';";
 		icon = "";
 		cursor = "";
 		enable = "1";

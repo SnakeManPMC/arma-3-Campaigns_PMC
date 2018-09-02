@@ -12,6 +12,10 @@ PMC_CurrentMissionDeaths = 0;
 	_x addEventHandler ["killed", {0 = _this execVM "PMC\PMC_PlayerGroupKilledEH.sqf"}];
 } forEach units _grp;
 
+[player, "PMC_WeatherForecast", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+[player, "PMC_DebugEndMission", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+[player, "PMC_DebugCampaignMsg", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+
 sleep 10;
 [ format["Somewhere on %1", worldName], format ["Year %1", date select 0], mapGridPosition player ] spawn BIS_fnc_infoText;
 /*

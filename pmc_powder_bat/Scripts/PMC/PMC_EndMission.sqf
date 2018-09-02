@@ -14,8 +14,17 @@ titleText ["Mission Accomplished!", "plain down", 3];
 playMusic "LeadTrack01_F";
 sleep 7;
 
+// dirty haxx0r for end mission cheater hehe
+if (isNil "PMC_CampaignDeaths") then
+{
+	PMC_CampaignDeaths = 0;
+	saveVar "PMC_CampaignDeaths";
+};
 private _pmcStr = format ["Mission friendly KIAs: %1, Campaign wide: %2", PMC_CurrentMissionDeaths, PMC_CampaignDeaths];
 titleText [_pmcStr, "plain down", 3];
+
+diag_log "PMC_EndMission.sqf is starting 'exit.sqf' ...";
+[] execVM "exit.sqf";
 
 // this bullshit is required because arma3 weaponPool is BROKEN and duplicates its contents on every mission load
 [] execVM "PMC\PMC_WeaponPoolClearEverything.sqf";

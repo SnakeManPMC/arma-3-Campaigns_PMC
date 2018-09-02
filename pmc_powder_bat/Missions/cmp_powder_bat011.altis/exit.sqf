@@ -14,3 +14,13 @@ saveVar "PMC_LastMissionOvercast";
 
 PMC_CampaignDeaths = PMC_CampaignDeaths + PMC_CurrentMissionDeaths;
 saveVar "PMC_CampaignDeaths";
+
+diag_log format
+[
+	"PMC m011 exit.sqf, PMC_CampaignDeaths: %1, PMC_AmmoBoxFOB11: %2, PMC_AmmoTruck1: %3, PMC_LastMissionDateTime: %4, PMC_LastMissionOvercast: %5",
+	PMC_CampaignDeaths,
+	PMC_AmmoBoxFOB11,
+	PMC_AmmoTruck1,
+	PMC_LastMissionDateTime,
+	PMC_LastMissionOvercast
+];

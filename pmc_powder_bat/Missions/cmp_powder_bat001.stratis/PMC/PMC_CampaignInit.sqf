@@ -10,3 +10,5 @@ saveVar "PMC_LastMissionOvercast";
 
 PMC_CampaignDeaths = 0;
 saveVar "PMC_CampaignDeaths";
+
+diag_log format["PMC_CampaignInit, PMC_LastMissionDateTime: %1, PMC_LastMissionOvercast: %2, PMC_CampaignDeaths: %3", PMC_LastMissionDateTime, PMC_LastMissionOvercast, PMC_CampaignDeaths];
