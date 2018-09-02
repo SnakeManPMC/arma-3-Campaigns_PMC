@@ -1,145 +1,226 @@
-version=11;
-class Mission
+version=53;
+class EditorData
 {
-	randomSeed=14070614;
-	class Intel
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
 	{
-		briefingName="PMC 4";
-		startWeather=0.39999998;
-		forecastWeather=0.25;
-		year=2008;
-		month=10;
-		day=11;
-		hour=14;
-		minute=20;
+		nextID=24;
 	};
-	class Groups
+	class Camera
+	{
+		pos[]={3533.1104,127.48926,3559.4441};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F"
+};
+class AddonsMetaData
+{
+	class List
 	{
 		items=1;
 		class Item0
 		{
-			side="WEST";
-			class Vehicles
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=14526743;
+class ScenarioData
+{
+	author="PMC Since 1984";
+};
+class Intro
+{
+	class Intel
+	{
+		startWeather=0.40000001;
+		startWind=0.1;
+		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2008;
+		month=10;
+		day=11;
+		hour=14;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="PMC 4";
+		startWeather=0.39999998;
+		startWind=0.1;
+		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2008;
+		month=10;
+		day=11;
+		hour=14;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+	class Entities
+	{
+		items=5;
+		class Item0
+		{
+			dataType="Trigger";
+			position[]={3538.0125,19,3593.075};
+			class Attributes
+			{
+				text="Start music";
+				onActivation="this = [] execVM ""startmusic.sqf"";";
+				sizeA=0;
+				sizeB=0;
+				interuptable=1;
+				repeatable=1;
+				activationBy="ALPHA";
+			};
+			id=18;
+			type="EmptyDetector";
+			atlOffset=-85.591667;
+		};
+		class Item1
+		{
+			dataType="Trigger";
+			position[]={3540.3511,19,3590.8142};
+			class Attributes
+			{
+				text="Stop music";
+				onActivation="this = [] execVM ""stopmusic.sqf"";";
+				sizeA=0;
+				sizeB=0;
+				interuptable=1;
+				repeatable=1;
+				activationBy="BRAVO";
+			};
+			id=19;
+			type="EmptyDetector";
+			atlOffset=-85.997948;
+		};
+		class Item2
+		{
+			dataType="Trigger";
+			position[]={3543.3137,19,3588.6313};
+			class Attributes
+			{
+				text="Play sound";
+				onActivation="this = [] execVM ""playsound.sqf"";";
+				sizeA=0;
+				sizeB=0;
+				interuptable=1;
+				repeatable=1;
+				activationBy="CHARLIE";
+			};
+			id=20;
+			type="EmptyDetector";
+			atlOffset=-86.75071;
+		};
+		class Item3
+		{
+			dataType="Trigger";
+			position[]={3546.0422,19,3586.4482};
+			class Attributes
+			{
+				text="End mission";
+				sizeA=0;
+				sizeB=0;
+				interuptable=1;
+				repeatable=1;
+				activationBy="DELTA";
+				type="END1";
+			};
+			id=21;
+			type="EmptyDetector";
+			atlOffset=-87.541107;
+		};
+		class Item4
+		{
+			dataType="Group";
+			side="West";
+			class Entities
 			{
 				items=1;
 				class Item0
 				{
-					position[]={3533.1104,19,3584.394};
-					id=0;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
-					init="hint ""Use radio 0-0- to toggle music, play sound and end campaign (last mission).""";
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3533.1104,102.4907,3584.4941};
+						angles[]={6.1959085,0,0.20459689};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="hint ""Use radio 0-0- to toggle music, play sound and end campaign (last mission).""";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=23;
+					type="B_Soldier_F";
 				};
 			};
-		};
-	};
-	class Sensors
-	{
-		items=4;
-		class Item0
-		{
-			position[]={3538.0125,19,3593.075};
-			a=0;
-			b=0;
-			activationBy="ALPHA";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="Start music";
-			expActiv="this = [] execVM ""startmusic.sqf"";";
-			class Effects
+			class Attributes
 			{
 			};
+			id=22;
 		};
-		class Item1
-		{
-			position[]={3540.3511,19,3590.8142};
-			a=0;
-			b=0;
-			activationBy="BRAVO";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="Stop music";
-			expActiv="this = [] execVM ""stopmusic.sqf"";";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
-			position[]={3543.3137,19,3588.6313};
-			a=0;
-			b=0;
-			activationBy="CHARLIE";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="Play sound";
-			expActiv="this = [] execVM ""playsound.sqf"";";
-			class Effects
-			{
-			};
-		};
-		class Item3
-		{
-			position[]={3546.0422,19,3586.4482};
-			a=0;
-			b=0;
-			activationBy="DELTA";
-			repeating=1;
-			interruptable=1;
-			type="END1";
-			age="UNKNOWN";
-			text="End mission";
-			class Effects
-			{
-			};
-		};
-	};
-};
-class Intro
-{
-	randomSeed=7922283;
-	class Intel
-	{
-		startWeather=0.40000001;
-		forecastWeather=0.25;
-		year=2008;
-		month=10;
-		day=11;
-		hour=14;
-		minute=20;
-	};
-};
-class OutroWin
-{
-	randomSeed=16125869;
-	class Intel
-	{
-		startWeather=0.40000001;
-		forecastWeather=0.25;
-		year=2008;
-		month=10;
-		day=11;
-		hour=14;
-		minute=20;
 	};
 };
 class OutroLoose
 {
-	randomSeed=1819507;
 	class Intel
 	{
 		startWeather=0.40000001;
+		startWind=0.1;
 		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
 		year=2008;
 		month=10;
 		day=11;
 		hour=14;
 		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroWin
+{
+	class Intel
+	{
+		startWeather=0.40000001;
+		startWind=0.1;
+		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2008;
+		month=10;
+		day=11;
+		hour=14;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
 	};
 };
