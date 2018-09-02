@@ -1,21 +1,80 @@
-version=12;
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=27;
+	};
+	class Camera
+	{
+		pos[]={4172.1348,30,4251.8052};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Weapons_F_Bootcamp_Ammoboxes",
+	"A3_Characters_F"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=2;
+		class Item0
+		{
+			className="A3_Weapons_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=12040967;
+class ScenarioData
+{
+	author="PMC Since 1984";
+};
+class Intro
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
 class Mission
 {
-	addOns[]=
-	{
-		"A3_Characters_F_Gamma",
-		"a3_characters_f",
-		"A3_Weapons_F_Bootcamp_Ammoboxes",
-		"map_vr"
-	};
-	addOnsAuto[]=
-	{
-		"A3_Characters_F_Gamma",
-		"a3_characters_f",
-		"A3_Weapons_F_Bootcamp_Ammoboxes",
-		"map_vr"
-	};
-	randomSeed=8037250;
 	class Intel
 	{
 		briefingName="Test Weaponpool 3";
@@ -36,117 +95,131 @@ class Mission
 		startFogDecay=0.0049999999;
 		forecastFogDecay=0.0049999999;
 	};
-	class Groups
+	class Entities
 	{
-		items=1;
+		items=7;
 		class Item0
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Trigger";
+			position[]={4179.1328,5,4281.6714};
+			class Attributes
+			{
+				text="End mission, goto mission 2";
+				onActivation="[ ""pmc2"", true, 2 ] call BIS_fnc_endMission;";
+				interuptable=1;
+				activationBy="ALPHA";
+			};
+			id=19;
+			type="EmptyDetector";
+		};
+		class Item1
+		{
+			dataType="Trigger";
+			position[]={4180.4966,5,4280.5229};
+			class Attributes
+			{
+				text="End mission, goto mission 3";
+				onActivation="[ ""pmc3"", true, 2 ] call BIS_fnc_endMission;";
+				interuptable=1;
+				activationBy="BRAVO";
+			};
+			id=20;
+			type="EmptyDetector";
+		};
+		class Item2
+		{
+			dataType="Trigger";
+			position[]={4182.1113,5,4279.4102};
+			class Attributes
+			{
+				text="End mission, goto mission 4";
+				onActivation="[ ""pmc4"", true, 2 ] call BIS_fnc_endMission;";
+				interuptable=1;
+				activationBy="CHARLIE";
+			};
+			id=21;
+			type="EmptyDetector";
+		};
+		class Item3
+		{
+			dataType="Trigger";
+			position[]={4184.5156,5,4277.293};
+			class Attributes
+			{
+				text="End mission, END CAMPAIGN!";
+				onActivation="[ ""end1"", true, 2 ] call BIS_fnc_endMission;";
+				interuptable=1;
+				activationBy="ECHO";
+			};
+			id=22;
+			type="EmptyDetector";
+		};
+		class Item4
+		{
+			dataType="Trigger";
+			position[]={4183.2236,5,4278.3696};
+			class Attributes
+			{
+				text="End mission, goto mission 1 ;)";
+				onActivation="[ ""pmc1"", true, 2 ] call BIS_fnc_endMission;";
+				interuptable=1;
+				activationBy="DELTA";
+			};
+			id=23;
+			type="EmptyDetector";
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4171.9912,6.175662,4281.1333};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				name="box1";
+			};
+			id=24;
+			type="Box_FIA_Wps_F";
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="West";
+			class Entities
 			{
 				items=1;
 				class Item0
 				{
-					position[]={4172.1348,5,4276.7554};
-					id=0;
-					side="WEST";
-					vehicle="B_G_Soldier_F";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4172.1348,5.0014391,4276.855};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=26;
+					type="B_G_Soldier_F";
 				};
 			};
-		};
-	};
-	class Vehicles
-	{
-		items=1;
-		class Item0
-		{
-			position[]={4171.9912,5,4281.1333};
-			id=1;
-			side="EMPTY";
-			vehicle="Box_FIA_Wps_F";
-			skill=0.60000002;
-			text="box1";
-		};
-	};
-	class Sensors
-	{
-		items=5;
-		class Item0
-		{
-			position[]={4179.1328,5,4281.6714};
-			activationBy="ALPHA";
-			interruptable=1;
-			age="UNKNOWN";
-			text="End mission, goto mission 2";
-			expActiv="[ ""pmc2"", true, 2 ] call BIS_fnc_endMission;";
-			class Effects
+			class Attributes
 			{
 			};
-		};
-		class Item1
-		{
-			position[]={4180.4966,5,4280.5229};
-			activationBy="BRAVO";
-			interruptable=1;
-			age="UNKNOWN";
-			text="End mission, goto mission 3";
-			expActiv="[ ""pmc3"", true, 2 ] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
-			position[]={4182.1113,5,4279.4102};
-			activationBy="CHARLIE";
-			interruptable=1;
-			age="UNKNOWN";
-			text="End mission, goto mission 4";
-			expActiv="[ ""pmc4"", true, 2 ] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
-		};
-		class Item3
-		{
-			position[]={4184.5156,5,4277.293};
-			activationBy="ECHO";
-			interruptable=1;
-			age="UNKNOWN";
-			text="End mission, END CAMPAIGN!";
-			expActiv="[ ""end1"", true, 2 ] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
-		};
-		class Item4
-		{
-			position[]={4183.2236,5,4278.3696};
-			activationBy="DELTA";
-			interruptable=1;
-			age="UNKNOWN";
-			text="End mission, goto mission 1 ;)";
-			expActiv="[ ""pmc1"", true, 2 ] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
+			id=25;
 		};
 	};
 };
-class Intro
+class OutroLoose
 {
-	addOns[]=
-	{
-		"map_vr"
-	};
-	addOnsAuto[]=
-	{
-		"map_vr"
-	};
-	randomSeed=5741347;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
@@ -170,47 +243,6 @@ class Intro
 };
 class OutroWin
 {
-	addOns[]=
-	{
-		"map_vr"
-	};
-	addOnsAuto[]=
-	{
-		"map_vr"
-	};
-	randomSeed=13421700;
-	class Intel
-	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2035;
-		month=7;
-		day=6;
-		hour=14;
-		minute=15;
-		startFogBase=0.001;
-		forecastFogBase=0.001;
-		startFogDecay=0.0049999999;
-		forecastFogDecay=0.0049999999;
-	};
-};
-class OutroLoose
-{
-	addOns[]=
-	{
-		"map_vr"
-	};
-	addOnsAuto[]=
-	{
-		"map_vr"
-	};
-	randomSeed=1952246;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
