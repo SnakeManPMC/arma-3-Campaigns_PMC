@@ -7,10 +7,14 @@ PMCHQ = [ West, "BASE" ];
 [] execVM "PMC\PMC_Briefing.sqf";
 [] execVM "PMC\PMC_Tasks.sqf";
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
-//[] execVM "PMC\PMC_WeaponPoolTruck.sqf";
-//[] execVM "PMC\PMC_WeaponPoolAmmoBox.sqf";
 pmc_ammobox_campmaxwell_1 loadStatus "PMC_StatusAmmoBoxCampMaxwell_1";
 pmc_ammobox_campmaxwell_2 loadStatus "PMC_StatusAmmoBoxCampMaxwell_2";
+pmc_ammobox_campmaxwell_3 loadStatus "PMC_StatusAmmoBoxCampMaxwell_3";
+pmc_ammobox_campmaxwell_4 loadStatus "PMC_StatusAmmoBoxCampMaxwell_4";
+pmc_ammobox_campmaxwell_5 loadStatus "PMC_StatusAmmoBoxCampMaxwell_5";
+pmc_ammobox_campmaxwell_6 loadStatus "PMC_StatusAmmoBoxCampMaxwell_6";
+pmc_ammobox_campmaxwell_7 loadStatus "PMC_StatusAmmoBoxCampMaxwell_7";
+pmc_ammobox_campmaxwell_8 loadStatus "PMC_StatusAmmoBoxCampMaxwell_8";
 pmc_truck1 loadStatus "PMC_AmmoTruck1";
 
 PMC_corpses = [];

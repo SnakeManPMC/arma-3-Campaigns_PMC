@@ -7,6 +7,7 @@ PMCHQ = [ West, "BASE" ];
 [] execVM "PMC\PMC_Briefing.sqf";
 [] execVM "PMC\PMC_Tasks.sqf";
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
+[pmc_truck1] execVM "PMC\PMC_WeaponCargo.sqf";
 
 PMC_corpses = [];
 PMC_killedNum = 0;

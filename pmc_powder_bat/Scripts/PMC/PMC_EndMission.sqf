@@ -22,6 +22,16 @@ if (!isNil "pmc_ammobox_campmaxwell_1") then
 	pmc_ammobox_campmaxwell_2 saveStatus "PMC_StatusAmmoBoxCampMaxwell_2";
 };
 
+if (!isNil "pmc_ammobox_campmaxwell_3") then
+{
+	pmc_ammobox_campmaxwell_3 saveStatus "PMC_StatusAmmoBoxCampMaxwell_3";
+	pmc_ammobox_campmaxwell_4 saveStatus "PMC_StatusAmmoBoxCampMaxwell_4";
+	pmc_ammobox_campmaxwell_5 saveStatus "PMC_StatusAmmoBoxCampMaxwell_5";
+	pmc_ammobox_campmaxwell_6 saveStatus "PMC_StatusAmmoBoxCampMaxwell_6";
+	pmc_ammobox_campmaxwell_7 saveStatus "PMC_StatusAmmoBoxCampMaxwell_7";
+	pmc_ammobox_campmaxwell_8 saveStatus "PMC_StatusAmmoBoxCampMaxwell_8";
+};
+
 // Altis m011 - m020
 // FOB 1
 if (!isNil "pmc_ammobox_fob1_1") then
