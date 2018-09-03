@@ -17,6 +17,8 @@ pmc_ammobox_campmaxwell_7 loadStatus "PMC_StatusAmmoBoxCampMaxwell_7";
 pmc_ammobox_campmaxwell_8 loadStatus "PMC_StatusAmmoBoxCampMaxwell_8";
 pmc_truck1 loadStatus "PMC_AmmoTruck1";
 
+[(getPos pmc_hq_1), 100] execVM "PMC\PMC_CampFOBDefenses.sqf";
+
 PMC_corpses = [];
 PMC_killedNum = 0;
 
