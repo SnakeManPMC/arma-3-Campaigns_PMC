@@ -12,7 +12,7 @@ pmc_ammobox_campmaxwell_2 loadStatus "PMC_StatusAmmoBoxCampMaxwell_2";
 // here we introduced the USMC ammo boxes 3 through 8, and we must initialize them here if we want special items added etc
 // we make the huge vehicle ammo box as our uniform storage
 [pmc_ammobox_campmaxwell_5] execVM "PMC\PMC_ClearVehicleCargo.sqf";
-[pmc_ammobox_campmaxwell_5, 10] execVM "PMC\PMC_CUP_UniformsToCargo.sqf";
+[pmc_ammobox_campmaxwell_5, 3] execVM "PMC\PMC_CUP_UniformsToCargo.sqf";
 
 PMC_corpses = [];
 PMC_killedNum = 0;
