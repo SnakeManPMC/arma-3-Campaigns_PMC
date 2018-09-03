@@ -10,5 +10,5 @@
 
 	// fill from weaponPool
 	putWeaponPool _x;
-} forEach [pmc_ammobox_base_1, pmc_ammobox_base_2];
+} forEach [pmc_ammobox_campmaxwell_1, pmc_ammobox_campmaxwell_2];
 */

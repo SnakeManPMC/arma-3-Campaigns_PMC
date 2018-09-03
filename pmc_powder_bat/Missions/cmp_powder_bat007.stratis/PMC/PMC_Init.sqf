@@ -9,8 +9,8 @@ PMCHQ = [ West, "BASE" ];
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
 //[] execVM "PMC\PMC_WeaponPoolTruck.sqf";
 //[] execVM "PMC\PMC_WeaponPoolAmmoBox.sqf";
-pmc_ammobox_base_1 loadStatus "PMC_AmmoBoxBase1";
-pmc_ammobox_base_2 loadStatus "PMC_AmmoBoxBase2";
+pmc_ammobox_campmaxwell_1 loadStatus "PMC_StatusAmmoBoxCampMaxwell_1";
+pmc_ammobox_campmaxwell_2 loadStatus "PMC_StatusAmmoBoxCampMaxwell_2";
 pmc_truck1 loadStatus "PMC_AmmoTruck1";
 
 PMC_corpses = [];

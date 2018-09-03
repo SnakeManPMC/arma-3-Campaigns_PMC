@@ -16,10 +16,10 @@ sleep 7;
 
 // Stratis m001 - m010
 // camp maxwell ammo boxes
-if (!isNil "pmc_ammobox_base_1") then
+if (!isNil "pmc_ammobox_campmaxwell_1") then
 {
-	pmc_ammobox_base_1 saveStatus "PMC_AmmoBoxBase1";
-	pmc_ammobox_base_2 saveStatus "PMC_AmmoBoxBase2";
+	pmc_ammobox_campmaxwell_1 saveStatus "PMC_StatusAmmoBoxCampMaxwell_1";
+	pmc_ammobox_campmaxwell_2 saveStatus "PMC_StatusAmmoBoxCampMaxwell_2";
 };
 
 // Altis m011 - m020
