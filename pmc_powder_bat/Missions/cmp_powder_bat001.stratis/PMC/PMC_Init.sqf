@@ -1,4 +1,6 @@
 
+[] execVM "PMC\PMC_USMCFrogDesertLoadoutTweak.sqf";
+
 // year, month, day, hour, minute
 setDate [2008, 10, 11, 5, 50];
 
