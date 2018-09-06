@@ -14,6 +14,10 @@ pmc_ammobox_campmaxwell_2 loadStatus "PMC_StatusAmmoBoxCampMaxwell_2";
 [pmc_ammobox_campmaxwell_5] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 [pmc_ammobox_campmaxwell_5, 3] execVM "PMC\PMC_CUP_UniformsToCargo.sqf";
 
+// truck initial juicy loadout
+[pmc_truck1] execVM "PMC\PMC_ClearVehicleCargo.sqf";
+[pmc_truck1] execVM "PMC\PMC_AmmoBoxResupply.sqf;
+
 [(getPos pmc_hq_1), 100] execVM "PMC\PMC_CampFOBDefenses.sqf";
 
 PMC_corpses = [];
