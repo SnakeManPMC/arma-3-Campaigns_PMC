@@ -24,7 +24,7 @@ for "_i" from 1 to 3 do
 	_grp setspeedmode "LIMITED";
 	_grp setformation "LINE";
 
-	[_pos, _grp, 200] execVM "PMC\PMC_DefendLocation.sqf"	
+	[_pos, _grp, _waypointRanPosit] execVM "PMC\PMC_DefendLocation.sqf"	
 };
 
 // sentry
