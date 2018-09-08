@@ -24,11 +24,16 @@ PMC_killedNum = 0;
 
 call compile preprocessFileLineNumbers "PMC\PMC_Create_CUP_NAPA_Random_Infantry.sqf";
 call compile preprocessFileLineNumbers "PMC\PMC_Sentry_Inf_Waypoints.sqf";
+call compile preprocessFileLineNumbers "PMC\PMC_Create_CUP_NAPA_Sniper_Team.sqf";
+call compile preprocessFileLineNumbers "PMC\PMC_Guard_Inf_Sniper_Stealth_Waypoints.sqf";
 
 private _grp = [getPos pmc_location_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_location_2, 50] call PMC_Sentry_Inf_Waypoints;
 _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_2, 20] call PMC_Sentry_Inf_Waypoints;
+
+_grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Sniper_Team;
+[_grp, getPos pmc_2, 500] call PMC_Guard_Inf_Sniper_Stealth_Waypoints;
 
 {
 	_grp = [getPos pmc_1] call PMC_Create_CUP_NAPA_Random_Infantry;
