@@ -42,6 +42,17 @@ if (!isNil "pmc_ammobox_fob1_1") then
 	private _pmcBox4 = pmc_ammobox_fob1_4 saveStatus "PMC_AmmoBoxFOB14";
 };
 
+// FOB Eagle
+if (!isNil "pmc_ammobox_fobeagle_1") then
+{
+	private _pmcBox1 = pmc_ammobox_fobeagle_1 saveStatus "PMC_StatusAmmoBoxFOBEagle_1";
+	private _pmcBox2 = pmc_ammobox_fobeagle_2 saveStatus "PMC_StatusAmmoBoxFOBEagle_2";
+	private _pmcBox3 = pmc_ammobox_fobeagle_3 saveStatus "PMC_StatusAmmoBoxFOBEagle_3";
+	private _pmcBox4 = pmc_ammobox_fobeagle_4 saveStatus "PMC_StatusAmmoBoxFOBEagle_4";
+	private _pmcBox5 = pmc_ammobox_fobeagle_5 saveStatus "PMC_StatusAmmoBoxFOBEagle_5";
+	private _pmcBox6 = pmc_ammobox_fobeagle_6 saveStatus "PMC_StatusAmmoBoxFOBEagle_6";
+};
+
 // truck is on m001 - m011 as american MTVR
 // truck is on m011 - m020 as guerrilla v3s
 private _pmcTruck1 = pmc_truck1 saveStatus "PMC_AmmoTruck1";
