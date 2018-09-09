@@ -40,8 +40,8 @@ PMC_killedNum = 0;
 	waitUntil
 	{
 		sleep 3;
-		(player distance pmc_fob_eagle > 100);
+		(player distance pmc_fob_raven > 100);
 	};
 
-	"eagle_patrol" call BIS_fnc_endMission;
+	"raven_patrol" call BIS_fnc_endMission;
 };
