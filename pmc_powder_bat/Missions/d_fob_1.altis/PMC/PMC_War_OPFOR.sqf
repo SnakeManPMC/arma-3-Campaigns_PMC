@@ -1,5 +1,5 @@
 
-// pmc_1 is FOB 1
+// pmc_1 is FOB Falcon
 // pmc_location_1 etc are the enemy spawn points
 
 PMC_corpses = [];

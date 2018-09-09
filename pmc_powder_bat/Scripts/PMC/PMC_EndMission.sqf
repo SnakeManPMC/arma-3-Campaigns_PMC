@@ -33,7 +33,7 @@ if (!isNil "pmc_ammobox_campmaxwell_3") then
 };
 
 // Altis m011 - m020
-// FOB 1
+// FOB Falcon
 if (!isNil "pmc_ammobox_fob1_1") then
 {
 	private _pmcBox1 = pmc_ammobox_fob1_1 saveStatus "PMC_AmmoBoxFOB11";
