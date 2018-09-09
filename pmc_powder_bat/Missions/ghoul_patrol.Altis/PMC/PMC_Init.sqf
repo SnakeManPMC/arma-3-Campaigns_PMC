@@ -8,10 +8,10 @@ PMCHQ = [ West, "BASE" ];
 [] execVM "PMC\PMC_Tasks.sqf";
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
 
-pmc_ammobox_fob1_1 loadStatus "PMC_AmmoBoxFOB11";
-pmc_ammobox_fob1_2 loadStatus "PMC_AmmoBoxFOB12";
-pmc_ammobox_fob1_3 loadStatus "PMC_AmmoBoxFOB13";
-pmc_ammobox_fob1_4 loadStatus "PMC_AmmoBoxFOB14";
+pmc_ammobox_fobfalcon_1 loadStatus "PMC_StatusAmmoBoxFOBFalcon_1";
+pmc_ammobox_fobfalcon_2 loadStatus "PMC_StatusAmmoBoxFOBFalcon_2";
+pmc_ammobox_fobfalcon_3 loadStatus "PMC_StatusAmmoBoxFOBFalcon_3";
+pmc_ammobox_fobfalcon_4 loadStatus "PMC_StatusAmmoBoxFOBFalcon_4";
 pmc_truck1 loadStatus "PMC_AmmoTruck1";
 
 pmc_ammobox_fobeagle_1 loadStatus "PMC_StatusAmmoBoxFOBEagle_1";
