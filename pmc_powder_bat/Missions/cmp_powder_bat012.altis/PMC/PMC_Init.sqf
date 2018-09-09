@@ -15,7 +15,7 @@ pmc_ammobox_fobfalcon_4 loadStatus "PMC_StatusAmmoBoxFOBFalcon_4";
 pmc_truck1 loadStatus "PMC_AmmoTruck1";
 // truck initial juicy loadout
 [pmc_truck1] execVM "PMC\PMC_ClearVehicleCargo.sqf";
-[pmc_truck1] execVM "PMC\PMC_AmmoBoxResupply.sqf;
+[pmc_truck1] execVM "PMC\PMC_AmmoBoxResupply.sqf";
 
 [(getPos pmc_fob_falcon), 100] execVM "PMC\PMC_CampFOBDefenses.sqf";
 
