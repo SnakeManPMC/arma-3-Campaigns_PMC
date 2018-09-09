@@ -17,7 +17,7 @@ pmc_truck1 loadStatus "PMC_AmmoTruck1";
 [pmc_truck1] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 [pmc_truck1] execVM "PMC\PMC_AmmoBoxResupply.sqf;
 
-[(getPos pmc_hq_1), 100] execVM "PMC\PMC_CampFOBDefenses.sqf";
+[(getPos pmc_fob_falcon), 100] execVM "PMC\PMC_CampFOBDefenses.sqf";
 
 PMC_corpses = [];
 PMC_killedNum = 0;
