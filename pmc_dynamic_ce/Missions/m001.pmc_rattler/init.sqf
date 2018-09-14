@@ -81,8 +81,8 @@ skipTime PMC_AllTimeUsed;
 
 [] execVM "PMC\PMC_setPos_Troops.sqf";
 sleep 3;
-{_x addEventHandler [{killed}, {_this exec "killed.sqs"}]} forEach aiwest;
+{_x addEventHandler [{killed}, {_this execVM "PMC\PMC_killed.sqf"}]} forEach aiwest;
 [] exec "war.sqs";
 sleep 10;
 [] exec "moving.sqs";
-[] exec "PMC_corpses.sqs";
+[] execVM "PMC\PMC_corpses.sqf";
