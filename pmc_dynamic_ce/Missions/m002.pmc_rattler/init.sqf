@@ -90,6 +90,6 @@ sleep 5;
 sleep 10;
 [] execVM "PMC\PMC_MoveGroups.sqf";
 [] execVM "PMC\PMC_corpses.sqf";
-[artyleader] exec "PMC_artydefence.sqs";
+[artyleader] execVM "PMC\PMC_ArtyDefence.sqf";
 sleep 5;
-[mortarleader] exec "PMC_artydefence.sqs";
+[mortarleader] execVM "PMC\PMC_ArtyDefence.sqf";
