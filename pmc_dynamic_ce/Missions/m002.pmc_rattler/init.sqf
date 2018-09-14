@@ -92,3 +92,6 @@ sleep 10;
 [artyleader] execVM "PMC\PMC_ArtyDefence.sqf";
 sleep 5;
 [mortarleader] execVM "PMC\PMC_ArtyDefence.sqf";
+
+// objectives
+[] execVM "PMC\PMC_Objectives.sqf";

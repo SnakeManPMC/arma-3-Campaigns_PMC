@@ -1,4 +1,12 @@
 
+// because the old style of making array of all units aieast = thisList; with a trigger
+waitUntil
+{
+	(!isNil "aieast");
+};
+
+call compile preprocessFileLineNumbers "PMC\PMC_CreateWaypointPole.sqf";
+
 pmcdb = false;
 PMC_sdg = 0;
 PMC_MLP = 5;
@@ -11,7 +19,7 @@ private _WinCampaignKIAs = 5000;
 MaxEast = 20;
 
 // win KIA's is how many EAST KIA's in current mission.
-private _WinKills = (500 + random 200);
+private _WinKills = 30; //(500 + random 200);
 
 // vehicle arrays
 PMC_EastTanks = ["CUP_O_BMP2_CHDKZ","CUP_O_ZSU23_TK","CUP_O_T55_TK","CUP_O_T72_RU","CUP_O_T72_RU"];
@@ -44,7 +52,7 @@ while {PMC_WarRunning} do
 	*/
 	if (PMC_East_KIA > _WinCampaignKIAs) then
 	{
-		PMC_Campaign_End = 1;
+		PMC_Campaign_End = true;
 		saveVar "PMC_Campaign_End";
 		hint "You completed the campaign!";
 		PAPABEAR sideChat "CONGRATULATIONS. YOU HAVE ACHIEVED OVER 5000 ENEMY KIAS. MISSION ACCOMPLISHED. OVER.";
@@ -77,18 +85,22 @@ while {PMC_WarRunning} do
 		private _pos = getPos (selectRandom _evs);
 		private _newPos = [_pos, 0, 100, 10, 0, 50, 0] call BIS_fnc_findSafePos;
 		private _grp = [_newPos, EAST, (configFile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Motorized" >> "CUP_O_RU_MotInfSquad")] call BIS_fnc_spawnGroup;
+		[_grp] call PMC_CreateWaypointPole;
 
 		_pos = getPos (selectRandom _evs);
 		_newPos = [_pos, 0, 100, 10, 0, 50, 0] call BIS_fnc_findSafePos;
 		_grp = [_newPos, EAST, (configFile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Mechanized" >> "CUP_O_RU_MechInfSquad_2")] call BIS_fnc_spawnGroup;
+		[_grp] call PMC_CreateWaypointPole;
 
 		_pos = getPos (selectRandom _evs);
 		_newPos = [_pos, 0, 100, 10, 0, 50, 0] call BIS_fnc_findSafePos;
 		_grp = [_newPos, EAST, (configFile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Armored" >> "CUP_O_RU_TankPlatoon")] call BIS_fnc_spawnGroup;
+		[_grp] call PMC_CreateWaypointPole;
 
 		_pos = getPos (selectRandom _ehs);
 		_newPos = [_pos, 0, 100, 10, 0, 50, 0] call BIS_fnc_findSafePos;
 		_grp = [_newPos, EAST, (configFile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Air" >> "CUP_O_RU_Mi24VSquadron")] call BIS_fnc_spawnGroup;
+		[_grp] call PMC_CreateWaypointPole;
 	};
 	sleep 30;
 };

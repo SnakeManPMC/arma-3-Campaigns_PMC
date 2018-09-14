@@ -29,7 +29,7 @@ class Campaign
 		
 		cutscene = cutscene1.PMC_Rattler;
 		
-		firstMission = PMC0;
+		firstMission = weaponpoolinit;
 		end1 = ;
 		end2 = ;
 		end3 = ;
@@ -38,26 +38,26 @@ class Campaign
 		end6 = ;
 		lost = ;
 		
-		class PMC0: MissionDefault
+		class weaponpoolinit: MissionDefault
 		{
-			end1 = PMC1;
-			lost = PMC1;
+			end1 = m001;
+			lost = m001;
 			template = weaponpoolinit.PMC_Rattler;
 		};
-		class PMC1: MissionDefault
+		class m001: MissionDefault
 		{
-			end1 = PMC2;
-			end2 = PMC3;
-			lost = PMC1;
+			end1 = m002;
+			end2 = cutscene2;
+			lost = m001;
 			template = m001.pmc_rattler;
 		};
-		class PMC2: MissionDefault
+		class m002: MissionDefault
 		{
-			end1 = PMC1;
-			lost = PMC2;
+			end1 = m001;
+			lost = m002;
 			template = m002.pmc_rattler;
 		};
-		class PMC3: MissionDefault
+		class cutscene2: MissionDefault
 		{
 			template = cutscene2.PMC_Rattler;
 		};
