@@ -57,7 +57,7 @@ if ( PMC_AllTimeUsed > (PMC_LastResupplyTime + 48) ) then
 
 if (PMC_ResupplyDay == 1) then
 {
-	[] execVM "PMC_weaponPool.sqf";
+	[] execVM "PMC\PMC_weaponPool.sqf";
 	PMC_ResupplyDay = 0;
 	saveVar "PMC_ResupplyDay";
 	PMC_LastResupplyTime = (time / 3600);
@@ -84,5 +84,5 @@ sleep 3;
 {_x addEventHandler [{killed}, {_this execVM "PMC\PMC_killed.sqf"}]} forEach aiwest;
 [] exec "war.sqs";
 sleep 10;
-[] exec "moving.sqs";
+[] execVM "PMC\PMC_MoveGroups.sqf";
 [] execVM "PMC\PMC_corpses.sqf";
