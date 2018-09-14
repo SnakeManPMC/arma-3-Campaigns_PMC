@@ -4,6 +4,7 @@
 PAPABEAR = [West, "HQ"];
 
 PMC_corpses = [];
+PMC_KilledNum = 0;
 PMC_groups = [];
 PMC_targets = [pole1,pole2,pole3,pole4,pole5,pole6,pole7,pole8,pole9,pole10,pole11,pole12,pole13,pole14,pole15,pole16,pole17,pole18,pole19,pole20,pole21,pole22,pole23,pole24,pole25,pole26,pole27,pole28,pole29,pole30];
 West_ControList = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
@@ -15,7 +16,6 @@ East_AssignList = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 {_x setmarkersize [100,100]} foreach ["pmc11","pmc12","pmc13","pmc14","pmc15","pmc16","pmc17","pmc18","pmc19","pmc20"];
 {_x setmarkersize [100,100]} foreach ["pmc21","pmc22","pmc23","pmc24","pmc25","pmc26","pmc27","pmc28","pmc29","pmc30"];
 
-eastguys = 0;
 westguys = 0;
 
 // new city occupation colors
@@ -81,8 +81,7 @@ skipTime PMC_AllTimeUsed;
 
 [] execVM "PMC\PMC_setPos_Troops.sqf";
 sleep 3;
-{_x addEventHandler [{killed}, {_this execVM "PMC\PMC_killed.sqf"}]} forEach aiwest;
-[] exec "war.sqs";
+{_x addEventHandler ["killed", {_this execVM "PMC\PMC_killed.sqf"}]} forEach aiwest;
+[] execVM "PMC\PMC_War.sqf";
 sleep 10;
-[] execVM "PMC\PMC_MoveGroups.sqf";
-[] execVM "PMC\PMC_corpses.sqf";
+[50] execVM "PMC\PMC_corpses.sqf";

@@ -1,33 +1,27 @@
-/*
+/* 2018-09-14 disabled due being utterly and totally broken hehe
+
 ; Weapons
 ; JAM3
-*/
+
 addWeaponPool ["CUP_M16A2",5];
 addWeaponPool ["CUP_M16A2GL",5];
 addWeaponPool ["CUP_arifle_G36A",5];
-addWeaponPool ["CUP_arifle_G36A",5];
-addWeaponPool ["CUP_M60A4_EP1",5];
+//addWeaponPool ["CUP_M60A4_EP1",5];
 addWeaponPool ["CUP_M14_EP1",5];
 addWeaponPool ["CUP_FN_FAL",5];
-addWeaponPool ["CUP_FN_FAL",5];
 addWeaponPool ["CUP_M40A3",5];
-addWeaponPool ["CUP_M4A1_Aim",5];
 addWeaponPool ["CUP_M4A1_Aim",5];
 addWeaponPool ["CUP_MP5A5",5];
 addWeaponPool ["CUP_30Rnd_9x19_MP5",5];
-addWeaponPool ["CUP_MP5A5",5];
 addWeaponPool ["CUP_M40A3",5];
 //addWeaponPool ["M79_EP1",5];
 addWeaponPool ["CUP_launch_M136",5];
-addWeaponPool ["CUP_launch_M136",5];
 addWeaponPool ["CUP_M9",5];
-addWeaponPool ["CUP_M9",5];
-addWeaponPool ["CUP_Glock17_EP1",5];
 addWeaponPool ["CUP_Glock17_EP1",5];
 //addWeaponPool ["AALauncher",5];
 addWeaponPool ["Binocular",5];
 addWeaponPool ["CUP_NVG_PVS7",5];
-/*
+
 ; LSR stuff
 addWeaponPool ["LSR_m249",5];
 addWeaponPool ["LSR_M249saw",5];
@@ -108,44 +102,32 @@ addWeaponPool ["LSR_JAM_m1911_sd",5];
 ;addWeaponPool ["CUP_Laserdesignator",5];
 
 ; Magazines
-*/
-addMagazinePool ["CUP_30Rnd_556x45_Stanag",50];
-addMagazinePool ["CUP_30Rnd_556x45_Stanag",50];
+
+//addMagazinePool ["AALauncher",50];
+//addMagazinePool ["CUP_M9",50];
+//addMagazinePool ["JAM_12Gauge_Shotgun_Mag",50];
+//addMagazinePool ["JAM_W127_10mag",50];
 //addMagazinePool ["JAM_W556_30SDHDmag",50];
-addMagazinePool ["CUP_30Rnd_556x45_G36",50];
+//addMagazinePool ["JAM_W556M_200SDHDmag",50];
+//addMagazinePool ["JAM_W762_20SDHDMag",50];
+//addMagazinePool ["CUP_30Rnd_9x19_MP5",50];
+addMagazinePool ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",50];
+addMagazinePool ["CUP_15Rnd_9x19_M9",50];
+addMagazinePool ["CUP_17Rnd_9x19_glock17",50];
+addMagazinePool ["CUP_1Rnd_HE_M203",50];
+addMagazinePool ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",50];
 addMagazinePool ["CUP_20Rnd_556x45_Stanag",50];
 addMagazinePool ["CUP_20Rnd_762x51_DMR",50];
-//addMagazinePool ["JAM_W762_20SDHDMag",50];
-addMagazinePool ["CUP_1Rnd_HE_M203",50];
-addMagazinePool ["CUP_1Rnd_HE_M203",50];
+addMagazinePool ["CUP_30Rnd_556x45_G36",50];
+addMagazinePool ["CUP_30Rnd_556x45_Stanag",50];
 addMagazinePool ["CUP_5Rnd_762x51_M24",50];
-addMagazinePool ["CUP_30Rnd_9x19_MP5",50];
-addMagazinePool ["CUP_30Rnd_9x19_MP5",50];
-addMagazinePool ["CUP_30Rnd_9x19_MP5",50];
-addMagazinePool ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",50];
-//addMagazinePool ["JAM_W556M_200SDHDmag",50];
-addMagazinePool ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",50];
-addMagazinePool ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",50];
-//addMagazinePool ["JAM_12Gauge_Shotgun_Mag",50];
-addMagazinePool ["CUP_20Rnd_762x51_DMR",50];
-addMagazinePool ["CUP_20Rnd_762x51_DMR",50];
-//addMagazinePool ["JAM_W127_10mag",50];
-addMagazinePool ["CUP_M136_M",50];
-addMagazinePool ["CUP_M136_M",50];
-addMagazinePool ["CUP_M9",50];
-addMagazinePool ["CUP_15Rnd_9x19_M9",50];
 addMagazinePool ["CUP_7Rnd_45ACP_1911",50];
-addMagazinePool ["CUP_15Rnd_9x19_M9",50];
-addMagazinePool ["CUP_17Rnd_9x19_glock17",50];
-addMagazinePool ["CUP_17Rnd_9x19_glock17",50];
 addMagazinePool ["CUP_FlareGreen_M203",50];
 addMagazinePool ["CUP_FlareRed_M203",50];
-addMagazinePool ["CUP_FlareGreen_M203",50];
-addMagazinePool ["CUP_FlareGreen_M203",50];
+addMagazinePool ["CUP_M136_M",50];
 addMagazinePool ["SmokeShell",50];
-//addMagazinePool ["AALauncher",50];
 
-/*
+
 ; removed these just in case ITS ONE OF THESE WHO FUCKS THE WEAPONPOOL UP :(
 ;addMagazinePool ["CUP_PipeBomb_M",10];
 ;addMagazinePool ["CUP_MineE",10];

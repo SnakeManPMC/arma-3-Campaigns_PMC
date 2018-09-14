@@ -1,3 +1,6 @@
+
+// this was scripts\exit.sqf previously, which obviously wont work...
+
 // this is for the captured towns stuff.
 PMC_City01=getMarkerColor "pmc1";
 PMC_City02=getMarkerColor "pmc2";
@@ -160,13 +163,9 @@ units hqteam select 8 saveStatus "hqt9";
 PMC_passTime = (3 + random 4);
 // this is the time used in this mission.
 // time = seconds. skiptime = hours.
-PMC_AllTimeUsed=((PMC_AllTimeUsed + PMC_passTime) + (time/3600));
-
+PMC_AllTimeUsed = ((PMC_AllTimeUsed + PMC_passTime) + (time/3600));
 saveVar "PMC_passTime";
 saveVar "PMC_AllTimeUsed";
 
-// bn880 weather
-saveVar "startOvercast";
-saveVar "endOvercast";
-saveVar "fogStart";
-saveVar "fogEnd";
+sleep 10;
+"pmc_end1" call BIS_fnc_endMission;
