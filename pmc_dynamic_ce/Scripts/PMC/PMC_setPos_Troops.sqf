@@ -1,3 +1,4 @@
+
 {_x setpos [assault1_x,assault1_y]} foreach units assault1;
 {_x setpos [assault2_x,assault2_y]} foreach units assault2;
 {_x setpos [assault3_x,assault3_y]} foreach units assault3;
@@ -52,10 +53,10 @@ vehicle (units usarty3 select 1) setpos [usarty3_x+20,usarty3_y];
 vehicle (units usarty3 select 2) setpos [usarty3_x-20,usarty3_y+20];
 vehicle (units usarty3 select 3) setpos [usarty3_x+40,usarty3_y+20];
 
-exit
-
+/*
 {_x setpos [ustanks1_x,ustanks1_y]} foreach [ut1,ut2,ut3,ut4];
 {_x setpos [ustanks2_x,ustanks2_y]} foreach [ut5,ut6,ut7,ut8];
 {_x setpos [ustanks3_x,ustanks3_y]} foreach [ut9,ut10,ut11,ut12];
 {_x setpos [ustanks4_x,ustanks4_y]} foreach [ut13,ut14,ut15,ut16];
 {_x setpos [ustanks5_x,ustanks5_y]} foreach [ut17,ut18,ut19,ut20];
+*/

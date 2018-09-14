@@ -1,7 +1,7 @@
 
 [] execVM "briefing.sqf";
 
-PAPABEAR=[West,"HQ"];
+PAPABEAR = [West, "HQ"];
 
 PMC_corpses = [];
 PMC_groups = [];
@@ -15,7 +15,8 @@ East_AssignList = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 {_x setmarkersize [100,100]} foreach ["pmc11","pmc12","pmc13","pmc14","pmc15","pmc16","pmc17","pmc18","pmc19","pmc20"];
 {_x setmarkersize [100,100]} foreach ["pmc21","pmc22","pmc23","pmc24","pmc25","pmc26","pmc27","pmc28","pmc29","pmc30"];
 
-eastguys=0;westguys=0;
+eastguys = 0;
+westguys = 0;
 
 // new city occupation colors
 "pmc1" setMarkerColor PMC_City01; ["pmc1"] execVM "PMC\PMC_addDefenses.sqf";
@@ -49,8 +50,19 @@ eastguys=0;westguys=0;
 "pmc29" setMarkerColor PMC_City29; ["pmc29"] execVM "PMC\PMC_addDefenses.sqf";
 "pmc30" setMarkerColor PMC_City30; ["pmc30"] execVM "PMC\PMC_addDefenses.sqf";
 
-if ( PMC_AllTimeUsed > (PMC_LastResupplyTime + 48) ) then { PMC_ResupplyDay=1; };
-if (PMC_ResupplyDay==1) then { [] execVM "PMC_weaponPool.sqf"; PMC_ResupplyDay=0; saveVar "PMC_ResupplyDay"; PMC_LastResupplyTime=(time/3600); saveVar "PMC_LastResupplyTime"; };
+if ( PMC_AllTimeUsed > (PMC_LastResupplyTime + 48) ) then
+{
+	PMC_ResupplyDay = 1;
+};
+
+if (PMC_ResupplyDay == 1) then
+{
+	[] execVM "PMC_weaponPool.sqf";
+	PMC_ResupplyDay = 0;
+	saveVar "PMC_ResupplyDay";
+	PMC_LastResupplyTime = (time / 3600);
+	saveVar "PMC_LastResupplyTime";
+};
 
 // load my squad up
 units hqteam select 0 loadStatus "hqt1";
@@ -67,7 +79,7 @@ skipTime PMC_AllTimeUsed;
 
 // weather script here
 
-[] exec "setpos_troops.sqs";
+[] execVM "PMC\PMC_setPos_Troops.sqf";
 sleep 3;
 {_x addEventHandler [{killed}, {_this exec "killed.sqs"}]} forEach aiwest;
 [] exec "war.sqs";
