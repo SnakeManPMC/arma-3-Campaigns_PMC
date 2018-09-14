@@ -1,3 +1,5 @@
+/* 2018-09-14 commented out as this must be some case of accidentally leaving exit.sqf into this CUTSCENE dir
+
 // this is for the captured towns stuff.
 PMC_City01="Default";
 PMC_City02="Default";
@@ -179,3 +181,4 @@ saveVar "startOvercast";
 saveVar "endOvercast";
 saveVar "fogStart";
 saveVar "fogEnd";
+*/
