@@ -12,7 +12,7 @@ private _pmc_sentry =
 	private _grp = [getPos (_this select 0)] call PMC_Create_CUP_NAPA_Random_Infantry;
 	[_grp, getPos (_this select 0), (_this select 1)] call PMC_Sentry_Inf_Waypoints;
 
-	dynamicSimulationEnabled _grp;
+	_grp enableDynamicSimulation true;
 };
 
 [pmc_1, 30] call _pmc_sentry;
@@ -46,7 +46,7 @@ private _pmc_patrol =
 	private _grp = [getPos (_this select 0)] call PMC_Create_CUP_NAPA_Random_Infantry;
 	[(getPos (_this select 0)), _grp, (_this select 1)] execVM "PMC\PMC_defendLocation.sqf";
 
-	dynamicSimulationEnabled _grp;
+	_grp enableDynamicSimulation true;
 };
 
 [pmc_location_1, 300] call _pmc_patrol;
