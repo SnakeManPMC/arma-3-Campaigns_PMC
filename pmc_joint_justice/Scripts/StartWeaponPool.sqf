@@ -1,4 +1,5 @@
 
+/* disabled as classes are all wrong for ArmA 3 CUP
 addMagazinePool ["cwr2_30Rnd_556x45_NATO",50];
 addMagazinePool ["cwr2_30Rnd_556x45_NATO",50];
 addMagazinePool ["cwr2_30Rnd_556x45_NATO",50];
@@ -81,3 +82,4 @@ addWeaponPool ["AALauncher",2];
 addWeaponPool ["cwr2_M9",2];
 addWeaponPool ["Binocular",2];
 //addWeaponPool ["NVgoggles",2];
+*/

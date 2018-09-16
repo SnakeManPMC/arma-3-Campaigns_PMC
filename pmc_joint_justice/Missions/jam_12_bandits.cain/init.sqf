@@ -25,4 +25,4 @@ PMC_BodyCount = 0;
 
 [] execVM "pmc_opfor_waves.sqf";
 
-{_x addEventHandler ["killed",{_this exec "killed.sqs"}] } foreach aieast;
+{_x addEventHandler ["killed",{_this execVM "PMC\PMC_JointJusticeKilled.sqf"}] } foreach aieast;

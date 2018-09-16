@@ -21,4 +21,4 @@ PMC_BodyCount = 0;
 
 sleep 3;
 
-{_x addEventHandler ["killed", {_this exec "killed.sqs"}]} forEach aieast;
+{_x addEventHandler ["killed", {_this execVM "PMC\PMC_JointJusticeKilled.sqf"}]} forEach aieast;
