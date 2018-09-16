@@ -51,7 +51,7 @@ westguys = 0;
 "pmc30" setMarkerColor PMC_City30; ["pmc30"] execVM "PMC\PMC_addDefenses.sqf";
 
 /* mortar stuff from CoC Dinger
-?local mortarg1:[] exec "initgroup.sqs"
+[] execVM "PMC\PMC_InitGroup.sqf"
 ?local mortarg1:[] exec "enemytacfire.sqs"
 */
 if ( PMC_AllTimeUsed > (PMC_LastResupplyTime + 48) ) then
