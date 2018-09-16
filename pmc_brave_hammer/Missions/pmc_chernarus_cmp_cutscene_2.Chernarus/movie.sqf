@@ -86,7 +86,7 @@ sleep _d;
 titleText ["Visit PMC Tactical web site for more ArmA 2 stuff.","plain",3];
 sleep _d;
 
-titleText ["http://tactical.nekromantix.com/","plain",3];
+titleText ["https://www.pmctactical.org","plain",3];
 sleep _d;
 
 4 fademusic 0;

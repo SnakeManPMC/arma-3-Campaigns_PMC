@@ -1,70 +1,61 @@
 
-; this is the generic movie.sqs ran if nothing else is available.
+// this is the generic movie.sqs ran if nothing else is available.
 
-; camera basic initialization
-_camera = "camera" camCreate [0,0,0];
+// camera basic initialization
+private _camera = "camera" camCreate [0,0,0];
 _camera camSetTarget [0,0,0];
 _camera cameraEffect ["internal","back"];
 _camera camSetFOV 0.700;
 
-; assault1 leader
+// assault1 leader
 _camera camSetTarget leader assault1;
 _camera camSetRelPos [-5,5,2];
-_camera camSetFOV 0.700;
 _camera camCommit 0;
-@camCommitted _camera;
+waitUntil { (camCommitted _camera); };
 
 [] execVM "PMC\PMC_ArmA_Default_Music.sqf";
 
 titlecut ["","BLACK IN",2];
-~2
+sleep 2;
 
-;titletext["","plain down",2];
+//titletext["","plain down",2];
 
 _camera camSetRelPos [0,3,1.5];
-_camera camSetFOV 0.700;
 _camera camCommit 5;
-@camCommitted _camera;
-~1
+waitUntil { (camCommitted _camera); };
+sleep 1;
 
-;titletext["","plain down",2];
+//titletext["","plain down",2];
 
 _camera camSetTarget leader assault2;
 _camera camSetRelPos [-10,20,3];
-_camera camSetFOV 0.700;
 _camera camCommit 0;
-@camCommitted _camera;
-~2
+waitUntil { (camCommitted _camera); };
+sleep 2;
 _camera camSetRelPos [-1,3,1.5];
-_camera camSetFOV 0.700;
 _camera camCommit 10;
-@camCommitted _camera;
-~2
+waitUntil { (camCommitted _camera); };
+sleep 2;
 
-;titletext["","plain down",2];
+//titletext["","plain down",2];
 
 _camera camSetTarget leader assault3;
 _camera camSetRelPos [3,35,4];
-_camera camSetFOV 0.700;
 _camera camCommit 0;
-@camCommitted _camera;
-~1
+waitUntil { (camCommitted _camera); };
+sleep 1;
 _camera camSetRelPos [-3,3.5,1];
-_camera camSetFOV 0.700;
 _camera camCommit 10;
-@camCommitted _camera;
-~3
+waitUntil { (camCommitted _camera); };
+sleep 3;
 
-;titletext["","plain down",2];
+//titletext["","plain down",2];
 titlecut ["","BLACK OUT",3];
 3 fademusic 0;
-~3
+sleep 3;
 
-; Destroy the camera
+// Destroy the camera
 camDestroy _camera;
 
-; end the intro
+// end the intro
 endcut = true;
-
-; Exit this script
-exit

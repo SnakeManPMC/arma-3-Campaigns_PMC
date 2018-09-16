@@ -36,4 +36,4 @@ sleep 15;
 titletext["If you enjoyed this campaign and would like to see more\ncampaigns from PMC, please visit our forum\nand post a message there.", "plain down", 2];
 sleep 20;
 
-titletext["http://tactical.nekromantix.com/", "plain down", 2];
+titletext["https://www.pmctactical.org", "plain down", 2];

@@ -36,7 +36,7 @@ sleep 5;
 titletext ["Thank you for playing PMC Tank Hunter", "plain", 1];
 sleep 5;
 
-titletext ["PMC Tactical homepage\nhttp://tactical.nekromantix.com/", "plain", 1];
+titletext ["PMC Tactical homepage\nhttps://www.pmctactical.org", "plain", 1];
 sleep 5;
 
 titlecut ["", "BLACK OUT", 3];

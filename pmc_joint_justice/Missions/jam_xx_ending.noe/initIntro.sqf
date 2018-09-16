@@ -77,7 +77,7 @@ titletext["Scripting\nSnake Man","plain",2];
 sleep 7;
 titletext["Thank you for playing PMC Joint Justice!","plain",2];
 sleep 7;
-titletext["Visit our web site and forum for more PMC madness\n\nhttp://tactical.nekromantix.com\n\n","plain",2];
+titletext["Visit our web site and forum for more PMC madness\n\nhttps://www.pmctactical.org\n\n","plain",2];
 sleep 9;
 
 4 fademusic 0;
