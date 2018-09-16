@@ -1,8 +1,8 @@
-; camera basic initialization
-_camera = "camera" camCreate [0,0,0]
-_camera camSetTarget [0,0,0]
-_camera cameraEffect ["internal","back"]
-_camera camSetFOV 0.700
+// camera basic initialization
+private _camera = "camera" camCreate [0,0,0];
+_camera camSetTarget [0,0,0];
+_camera cameraEffect ["internal","back"];
+//_camera camSetFOV 0.700;
 
 rusinf1 setbehaviour "careless";
 rusinf1 setcombatmode "blue";
@@ -22,7 +22,7 @@ assault1 setspeedmode "full";
 RappellingCam=false;
 eastdead1=false;
 
-playmusic ["Track10_Logistics",0]
+playmusic ["Track10_Logistics",0];
 
 titletext ["Recognizing that I volunteered as a Ranger, fully knowing the hazards of my\nchosen profession, I will always endeavor to uphold the prestige,\nhonor, and high esprit de corps of my Ranger Regiment.","plain",2];
 ~11
@@ -42,63 +42,63 @@ titletext ["Energetically will I meet the enemies of my country. I shall defeat 
 #Poo
 HelosAreGo=true;
 titletext ["Readily will I display the intestinal fortitude required to fight on to\n the Ranger objective and complete the mission though I be the lone survivor.","plain",2];
-~9
+sleep 9;
 
 {[_x] exec "init_addTracers.sqs"} foreach units assault1;
 
-playmusic ["rtrack2",0]
+playmusic ["LeadTrack01_F", 0];
 
 titletext ["RANGERS LEAD THE WAY!","plain",2];
 
-; explosive shot
+// explosive shot
 _camera camSetTarget helo1
-_camera camSetRelPos [0,80,0]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [0,80,0];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 
 titlecut ["","BLACK IN",0];
-~6
+sleep 6;
 
 titletext ["PMC Ranger Campaign\nRanger Path","plain",2];
 _A=0;
 #TitleLoopah
 ~.01
 _camera camSetTarget helo1
-_camera camSetRelPos [-20,5,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [-20,5,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _A=_A+1
 if (_A < 250) then { goto "TitleLoopah"; };
 
 titlecut ["","plain",0];
 
 _camera camSetTarget gship1
-_camera camSetRelPos [-50,100,10]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~4
+_camera camSetRelPos [-50,100,10];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 4;
 
 titletext ["PMC Productions 2003","plain",2];
 _A=0;
 #SideLoop
 ~.01
 _camera camSetTarget helo1
-_camera camSetRelPos [-5,20,5]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [-5,20,5];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _A=_A+1
 if (_A < 125) then { goto "SideLoop"; };
 
 _camera camSetTarget helo1
-_camera camSetRelPos [10,80,20]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~4
+_camera camSetRelPos [10,80,20];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 4;
 
 titletext ["","plain",2];
 
@@ -106,233 +106,233 @@ _A=0;
 #SideLoop2
 ~.01
 _camera camSetTarget helo1
-_camera camSetRelPos [5,10,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [5,10,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _A=_A+1
 if (_A < 125) then { goto "SideLoop2"; };
 
 _camera camSetTarget helo1
-_camera camSetRelPos [-30,40,10]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [-30,40,10];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 setacctime .2
 ~1.5
 setacctime 1
 ~2.5
 
 _camera camSetTarget gship1
-_camera camSetRelPos [-10,50,5]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~4
+_camera camSetRelPos [-10,50,5];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 4;
 
 _camera camSetTarget HillShot
-_camera camSetRelPos [0,0,2]
+_camera camSetRelPos [0,0,2];
 _camera camSetTarget helo1
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~.5
-; zoom for incomng helos
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 0.5;
+// zoom for incomng helos
 _camera camSetFOV 0.100
 _camera camCommit 6
-@camCommitted _camera
-~.5
+waitUntil { (camCommitted _camera); };
+sleep 0.5;
 
-; slowmotion shot when helo is rotorwashing the water and moves nicely sideways
+// slowmotion shot when helo is rotorwashing the water and moves nicely sideways
 setacctime .3
 _camera camSetTarget helo1
-_camera camSetRelPos [15,30,10]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~5
+_camera camSetRelPos [15,30,10];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 5;
 setacctime 1;
 
 #LoopView
 ~.01
 _camera camSetTarget helo1
-_camera camSetRelPos [0,20,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [0,20,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 if (!RappellingCam) then { goto "LoopView"; };
 
 _camera camSetTarget helo1
-_camera camSetRelPos [-20,100,-50]
-_camera camSetFOV 0.700
-_camera camCommit 5
-@camCommitted _camera
+_camera camSetRelPos [-20,100,-50];
+//_camera camSetFOV 0.700;
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
 
-; shot from insertion
+// shot from insertion
 _camera camSetTarget helo1
-_camera camSetRelPos [20,200,-30]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [20,200,-30];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget helo1
-_camera camSetRelPos [-70,150,-30]
+_camera camSetRelPos [-70,150,-30];
 _camera camSetFOV 0.200
-_camera camCommit 5
-@camCommitted _camera
-~1
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
+sleep 1;
 
 _camera camSetTarget helo1
-_camera camSetRelPos [-20,5,0]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [-20,5,0];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget helo1
-_camera camSetRelPos [30,5,5]
-_camera camSetFOV 0.700
-_camera camCommit 5
-@camCommitted _camera
+_camera camSetRelPos [30,5,5];
+//_camera camSetFOV 0.700;
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
 
 _camera camSetTarget BeachShot
-_camera camSetRelPos [0,0,2]
+_camera camSetRelPos [0,0,2];
 _camera camSetTarget helo1
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget BeachShot
-_camera camSetRelPos [0,0,2]
+_camera camSetRelPos [0,0,2];
 _camera camSetTarget helo1
 _camera camSetFOV 0.300
-_camera camCommit 5
-@camCommitted _camera
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
 
 _camera camSetTarget helo1
-_camera camSetRelPos [30,10,0]
+_camera camSetRelPos [30,10,0];
 _camera camSetFOV 0.500
-_camera camCommit 0
-@camCommitted _camera
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget helo1
-_camera camSetRelPos [-30,20,10]
+_camera camSetRelPos [-30,20,10];
 _camera camSetFOV 0.500
-_camera camCommit 5
-@camCommitted _camera
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
 
 _camera camSetTarget helo1
-_camera camSetRelPos [10,-30,-30]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [10,-30,-30];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 
-; move the leader while others are still fast roping
+// move the leader while others are still fast roping
 leader assault1 move getpos telep;
 
 @FastRopeOver
 
-; leader assault1
+// leader assault1
 _camera camSetTarget getpos leader assault1
-_camera camSetRelPos [0,50,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~10
+_camera camSetRelPos [0,50,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 10;
 
-_camera camSetTarget leader assault1
-_camera camSetRelPos [-3,10,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~5
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [-3,10,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 5;
 
 titlecut ["","BLACK OUT",3];
 3 fademusic 0
-~3
+sleep 3;
 
-; teleport the guys into the gamelogic
+// teleport the guys into the gamelogic
 "_x setpos getpos telep" foreach units assault1;
 
-; bit of black screen, then shot from the camp. move rangers to the flag.
+// bit of black screen, then shot from the camp. move rangers to the flag.
 leader assault1 move getpos ruskie;
-~1
+sleep 1;
 0 fademusic 1;
-playmusic ["7thlifeless",0]
+playmusic ["7thlifeless",0];
 
 _camera camSetTarget leader rusinf1
-_camera camSetRelPos [0,2,1]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [0,2,1];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 
 titlecut ["","BLACK IN",2];
-~3
+sleep 3;
 
-; delete helos for making noise, and for paranormal guys to slowdown cpu ;)
+// delete helos for making noise, and for paranormal guys to slowdown cpu ;)
 "deletevehicle _x" foreach units gunships1;
 "deletevehicle _x" foreach units gunships2;
 "deletevehicle _x" foreach units transp1;
 
 _camera camSetTarget ruskie
-_camera camSetRelPos [-70,0,20]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [-70,0,20];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget ruskie
-_camera camSetRelPos [-25,-25,15]
-_camera camSetFOV 0.700
-_camera camCommit 7
-@camCommitted _camera
+_camera camSetRelPos [-25,-25,15];
+//_camera camSetFOV 0.700;
+_camera camCommit 7;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget ruskie
-_camera camSetRelPos [0,-25,10]
-_camera camSetFOV 0.700
-_camera camCommit 5
-@camCommitted _camera
-~1
+_camera camSetRelPos [0,-25,10];
+//_camera camSetFOV 0.700;
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
+sleep 1;
 
-_camera camSetTarget leader assault1
-_camera camSetRelPos [0,5,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~5
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [0,5,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 5;
 
-; make the leader say enemy sighted open fire.
+// make the leader say enemy sighted open fire.
 leader assault1 say "Eng12";
-; start the fight!
+// start the fight!
 assault1 setcombatmode "yellow";
 "_x setunitpos ""UP""" foreach units assault1;
 
 _fish1 = "flare" createvehicle [(getpos scd1 select 0),(getpos scd1 select 1),100];
 
 _camera camSetTarget telep
-_camera camSetRelPos [0,0,2]
+_camera camSetRelPos [0,0,2];
 _camera camSetTarget ruskie
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget telep
-_camera camSetRelPos [0,0,25]
+_camera camSetRelPos [0,0,25];
 _camera camSetTarget ruskie
-_camera camSetFOV 0.700
-_camera camCommit 10
-@camCommitted _camera
-~1
+//_camera camSetFOV 0.700;
+_camera camCommit 10;
+waitUntil { (camCommitted _camera); };
+sleep 1;
 
-_camera camSetTarget leader assault1
-_camera camSetRelPos [2,5,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [2,5,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 ~2.5
 
 _camera camSetTarget leader rusinf1
-_camera camSetRelPos [2,5,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [2,5,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 ~2.5
 
-; russian leader says the usual... amerikan evils :)
+// russian leader says the usual... amerikan evils :)
 leader rusinf1 say "Rus1"
 
-; give russians better chances
+// give russians better chances
 rusinf1 setbehaviour "combat";
 rusinf1 setcombatmode "red";
 rusinf1 setformation "wedge";
@@ -348,175 +348,173 @@ rusinf2 setspeedmode "full";
 _fish1 = "flare" createvehicle [(getpos scd1 select 0),(getpos scd1 select 1),100];
 
 #FightLoop
-_camera camSetTarget leader assault1
-_camera camSetRelPos [0,-2,1]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~3
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [0,-2,1];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 3;
 
 _camera camSetTarget leader rusinf1;
-_camera camSetRelPos [0,-3,1.7]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~3
+_camera camSetRelPos [0,-3,1.7];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 3;
 
-_camera camSetTarget leader assault1
-_camera camSetRelPos [2,-10,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~3
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [2,-10,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 3;
 
 _camera camSetTarget leader rusinf1;
-_camera camSetRelPos [0,-3,1.7]
+_camera camSetRelPos [0,-3,1.7];
 _camera camSetTarget getpos leader assault1;
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetFOV 0.300
-_camera camCommit 3
-@camCommitted _camera
+_camera camCommit 3;
+waitUntil { (camCommitted _camera); };
 
 _camera camSetTarget ruskie
-_camera camSetRelPos [-25,10,3]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~5
+_camera camSetRelPos [-25,10,3];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 5;
 
 _fish1 = "flare" createvehicle [(getpos scd1 select 0),(getpos scd1 select 1),100];
 
 if (!eastdead1) then { goto "FightLoop"; };
 
-; satchel charges guys are ordered to go t80 and ural fuel
+// satchel charges guys are ordered to go t80 and ural fuel
 t1 setunitpos "auto";
 t2 setunitpos "auto";
-t1 commandmove [(getpos scd1 select 0)+2,(getpos scd1 select 1),0]
-t2 commandmove [(getpos tnk1 select 0)+2,(getpos tnk1 select 1),0]
+t1 commandmove [(getpos scd1 select 0)+2,(getpos scd1 select 1),0];
+t2 commandmove [(getpos tnk1 select 0)+2,(getpos tnk1 select 1),0];
 
 _camera camSetTarget ruskie
-_camera camSetRelPos [-10,-10,5]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [-10,-10,5];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget ruskie
-_camera camSetRelPos [-20,20,10]
+_camera camSetRelPos [-20,20,10];
 _camera camSetFOV 0.800
-_camera camCommit 5
-@camCommitted _camera
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget ruskie
-_camera camSetRelPos [20,25,10]
+_camera camSetRelPos [20,25,10];
 _camera camSetFOV 0.800
-_camera camCommit 5
-@camCommitted _camera
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
 
 _camera camSetTarget t1
-_camera camSetRelPos [1,5,1]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-~5
+_camera camSetRelPos [1,5,1];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+sleep 5;
 
 _camera camSetTarget t2
-_camera camSetRelPos [0,-3,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [0,-3,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 
 #T2Loop
 ~.01
 _camera camSetTarget t2
-_camera camSetRelPos [0,-3,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [0,-3,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 if (!unitready t2) then { goto "T2Loop"; };
 
 _camera camSetTarget t2
-_camera camSetRelPos [2,0,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [2,0,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 t2 fire ["put","CUP_PipeBomb_M"];
-~4
+sleep 4;
 
 @unitready t1
 _camera camSetTarget t1
-_camera camSetRelPos [-2,-1,2]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [-2,-1,2];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 t1 fire ["put","CUP_PipeBomb_M"];
-~4
+sleep 4;
 
-leader assault1 move [(getpos telep2 select 0),(getpos telep2 select 1),0]
+leader assault1 move [(getpos telep2 select 0),(getpos telep2 select 1),0];
 
 #AwayLoop
 ~.01
-_camera camSetTarget leader assault1
-_camera camSetRelPos [0,10,3]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [0,10,3];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 if (leader assault1 distance ruskie < 60) then { goto "AwayLoop"; };
 
-; instead of camp, lets just slowly move the camera upwards from the running ranger
-_camera camSetTarget leader assault1
-_camera camSetRelPos [0,10,3]
+// instead of camp, lets just slowly move the camera upwards from the running ranger
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [0,10,3];
 _camera camSetTarget ruskie
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
-_camera camSetTarget leader assault1
-_camera camSetRelPos [0,10,15]
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [0,10,15];
 _camera camSetTarget ruskie
-_camera camSetFOV 0.700
-_camera camCommit 5
-@camCommitted _camera
-~.5
+//_camera camSetFOV 0.700;
+_camera camCommit 5;
+waitUntil { (camCommitted _camera); };
+sleep 0.5;
 
 setAccTime .2;
-; bomba
+// bomba
 fire1 inflame false;
 fire2 inflame false;
 _fish3 = "laserguidedbomb" createvehicle getpos trk1;
 _fish4 = "laserguidedbomb" createvehicle getpos tnk1;
 ~.001
 _fish2 = "laserguidedbomb" createvehicle getpos scd1;
-~3
+sleep 3;
 
 setAccTime 1;
 _camera camSetTarget ruskie
-_camera camSetRelPos [-50,0,3]
-_camera camSetFOV 0.700
-_camera camCommit 0
-@camCommitted _camera
+_camera camSetRelPos [-50,0,3];
+//_camera camSetFOV 0.700;
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
 _camera camSetTarget ruskie
-_camera camSetRelPos [-100,0,30]
-_camera camSetFOV 0.700
-_camera camCommit 7
-@camCommitted _camera
-~1
+_camera camSetRelPos [-100,0,30];
+//_camera camSetFOV 0.700;
+_camera camCommit 7;
+waitUntil { (camCommitted _camera); };
+sleep 1;
 
 titletext ["Rangers Lead The Way!","plain",2];
-~7
+sleep 7;
 
 titlecut ["","BLACK OUT",3];
 4 fademusic 0;
-~4
+sleep 4;
 titletext ["","plain",2];
-~2
+sleep 2;
 
-; destroy camera - if we use mission cutscene
-_camera cameraEffect ["terminate","back"]
+// destroy camera - if we use mission cutscene
+_camera cameraEffect ["terminate","back"];
 
-; Destroy the camera
-camDestroy _camera
+// Destroy the camera
+camDestroy _camera;
 
-; end the intro
-endcut=true
+// end the intro
+endcut = true;
 
-; Exit this script
-exit

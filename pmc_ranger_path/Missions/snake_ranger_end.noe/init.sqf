@@ -1,0 +1,2 @@
+
+PAPABEAR=[West,"HQ"];
