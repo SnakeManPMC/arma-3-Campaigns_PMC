@@ -3,8 +3,6 @@
 
 PAPABEAR = [ West, "HQ" ];
 
-[] exec "weather_old.sqs";
-
 // new LSR stuff, the cool stuff :)
 addWeaponpool ["CUP_M4A1_Aim",8];
 addWeaponpool ["CUP_M4A1_Aim",4];

@@ -3,8 +3,6 @@
 
 PAPABEAR = [ West, "HQ" ];
 
-[] exec "weather_old2.sqs";
-
 /* this was commented out in init.sqf, wonder why? during port or from OFP times already?
 sleep 5;
 {

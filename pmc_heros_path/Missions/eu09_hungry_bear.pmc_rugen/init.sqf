@@ -3,8 +3,6 @@
 
 PAPABEAR = [ West, "HQ" ];
 
-[] exec "weather_old.sqs";
-
 rngr1 loadStatus "rng1_08a";
 rngr2 loadStatus "rng2_08a";
 rngr3 loadStatus "rng3_08a";

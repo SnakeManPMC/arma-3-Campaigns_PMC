@@ -3,8 +3,6 @@
 
 PAPABEAR = [ West, "HQ" ];
 
-[] exec "weather_old.sqs";
-
 // army guys loadout
 addWeaponpool ["CUP_M16A2",6];
 addWeaponpool ["CUP_M16A2GL",4];
@@ -64,30 +62,3 @@ addMagazinePool ["CUP_PipeBomb_M",10];
 addMagazinePool ["Timebomb",10];
 
 //[] exec "\COC_Mines\scripts\InitMines.sqs"
-
-knownUnits = preprocessFileLineNumbers "knownUnits.sqf";
-findUnits = preprocessFileLineNumbers "findUnits.sqf";
-
-sleep 5;
-// AI stuff for UA arty
-[leader rusinf1, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rusinf2, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rusinf3, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rusinf4, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rusinf5, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rusinf6, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader patrol1, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader patrol2, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader patrol3, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader patrol4, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rusinf7, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rusinf8, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader mechs1, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader backup1, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader backup2, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rsnipas1, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader mechs3, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader patrol5, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader patrol6, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader rusreinf1, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";
-[leader mechs4, "aiwest", "aieast", artygrp1] exec "ai_arty_ua.sqs";

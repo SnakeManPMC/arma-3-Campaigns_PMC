@@ -3,8 +3,6 @@
 
 PAPABEAR = [ West, "HQ" ];
 
-[] exec "weather_old.sqs";
-
 s1 loadStatus "sol1_12";
 s2 loadStatus "sol2_12";
 s3 loadStatus "sol3_12";

@@ -3,8 +3,6 @@
 
 PAPABEAR = [ West,"HQ" ];
 
-[] exec "weather_old.sqs";
-
 // remove shit from the weaponpool
 clearMagazinePool;
 clearWeaponPool;
