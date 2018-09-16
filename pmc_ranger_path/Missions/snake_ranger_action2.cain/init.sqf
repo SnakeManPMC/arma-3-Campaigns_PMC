@@ -13,14 +13,14 @@ s7 loadStatus "04s7";
 s8 loadStatus "04s8";
 s9 loadStatus "04s9";
 
-if (!alive s2) then { deletevehicle s2 };
-if (!alive s3) then { deletevehicle s3 };
-if (!alive s4) then { deletevehicle s4 };
-if (!alive s5) then { deletevehicle s5 };
-if (!alive s6) then { deletevehicle s6 };
-if (!alive s7) then { deletevehicle s7 };
-if (!alive s8) then { deletevehicle s8 };
-if (!alive s9) then { deletevehicle s9 };
+if (!alive s2) then { deletevehicle s2; };
+if (!alive s3) then { deletevehicle s3; };
+if (!alive s4) then { deletevehicle s4; };
+if (!alive s5) then { deletevehicle s5; };
+if (!alive s6) then { deletevehicle s6; };
+if (!alive s7) then { deletevehicle s7; };
+if (!alive s8) then { deletevehicle s8; };
+if (!alive s9) then { deletevehicle s9; };
 
 {_x setdammage 0} foreach units assault1;
 

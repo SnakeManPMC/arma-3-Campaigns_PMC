@@ -181,7 +181,7 @@ class Intro
 					{
 						skill=0.73333299;
 						rank="CAPTAIN";
-						init="assault1=group this; this exec ""movie.sqs""; ""_x moveincargo plane1"" foreach units assault1;";
+						init="assault1=group this; this execVM ""movie.sqf""; ""_x moveincargo plane1"" foreach units assault1;";
 						name="s1";
 						isPlayer=1;
 						isPlayable=1;
@@ -840,7 +840,7 @@ class Mission
 			{
 				text="END";
 				condition="mcomplete";
-				onActivation="[] exec ""exit.sqs""; [] exec ""movie-end.sqs"";";
+				onActivation="[] execVM ""movie-end.sqf"";";
 				sizeA=0;
 				sizeB=0;
 				timeout[]={0,25,35};
@@ -923,7 +923,7 @@ class Mission
 			class Attributes
 			{
 				text="launch paradroops";
-				onActivation="[assault1,herc1] exec ""paradrop.sqs"";";
+				onActivation="[assault1,herc1] execVM ""paradrop.sqf"";";
 				sizeB=500;
 				activationBy="WEST";
 				isRectangle=1;
