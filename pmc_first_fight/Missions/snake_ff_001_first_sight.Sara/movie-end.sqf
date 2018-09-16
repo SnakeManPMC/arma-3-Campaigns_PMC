@@ -1,0 +1,35 @@
+// camera basic initialization
+_camera = "camera" camCreate [0,0,0];
+_camera camSetTarget [0,0,0];
+_camera cameraEffect ["internal","back"];
+_camera camSetFOV 0.700;
+
+// assault1 face
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [-5+random 10,5+random 5,1+random 2];
+_camera camCommit 0;
+waitUntil { (camCommitted _camera); };
+
+[] execVM "PMC\PMC_ArmA_Default_Music.sqf";
+
+titlecut ["","BLACK IN",2];
+sleep 5;
+
+_camera camSetTarget leader assault1;
+_camera camSetRelPos [-2.5+random 2.5,.5+random 2,1+random 1];
+_camera camCommit 15;
+waitUntil { (camCommitted _camera); };
+sleep 3;
+
+titlecut ["","BLACK OUT",3];
+3 fademusic 0;
+sleep 3;
+
+// destroy camera - if we use mission cutscene the end
+_camera cameraEffect ["terminate","back"];
+
+// Destroy the camera
+camDestroy _camera;
+
+// end the intro
+endcut = true;

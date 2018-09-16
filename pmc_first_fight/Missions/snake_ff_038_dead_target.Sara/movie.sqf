@@ -1,6 +1,6 @@
 
 // camera basic initialization
-_camera = "camera" camCreate [0,0,0];
+private _camera = "camera" camCreate [0,0,0];
 _camera cameraEffect ["internal","back"];
 
 []; execVM "PMC\PMC_ArmA_Default_Music.sqf";
@@ -13,7 +13,7 @@ _camera camCommitPrepared 0;
 waitUntil { camCommitted _camera; };
 sleep 3;
 
-titleText ["Snipers are getting ready to depart", "plain down", 3];;;
+titleText ["Snipers are getting ready to depart", "plain down", 3];
 
 // pan 1
 _camera camPrepareTarget [51767.39,-80668.65,141.22];
