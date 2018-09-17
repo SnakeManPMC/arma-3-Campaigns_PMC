@@ -1,17 +1,11 @@
 
-;
-; create empty bmp named t80_1
-;
+// create empty bmp named t80_1
 t80_1="CUP_O_T72_RU" createvehicle [GLB_02_t80_1X, GLB_02_t80_1Y];
 
-;
-; adjust the pos + heading to match where you left it in previous mission
-;
+// adjust the pos + heading to match where you left it in previous mission
 t80_1 setpos [GLB_02_t80_1X, GLB_02_t80_1Y]; t80_1 setdir GLB_02_t80_1D;
 
-;
-; make it highly broken 
-;
+// make it highly broken
 aa = t80_1 loadStatus "02t80_1";
 t80_1 lock true;
 
@@ -60,7 +54,6 @@ uammo1 setpos [GLB_02_uammo1X, GLB_02_uammo1Y]; uammo1 setdir GLB_02_uammo1D;
 aa = uammo1 loadStatus "02uammo1";
 uammo1 lock true;
 
-
 aa = s1 loadStatus "17s1";
 aa = s2 loadStatus "17s2";
 aa = s3 loadStatus "17s3";
@@ -71,13 +64,13 @@ aa = s7 loadStatus "17s7";
 aa = s8 loadStatus "17s8";
 aa = s9 loadStatus "17s9";
 
-if (!alive s2) then { deletevehicle s2 }
-if (!alive s3) then { deletevehicle s3 }
-if (!alive s4) then { deletevehicle s4 }
-if (!alive s5) then { deletevehicle s5 }
-if (!alive s6) then { deletevehicle s6 }
-if (!alive s7) then { deletevehicle s7 }
-if (!alive s8) then { deletevehicle s8 }
-if (!alive s9) then { deletevehicle s9 }
+if (!alive s2) then { deletevehicle s2; };
+if (!alive s3) then { deletevehicle s3; };
+if (!alive s4) then { deletevehicle s4; };
+if (!alive s5) then { deletevehicle s5; };
+if (!alive s6) then { deletevehicle s6; };
+if (!alive s7) then { deletevehicle s7; };
+if (!alive s8) then { deletevehicle s8; };
+if (!alive s9) then { deletevehicle s9; };
 
 {_x setdammage 0} foreach units assault1;
