@@ -1,6 +1,14 @@
 
-// pmc_fob_pig is FOB Pig
-// pmc_location_1 etc are the enemy spawn points
+/*
+[location, numberOfBadGuys, attackStrenght] execVM "PMC\PMC_War_OPFOR.sqf";
+
+example:
+[pmc_fob_eagle, 200, 30] execVM "PMC\PMC_War_OPFOR.sqf";
+*/
+
+private _target = getPos (_this select 0);
+private _numBadGuys = _this select 1;
+private _waveStrenght = _this select 2;
 
 PMC_corpses = [];
 PMC_killedNum = 0;
@@ -16,7 +24,6 @@ private _pmcKilledEH =
 };
 
 private _spawnPosList = [pmc_location_1, pmc_location_2, pmc_location_3, pmc_location_4];
-private _fob1 = getPos pmc_fob_pig;
 
 private _PMC_Attack_Waypoints =
 {
@@ -44,17 +51,17 @@ private _PMC_Attack_Waypoints =
 	[_grp, 1] setWaypointCompletionRadius 10;
 };
 
-while { (PMC_killedNum < 50) } do
+while { (PMC_killedNum < _numBadGuys) } do
 {
 	private _grp = [getPos (selectRandom _spawnPosList)] call PMC_Create_CUP_NAPA_Random_Infantry;
 	[_grp] call _pmcKilledEH;
-	[_grp, _fob1, 25] call _PMC_Attack_Waypoints;
+	[_grp, _target, 25] call _PMC_Attack_Waypoints;
 
 	waitUntil
 	{
 		sleep 5;
-		player sidechat format["WaitUntil AllUnits: %1, PMC_killedNum: %2. Time: %3 min.", (count AllUnits), PMC_killedNum, (time/60)];
-		(count AllUnits) < 33;
+		//player sidechat format["WaitUntil AllUnits: %1, PMC_killedNum: %2. Time: %3 min.", (count AllUnits), PMC_killedNum, (time/60)];
+		(count AllUnits) < _waveStrenght;
 	};
 };
 

@@ -23,6 +23,6 @@ pmc_truck1 loadStatus "PMC_AmmoTruck1";
 
 PMC_debug = true;
 [50] execVM "PMC\PMC_corpses.sqf";
-[] execVM "PMC\PMC_War_OPFOR.sqf";
+[pmc_fob_falcon, 200, 33] execVM "PMC\PMC_War_OPFOR.sqf";
 
 [] execVM "PMC\PMC_MissionStart.sqf";
