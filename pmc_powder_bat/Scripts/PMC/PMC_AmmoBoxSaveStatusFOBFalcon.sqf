@@ -1,0 +1,5 @@
+
+pmc_ammobox_fobfalcon_1 saveStatus "PMC_StatusAmmoBoxFOBFalcon_1";
+pmc_ammobox_fobfalcon_2 saveStatus "PMC_StatusAmmoBoxFOBFalcon_2";
+pmc_ammobox_fobfalcon_3 saveStatus "PMC_StatusAmmoBoxFOBFalcon_3";
+pmc_ammobox_fobfalcon_4 saveStatus "PMC_StatusAmmoBoxFOBFalcon_4";

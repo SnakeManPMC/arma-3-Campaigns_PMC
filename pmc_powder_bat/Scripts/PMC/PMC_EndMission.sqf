@@ -18,39 +18,43 @@ sleep 7;
 // camp maxwell ammo boxes
 if (!isNil "pmc_ammobox_campmaxwell_1") then
 {
-	pmc_ammobox_campmaxwell_1 saveStatus "PMC_StatusAmmoBoxCampMaxwell_1";
-	pmc_ammobox_campmaxwell_2 saveStatus "PMC_StatusAmmoBoxCampMaxwell_2";
+	[] execVM "PMC\PMC_AmmoBoxSaveStatusCampMaxwell_1_2.sqf";
 };
 
 if (!isNil "pmc_ammobox_campmaxwell_3") then
 {
-	pmc_ammobox_campmaxwell_3 saveStatus "PMC_StatusAmmoBoxCampMaxwell_3";
-	pmc_ammobox_campmaxwell_4 saveStatus "PMC_StatusAmmoBoxCampMaxwell_4";
-	pmc_ammobox_campmaxwell_5 saveStatus "PMC_StatusAmmoBoxCampMaxwell_5";
-	pmc_ammobox_campmaxwell_6 saveStatus "PMC_StatusAmmoBoxCampMaxwell_6";
-	pmc_ammobox_campmaxwell_7 saveStatus "PMC_StatusAmmoBoxCampMaxwell_7";
-	pmc_ammobox_campmaxwell_8 saveStatus "PMC_StatusAmmoBoxCampMaxwell_8";
+	[] execVM "PMC\PMC_AmmoBoxSaveStatusCampMaxwell_3_8.sqf";
 };
 
 // Altis m011 - m020
 // FOB Falcon
-if (!isNil "pmc_ammobox_fob1_1") then
+if (!isNil "pmc_ammobox_fobfalcon_1") then
 {
-	private _pmcBox1 = pmc_ammobox_fob1_1 saveStatus "PMC_AmmoBoxFOB11";
-	private _pmcBox2 = pmc_ammobox_fob1_2 saveStatus "PMC_AmmoBoxFOB12";
-	private _pmcBox3 = pmc_ammobox_fob1_3 saveStatus "PMC_AmmoBoxFOB13";
-	private _pmcBox4 = pmc_ammobox_fob1_4 saveStatus "PMC_AmmoBoxFOB14";
+	[] execVM "PMC\PMC_AmmoBoxSaveStatusFOBFalcon.sqf";
 };
 
 // FOB Eagle
 if (!isNil "pmc_ammobox_fobeagle_1") then
 {
-	private _pmcBox1 = pmc_ammobox_fobeagle_1 saveStatus "PMC_StatusAmmoBoxFOBEagle_1";
-	private _pmcBox2 = pmc_ammobox_fobeagle_2 saveStatus "PMC_StatusAmmoBoxFOBEagle_2";
-	private _pmcBox3 = pmc_ammobox_fobeagle_3 saveStatus "PMC_StatusAmmoBoxFOBEagle_3";
-	private _pmcBox4 = pmc_ammobox_fobeagle_4 saveStatus "PMC_StatusAmmoBoxFOBEagle_4";
-	private _pmcBox5 = pmc_ammobox_fobeagle_5 saveStatus "PMC_StatusAmmoBoxFOBEagle_5";
-	private _pmcBox6 = pmc_ammobox_fobeagle_6 saveStatus "PMC_StatusAmmoBoxFOBEagle_6";
+	[] execVM "PMC\PMC_AmmoBoxSaveStatusFOBEagle.sqf";
+};
+
+// FOB Pig
+if (!isNil "pmc_ammobox_fobpig_1") then
+{
+	[] execVM "PMC\PMC_AmmoBoxSaveStatusFOBPig.sqf";
+};
+
+// FOB Raven
+if (!isNil "pmc_ammobox_fobraven_1") then
+{
+	[] execVM "PMC\PMC_AmmoBoxSaveStatusFOBRaven.sqf";
+};
+
+// FOB Ghoul
+if (!isNil "pmc_ammobox_fobghoul_1") then
+{
+	[] execVM "PMC\PMC_AmmoBoxSaveStatusFOBGhoul.sqf";
 };
 
 // truck is on m001 - m011 as american MTVR
