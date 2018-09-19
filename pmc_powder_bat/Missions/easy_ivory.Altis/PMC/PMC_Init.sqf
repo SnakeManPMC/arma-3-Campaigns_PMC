@@ -49,3 +49,11 @@ sleep 1;
 pmc_uh60path = call compile preprocessFile "PMC\PMC_UH60Path.sqf";
 sleep 1;
 [pmc_helo, pmc_uh60path] spawn BIS_fnc_UnitPlay;
+
+// here we introduced the USMC ammo boxes and we must initialize them here if we want special items added etc
+// we make the huge vehicle ammo box as our uniform storage
+[pmc_ammobox_fobraven_6] execVM "PMC\PMC_ClearVehicleCargo.sqf";
+[pmc_ammobox_fobraven_6, 3] execVM "PMC\PMC_CUP_UniformsToCargo.sqf";
+
+// special save to fob raven ammo boxes which are hidden in the norther island
+[] execVM "PMC\PMC_AmmoBoxSaveStatusFOBRaven.sqf";
