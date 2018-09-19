@@ -12,7 +12,7 @@ PMCHQ = [ West, "BASE" ];
 pmc_truck1 loadStatus "PMC_AmmoTruck1";
 [] execVM "PMC\PMC_AmmoBoxLoadStatusFOBEagle.sqf";
 
-[(getPos pmc_fob_eagle), 100] execVM "PMC\PMC_CampFOBDefenses.sqf";
+[(getPos pmc_fob_pig), 50] execVM "PMC\PMC_CampFOBDefenses.sqf";
 
 PMC_corpses = [];
 PMC_killedNum = 0;
