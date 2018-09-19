@@ -10,9 +10,18 @@ call compile preprocessFileLineNumbers "PMC\PMC_Guard_Inf_Sniper_Stealth_Waypoin
 pmc_dynsim_dudes_sentry = 0;
 pmc_dynsim_dudes_patrol = 0;
 
+private _pmcKilledEH =
+{
+	private _grp = _this select 0;
+	{
+		_x addEventHandler ["killed", {0 = _this execVM "PMC\PMC_killed.sqf"}];
+	} foreach units _grp;
+};
+
 private _pmc_sentry =
 {
 	private _grp = [getPos (_this select 0)] call PMC_Create_CUP_NAPA_Random_Infantry;
+	[_grp] call _pmcKilledEH;
 	[_grp, getPos (_this select 0), (_this select 1)] call PMC_Sentry_Inf_Waypoints;
 
 	pmc_dynsim_dudes_sentry = pmc_dynsim_dudes_sentry + (count units _grp);
@@ -49,6 +58,7 @@ _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Sniper_Team;
 private _pmc_patrol =
 {
 	private _grp = [getPos (_this select 0)] call PMC_Create_CUP_NAPA_Random_Infantry;
+	[_grp] call _pmcKilledEH;
 	[(getPos (_this select 0)), _grp, (_this select 1)] execVM "PMC\PMC_defendLocation.sqf";
 
 	pmc_dynsim_dudes_patrol = pmc_dynsim_dudes_patrol + (count units _grp);
