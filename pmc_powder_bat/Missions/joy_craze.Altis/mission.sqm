@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=48;
+		nextID=49;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12286.277,148.94339,8842.3633};
-		dir[]={0.30875772,-0.34309125,0.88710827};
-		up[]={0.11277775,0.93930191,0.32402784};
-		aside[]={0.94443375,-1.4762918e-008,-0.32870981};
+		pos[]={23240.822,37.837536,21660.078};
+		dir[]={0.33869109,-0.12629147,-0.93239278};
+		up[]={0.043120451,0.99198532,-0.11870687};
+		aside[]={-0.9399184,1.7086859e-007,-0.34142548};
 	};
 };
 binarizationWanted=0;
@@ -100,7 +100,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			dataType="Group";
@@ -308,7 +308,7 @@ class Mission
 					{
 						skill=1;
 						rank="LIEUTENANT";
-						init="call{{_x moveInCargo pmc_helo} forEach units group this;}";
+						init="call{pmc_inf1 = group this; {_x moveInCargo pmc_helo} forEach units pmc_inf1;}";
 						isPlayer=1;
 					};
 					id=15;
@@ -817,6 +817,23 @@ class Mission
 			};
 			id=47;
 			type="CUP_V3S_Open_NAPA";
+		};
+		class Item17
+		{
+			dataType="Trigger";
+			position[]={23249.434,29.223335,21637.338};
+			class Attributes
+			{
+				text="pmc_helo arrived, now eject dudes";
+				condition="call{this}";
+				onActivation="call{[pmc_inf1, pmc_helo] execVM ""PMC\PMC_EjectGroupFromVehicle.sqf"";}";
+				sizeA=10;
+				sizeB=10;
+				activationBy="WEST";
+			};
+			id=48;
+			type="EmptyDetector";
+			atlOffset=-1.9073486e-006;
 		};
 	};
 };
