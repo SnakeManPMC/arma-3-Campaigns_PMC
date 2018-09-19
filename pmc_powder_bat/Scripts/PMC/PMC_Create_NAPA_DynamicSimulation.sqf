@@ -7,10 +7,15 @@ call compile preprocessFileLineNumbers "PMC\PMC_Sentry_Inf_Waypoints.sqf";
 call compile preprocessFileLineNumbers "PMC\PMC_Create_CUP_NAPA_Sniper_Team.sqf";
 call compile preprocessFileLineNumbers "PMC\PMC_Guard_Inf_Sniper_Stealth_Waypoints.sqf";
 
+pmc_dynsim_dudes_sentry = 0;
+pmc_dynsim_dudes_patrol = 0;
+
 private _pmc_sentry =
 {
 	private _grp = [getPos (_this select 0)] call PMC_Create_CUP_NAPA_Random_Infantry;
 	[_grp, getPos (_this select 0), (_this select 1)] call PMC_Sentry_Inf_Waypoints;
+
+	pmc_dynsim_dudes_sentry = pmc_dynsim_dudes_sentry + (count units _grp);
 
 	_grp enableDynamicSimulation true;
 };
@@ -45,6 +50,8 @@ private _pmc_patrol =
 {
 	private _grp = [getPos (_this select 0)] call PMC_Create_CUP_NAPA_Random_Infantry;
 	[(getPos (_this select 0)), _grp, (_this select 1)] execVM "PMC\PMC_defendLocation.sqf";
+
+	pmc_dynsim_dudes_patrol = pmc_dynsim_dudes_patrol + (count units _grp);
 
 	_grp enableDynamicSimulation true;
 };
