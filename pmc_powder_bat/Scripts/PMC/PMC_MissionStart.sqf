@@ -36,7 +36,7 @@ https://community.bistudio.com/wiki/BIS_fnc_textTiles
 {
 	waitUntil
 	{
-		diag_log format["PMC_MissionStart spawned zero casualties check, PMC_CurrentMissionDeaths: %1", PMC_CurrentMissionDeaths];
+		//diag_log format["PMC_MissionStart spawned zero casualties check, PMC_CurrentMissionDeaths: %1", PMC_CurrentMissionDeaths];
 		sleep 10;
 		(PMC_CurrentMissionDeaths > 1);
 	};
