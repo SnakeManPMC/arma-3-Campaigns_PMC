@@ -29,26 +29,10 @@ private _pmc_sentry =
 	_grp enableDynamicSimulation true;
 };
 
-[pmc_1, 30] call _pmc_sentry;
-[pmc_2, 30] call _pmc_sentry;
-[pmc_3, 30] call _pmc_sentry;
-[pmc_4, 30] call _pmc_sentry;
-[pmc_5, 30] call _pmc_sentry;
-[pmc_6, 30] call _pmc_sentry;
-[pmc_7, 30] call _pmc_sentry;
-[pmc_8, 30] call _pmc_sentry;
-[pmc_9, 30] call _pmc_sentry;
-[pmc_10, 30] call _pmc_sentry;
-[pmc_11, 30] call _pmc_sentry;
-[pmc_12, 30] call _pmc_sentry;
-[pmc_13, 30] call _pmc_sentry;
-[pmc_14, 30] call _pmc_sentry;
-[pmc_15, 30] call _pmc_sentry;
-[pmc_16, 30] call _pmc_sentry;
-[pmc_17, 30] call _pmc_sentry;
-[pmc_18, 30] call _pmc_sentry;
-[pmc_19, 30] call _pmc_sentry;
-[pmc_20, 30] call _pmc_sentry;
+{
+	[_x, 30] call _pmc_sentry;
+	[_x, 100] call _pmc_sentry;
+} forEach [pmc_1, pmc2, pmc3, pmc4, pmc5, pmc6, pmc7, pmc8, pmc9, pmc10, pmc11, pmc12, pmc13, pmc14, pmc15, pmc16, pmc17, pmc18, pmc19, pmc20];
 
 /*
 _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Sniper_Team;
@@ -66,23 +50,7 @@ private _pmc_patrol =
 	_grp enableDynamicSimulation true;
 };
 
-[pmc_location_1, 300] call _pmc_patrol;
-[pmc_location_2, 300] call _pmc_patrol;
-[pmc_location_3, 300] call _pmc_patrol;
-[pmc_location_4, 300] call _pmc_patrol;
-[pmc_location_5, 300] call _pmc_patrol;
-[pmc_location_6, 300] call _pmc_patrol;
-[pmc_location_7, 300] call _pmc_patrol;
-[pmc_location_8, 300] call _pmc_patrol;
-[pmc_location_9, 300] call _pmc_patrol;
-[pmc_location_10, 300] call _pmc_patrol;
-[pmc_location_11, 300] call _pmc_patrol;
-[pmc_location_12, 300] call _pmc_patrol;
-[pmc_location_13, 300] call _pmc_patrol;
-[pmc_location_14, 300] call _pmc_patrol;
-[pmc_location_15, 300] call _pmc_patrol;
-[pmc_location_16, 300] call _pmc_patrol;
-[pmc_location_17, 300] call _pmc_patrol;
-[pmc_location_18, 300] call _pmc_patrol;
-[pmc_location_19, 300] call _pmc_patrol;
-[pmc_location_20, 300] call _pmc_patrol;
+{
+	[_x, 300] call _pmc_patrol;
+	[_x, 500] call _pmc_patrol;
+} forEach [pmc_location_1, pmc_location_2, pmc_location_3, pmc_location_4, pmc_location_5, pmc_location_6, pmc_location_7, pmc_location_8, pmc_location_9, pmc_location_10, pmc_location_11, pmc_location_12, pmc_location_13, pmc_location_14, pmc_location_15, pmc_location_16, pmc_location_17, pmc_location_18, pmc_location_19, pmc_location_20];
