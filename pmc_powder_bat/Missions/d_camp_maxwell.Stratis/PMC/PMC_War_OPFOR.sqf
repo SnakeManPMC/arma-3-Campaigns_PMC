@@ -1,5 +1,5 @@
 
-// pmc_hq_1 is Camp Maxwell
+// pmc_fob_falcon is Camp Maxwell
 // pmc_location_1 etc are the enemy spawn points
 
 PMC_corpses = [];
@@ -16,7 +16,7 @@ private _pmcKilledEH =
 };
 
 private _spawnPosList = [pmc_location_1, pmc_location_2, pmc_location_3, pmc_location_4, pmc_location_5];
-private _fob1 = getPos pmc_hq_1;
+private _fob1 = getPos pmc_fob_falcon;
 
 private _PMC_Attack_Waypoints =
 {

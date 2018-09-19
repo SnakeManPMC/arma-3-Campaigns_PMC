@@ -8,7 +8,7 @@ _grp = [_pos, WEST, (configFile >> "CfgGroups" >> "West" >> "CUP_B_USMC" >> "Inf
 _grp = [_pos, WEST, (configFile >> "CfgGroups" >> "West" >> "CUP_B_USMC" >> "Infantry_FROG_DES" >> "CUP_B_USMC_HeavyATTeam_FROG_DES")] call BIS_fnc_spawnGroup;
 */
 
-//[getPos pmc_hq_1, 100] execVM "PMC\PMC_CampFOBDefenses.sqf";
+//[getPos nameOfTheFOBGameLogic, 100] execVM "PMC\PMC_CampFOBDefenses.sqf";
 
 private _pos = _this select 0;
 private _waypointRanPosit = _this select 1;

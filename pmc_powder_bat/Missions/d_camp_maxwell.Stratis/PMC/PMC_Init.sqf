@@ -19,7 +19,7 @@ pmc_ammobox_campmaxwell_7 loadStatus "PMC_StatusAmmoBoxCampMaxwell_7";
 pmc_ammobox_campmaxwell_8 loadStatus "PMC_StatusAmmoBoxCampMaxwell_8";
 pmc_truck1 loadStatus "PMC_AmmoTruck1";
 
-[(getPos pmc_hq_1), 50] execVM "PMC\PMC_CampFOBDefenses.sqf";
+[(getPos pmc_fob_falcon), 50] execVM "PMC\PMC_CampFOBDefenses.sqf";
 
 PMC_debug = true;
 [50] execVM "PMC\PMC_corpses.sqf";
