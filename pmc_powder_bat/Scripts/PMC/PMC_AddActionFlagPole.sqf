@@ -1,2 +1,2 @@
 
-(_this select 0) addAction ["End Mission", "PMC\PMC_EndMission.sqf"];
+(_this select 0) addAction ["End Mission", "PMC\PMC_PatrolMissionEnd.sqf"];
