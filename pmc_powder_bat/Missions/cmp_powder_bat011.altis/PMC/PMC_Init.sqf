@@ -50,3 +50,14 @@ _grp = [getPos pmc_3] call PMC_Create_CUP_NAPA_Sniper_Team;
 } forEach [500, 300];
 
 [] execVM "PMC\PMC_MissionStart.sqf";
+
+// here we introduced the USMC ammo boxes and we must initialize them here if we want special items added etc
+// we make the huge vehicle ammo box as our uniform storage
+[pmc_ammobox_fobfalcon_6] execVM "PMC\PMC_ClearVehicleCargo.sqf";
+[pmc_ammobox_fobfalcon_6, 3] execVM "PMC\PMC_CUP_UniformsToCargo.sqf";
+// special empty boxes
+[pmc_ammobox_fobfalcon_5] execVM "PMC\PMC_ClearVehicleCargo.sqf";
+[pmc_ammobox_fobfalcon_7] execVM "PMC\PMC_ClearVehicleCargo.sqf";
+
+// special save to fob eagle ammo boxes which are hidden in the norther island
+[] execVM "PMC\PMC_AmmoBoxSaveStatusFOBFalcon.sqf";
