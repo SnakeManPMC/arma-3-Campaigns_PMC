@@ -68,4 +68,14 @@ while { (PMC_killedNum < _numBadGuys) } do
 PMCHQ sideChat "Enemy assault has been repelled, excellent work Alpha One, HQ Out.";
 sleep 15;
 
+if (isNil "PMC_DefendMissionsKIAs") then { PMC_DefendMissionsKIAs = 0; };
+
+PMC_DefendMissionsKIAs = PMC_DefendMissionsKIAs + PMC_killedNum;
+
+private _pmcStr = format["Current defend enemy KIAs: %1, all defend mission KIAs: %2", PMC_killedNum, PMC_DefendMissionsKIAs];
+saveVar "PMC_DefendMissionsKIAs";
+
+titleText[_pmcStr, "plain", 3];
+sleep 7;
+
 [] execVM "PMC\PMC_EndMission.sqf";
