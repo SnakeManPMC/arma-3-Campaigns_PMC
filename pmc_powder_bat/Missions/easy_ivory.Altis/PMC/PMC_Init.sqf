@@ -55,5 +55,5 @@ sleep 1;
 [pmc_ammobox_fobraven_6] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 [pmc_ammobox_fobraven_6, 3] execVM "PMC\PMC_CUP_UniformsToCargo.sqf";
 
-// special save to fob raven ammo boxes which are hidden in the norther island
+// special save to fob raven ammo boxes which are hidden in the northern island
 [] execVM "PMC\PMC_AmmoBoxSaveStatusFOBRaven.sqf";

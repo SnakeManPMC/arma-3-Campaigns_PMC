@@ -59,5 +59,5 @@ _grp = [getPos pmc_3] call PMC_Create_CUP_NAPA_Sniper_Team;
 [pmc_ammobox_fobfalcon_5] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 [pmc_ammobox_fobfalcon_7] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 
-// special save to fob eagle ammo boxes which are hidden in the norther island
+// special save to fob eagle ammo boxes which are hidden in the northern island
 [] execVM "PMC\PMC_AmmoBoxSaveStatusFOBFalcon.sqf";
