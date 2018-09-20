@@ -1,0 +1,9 @@
+
+pmc_ammobox_fobpig_1 loadStatus "PMC_StatusAmmoBoxFOBPig_1";
+pmc_ammobox_fobpig_2 loadStatus "PMC_StatusAmmoBoxFOBPig_2";
+pmc_ammobox_fobpig_3 loadStatus "PMC_StatusAmmoBoxFOBPig_3";
+pmc_ammobox_fobpig_4 loadStatus "PMC_StatusAmmoBoxFOBPig_4";
+pmc_ammobox_fobpig_5 loadStatus "PMC_StatusAmmoBoxFOBPig_5";
+pmc_ammobox_fobpig_6 loadStatus "PMC_StatusAmmoBoxFOBPig_6";
+pmc_ammobox_fobpig_7 loadStatus "PMC_StatusAmmoBoxFOBPig_7";
+pmc_ammobox_fobpig_8 loadStatus "PMC_StatusAmmoBoxFOBPig_8";

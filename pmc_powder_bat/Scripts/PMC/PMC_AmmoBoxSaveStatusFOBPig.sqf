@@ -5,3 +5,5 @@ pmc_ammobox_fobpig_3 saveStatus "PMC_StatusAmmoBoxFOBPig_3";
 pmc_ammobox_fobpig_4 saveStatus "PMC_StatusAmmoBoxFOBPig_4";
 pmc_ammobox_fobpig_5 saveStatus "PMC_StatusAmmoBoxFOBPig_5";
 pmc_ammobox_fobpig_6 saveStatus "PMC_StatusAmmoBoxFOBPig_6";
+pmc_ammobox_fobpig_7 saveStatus "PMC_StatusAmmoBoxFOBPig_7";
+pmc_ammobox_fobpig_8 saveStatus "PMC_StatusAmmoBoxFOBPig_8";
