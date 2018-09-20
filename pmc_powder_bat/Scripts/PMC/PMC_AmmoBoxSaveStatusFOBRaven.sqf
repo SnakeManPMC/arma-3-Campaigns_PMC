@@ -5,3 +5,5 @@ pmc_ammobox_fobraven_3 saveStatus "PMC_StatusAmmoBoxFOBRaven_3";
 pmc_ammobox_fobraven_4 saveStatus "PMC_StatusAmmoBoxFOBRaven_4";
 pmc_ammobox_fobraven_5 saveStatus "PMC_StatusAmmoBoxFOBRaven_5";
 pmc_ammobox_fobraven_6 saveStatus "PMC_StatusAmmoBoxFOBRaven_6";
+pmc_ammobox_fobraven_7 saveStatus "PMC_StatusAmmoBoxFOBRaven_7";
+pmc_ammobox_fobraven_8 saveStatus "PMC_StatusAmmoBoxFOBRaven_8";

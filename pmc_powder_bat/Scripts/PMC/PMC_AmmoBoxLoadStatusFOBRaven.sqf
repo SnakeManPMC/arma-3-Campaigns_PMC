@@ -5,3 +5,5 @@ pmc_ammobox_fobraven_3 loadStatus "PMC_StatusAmmoBoxFOBRaven_3";
 pmc_ammobox_fobraven_4 loadStatus "PMC_StatusAmmoBoxFOBRaven_4";
 pmc_ammobox_fobraven_5 loadStatus "PMC_StatusAmmoBoxFOBRaven_5";
 pmc_ammobox_fobraven_6 loadStatus "PMC_StatusAmmoBoxFOBRaven_6";
+pmc_ammobox_fobraven_7 loadStatus "PMC_StatusAmmoBoxFOBRaven_7";
+pmc_ammobox_fobraven_8 loadStatus "PMC_StatusAmmoBoxFOBRaven_8";

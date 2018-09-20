@@ -54,6 +54,8 @@ sleep 1;
 // we make the huge vehicle ammo box as our uniform storage
 [pmc_ammobox_fobraven_6] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 [pmc_ammobox_fobraven_6, 3] execVM "PMC\PMC_CUP_UniformsToCargo.sqf";
+[pmc_ammobox_fobraven_7] execVM "PMC\PMC_ClearVehicleCargo.sqf";
+[pmc_ammobox_fobraven_8] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 
 // special save to fob raven ammo boxes which are hidden in the northern island
 [] execVM "PMC\PMC_AmmoBoxSaveStatusFOBRaven.sqf";
