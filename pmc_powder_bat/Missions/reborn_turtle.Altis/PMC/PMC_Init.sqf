@@ -54,5 +54,7 @@ sleep 1;
 // we make the huge vehicle ammo box as our uniform storage
 [pmc_ammobox_fobghoul_6] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 [pmc_ammobox_fobghoul_6, 3] execVM "PMC\PMC_CUP_UniformsToCargo.sqf";
+[pmc_ammobox_fobghoul_7] execVM "PMC\PMC_ClearVehicleCargo.sqf";
+[pmc_ammobox_fobghoul_8] execVM "PMC\PMC_ClearVehicleCargo.sqf";
 
 [] execVM "PMC\PMC_AmmoBoxSaveStatusFOBGhoul.sqf";
