@@ -3,8 +3,8 @@ player createDiaryRecord ["Diary", ["Designers Notes", "Mission created 2018-09-
 /*player createDiaryRecord ["Diary", ["Diary", ""]];
 player createDiaryRecord ["Diary", ["Command and Signal", ""]];
 */
-player createDiaryRecord ["Diary", ["Support", "<marker name='pmc_marker_fob_falcon'>FOB Falcon</marker>, <marker name='pmc_marker_fob_eagle'>FOB Eagle</marker>, <marker name='pmc_marker_fob_raven'>FOB Raven</marker> and <marker name='pmc_marker_fob_ghoul'>FOB Ghoul</marker> are open and ammo boxes are located there. Use them to store weapons, ammo and gear."]];
+player createDiaryRecord ["Diary", ["Support", "<marker name='pmc_marker_fob_falcon'>FOB Falcon</marker>, <marker name='pmc_marker_fob_eagle'>FOB Eagle</marker>, <marker name='pmc_marker_fob_raven'>FOB Raven</marker> and <marker name='pmc_marker_fob_ghoul'>FOB Ghoul</marker> are open and ammo boxes are located there. Use them to store weapons, ammo and gear.<br/><br/>Ammo boxes are located <marker name='pmc_marker_fob_ghoul_ammoboxes'>near the wall</marker>, use them to gear up."]];
 /*player createDiaryRecord ["Diary", ["Execution", ""]];
 player createDiaryRecord ["Diary", ["Intel", ""]];*/
-player createDiaryRecord ["Diary", ["Mission", "Patrol from <marker name='pmc_marker_fob_ghoul'>FOB Ghoul</marker> in the nearby areas."]];
+player createDiaryRecord ["Diary", ["Mission", "Patrol from <marker name='pmc_marker_fob_ghoul'>FOB Ghoul</marker> in the nearby areas.<br/><br/>Once you return from the patrol end the mission from <marker name='pmc_marker_fob_ghoul_flagpole>flag pole</marker>."]];
 //player createDiaryRecord ["Diary", ["Situation", ""]];
