@@ -77,13 +77,14 @@ else
 };
 saveVar "PMC_CampaignDeaths";
 
+private _pmcStr = "";
 if (!isNil "PMC_killedNum") then
 {
-	private _pmcStr = format ["Friendly Killed in Action\nCurrent Mission: %1, Campaign wide: %2\nEnemy Killed in Action: %3", PMC_CurrentMissionDeaths, PMC_CampaignDeaths, PMC_killedNum];
+	_pmcStr = format ["Friendly Killed in Action\nCurrent Mission: %1, Campaign wide: %2\nEnemy Killed in Action: %3", PMC_CurrentMissionDeaths, PMC_CampaignDeaths, PMC_killedNum];
 }
 else
 {
-	private _pmcStr = format ["Friendly Killed in Action\nCurrent Mission: %1, Campaign wide: %2", PMC_CurrentMissionDeaths, PMC_CampaignDeaths];
+	_pmcStr = format ["Friendly Killed in Action\nCurrent Mission: %1, Campaign wide: %2", PMC_CurrentMissionDeaths, PMC_CampaignDeaths];
 };
 titleText [_pmcStr, "plain down", 3];
 

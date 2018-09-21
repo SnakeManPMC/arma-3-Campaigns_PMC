@@ -1,6 +1,6 @@
 
-if (isNil "pmc_dynsim_dudes_patrol" then { pmc_dynsim_dudes_patrol = "n/a"; };
-if (isNil "pmc_dynsim_dudes_sentry" then { pmc_dynsim_dudes_sentry = "n/a"; };
+if (isNil "pmc_dynsim_dudes_patrol") then { pmc_dynsim_dudes_patrol = "n/a"; };
+if (isNil "pmc_dynsim_dudes_sentry") then { pmc_dynsim_dudes_sentry = "n/a"; };
 if (isNil "pmc_fobdefense_dudes") then { pmc_fobdefense_dudes = "n/a"; };
 if (isNil "PMC_killedNum") then { PMC_killedNum = "n/a"; };
 

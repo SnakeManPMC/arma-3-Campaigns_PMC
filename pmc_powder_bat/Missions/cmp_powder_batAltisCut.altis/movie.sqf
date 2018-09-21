@@ -10,9 +10,9 @@ _camera cameraEffect ["internal", "back"];
 
 _d = 7; enableRadio false;
 
-setDate PMC_LastMissionDateTime;
-0 setOvercast PMC_LastMissionOvercast;
-forceWeatherChange;
+setDate [2008, 11, 3, 8, 30];
+//0 setOvercast PMC_LastMissionOvercast;
+//forceWeatherChange;
 
 // start
 _camera camPrepareTarget leader pmcinf1;
