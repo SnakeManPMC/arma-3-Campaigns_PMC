@@ -3,4 +3,4 @@
 
 PAPABEAR=[West,"HQ"];
 
-playmusic ["7thIAmGonaFly",0]
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";

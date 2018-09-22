@@ -15,7 +15,7 @@ waitUntil
 	camCommitted _camera;
 };
 
-//playmusic ["7thlifeless",0]
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 //titlecut ["","BLACK IN",2];
 
 titletext ["You have been playing PMC Tank Hunter", "plain", 1];

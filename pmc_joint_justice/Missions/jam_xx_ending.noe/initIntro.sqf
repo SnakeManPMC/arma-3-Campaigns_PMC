@@ -15,7 +15,7 @@ _camera camSetRelPos [10,100,25];
 _camera camCommit 0
 waitUntil { (camCommitted _camera); };
 
-playmusic ["7thlifeless", 0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titletext["War is Over!","plain",2];
 sleep 4;
