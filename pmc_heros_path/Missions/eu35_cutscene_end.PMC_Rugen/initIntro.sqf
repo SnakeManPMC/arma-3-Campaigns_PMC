@@ -32,7 +32,7 @@ _camera camSetRelPos [3,7,1];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["Ambient06_Khe_Sanh_Riff",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titlecut ["","BLACK IN",2];
 sleep 2;

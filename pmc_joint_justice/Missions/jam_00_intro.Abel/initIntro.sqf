@@ -15,7 +15,7 @@ _camera camSetRelPos [1,10,2];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["rtrack2", 0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titletext["PMC Presents","plain down",2];
 sleep 2;

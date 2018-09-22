@@ -3,7 +3,7 @@
 _camera = "camera" camCreate [0,0,0];
 _camera cameraEffect ["internal","back"];
 
-playMusic ["ATrack7", 0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 [] execVM "movie-text.sqf";
 
 // start

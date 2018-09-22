@@ -243,7 +243,7 @@ sleep 3;
 leader assault1 move getpos ruskie;
 sleep 1;
 0 fademusic 1;
-playmusic ["7thlifeless",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 _camera camSetTarget leader rusinf1;
 _camera camSetRelPos [0,2,1];

@@ -11,7 +11,7 @@ _camera camSetPos [648.49,12102.72,3.00];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["rtrack6",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titlecut ["","BLACK IN",2];
 sleep 5;
@@ -62,7 +62,7 @@ _camera camCommit 4;
 waitUntil { (camCommitted _camera); };
 sleep 1;
 
-playmusic ["rtrack7",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 {_x assignascargo herc1} foreach units assault1;
 {[_x] ordergetin true} foreach units assault1;

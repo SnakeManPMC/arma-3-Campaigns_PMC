@@ -11,7 +11,7 @@ _camera camSetPos [4881.94,11723.80,10.67];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["7thiamgonafly",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titlecut ["","BLACK IN",2];
 sleep 5;

@@ -10,7 +10,7 @@ _camera cameraEffect ["internal","back"];
 
 _d = 7;
 
-playMusic ["Ambient06_Khe_Sanh_Riff",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 titleText ["The war is over!","plain",3];
 
 // statue

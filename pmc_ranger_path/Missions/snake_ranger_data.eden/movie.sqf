@@ -14,7 +14,7 @@ _camera camSetPos [4882.81,11692.59,2.00];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["rtrack8",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titlecut ["","BLACK IN",2];
 offi1 playmove "effectstandtalk";

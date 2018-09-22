@@ -112,7 +112,7 @@ _camera camCommit 5;
 waitUntil { (camCommitted _camera); };
 sleep 0.5;
 
-playmusic ["rtrack1b",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 //=== 18:23:33
 _camera camSetTarget [86602.22,68304.59,1124.22];

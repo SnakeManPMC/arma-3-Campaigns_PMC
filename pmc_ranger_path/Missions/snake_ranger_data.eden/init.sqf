@@ -26,4 +26,4 @@ if (!alive s9) then { deletevehicle s9; };
 
 {_x moveincargo helo1} foreach units assault1;
 
-playmusic ["rtrack2",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";

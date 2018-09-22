@@ -2,7 +2,7 @@
 _camera = "camera" camCreate [0,0,0];
 _camera cameraEffect ["internal","back"];
 
-playMusic ["ATrack2", 0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 // still on the edge
 _camera camPrepareTarget [-95179.19,-11468.29,-13487.33];

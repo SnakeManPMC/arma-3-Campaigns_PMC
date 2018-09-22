@@ -13,7 +13,7 @@ _camera camSetRelPos [2,10,1];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["ATrack6",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 sleep 3;
 
 titletext["You have been playing\nArmed Assault first usermade campaign","plain down",2];

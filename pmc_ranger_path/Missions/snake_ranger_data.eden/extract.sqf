@@ -33,4 +33,4 @@ while { (_B > _A) } do
 _helo flyinheight 50;
 _helo sideradio "Rdustoff";
 0 fademusic 1;
-playmusic ["7thlifeless",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";

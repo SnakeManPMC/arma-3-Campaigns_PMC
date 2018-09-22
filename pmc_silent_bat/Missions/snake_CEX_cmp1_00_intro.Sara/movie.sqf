@@ -8,7 +8,7 @@ _camera camCommitPrepared 0;
 titleCut ["", "black out", 0.000001];
 sleep 3;
 
-playMusic ["ATrack26", 0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 sleep 2;
 
 titleText ["PMC Productions 2009", "plain", 4];
