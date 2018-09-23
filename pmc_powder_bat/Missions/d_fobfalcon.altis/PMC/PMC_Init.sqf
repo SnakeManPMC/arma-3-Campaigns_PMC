@@ -13,6 +13,6 @@ pmc_truck1 loadStatus "PMC_AmmoTruck1";
 
 [(getPos pmc_fob_falcon), 50] execVM "PMC\PMC_CampFOBDefenses.sqf";
 
-[pmc_1, 100, 33] execVM "PMC\PMC_War_OPFOR.sqf";
+[pmc_fob_falcon, 100, 33] execVM "PMC\PMC_War_OPFOR.sqf";
 
 [] execVM "PMC\PMC_MissionStart.sqf";
