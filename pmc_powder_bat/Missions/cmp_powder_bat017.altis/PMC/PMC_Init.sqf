@@ -26,8 +26,8 @@ private _grp = [getPos pmc_location_4] call PMC_Create_CUP_NAPA_Random_Infantry;
 _grp = [getPos pmc_location_5] call PMC_Create_CUP_NAPA_Random_Infantry;
 [_grp, getPos pmc_location_5, 20] call PMC_Sentry_Inf_Waypoints;
 
-_grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Sniper_Team;
-[_grp, getPos pmc_2, 500] call PMC_Guard_Inf_Sniper_Stealth_Waypoints;
+_grp = [getPos pmc_1] call PMC_Create_CUP_NAPA_Sniper_Team;
+[_grp, getPos pmc_1, 500] call PMC_Guard_Inf_Sniper_Stealth_Waypoints;
 
 {
 	_grp = [getPos pmc_location_1] call PMC_Create_CUP_NAPA_Random_Infantry;
