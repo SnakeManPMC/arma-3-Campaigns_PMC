@@ -10,7 +10,7 @@ _camera camSetRelPos [10,-5,3];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };;
 
-playmusic ["Track10_Logistics",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titlecut ["","BLACK IN",2];
 sleep 5;

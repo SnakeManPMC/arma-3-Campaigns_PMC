@@ -11,7 +11,7 @@ _camera camSetRelPos [0,5,2];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["Track10_Logistics",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 // shut them up
 enableRadio false;

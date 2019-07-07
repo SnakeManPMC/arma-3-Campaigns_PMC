@@ -22,7 +22,7 @@ assault1 setspeedmode "full";
 RappellingCam=false;
 eastdead1=false;
 
-playmusic ["Track10_Logistics",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titletext ["Recognizing that I volunteered as a Ranger, fully knowing the hazards of my\nchosen profession, I will always endeavor to uphold the prestige,\nhonor, and high esprit de corps of my Ranger Regiment.","plain",2];
 sleep 11;

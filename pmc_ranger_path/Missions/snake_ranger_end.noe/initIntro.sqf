@@ -17,7 +17,7 @@ officers3 setbehaviour "safe";
 // debug second part
 //goto "goo";
 
-playmusic ["Track10_Logistics",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 sleep 2;
 
 //=== 18:20:48
