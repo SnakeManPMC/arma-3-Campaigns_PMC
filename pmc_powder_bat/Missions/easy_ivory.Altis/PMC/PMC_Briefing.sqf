@@ -3,7 +3,7 @@ player createDiaryRecord ["Diary", ["Designers Notes", "Mission created 2018-09-
 /*player createDiaryRecord ["Diary", ["Diary", ""]];
 player createDiaryRecord ["Diary", ["Command and Signal", ""]];
 */
-player createDiaryRecord ["Diary", ["Support", "<marker name='pmc_marker_fob_falcon'>FOB Falcon</marker> is open and ammo boxes are located there. Use them to store weapons, ammo and gear."]];
+player createDiaryRecord ["Diary", ["Support", "<marker name='pmc_marker_fob_falcon'>FOB Falcon</marker> and <marker name='pmc_marker_fob_eagle'>FOB Eagle</marker> are open and ammo boxes are located there. Use them to store weapons, ammo and gear."]];
 /*
 player createDiaryRecord ["Diary", ["Execution", ""]];
 player createDiaryRecord ["Diary", ["Intel", ""]];*/

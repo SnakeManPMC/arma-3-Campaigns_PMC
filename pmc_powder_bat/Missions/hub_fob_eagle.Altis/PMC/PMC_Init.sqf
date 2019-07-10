@@ -29,3 +29,6 @@ PMC_killedNum = 0;
 
 	"eagle_patrol" call BIS_fnc_endMission;
 };
+
+// 2019-07-09 temporary debug end this FOB loop and go to the next mission
+pmc_fobeagle_flag addAction ["Debug: leave FOB and go to next mission", "PMC\PMC_Debug_End_FOB_Eagle.sqf"];
