@@ -22,7 +22,7 @@ waitUntil
 	camCommitted _camera;
 };
 
-[] execVM "PMC\PMC_playMusic_random_track.sqf";
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titlecut ["", "BLACK IN", 2];
 sleep 1;

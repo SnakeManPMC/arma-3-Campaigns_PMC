@@ -37,7 +37,7 @@ forceMap true;
 
 0 fademusic 1;
 // play random track
-[] execVM "PMC\PMC_playMusic_random_track.sqf";
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 _timeh = PMC_passTime - (PMC_passTime mod 1);
 

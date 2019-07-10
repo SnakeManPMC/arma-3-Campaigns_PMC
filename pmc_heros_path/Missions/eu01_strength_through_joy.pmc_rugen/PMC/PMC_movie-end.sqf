@@ -10,7 +10,7 @@ _camera camSetRelPos [5,10,3];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["Track07_Last_Men_Standing",0];
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titlecut ["","BLACK IN",2];
 sleep 5;

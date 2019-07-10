@@ -35,7 +35,7 @@ if (pmcmoff) exitWith
 
 enableRadio false;
 0 fademusic 1;
-[] execVM "PMC\PMC_playMusic_random_track.sqf";
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 titlecut ["", "BLACK IN", 2];
 sleep 3;
 
