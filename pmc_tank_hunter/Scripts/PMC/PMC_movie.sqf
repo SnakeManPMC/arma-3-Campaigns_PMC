@@ -11,6 +11,8 @@ waitUntil
         camCommitted _camera;
 };
 
+// dumb check
+if (isNil "pmcmoff") then { pmcmoff = 0; };
 if (pmcmoff) exitWith
 {
 // no savegames its kind of gay
