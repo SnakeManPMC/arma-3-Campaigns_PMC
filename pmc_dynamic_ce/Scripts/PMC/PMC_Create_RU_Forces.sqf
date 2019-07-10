@@ -34,7 +34,7 @@ PMC_Create_RU_Forces =
 	private _rusbox = "CUP_RUBasicAmmunitionBox" createvehicle _city;
 	_ran = 2 + random 5;
 	_ran = _ran - (_ran mod 1);
-	_rusbox addMagazineCargo ["CUP_MineE", _ran];
+	_rusbox addMagazineCargo ["CUP_MineE_M", _ran];
 	_ran = 2 + random 5;
 	_ran = _ran - (_ran mod 1);
 	_rusbox addMagazineCargo ["CUP_PipeBomb_M", _ran];

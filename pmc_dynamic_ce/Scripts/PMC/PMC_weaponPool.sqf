@@ -130,7 +130,7 @@ addMagazinePool ["SmokeShell",50];
 
 ; removed these just in case ITS ONE OF THESE WHO FUCKS THE WEAPONPOOL UP :(
 ;addMagazinePool ["CUP_PipeBomb_M",10];
-;addMagazinePool ["CUP_MineE",10];
+;addMagazinePool ["CUP_MineE_M",10];
 ;addMagazinePool ["CUP_Laserdesignator",10];
 
 exit;

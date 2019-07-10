@@ -45,7 +45,7 @@ _abox3 setDir (random 360);
 
 // some extra magazines for the box
 _abox1 addMagazineCargo ["CUP_10Rnd_127x99_M107",50];
-_abox1 addMagazineCargo ["CUP_MineE",10];
+_abox1 addMagazineCargo ["CUP_MineE_M",10];
 _abox1 addWeaponCargo ["CUP_NVG_PVS7",5];
 
 _markerobj = createMarker ["mybase",_p];
@@ -145,6 +145,6 @@ addMagazinePool ["HandGrenade",12];
 addMagazinePool ["HandGrenade",12];
 addMagazinePool ["CUP_PipeBomb_M",12];
 addMagazinePool ["TimeBomb",12];
-addMagazinePool ["CUP_MineE",12];
-addMagazinePool ["CUP_MineE",12];
+addMagazinePool ["CUP_MineE_M",12];
+addMagazinePool ["CUP_MineE_M",12];
 */

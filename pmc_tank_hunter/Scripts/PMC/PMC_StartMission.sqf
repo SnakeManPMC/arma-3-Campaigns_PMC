@@ -74,6 +74,7 @@ skipTime PMC_AllTimeUsed;
 //skiptime (((paramsarray select 0) - daytime + 24) % 24);
 //cutText [startText, "BLACK IN",3];
 
+[] execVM "PMC\PMC_Vehicle_Arrays.sqf";
 
 /*
 relocate the base
@@ -104,7 +105,7 @@ RockBox2 = createVehicle ["CUP_USBasicAmmunitionBox", [(_tmp select 0), (_tmp se
 clearMagazineCargo RockBox2;
 clearWeaponCargo RockBox2;
 /*
-Transfers weapons and magazines from the weapon pool (used in campaigns to 
+Transfers weapons and magazines from the weapon pool (used in campaigns to
 transfer weapons to the next mission) into the cargo space of object obj.
 */
 putWeaponPool RockBox2;
