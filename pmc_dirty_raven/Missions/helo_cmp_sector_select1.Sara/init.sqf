@@ -1,3 +1,6 @@
+
+[] execVM "PMC\PMC_Briefing.sqf";
+
 /*
 
 campaign starts, we have no variables set, at all.
