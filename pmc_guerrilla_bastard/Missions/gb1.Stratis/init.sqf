@@ -1,12 +1,7 @@
-[] execVM "PMC\PMC_LoadOnEveryMission.sqf";
 
-[[
-//	["PMC_objective1","obj1", "<marker name='pmc_markertask1'>obj1</marker>.", true, ["pmc_markertask1", getPosASL pmc_1]],
-//	["PMC_objective2","obj2", "<marker name='pmc_markertask2'>obj2</marker>.", true, ["pmc_markertask2", getPosASL pmc_2]]
-],[
-	["Orders", "Your <marker name='start'>start</marker>"],
-	["Credits", "Addons used: CUP.<br/>Mission design, scripts: Snake Man, PMC."]
-]] call compile preprocessFileLineNumbers "PMC\shk_taskmaster.sqf";
+[] execVM "PMC\PMC_Briefing.sqf";
+[] execVM "PMC\PMC_Tasks.sqf";
+[] execVM "PMC\PMC_LoadOnEveryMission.sqf";
 
 PMC_loc = call compile preprocessFileLineNumbers "PMC\PMC_locationFinder_test.sqf";
 
