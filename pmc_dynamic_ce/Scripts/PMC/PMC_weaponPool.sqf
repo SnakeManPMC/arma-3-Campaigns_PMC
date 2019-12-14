@@ -6,8 +6,8 @@
 addWeaponPool ["CUP_M16A2",5];
 addWeaponPool ["CUP_M16A2GL",5];
 addWeaponPool ["CUP_arifle_G36A",5];
-//addWeaponPool ["CUP_M60A4_EP1",5];
-addWeaponPool ["CUP_M14_EP1",5];
+//addWeaponPool ["CUP_lmg_M60A4",5];
+addWeaponPool ["CUP_srifle_M14_Aim",5];
 addWeaponPool ["CUP_FN_FAL",5];
 addWeaponPool ["CUP_M40A3",5];
 addWeaponPool ["CUP_M4A1_Aim",5];
