@@ -11,7 +11,7 @@ if (PMC_debug) then
 {
 	diag_log format
 	[
-		"PMC_sendgroup_west: received _group: %1, West_ControlList: %2, West_AssignList: %3.",
+		"PMC_sendgroup_west; received _group: %1, West_ControlList: %2, West_AssignList: %3.",
 		_group,
 		West_ControList,
 		West_AssignList
@@ -64,7 +64,7 @@ if (PMC_debug && "Air" countType _tmp == 1) then
 /*
 diag_log format
 [
-	"%1 - %2",
+	"PMC_sendgroup_west; %1 - %2",
 	_tmp,
 	typeOf vehicle leader _group
 ];
@@ -116,7 +116,7 @@ while { _A < (count PMC_targets) && _noMatchFound } do
 		_noMatchFound = false;
 		if (PMC_debug) then
 		{
-			diag_log format["_group: %1, _A: %2, West_ControList: %3, West_AssignList: %4", _group, _A, West_ControList, West_AssignList];
+			diag_log format["PMC_sendgroup_west; _group: %1, _A: %2, West_ControList: %3, West_AssignList: %4", _group, _A, West_ControList, West_AssignList];
 		};
 	};
 	_A = _A + 1;
@@ -254,7 +254,7 @@ if (PMC_debug) then
 {
 	diag_log format
 	[
-		"_group: %1, vehicle: %2. reports - Patrol over.",
+		"PMC_sendgroup_west; _group: %1, vehicle: %2. reports - Patrol over.",
 		_group,
 		typeOf (vehicle leader _group)
 	];
@@ -314,7 +314,7 @@ waitUntil
 
 if (PMC_debug) then
 {
-	diag_log format["group passed IN VEHICLE and !dead check: %1, vehicle: %2", _group, (_veh select 0)];
+	diag_log format["PMC_sendgroup_west; group passed IN VEHICLE and !dead check: %1, vehicle: %2", _group, (_veh select 0)];
 };
 
 // last dead check
@@ -335,7 +335,7 @@ if (PMC_debug) then
 {
 	player sideChat format
 	[
-		"PMC_sendgroup_east.sqf exit %1, leader alive: %2. units: %3, veh: %4",
+		"PMC_sendgroup_west; exit %1, leader alive: %2. units: %3, veh: %4",
 		_group,
 		alive leader _group,
 		count units _group,
@@ -344,7 +344,7 @@ if (PMC_debug) then
 
 	diag_log format
 	[
-		"PMC_sendgroup_east.sqf exit %1, leader alive: %2. units: %3, veh: %4",
+		"PMC_sendgroup_west; exit %1, leader alive: %2. units: %3, veh: %4",
 		_group,
 		alive leader _group,
 		count units _group,

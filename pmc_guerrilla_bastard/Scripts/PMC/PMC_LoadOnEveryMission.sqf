@@ -5,7 +5,7 @@ player setVariable ["BIS_noCoreConversations", true];
 private["_ok"];
 // his health status, weapons and gear
 _ok = player loadStatus "pmc_player";
-diag_log format["PMC player status: %1", _ok];
+diag_log format["PMC_LoadOnEveryMission; PMC player status: %1", _ok];
 
 // his position on map, lets add it to whole squad
 {

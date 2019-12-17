@@ -1,7 +1,7 @@
 
 private ["_grp","_HeloGrp","_EPil","_nazi", "_HBHelo1"];
 
-if (PMC_debug) then{	hint "Homebase has been found by the russians!";	player sideChat "Homebase has been found by the russians!";	diag_log "Homebase has been found by the russians!";};
+if (PMC_debug) then{	hint "Homebase has been found by the russians!";	player sideChat "Homebase has been found by the russians!";	diag_log "PMC_homebasefound; Homebase has been found by the russians!";};
 
 _grp = objNull;
 _grp = createGroup east;
@@ -59,7 +59,7 @@ if (!alive _HBHelo1) exitWith
 {
 	if (PMC_debug) then
 	{
-		diag_log "Speznaz homebasefound helo was destroyed enroute to target. script exiting.";
+		diag_log "PMC_homebasefound; Speznaz homebasefound helo was destroyed enroute to target. script exiting.";
 	};
 };
 
@@ -121,7 +121,7 @@ leader _grp globalChat "Death to the amerikan pigs and their helper resistance d
 hint "Russian Speznaz special forces have blown up your hideout along with your precious weapon pool. Take care of hiding your hideout little better next time. Sorry.";
 if (PMC_debug) then
 {
-	diag_log format["Homebasefound blew up players weaponPool at: %1.", time];
+	diag_log format["PMC_homebasefound; Homebasefound blew up players weaponPool at: %1.", time];
 };
 
 // clear weaponPool and ammo boxes ruthlessly.

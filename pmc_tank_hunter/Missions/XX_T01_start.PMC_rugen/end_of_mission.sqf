@@ -3,7 +3,7 @@ private ["_vehs","_clist","_newList","_theVeh","_f","_xVehType","_stuff","_q","_
 
 if (PMC_debug) then
 {
-	diag_log format["xx_t01_start\end_of_mission.sqf executed at: %1", time];
+	diag_log format["end_of_mission; xx_t01_start\end_of_mission.sqf executed at: %1", time];
 };
 
 //#---save "garage"---
@@ -32,7 +32,7 @@ while { _f < _q } do
 
 		diag_log format
 		[
-			"_f: %1. _q: %2. _newList: %3. _theVeh: %4",
+			"end_of_mission; _f: %1. _q: %2. _newList: %3. _theVeh: %4",
 			_f,
 			_q,
 			_newList,
@@ -607,7 +607,7 @@ numVehicles = count _vehs;
 if (PMC_debug) then
 {
 	player sidechat format["numVehicles: %1", numVehicles];
-	diag_log format["numVehicles: %1", numVehicles];
+	diag_log format["end_of_mission; numVehicles: %1", numVehicles];
 };
 
 /*
@@ -960,5 +960,5 @@ saveVar "PMC_City10";
 
 if (PMC_debug) then
 {
-	diag_log format["xx_t01_start\end_of_mission.sqf succesfully completed at: %1", time];
+	diag_log format["end_of_mission; xx_t01_start\end_of_mission.sqf succesfully completed at: %1", time];
 };

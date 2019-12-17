@@ -38,7 +38,7 @@ for "_i" from 0 to (count _locations - 1) do
 
 	diag_log format
 	[
-		"_current: %1, _position: %2, _type: %3, _typeLogic: %4",
+		"PMC_locationFinder_test; _current: %1, _position: %2, _type: %3, _typeLogic: %4",
 		_current,
 		_position,
 		_type,
@@ -46,7 +46,7 @@ for "_i" from 0 to (count _locations - 1) do
 	];
 };
 
-diag_log "all done, now _logics ...";
+diag_log "PMC_locationFinder_test; all done, now _logics ...";
 diag_log _logics;
 
 // return the array of CityCenters

@@ -4,7 +4,7 @@ if (PMC_debug) then
 {
 	diag_log format
 	[
-		"At garage. values: veh0: %1, veh1: %2, veh2: %3, veh3: %4, veh4: %5, veh5: %6, veh6: %7, veh7: %8, veh8: %9, veh9: %10, numVehicles: %11",
+		"PMC_GarageSetup; At garage. values: veh0: %1, veh1: %2, veh2: %3, veh3: %4, veh4: %5, veh5: %6, veh6: %7, veh7: %8, veh8: %9, veh9: %10, numVehicles: %11",
 		veh0,
 		veh1,
 		veh2,

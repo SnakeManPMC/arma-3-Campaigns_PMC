@@ -5,14 +5,14 @@ if (isNil "rollCall") then
 {
 	if (PMC_debug) then
 	{
-		diag_log format["rollCall was: %1, so we had to try to fix it.", rollCall];
+		diag_log format["PMC_RollCall; rollCall was: %1, so we had to try to fix it.", rollCall];
 	};
 
 	rollCall = (count units group player);
 
 	if (PMC_debug) then
 	{
-		diag_log format["rollCall was fixed to: %1, alles goed?", rollCall];
+		diag_log format["PMC_RollCall; rollCall was fixed to: %1, alles goed?", rollCall];
 	};
 };
 private _q = 1;
@@ -98,7 +98,7 @@ while { _c < (rollCall) } do
 	if (PMC_debug) then
 	{
 		// just some cool debug
-		diag_log format["Unit: %1, Skill: %2, rating: %3", (_z select _c), skill (_z select _c), rating (_z select _c)];
+		diag_log format["PMC_RollCall; Unit: %1, Skill: %2, rating: %3", (_z select _c), skill (_z select _c), rating (_z select _c)];
 	};
 
 	if (damage (_z select _c) > 0.9) then

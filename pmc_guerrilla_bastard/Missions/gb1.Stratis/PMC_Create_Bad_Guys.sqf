@@ -16,13 +16,13 @@ _a = 0;
 _b = 0;
 while {_a < 10 && (count _tmpList > 1)} do
 {
-	diag_log format["Start: %1, _tmpList: %2", (count _tmpList), _tmpList];
+	diag_log format["PMC_Create_Bad_Guys; Start: %1, _tmpList: %2", (count _tmpList), _tmpList];
 	_ran = floor random (count _tmpList);
 	_myPos = (_tmpList select _ran);
 	_tmpList set [_ran, "DELETEME"];
 	_tmpList = _tmpList - ["DELETEME"];
-	diag_log format["End: %1, _tmpList: %2", (count _tmpList), _tmpList];
-	diag_log format["_myPos: %1", _myPos];
+	diag_log format["PMC_Create_Bad_Guys; End: %1, _tmpList: %2", (count _tmpList), _tmpList];
+	diag_log format["PMC_Create_Bad_Guys; _myPos: %1", _myPos];
 
 	_newPos = [_myPos, 0, 500, 5, 0, 20, 0] call BIS_fnc_findSafePos;
 	
@@ -35,13 +35,13 @@ while {_a < 10 && (count _tmpList > 1)} do
 	[_newPos, _myObj, _b] execVM "PMC\PMC_Create_Single_Task.sqf";
 	_b = _b + 1;
 
-	diag_log format["Start: %1, _tmpList: %2", (count _tmpList), _tmpList];
+	diag_log format["PMC_Create_Bad_Guys; Start: %1, _tmpList: %2", (count _tmpList), _tmpList];
 	_ran = floor random (count _tmpList);
 	_myPos = (_tmpList select _ran);
 	_tmpList set [_ran, "DELETEME"];
 	_tmpList = _tmpList - ["DELETEME"];
-	diag_log format["End: %1, _tmpList: %2", (count _tmpList), _tmpList];
-	diag_log format["_myPos: %1", _myPos];
+	diag_log format["PMC_Create_Bad_Guys; End: %1, _tmpList: %2", (count _tmpList), _tmpList];
+	diag_log format["PMC_Create_Bad_Guys; _myPos: %1", _myPos];
 
 	_newPos = [_myPos, 0, 500, 5, 0, 20, 0] call BIS_fnc_findSafePos;
 

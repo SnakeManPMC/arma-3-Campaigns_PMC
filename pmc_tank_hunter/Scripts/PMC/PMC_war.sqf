@@ -13,7 +13,7 @@ private
 
 if (PMC_debug) then
 {
-	diag_log "PMC_war.sqf executed, now going to wait until aiwest and aieast is larger than 0...";
+	diag_log "PMC_war; executed, now going to wait until aiwest and aieast is larger than 0...";
 };
 
 // just to be sure
@@ -24,7 +24,7 @@ waitUntil
 
 if (PMC_debug) then
 {
-	diag_log "PMC_war.sqf reporting passed aiwest && aieast check.";
+	diag_log "PMC_war; reporting passed aiwest && aieast check.";
 };
 
 // these two are setup in PMC_StartMission.sqf also, why?
@@ -59,7 +59,7 @@ if (PMC_debug) then
 {
 	diag_log format
 	[
-		"************* STARTUP *********** PMC_war MaxWest: %1, MaxEast: %2, MaxUnits: %3, _WinKills: %4, aiwest: %5, aieast: %6",
+		"PMC_war; ************* STARTUP *********** PMC_war MaxWest: %1, MaxEast: %2, MaxUnits: %3, _WinKills: %4, aiwest: %5, aieast: %6",
 		MaxWest,
 		MaxEast,
 		MaxUnits,
@@ -106,7 +106,7 @@ while { true } do
 	{
 		if (PMC_debug) then
 		{
-			diag_log format["We are in (count aieast) < MaxEast == TRUE. (count aieast): %1, MaxEast: %2", (count aieast), MaxEast];
+			diag_log format["PMC_war; We are in (count aieast) < MaxEast == TRUE. (count aieast): %1, MaxEast: %2", (count aieast), MaxEast];
 		};
 		call _PMC_Create_OPFOR;
 		sleep 1;
@@ -120,7 +120,7 @@ while { true } do
 	{
 		if (PMC_debug) then
 		{
-			diag_log format["We are in (count aiwest) < MaxWest == TRUE. (count aiwest):: %1, MaxWest: %2", (count aiwest), MaxWest];
+			diag_log format["PMC_war; We are in (count aiwest) < MaxWest == TRUE. (count aiwest):: %1, MaxWest: %2", (count aiwest), MaxWest];
 		};
 		call _PMC_Create_BLUFOR;
 		sleep 1;
@@ -135,7 +135,7 @@ while { true } do
 		// huge debug
 		diag_log format
 		[
-			"PMC_war MaxWest: %1, MaxEast: %2, MaxUnits: %3, _WinKills: %4, aiwest: %5, aieast: %6",
+			"PMC_war; MaxWest: %1, MaxEast: %2, MaxUnits: %3, _WinKills: %4, aiwest: %5, aieast: %6",
 			MaxWest,
 			MaxEast,
 			MaxUnits,

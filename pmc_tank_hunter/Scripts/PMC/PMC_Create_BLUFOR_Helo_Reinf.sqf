@@ -20,8 +20,8 @@ _rtmptnk = _poo select _r1;
 
 if (PMC_debug) then
 {
-	player sideChat format["US helo_reinf.sqf is now running! - %1", _rtmptnk];
-	diag_log format["US helo_reinf.sqf is now running! - %1", _rtmptnk];
+	player sideChat format["PMC_Create_BLUFOR_Helo_Reinf; is now running! - %1", _rtmptnk];
+	diag_log format["PMC_Create_BLUFOR_Helo_Reinf; is now running! - %1", _rtmptnk];
 };
 
 _helo = _rtmptnk createVehicle getPosASL west_helostart;
@@ -169,8 +169,8 @@ _fish = getPosASL _helo_dest;
 
 if (PMC_debug) then
 {
-	player sideChat format["US helo_reinf.sqf target - %1", _helo_dest];
-	diag_log format["US helo_reinf.sqf target - %1", _helo_dest];
+	player sideChat format["PMC_Create_BLUFOR_Helo_Reinf; target - %1", _helo_dest];
+	diag_log format["PMC_Create_BLUFOR_Helo_Reinf;  target - %1", _helo_dest];
 };
 
 leader _heloGrp move _fish;
@@ -184,8 +184,8 @@ if (!alive _helo) exitWith
 {
 	if (PMC_debug) then
 	{
-		player sideChat format["US helo_reinf.sqf helo entered slowdelete - %1", _helo];
-		diag_log format["US helo_reinf.sqf helo entered slowdelete - %1", _helo];
+		player sideChat format["PMC_Create_BLUFOR_Helo_Reinf; helo entered slowdelete - %1", _helo];
+		diag_log format["PMC_Create_BLUFOR_Helo_Reinf;  helo entered slowdelete - %1", _helo];
 	};
 };
 
@@ -212,8 +212,8 @@ leader _heloGrp move (getPosASL west_helostart);
 
 if (PMC_debug) then
 {
-	player sideChat format["US helo_reinf.sqf helo heading home - %1", _helo];
-	diag_log format["US helo_reinf.sqf helo heading home - %1", _helo];
+	player sideChat format["PMC_Create_BLUFOR_Helo_Reinf; helo heading home - %1", _helo];
+	diag_log format["PMC_Create_BLUFOR_Helo_Reinf;  helo heading home - %1", _helo];
 };
 // let it fly a bit so we dont instantly check for unitReady
 sleep 5;
@@ -228,8 +228,8 @@ if (!alive _helo) exitWith
 {
 	if (PMC_debug) then
 	{
-		player sideChat format["US helo_reinf.sqf helo entered slowdelete - %1", _helo];
-		diag_log format["US helo_reinf.sqf helo entered slowdelete - %1", _helo];
+		player sideChat format["PMC_Create_BLUFOR_Helo_Reinf; helo entered slowdelete - %1", _helo];
+		diag_log format["PMC_Create_BLUFOR_Helo_Reinf;  helo entered slowdelete - %1", _helo];
 	};
 };
 
@@ -240,6 +240,6 @@ deleteVehicle _helo;
 
 if (PMC_debug) then
 {
-	player sideChat "US helo_reinf.sqf exit";
-	diag_log "US helo_reinf.sqf exit";
+	player sideChat "PMC_Create_BLUFOR_Helo_Reinf;  exit";
+	diag_log "PMC_Create_BLUFOR_Helo_Reinf;  exit";
 };

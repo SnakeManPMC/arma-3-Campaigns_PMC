@@ -31,7 +31,7 @@ while { _f < _q } do
 
 		diag_log format
 		[
-			"_f: %1. _q: %2. _newList: %3. _theVeh: %4",
+			"PMC_mission_exit; _f: %1. _q: %2. _newList: %3. _theVeh: %4",
 			_f,
 			_q,
 			_newList,
@@ -762,7 +762,7 @@ numVehicles = count _vehs;
 if (PMC_debug) then
 {
 	player sidechat format["numVehicles: %1", numVehicles];
-	diag_log format["numVehicles: %1", numVehicles];
+	diag_log format["PMC_mission_exit; numVehicles: %1", numVehicles];
 };
 
 /*
