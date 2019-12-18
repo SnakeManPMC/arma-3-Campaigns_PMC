@@ -11,7 +11,6 @@
 	};
 
 	// activation
-	//"1" objStatus "DONE";
 	arty_dead = true;
 	"artyfound" setMarkerType "mil_dot";
 	"artyfound" setMarkerColor "colorgreen";
@@ -62,7 +61,6 @@ mortar_dead = false;
 	};
 
 	// activation
-	//"2" objStatus "DONE";
 	mortar_dead = true;
 	"mortarfound" setMarkerType "mil_dot";
 	"mortarfound" setMarkerColor "colorgreen";
