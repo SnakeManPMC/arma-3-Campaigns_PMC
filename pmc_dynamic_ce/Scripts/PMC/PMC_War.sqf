@@ -56,7 +56,6 @@ while {PMC_WarRunning} do
 		saveVar "PMC_Campaign_End";
 		hint "You completed the campaign!";
 		PAPABEAR sideChat "CONGRATULATIONS. YOU HAVE ACHIEVED OVER 5000 ENEMY KIAS. MISSION ACCOMPLISHED. OVER.";
-		//"10" objStatus "DONE";
 		["t10", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
 		PMC_WarRunning = false;
 	};
@@ -65,7 +64,6 @@ while {PMC_WarRunning} do
 	if ((PMC_opforUnits - count aieast) > _WinKills) then
 	{
 		hint "Enemy seized attacks.";
-		//"1" objStatus "DONE";
 		["t1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
 		PAPABEAR sideChat "Appears enemy has seized their attacks and are retreating. Over.";
 		PMC_WarRunning = false;
