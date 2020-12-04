@@ -14,7 +14,7 @@ titleText ["Mission Accomplished!", "plain down", 3];
 playMusic "LeadTrack01_F";
 sleep 7;
 
-// Stratis m001 - m010
+// Agios Efstratios m001 - m010
 // camp maxwell ammo boxes
 if (!isNil "pmc_ammobox_campmaxwell_1") then
 {
@@ -26,7 +26,7 @@ if (!isNil "pmc_ammobox_campmaxwell_3") then
 	[] execVM "PMC\PMC_AmmoBoxSaveStatusCampMaxwell_3_8.sqf";
 };
 
-// Altis m011 - m020
+// Lemnos m011 - m020
 // FOB Falcon
 if (!isNil "pmc_ammobox_fobfalcon_1") then
 {
@@ -93,6 +93,8 @@ titleText [_pmcStr, "plain down", 3];
 sleep 1;
 [] execVM "PMC\PMC_WeaponPoolInit.sqf";
 
-sleep 30 + (random 25);
+//sleep 30 + (random 25);
+// short delay mostly for debugging, for final release this should be longer, not so hectic
+sleep 2;
 
 "PMC_end1" call BIS_fnc_endMission;

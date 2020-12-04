@@ -8,50 +8,50 @@ weaponPool = 0;
 
 class NoEndings
 {
-    lost = ;
-    end1 = ;
-    end2 = ;
-    end3 = ;
-    end4 = ;
-    end5 = ;
-    end6 = ;
+	lost = ;
+	end1 = ;
+	end2 = ;
+	end3 = ;
+	end4 = ;
+	end5 = ;
+	end6 = ;
 };
 
 class MissionDefault: NoEndings
 {
-    lives = -1;
+	lives = -1;
 };
 
 class Campaign
 {
-	briefingName = "PMC Powder Bat v0.4.4";
+	briefingName = "PMC Powder Bat v0.4.7";
 	author = "Snake Man, PMC.";
-	overviewText = "US Marine Corps clears Stratis, Altis and Tanoa of insurgent bastards. Uses CUP units/weapons/vehicles.";
+	overviewText = "US Marine Corps clears Greece Agios Efstratios, Lemnos and Tanoa of insurgent bastards. Uses CUP units/weapons/vehicles. Terrains used: PMC Agios Efstratios, PMC Lemnos and Tanoa.";
 	overviewPicture = "\campaigns\pmc_powder_bat\overviewPicture_ca.paa";
-	firstBattle = pmc_stratis;
+	firstBattle = pmc_chapter_greece_agios_efstratios;
 
-	class pmc_stratis: NoEndings
+	class pmc_chapter_greece_agios_efstratios: NoEndings
 	{
 		cutscene = ;
 		firstMission = cmp_powder_batOC;
 		// next chapter class name
-		end1 = pmc_altis;
-		lost = pmc_altis;
+		end1 = pmc_chapter_greece_lemnos;
+		lost = pmc_chapter_greece_lemnos;
 
-		// opening cutscene for stratis
+		// opening cutscene for agios efstratios
 		class cmp_powder_batOC: MissionDefault
 		{
 			end1 = cmp_powder_bat001;
 			lost = cmp_powder_bat001;
 			pmc_end1 = cmp_powder_bat001;
-			template = cmp_powder_batOC.stratis;
+			template = cmp_powder_batOC.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat001: MissionDefault
 		{
 			end1 = cmp_powder_bat001Cut;
 			pmc_end1 = cmp_powder_bat001Cut;
-			template = cmp_powder_bat001.stratis;
+			template = cmp_powder_bat001.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat001Cut: MissionDefault
@@ -59,14 +59,14 @@ class Campaign
 			end1 = cmp_powder_bat002;
 			lost = cmp_powder_bat002;
 			pmc_end1 = cmp_powder_bat002;
-			template = cmp_powder_bat001Cut.stratis;
+			template = cmp_powder_bat001Cut.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat002: MissionDefault
 		{
 			end1 = cmp_powder_bat002Cut;
 			pmc_end1 = cmp_powder_bat002Cut;
-			template = cmp_powder_bat002.stratis;
+			template = cmp_powder_bat002.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat002Cut: MissionDefault
@@ -74,7 +74,7 @@ class Campaign
 			end1 = cmp_powder_bat003;
 			lost = cmp_powder_bat003;
 			pmc_end1 = cmp_powder_bat003;
-			template = cmp_powder_bat002Cut.stratis;
+			template = cmp_powder_bat002Cut.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat003: MissionDefault
@@ -82,7 +82,7 @@ class Campaign
 			end1 = cmp_powder_bat003Cut;
 			lost = cmp_powder_bat003;
 			pmc_end1 = cmp_powder_bat003Cut;
-			template = cmp_powder_bat003.stratis;
+			template = cmp_powder_bat003.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat003Cut: MissionDefault
@@ -90,16 +90,16 @@ class Campaign
 			end1 = d_camp_maxwell;
 			lost = d_camp_maxwell;
 			pmc_end1 = d_camp_maxwell;
-			template = cmp_powder_bat003Cut.stratis;
+			template = cmp_powder_bat003Cut.pmc_greece_agios_efstratios;
 		};
 
-// defense of camp maxwell
+// defense of camp maxwell 1st which is basically campaign mission THREE
 		class d_camp_maxwell: MissionDefault
 		{
 			end1 = cmp_powder_bat004;
 			lost = d_camp_maxwell;
 			pmc_end1 = cmp_powder_bat004;
-			template = d_camp_maxwell.stratis;
+			template = d_camp_maxwell.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat004: MissionDefault
@@ -107,24 +107,24 @@ class Campaign
 			end1 = cmp_powder_bat004Cut;
 			lost = cmp_powder_bat004;
 			pmc_end1 = cmp_powder_bat004Cut;
-			template = cmp_powder_bat004.stratis;
+			template = cmp_powder_bat004.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat004Cut: MissionDefault
 		{
-			end1 = d_camp_maxwell2;
-			lost = d_camp_maxwell2;
-			pmc_end1 = d_camp_maxwell2;
-			template = cmp_powder_bat004Cut.stratis;
+			end1 = cmp_powder_bat005;
+			lost = cmp_powder_bat005;
+			pmc_end1 = cmp_powder_bat005;
+			template = cmp_powder_bat004Cut.pmc_greece_agios_efstratios;
 		};
 
-// defense of camp maxwell 2nd
+// defense of camp maxwell 2nd, disabled now due it being so much like spam
 		class d_camp_maxwell2: MissionDefault
 		{
 			end1 = cmp_powder_bat005;
 			lost = d_camp_maxwell2;
 			pmc_end1 = cmp_powder_bat005;
-			template = d_camp_maxwell.stratis;
+			template = d_camp_maxwell.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat005: MissionDefault
@@ -132,7 +132,7 @@ class Campaign
 			end1 = cmp_powder_bat005Cut;
 			lost = cmp_powder_bat005;
 			pmc_end1 = cmp_powder_bat005Cut;
-			template = cmp_powder_bat005.stratis;
+			template = cmp_powder_bat005.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat005Cut: MissionDefault
@@ -140,7 +140,7 @@ class Campaign
 			end1 = cmp_powder_bat006;
 			lost = cmp_powder_bat006;
 			pmc_end1 = cmp_powder_bat006;
-			template = cmp_powder_bat005Cut.stratis;
+			template = cmp_powder_bat005Cut.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat006: MissionDefault
@@ -148,24 +148,24 @@ class Campaign
 			end1 = cmp_powder_bat006Cut;
 			lost = cmp_powder_bat006;
 			pmc_end1 = cmp_powder_bat006Cut;
-			template = cmp_powder_bat006.stratis;
+			template = cmp_powder_bat006.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat006Cut: MissionDefault
 		{
-			end1 = d_camp_maxwell3;
-			lost = d_camp_maxwell3;
-			pmc_end1 = d_camp_maxwell3;
-			template = cmp_powder_bat006Cut.stratis;
+			end1 = cmp_powder_bat007;
+			lost = cmp_powder_bat007;
+			pmc_end1 = cmp_powder_bat007;
+			template = cmp_powder_bat006Cut.pmc_greece_agios_efstratios;
 		};
 
-// defense of camp maxwell 3rd
+// defense of camp maxwell 3rd, disabled now due it being so much like spam
 		class d_camp_maxwell3: MissionDefault
 		{
 			end1 = cmp_powder_bat007;
 			lost = d_camp_maxwell3;
 			pmc_end1 = cmp_powder_bat007;
-			template = d_camp_maxwell.stratis;
+			template = d_camp_maxwell.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat007: MissionDefault
@@ -173,7 +173,7 @@ class Campaign
 			end1 = cmp_powder_bat007Cut;
 			lost = cmp_powder_bat007;
 			pmc_end1 = cmp_powder_bat007Cut;
-			template = cmp_powder_bat007.stratis;
+			template = cmp_powder_bat007.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat007Cut: MissionDefault
@@ -181,7 +181,7 @@ class Campaign
 			end1 = cmp_powder_bat008;
 			lost = cmp_powder_bat008;
 			pmc_end1 = cmp_powder_bat008;
-			template = cmp_powder_bat007Cut.stratis;
+			template = cmp_powder_bat007Cut.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat008: MissionDefault
@@ -189,7 +189,7 @@ class Campaign
 			end1 = cmp_powder_bat008Cut;
 			lost = cmp_powder_bat008;
 			pmc_end1 = cmp_powder_bat008Cut;
-			template = cmp_powder_bat008.stratis;
+			template = cmp_powder_bat008.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat008Cut: MissionDefault
@@ -197,7 +197,7 @@ class Campaign
 			end1 = cmp_powder_bat009;
 			lost = cmp_powder_bat009;
 			pmc_end1 = cmp_powder_bat009;
-			template = cmp_powder_bat008Cut.stratis;
+			template = cmp_powder_bat008Cut.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat009: MissionDefault
@@ -205,15 +205,16 @@ class Campaign
 			end1 = cmp_powder_bat009Cut;
 			lost = cmp_powder_bat009;
 			pmc_end1 = cmp_powder_bat009Cut;
-			template = cmp_powder_bat009.stratis;
+			template = cmp_powder_bat009.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat009Cut: MissionDefault
 		{
-			end1 = cmp_powder_bat010;
-			lost = cmp_powder_bat010;
-			pmc_end1 = cmp_powder_bat010;
-			template = cmp_powder_bat009Cut.stratis;
+			// mission 10 is no good now, we skip straight to its cutscene therefore to lemnos missions
+			end1 = cmp_powder_bat010Cut; // cmp_powder_bat010
+			lost = cmp_powder_bat010Cut; // cmp_powder_bat010
+			pmc_end1 = cmp_powder_bat010Cut; // cmp_powder_bat010
+			template = cmp_powder_bat009Cut.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat010: MissionDefault
@@ -221,30 +222,30 @@ class Campaign
 			end1 = cmp_powder_bat010Cut;
 			lost = cmp_powder_bat010;
 			pmc_end1 = cmp_powder_bat010Cut;
-			template = cmp_powder_bat010.stratis;
+			template = cmp_powder_bat010.pmc_greece_agios_efstratios;
 		};
 
 		class cmp_powder_bat010Cut: MissionDefault
 		{
-			template = cmp_powder_bat010Cut.stratis;
+			template = cmp_powder_bat010Cut.pmc_greece_agios_efstratios;
 		};
 	};
 
-	class pmc_altis: NoEndings
+	class pmc_chapter_greece_lemnos: NoEndings
 	{
 		cutscene = ;
-		firstMission = cmp_powder_batAltisCut;
+		firstMission = cmp_powder_batLemnosCut;
 		// next chapters class name
 		end1 = pmc_tanoa;
 		lost = pmc_tanoa;
 
-		// opening cutscene for altis
-		class cmp_powder_batAltisCut: MissionDefault
+		// opening cutscene for lemnos
+		class cmp_powder_batLemnosCut: MissionDefault
 		{
 			end1 = cmp_powder_bat011;
 			lost = cmp_powder_bat011;
 			pmc_end1 = cmp_powder_bat011;
-			template = cmp_powder_batAltisCut.altis;
+			template = cmp_powder_batLemnosCut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat011: MissionDefault
@@ -252,7 +253,7 @@ class Campaign
 			end1 = cmp_powder_bat011Cut;
 			lost = cmp_powder_bat011;
 			pmc_end1 = cmp_powder_bat011Cut;
-			template = cmp_powder_bat011.altis;
+			template = cmp_powder_bat011.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat011Cut: MissionDefault
@@ -260,7 +261,7 @@ class Campaign
 			end1 = d_fobfalcon;
 			lost = d_fobfalcon;
 			pmc_end1 = d_fobfalcon;
-			template = cmp_powder_bat011Cut.altis;
+			template = cmp_powder_bat011Cut.pmc_greece_lemnos;
 		};
 
 // defense of FOB Falcon
@@ -270,7 +271,7 @@ class Campaign
 			end1 = d_fobfalconCut;
 			lost = d_fobfalconCut;
 			pmc_end1 = d_fobfalconCut;
-			template = d_fobfalcon.altis;
+			template = d_fobfalcon.pmc_greece_lemnos;
 		};
 
 // 011aCut
@@ -279,7 +280,7 @@ class Campaign
 			end1 = cmp_powder_bat012;
 			lost = cmp_powder_bat012;
 			pmc_end1 = cmp_powder_bat012;
-			template = d_fobfalconCut.altis;
+			template = d_fobfalconCut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat012: MissionDefault
@@ -287,7 +288,7 @@ class Campaign
 			end1 = cmp_powder_bat012Cut;
 			lost = cmp_powder_bat012;
 			pmc_end1 = cmp_powder_bat012Cut;
-			template = cmp_powder_bat012.altis;
+			template = cmp_powder_bat012.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat012Cut: MissionDefault
@@ -295,7 +296,7 @@ class Campaign
 			end1 = cmp_powder_bat013;
 			lost = cmp_powder_bat013;
 			pmc_end1 = cmp_powder_bat013;
-			template = cmp_powder_bat012Cut.altis;
+			template = cmp_powder_bat012Cut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat013: MissionDefault
@@ -303,7 +304,7 @@ class Campaign
 			end1 = cmp_powder_bat013Cut;
 			lost = cmp_powder_bat013;
 			pmc_end1 = cmp_powder_bat013Cut;
-			template = cmp_powder_bat013.altis;
+			template = cmp_powder_bat013.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat013Cut: MissionDefault
@@ -311,7 +312,7 @@ class Campaign
 			end1 = cmp_powder_bat014;
 			lost = cmp_powder_bat014;
 			pmc_end1 = cmp_powder_bat014;
-			template = cmp_powder_bat013Cut.altis;
+			template = cmp_powder_bat013Cut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat014: MissionDefault
@@ -319,7 +320,7 @@ class Campaign
 			end1 = cmp_powder_bat014Cut;
 			lost = cmp_powder_bat014;
 			pmc_end1 = cmp_powder_bat014Cut;
-			template = cmp_powder_bat014.altis;
+			template = cmp_powder_bat014.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat014Cut: MissionDefault
@@ -327,7 +328,7 @@ class Campaign
 			end1 = cmp_powder_bat015;
 			lost = cmp_powder_bat015;
 			pmc_end1 = cmp_powder_bat015;
-			template = cmp_powder_bat014Cut.altis;
+			template = cmp_powder_bat014Cut.pmc_greece_lemnos;
 		};
 
 // defense of AAC Airfield
@@ -337,7 +338,7 @@ class Campaign
 			end1 = d_aac_airstripCut;
 			lost = d_aac_airstrip;
 			pmc_end1 = d_aac_airstripCut;
-			template = d_aac_airstrip.altis;
+			template = d_aac_airstrip.pmc_greece_lemnos;
 		};
 
 		class d_aac_airstripCut: MissionDefault
@@ -345,7 +346,7 @@ class Campaign
 			end1 = cmp_powder_bat015;
 			lost = cmp_powder_bat015;
 			pmc_end1 = cmp_powder_bat015;
-			template = d_aac_airstripCut.altis;
+			template = d_aac_airstripCut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat015: MissionDefault
@@ -353,7 +354,7 @@ class Campaign
 			end1 = cmp_powder_bat015Cut;
 			lost = cmp_powder_bat015;
 			pmc_end1 = cmp_powder_bat015Cut;
-			template = cmp_powder_bat015.altis;
+			template = cmp_powder_bat015.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat015Cut: MissionDefault
@@ -361,7 +362,7 @@ class Campaign
 			end1 = d_therisa;
 			lost = d_therisa;
 			pmc_end1 = d_therisa;
-			template = cmp_powder_bat015Cut.altis;
+			template = cmp_powder_bat015Cut.pmc_greece_lemnos;
 		};
 
 // defense of Therisa
@@ -371,7 +372,7 @@ class Campaign
 			end1 = d_therisaCut;
 			lost = d_therisa;
 			pmc_end1 = d_therisaCut;
-			template = d_therisa.altis;
+			template = d_therisa.pmc_greece_lemnos;
 		};
 
 		class d_therisaCut: MissionDefault
@@ -379,7 +380,7 @@ class Campaign
 			end1 = cmp_powder_bat016;
 			lost = cmp_powder_bat016;
 			pmc_end1 = cmp_powder_bat016;
-			template = d_therisaCut.altis;
+			template = d_therisaCut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat016: MissionDefault
@@ -387,7 +388,7 @@ class Campaign
 			end1 = cmp_powder_bat016Cut;
 			lost = cmp_powder_bat016;
 			pmc_end1 = cmp_powder_bat016Cut;
-			template = cmp_powder_bat016.altis;
+			template = cmp_powder_bat016.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat016Cut: MissionDefault
@@ -395,7 +396,7 @@ class Campaign
 			end1 = cmp_powder_bat017;
 			lost = cmp_powder_bat017;
 			pmc_end1 = cmp_powder_bat017;
-			template = cmp_powder_bat016Cut.altis;
+			template = cmp_powder_bat016Cut.pmc_greece_lemnos;
 		};
 
 // defense of Zaros
@@ -405,7 +406,7 @@ class Campaign
 			end1 = d_zarosCut;
 			lost = d_zaros;
 			pmc_end1 = d_zarosCut;
-			template = d_zaros.altis;
+			template = d_zaros.pmc_greece_lemnos;
 		};
 
 		class d_zarosCut: MissionDefault
@@ -413,7 +414,7 @@ class Campaign
 			end1 = cmp_powder_bat017;
 			lost = cmp_powder_bat017;
 			pmc_end1 = cmp_powder_bat017;
-			template = d_zarosCut.altis;
+			template = d_zarosCut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat017: MissionDefault
@@ -421,7 +422,7 @@ class Campaign
 			end1 = cmp_powder_bat017Cut;
 			lost = cmp_powder_bat017;
 			pmc_end1 = cmp_powder_bat017Cut;
-			template = cmp_powder_bat017.altis;
+			template = cmp_powder_bat017.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat017Cut: MissionDefault
@@ -429,7 +430,7 @@ class Campaign
 			end1 = cmp_powder_bat018;
 			lost = cmp_powder_bat018;
 			pmc_end1 = cmp_powder_bat018;
-			template = cmp_powder_bat017Cut.altis;
+			template = cmp_powder_bat017Cut.pmc_greece_lemnos;
 		};
 
 // defense of Poliakko
@@ -439,7 +440,7 @@ class Campaign
 			end1 = d_poliakkoCut;
 			lost = d_poliakko;
 			pmc_end1 = d_poliakkoCut;
-			template = d_poliakko.altis;
+			template = d_poliakko.pmc_greece_lemnos;
 		};
 
 		class d_poliakkoCut: MissionDefault
@@ -447,7 +448,7 @@ class Campaign
 			end1 = cmp_powder_bat018;
 			lost = cmp_powder_bat018;
 			pmc_end1 = cmp_powder_bat018;
-			template = d_poliakkoCut.altis;
+			template = d_poliakkoCut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat018: MissionDefault
@@ -455,7 +456,7 @@ class Campaign
 			end1 = cmp_powder_bat018Cut;
 			lost = cmp_powder_bat018;
 			pmc_end1 = cmp_powder_bat018Cut;
-			template = cmp_powder_bat018.altis;
+			template = cmp_powder_bat018.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat018Cut: MissionDefault
@@ -463,7 +464,7 @@ class Campaign
 			end1 = d_neochori;
 			lost = d_neochori;
 			pmc_end1 = d_neochori;
-			template = cmp_powder_bat018Cut.altis;
+			template = cmp_powder_bat018Cut.pmc_greece_lemnos;
 		};
 
 // defense of Neochori
@@ -473,7 +474,7 @@ class Campaign
 			end1 = d_neochoriCut;
 			lost = d_neochori;
 			pmc_end1 = d_neochoriCut;
-			template = d_neochori.altis;
+			template = d_neochori.pmc_greece_lemnos;
 		};
 
 		class d_neochoriCut: MissionDefault
@@ -481,7 +482,7 @@ class Campaign
 			end1 = cmp_powder_bat019;
 			lost = cmp_powder_bat019;
 			pmc_end1 = cmp_powder_bat019;
-			template = d_neochoriCut.altis;
+			template = d_neochoriCut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat019: MissionDefault
@@ -489,7 +490,7 @@ class Campaign
 			end1 = cmp_powder_bat019Cut;
 			lost = cmp_powder_bat019;
 			pmc_end1 = cmp_powder_bat019Cut;
-			template = cmp_powder_bat019.altis;
+			template = cmp_powder_bat019.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat019Cut: MissionDefault
@@ -497,7 +498,7 @@ class Campaign
 			end1 = cmp_powder_bat020;
 			lost = cmp_powder_bat020;
 			pmc_end1 = cmp_powder_bat020;
-			template = cmp_powder_bat019Cut.altis;
+			template = cmp_powder_bat019Cut.pmc_greece_lemnos;
 		};
 
 // defense of Stavros
@@ -507,7 +508,7 @@ class Campaign
 			end1 = d_stavrosCut;
 			lost = d_stavros;
 			pmc_end1 = d_stavrosCut;
-			template = d_stavros.altis;
+			template = d_stavros.pmc_greece_lemnos;
 		};
 
 		class d_stavrosCut: MissionDefault
@@ -515,7 +516,7 @@ class Campaign
 			end1 = cmp_powder_bat019;
 			lost = cmp_powder_bat019;
 			pmc_end1 = cmp_powder_bat019;
-			template = d_stavrosCut.altis;
+			template = d_stavrosCut.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat020: MissionDefault
@@ -523,7 +524,7 @@ class Campaign
 			end1 = cmp_powder_bat020Cut;
 			lost = cmp_powder_bat020;
 			pmc_end1 = cmp_powder_bat020Cut;
-			template = cmp_powder_bat020.altis;
+			template = cmp_powder_bat020.pmc_greece_lemnos;
 		};
 
 		class cmp_powder_bat020Cut: MissionDefault
@@ -531,7 +532,7 @@ class Campaign
 			end1 = d_airbase;
 			lost = d_airbase;
 			pmc_end1 = d_airbase;
-			template = cmp_powder_bat020Cut.altis;
+			template = cmp_powder_bat020Cut.pmc_greece_lemnos;
 		};
 
 // defense of Airbase
@@ -541,7 +542,7 @@ class Campaign
 			end1 = d_airbaseCut;
 			lost = d_airbase;
 			pmc_end1 = d_airbaseCut;
-			template = d_airbase.altis;
+			template = d_airbase.pmc_greece_lemnos;
 		};
 
 		class d_airbaseCut: MissionDefault
@@ -549,7 +550,7 @@ class Campaign
 			end1 = joy_craze;
 			lost = joy_craze;
 			pmc_end1 = joy_craze;
-			template = d_airbaseCut.altis;
+			template = d_airbaseCut.pmc_greece_lemnos;
 		};
 
 // assault to create fob eagle
@@ -558,7 +559,7 @@ class Campaign
 			end1 = hub_fob_eagle;
 			lost = joy_craze;
 			pmc_end1 = hub_fob_eagle;
-			template = joy_craze.altis;
+			template = joy_craze.pmc_greece_lemnos;
 		};
 
 // Hub FOB Eagle
@@ -569,27 +570,27 @@ class Campaign
 			d_fobeagle = d_fobeagle; // defend
 			pmc_end1 = hub_fob_eagle;
 			easy_ivory = easy_ivory; // exit
-			template = hub_fob_eagle.altis;
+			template = hub_fob_eagle.pmc_greece_lemnos;
 		};
 
 		class eagle_patrol: MissionDefault
 		{
 			pmc_end1 = hub_fob_eagle;
-			template = eagle_patrol.altis;
+			template = eagle_patrol.pmc_greece_lemnos;
 		};
 
 		class d_fobeagle: MissionDefault
 		{
 			end1 = d_fobeagleCut;
 			pmc_end1 = d_fobeagleCut;
-			template = d_fobeagle.altis;
+			template = d_fobeagle.pmc_greece_lemnos;
 		};
 
 		class d_fobeagleCut: MissionDefault
 		{
 			end1 = hub_fob_eagle;
 			lost = hub_fob_eagle;
-			template = d_fobeagleCut.altis;
+			template = d_fobeagleCut.pmc_greece_lemnos;
 		};
 
 // assault to create fob raven
@@ -597,8 +598,15 @@ class Campaign
 		{
 			end1 = hub_fob_raven;
 			lost = easy_ivory;
-			pmc_end1 = hub_fob_raven;
-			template = easy_ivory.altis;
+			pmc_end1 = easy_ivoryCut;
+			template = easy_ivory.pmc_greece_lemnos;
+		};
+
+		class easy_ivoryCut: MissionDefault
+		{
+			end1 = hub_fob_raven;
+			lost = hub_fob_raven;
+			template = easy_ivoryCut.pmc_greece_lemnos;
 		};
 
 // Hub FOB Raven
@@ -610,27 +618,27 @@ class Campaign
 			pmc_end1 = hub_fob_raven;
 			// exit mission
 			reborn_turtle = reborn_turtle;
-			template = hub_fob_raven.altis;
+			template = hub_fob_raven.pmc_greece_lemnos;
 		};
 
 		class raven_patrol: MissionDefault
 		{
 			pmc_end1 = hub_fob_raven;
-			template = raven_patrol.altis;
+			template = raven_patrol.pmc_greece_lemnos;
 		};
 
 		class d_fobraven: MissionDefault
 		{
 			end1 = d_fobravenCut;
 			pmc_end1 = d_fobravenCut;
-			template = d_fobraven.altis;
+			template = d_fobraven.pmc_greece_lemnos;
 		};
 
 		class d_fobravenCut: MissionDefault
 		{
 			end1 = hub_fob_raven;
 			lost = hub_fob_raven;
-			template = d_fobravenCut.altis;
+			template = d_fobravenCut.pmc_greece_lemnos;
 		};
 
 // assault to create fob ghoul
@@ -638,8 +646,15 @@ class Campaign
 		{
 			end1 = hub_fob_ghoul;
 			lost = reborn_turtle;
-			pmc_end1 = hub_fob_ghoul;
-			template = reborn_turtle.altis;
+			pmc_end1 = reborn_turtleCut;
+			template = reborn_turtle.pmc_greece_lemnos;
+		};
+
+		class reborn_turtleCut: MissionDefault
+		{
+			end1 = hub_fob_ghoul;
+			lost = hub_fob_ghoul;
+			template = reborn_turtleCut.pmc_greece_lemnos;
 		};
 
 // Hub FOB Ghoul
@@ -651,27 +666,27 @@ class Campaign
 			pmc_end1 = hub_fob_ghoul;
 			// exit mission
 			pmc_tanoa = pmc_tanoa;
-			template = hub_fob_ghoul.altis;
+			template = hub_fob_ghoul.pmc_greece_lemnos;
 		};
 
 		class ghoul_patrol: MissionDefault
 		{
 			pmc_end1 = hub_fob_ghoul;
-			template = ghoul_patrol.altis;
+			template = ghoul_patrol.pmc_greece_lemnos;
 		};
 
 		class d_fobghoul: MissionDefault
 		{
 			end1 = d_fobghoulCut;
 			pmc_end1 = d_fobghoulCut;
-			template = d_fobghoul.altis;
+			template = d_fobghoul.pmc_greece_lemnos;
 		};
 
 		class d_fobghoulCut: MissionDefault
 		{
 			end1 = hub_fob_ghoul;
 			lost = hub_fob_ghoul;
-			template = d_fobghoulCut.altis;
+			template = d_fobghoulCut.pmc_greece_lemnos;
 		};
 
 		class quack_baboon: MissionDefault
@@ -679,7 +694,7 @@ class Campaign
 			end1 = quack_baboonCut;
 			lost = quack_baboon;
 			pmc_end1 = quack_baboonCut;
-			template = quack_baboon.altis;
+			template = quack_baboon.pmc_greece_lemnos;
 		};
 
 		class quack_baboonCut: MissionDefault
@@ -687,14 +702,14 @@ class Campaign
 			end1 = tin_monkey;
 			lost = tin_monkey;
 			pmc_end1 = tin_monkey;
-			template = quack_baboonCut.altis;
+			template = quack_baboonCut.pmc_greece_lemnos;
 		};
 		class tin_monkey: MissionDefault
 		{
 			end1 = tin_monkeyCut;
 			lost = tin_monkey;
 			pmc_end1 = tin_monkeyCut;
-			template = tin_monkey.altis;
+			template = tin_monkey.pmc_greece_lemnos;
 		};
 
 		class tin_monkeyCut: MissionDefault
@@ -702,14 +717,14 @@ class Campaign
 			end1 = carrot_goose;
 			lost = carrot_goose;
 			pmc_end1 = carrot_goose;
-			template = tin_monkeyCut.altis;
+			template = tin_monkeyCut.pmc_greece_lemnos;
 		};
 		class carrot_goose: MissionDefault
 		{
 			end1 = carrot_gooseCut;
 			lost = carrot_goose;
 			pmc_end1 = carrot_gooseCut;
-			template = carrot_goose.altis;
+			template = carrot_goose.pmc_greece_lemnos;
 		};
 
 		class carrot_gooseCut: MissionDefault
@@ -717,14 +732,14 @@ class Campaign
 			end1 = dusty_top;
 			lost = dusty_top;
 			pmc_end1 = dusty_top;
-			template = carrot_gooseCut.altis;
+			template = carrot_gooseCut.pmc_greece_lemnos;
 		};
 		class dusty_top: MissionDefault
 		{
 			end1 = dusty_topCut;
 			lost = dusty_top;
 			pmc_end1 = dusty_topCut;
-			template = dusty_top.altis;
+			template = dusty_top.pmc_greece_lemnos;
 		};
 
 		class dusty_topCut: MissionDefault
@@ -732,14 +747,14 @@ class Campaign
 			end1 = sunny_eel;
 			lost = sunny_eel;
 			pmc_end1 = sunny_eel;
-			template = dusty_topCut.altis;
+			template = dusty_topCut.pmc_greece_lemnos;
 		};
 		class sunny_eel: MissionDefault
 		{
 			end1 = sunny_eelCut;
 			lost = sunny_eel;
 			pmc_end1 = sunny_eelCut;
-			template = sunny_eel.altis;
+			template = sunny_eel.pmc_greece_lemnos;
 		};
 
 		class sunny_eelCut: MissionDefault
@@ -747,14 +762,14 @@ class Campaign
 			end1 = indigo_hope;
 			lost = indigo_hope;
 			pmc_end1 = indigo_hope;
-			template = sunny_eelCut.altis;
+			template = sunny_eelCut.pmc_greece_lemnos;
 		};
 		class indigo_hope: MissionDefault
 		{
 			end1 = indigo_hopeCut;
 			lost = indigo_hope;
 			pmc_end1 = indigo_hopeCut;
-			template = indigo_hope.altis;
+			template = indigo_hope.pmc_greece_lemnos;
 		};
 
 		class indigo_hopeCut: MissionDefault
@@ -762,14 +777,14 @@ class Campaign
 			end1 = lilac_ocean;
 			lost = lilac_ocean;
 			pmc_end1 = lilac_ocean;
-			template = indigo_hopeCut.altis;
+			template = indigo_hopeCut.pmc_greece_lemnos;
 		};
 		class lilac_ocean: MissionDefault
 		{
 			end1 = lilac_oceanCut;
 			lost = lilac_ocean;
 			pmc_end1 = lilac_oceanCut;
-			template = lilac_ocean.altis;
+			template = lilac_ocean.pmc_greece_lemnos;
 		};
 
 		class lilac_oceanCut: MissionDefault
@@ -777,14 +792,14 @@ class Campaign
 			end1 = raw_knife;
 			lost = raw_knife;
 			pmc_end1 = raw_knife;
-			template = lilac_oceanCut.altis;
+			template = lilac_oceanCut.pmc_greece_lemnos;
 		};
 		class raw_knife: MissionDefault
 		{
 			end1 = raw_knifeCut;
 			lost = raw_knife;
 			pmc_end1 = raw_knifeCut;
-			template = raw_knife.altis;
+			template = raw_knife.pmc_greece_lemnos;
 		};
 
 		class raw_knifeCut: MissionDefault
@@ -792,14 +807,14 @@ class Campaign
 			end1 = long_duck;
 			lost = long_duck;
 			pmc_end1 = long_duck;
-			template = raw_knifeCut.altis;
+			template = raw_knifeCut.pmc_greece_lemnos;
 		};
 		class long_duck: MissionDefault
 		{
 			end1 = long_duckCut;
 			lost = long_duck;
 			pmc_end1 = long_duckCut;
-			template = long_duck.altis;
+			template = long_duck.pmc_greece_lemnos;
 		};
 
 		class long_duckCut: MissionDefault
@@ -807,14 +822,14 @@ class Campaign
 			end1 = ocean_frog;
 			lost = ocean_frog;
 			pmc_end1 = ocean_frog;
-			template = long_duckCut.altis;
+			template = long_duckCut.pmc_greece_lemnos;
 		};
 		class ocean_frog: MissionDefault
 		{
 			end1 = ocean_frogCut;
 			lost = ocean_frog;
 			pmc_end1 = ocean_frogCut;
-			template = ocean_frog.altis;
+			template = ocean_frog.pmc_greece_lemnos;
 		};
 
 		class ocean_frogCut: MissionDefault
@@ -822,14 +837,14 @@ class Campaign
 			end1 = ninth_mule;
 			lost = ninth_mule;
 			pmc_end1 = ninth_mule;
-			template = ocean_frogCut.altis;
+			template = ocean_frogCut.pmc_greece_lemnos;
 		};
 		class ninth_mule: MissionDefault
 		{
 			end1 = ninth_muleCut;
 			lost = ninth_mule;
 			pmc_end1 = ninth_muleCut;
-			template = ninth_mule.altis;
+			template = ninth_mule.pmc_greece_lemnos;
 		};
 
 		class ninth_muleCut: MissionDefault
@@ -837,14 +852,14 @@ class Campaign
 			end1 = brass_badger;
 			lost = brass_badger;
 			pmc_end1 = brass_badger;
-			template = ninth_muleCut.altis;
+			template = ninth_muleCut.pmc_greece_lemnos;
 		};
 		class brass_badger: MissionDefault
 		{
 			end1 = brass_badgerCut;
 			lost = brass_badger;
 			pmc_end1 = brass_badgerCut;
-			template = brass_badger.altis;
+			template = brass_badger.pmc_greece_lemnos;
 		};
 
 		class brass_badgerCut: MissionDefault
@@ -852,14 +867,14 @@ class Campaign
 			end1 = whiskey_leaf;
 			lost = whiskey_leaf;
 			pmc_end1 = whiskey_leaf;
-			template = brass_badgerCut.altis;
+			template = brass_badgerCut.pmc_greece_lemnos;
 		};
 		class whiskey_leaf: MissionDefault
 		{
 			end1 = whiskey_leafCut;
 			lost = whiskey_leaf;
 			pmc_end1 = whiskey_leafCut;
-			template = whiskey_leaf.altis;
+			template = whiskey_leaf.pmc_greece_lemnos;
 		};
 
 		class whiskey_leafCut: MissionDefault
@@ -867,14 +882,14 @@ class Campaign
 			end1 = serious_ape;
 			lost = serious_ape;
 			pmc_end1 = serious_ape;
-			template = whiskey_leafCut.altis;
+			template = whiskey_leafCut.pmc_greece_lemnos;
 		};
 		class serious_ape: MissionDefault
 		{
 			end1 = serious_apeCut;
 			lost = serious_ape;
 			pmc_end1 = serious_apeCut;
-			template = serious_ape.altis;
+			template = serious_ape.pmc_greece_lemnos;
 		};
 
 		class serious_apeCut: MissionDefault
@@ -882,14 +897,14 @@ class Campaign
 			end1 = steady_dragon;
 			lost = steady_dragon;
 			pmc_end1 = steady_dragon;
-			template = serious_apeCut.altis;
+			template = serious_apeCut.pmc_greece_lemnos;
 		};
 		class steady_dragon: MissionDefault
 		{
 			end1 = steady_dragonCut;
 			lost = steady_dragon;
 			pmc_end1 = steady_dragonCut;
-			template = steady_dragon.altis;
+			template = steady_dragon.pmc_greece_lemnos;
 		};
 
 		class steady_dragonCut: MissionDefault
@@ -897,14 +912,14 @@ class Campaign
 			end1 = zebra_crab;
 			lost = zebra_crab;
 			pmc_end1 = zebra_crab;
-			template = steady_dragonCut.altis;
+			template = steady_dragonCut.pmc_greece_lemnos;
 		};
 		class zebra_crab: MissionDefault
 		{
 			end1 = zebra_crabCut;
 			lost = zebra_crab;
 			pmc_end1 = zebra_crabCut;
-			template = zebra_crab.altis;
+			template = zebra_crab.pmc_greece_lemnos;
 		};
 
 		class zebra_crabCut: MissionDefault
@@ -912,14 +927,14 @@ class Campaign
 			end1 = denim_viper;
 			lost = denim_viper;
 			pmc_end1 = denim_viper;
-			template = zebra_crabCut.altis;
+			template = zebra_crabCut.pmc_greece_lemnos;
 		};
 		class denim_viper: MissionDefault
 		{
 			end1 = denim_viperCut;
 			lost = denim_viper;
 			pmc_end1 = denim_viperCut;
-			template = denim_viper.altis;
+			template = denim_viper.pmc_greece_lemnos;
 		};
 
 		class denim_viperCut: MissionDefault
@@ -927,14 +942,14 @@ class Campaign
 			end1 = echo_mike;
 			lost = echo_mike;
 			pmc_end1 = echo_mike;
-			template = denim_viperCut.altis;
+			template = denim_viperCut.pmc_greece_lemnos;
 		};
 		class echo_mike: MissionDefault
 		{
 			end1 = echo_mikeCut;
 			lost = echo_mike;
 			pmc_end1 = echo_mikeCut;
-			template = echo_mike.altis;
+			template = echo_mike.pmc_greece_lemnos;
 		};
 
 		class echo_mikeCut: MissionDefault
@@ -942,7 +957,7 @@ class Campaign
 			end1 = hub_fob_pig;
 			lost = hub_fob_pig;
 			pmc_end1 = hub_fob_pig;
-			template = echo_mikeCut.altis;
+			template = echo_mikeCut.pmc_greece_lemnos;
 		};
 
 // Hub FOB Pig
@@ -954,27 +969,27 @@ class Campaign
 			pmc_end1 = hub_fob_pig;
 			// exit mission
 			pmc_tanoa = pack_clown;
-			template = hub_fob_pig.altis;
+			template = hub_fob_pig.pmc_greece_lemnos;
 		};
 
 		class pig_patrol: MissionDefault
 		{
 			pmc_end1 = hub_fob_pig;
-			template = pig_patrol.altis;
+			template = pig_patrol.pmc_greece_lemnos;
 		};
 
 		class d_fobpig: MissionDefault
 		{
 			end1 = d_fobpigCut;
 			pmc_end1 = d_fobpigCut;
-			template = d_fobpig.altis;
+			template = d_fobpig.pmc_greece_lemnos;
 		};
 
 		class d_fobpigCut: MissionDefault
 		{
 			end1 = hub_fob_pig;
 			lost = hub_fob_pig;
-			template = d_fobpigCut.altis;
+			template = d_fobpigCut.pmc_greece_lemnos;
 		};
 
 		class pack_clown: MissionDefault
@@ -982,7 +997,7 @@ class Campaign
 			end1 = pack_clownCut;
 			lost = pack_clown;
 			pmc_end1 = pack_clownCut;
-			template = pack_clown.altis;
+			template = pack_clown.pmc_greece_lemnos;
 		};
 
 		class pack_clownCut: MissionDefault
@@ -990,14 +1005,14 @@ class Campaign
 			end1 = sangria_rock;
 			lost = sangria_rock;
 			pmc_end1 = sangria_rock;
-			template = pack_clownCut.altis;
+			template = pack_clownCut.pmc_greece_lemnos;
 		};
 		class sangria_rock: MissionDefault
 		{
 			end1 = sangria_rockCut;
 			lost = sangria_rock;
 			pmc_end1 = sangria_rockCut;
-			template = sangria_rock.altis;
+			template = sangria_rock.pmc_greece_lemnos;
 		};
 
 		class sangria_rockCut: MissionDefault
@@ -1005,14 +1020,14 @@ class Campaign
 			end1 = maroon_door;
 			lost = maroon_door;
 			pmc_end1 = maroon_door;
-			template = sangria_rockCut.altis;
+			template = sangria_rockCut.pmc_greece_lemnos;
 		};
 		class maroon_door: MissionDefault
 		{
 			end1 = maroon_doorCut;
 			lost = maroon_door;
 			pmc_end1 = maroon_doorCut;
-			template = maroon_door.altis;
+			template = maroon_door.pmc_greece_lemnos;
 		};
 
 		class maroon_doorCut: MissionDefault
@@ -1020,14 +1035,14 @@ class Campaign
 			end1 = pure_glass;
 			lost = pure_glass;
 			pmc_end1 = pure_glass;
-			template = maroon_doorCut.altis;
+			template = maroon_doorCut.pmc_greece_lemnos;
 		};
 		class pure_glass: MissionDefault
 		{
 			end1 = pure_glassCut;
 			lost = pure_glass;
 			pmc_end1 = pure_glassCut;
-			template = pure_glass.altis;
+			template = pure_glass.pmc_greece_lemnos;
 		};
 
 		class pure_glassCut: MissionDefault
@@ -1035,14 +1050,14 @@ class Campaign
 			end1 = dusty_pony;
 			lost = dusty_pony;
 			pmc_end1 = dusty_pony;
-			template = pure_glassCut.altis;
+			template = pure_glassCut.pmc_greece_lemnos;
 		};
 		class dusty_pony: MissionDefault
 		{
 			end1 = dusty_ponyCut;
 			lost = dusty_pony;
 			pmc_end1 = dusty_ponyCut;
-			template = dusty_pony.altis;
+			template = dusty_pony.pmc_greece_lemnos;
 		};
 
 		class dusty_ponyCut: MissionDefault
@@ -1050,14 +1065,14 @@ class Campaign
 			end1 = duke_gull;
 			lost = duke_gull;
 			pmc_end1 = duke_gull;
-			template = dusty_ponyCut.altis;
+			template = dusty_ponyCut.pmc_greece_lemnos;
 		};
 		class duke_gull: MissionDefault
 		{
 			end1 = duke_gullCut;
 			lost = duke_gull;
 			pmc_end1 = duke_gullCut;
-			template = duke_gull.altis;
+			template = duke_gull.pmc_greece_lemnos;
 		};
 
 		class duke_gullCut: MissionDefault
@@ -1065,14 +1080,14 @@ class Campaign
 			end1 = sand_juliet;
 			lost = sand_juliet;
 			pmc_end1 = sand_juliet;
-			template = duke_gullCut.altis;
+			template = duke_gullCut.pmc_greece_lemnos;
 		};
 		class sand_juliet: MissionDefault
 		{
 			end1 = sand_julietCut;
 			lost = sand_juliet;
 			pmc_end1 = sand_julietCut;
-			template = sand_juliet.altis;
+			template = sand_juliet.pmc_greece_lemnos;
 		};
 
 		class sand_julietCut: MissionDefault
@@ -1080,14 +1095,14 @@ class Campaign
 			end1 = sierra_pluto;
 			lost = sierra_pluto;
 			pmc_end1 = sierra_pluto;
-			template = sand_julietCut.altis;
+			template = sand_julietCut.pmc_greece_lemnos;
 		};
 		class sierra_pluto: MissionDefault
 		{
 			end1 = sierra_plutoCut;
 			lost = sierra_pluto;
 			pmc_end1 = sierra_plutoCut;
-			template = sierra_pluto.altis;
+			template = sierra_pluto.pmc_greece_lemnos;
 		};
 
 		class sierra_plutoCut: MissionDefault
@@ -1095,14 +1110,14 @@ class Campaign
 			end1 = vanilla_kilo;
 			lost = vanilla_kilo;
 			pmc_end1 = vanilla_kilo;
-			template = sierra_plutoCut.altis;
+			template = sierra_plutoCut.pmc_greece_lemnos;
 		};
 		class vanilla_kilo: MissionDefault
 		{
 			end1 = vanilla_kiloCut;
 			lost = vanilla_kilo;
 			pmc_end1 = vanilla_kiloCut;
-			template = vanilla_kilo.altis;
+			template = vanilla_kilo.pmc_greece_lemnos;
 		};
 
 		class vanilla_kiloCut: MissionDefault
@@ -1110,14 +1125,14 @@ class Campaign
 			end1 = second_spider;
 			lost = second_spider;
 			pmc_end1 = second_spider;
-			template = vanilla_kiloCut.altis;
+			template = vanilla_kiloCut.pmc_greece_lemnos;
 		};
 		class second_spider: MissionDefault
 		{
 			end1 = second_spiderCut;
 			lost = second_spider;
 			pmc_end1 = second_spiderCut;
-			template = second_spider.altis;
+			template = second_spider.pmc_greece_lemnos;
 		};
 
 		class second_spiderCut: MissionDefault
@@ -1125,14 +1140,14 @@ class Campaign
 			end1 = ocean_bullet;
 			lost = ocean_bullet;
 			pmc_end1 = ocean_bullet;
-			template = second_spiderCut.altis;
+			template = second_spiderCut.pmc_greece_lemnos;
 		};
 		class ocean_bullet: MissionDefault
 		{
 			end1 = ocean_bulletCut;
 			lost = ocean_bullet;
 			pmc_end1 = ocean_bulletCut;
-			template = ocean_bullet.altis;
+			template = ocean_bullet.pmc_greece_lemnos;
 		};
 
 		class ocean_bulletCut: MissionDefault
@@ -1140,14 +1155,14 @@ class Campaign
 			end1 = cerise_squirrel;
 			lost = cerise_squirrel;
 			pmc_end1 = cerise_squirrel;
-			template = ocean_bulletCut.altis;
+			template = ocean_bulletCut.pmc_greece_lemnos;
 		};
 		class cerise_squirrel: MissionDefault
 		{
 			end1 = cerise_squirrelCut;
 			lost = cerise_squirrel;
 			pmc_end1 = cerise_squirrelCut;
-			template = cerise_squirrel.altis;
+			template = cerise_squirrel.pmc_greece_lemnos;
 		};
 
 		class cerise_squirrelCut: MissionDefault
@@ -1155,14 +1170,14 @@ class Campaign
 			end1 = ninth_gorilla;
 			lost = ninth_gorilla;
 			pmc_end1 = ninth_gorilla;
-			template = cerise_squirrelCut.altis;
+			template = cerise_squirrelCut.pmc_greece_lemnos;
 		};
 		class ninth_gorilla: MissionDefault
 		{
 			end1 = ninth_gorillaCut;
 			lost = ninth_gorilla;
 			pmc_end1 = ninth_gorillaCut;
-			template = ninth_gorilla.altis;
+			template = ninth_gorilla.pmc_greece_lemnos;
 		};
 
 		class ninth_gorillaCut: MissionDefault
@@ -1170,14 +1185,14 @@ class Campaign
 			end1 = mountain_silk;
 			lost = mountain_silk;
 			pmc_end1 = mountain_silk;
-			template = ninth_gorillaCut.altis;
+			template = ninth_gorillaCut.pmc_greece_lemnos;
 		};
 		class mountain_silk: MissionDefault
 		{
 			end1 = mountain_silkCut;
 			lost = mountain_silk;
 			pmc_end1 = mountain_silkCut;
-			template = mountain_silk.altis;
+			template = mountain_silk.pmc_greece_lemnos;
 		};
 
 		class mountain_silkCut: MissionDefault
@@ -1185,14 +1200,14 @@ class Campaign
 			end1 = khaki_mink;
 			lost = khaki_mink;
 			pmc_end1 = khaki_mink;
-			template = mountain_silkCut.altis;
+			template = mountain_silkCut.pmc_greece_lemnos;
 		};
 		class khaki_mink: MissionDefault
 		{
 			end1 = khaki_minkCut;
 			lost = khaki_mink;
 			pmc_end1 = khaki_minkCut;
-			template = khaki_mink.altis;
+			template = khaki_mink.pmc_greece_lemnos;
 		};
 
 		class khaki_minkCut: MissionDefault
@@ -1200,14 +1215,14 @@ class Campaign
 			end1 = razz_worm;
 			lost = razz_worm;
 			pmc_end1 = razz_worm;
-			template = khaki_minkCut.altis;
+			template = khaki_minkCut.pmc_greece_lemnos;
 		};
 		class razz_worm: MissionDefault
 		{
 			end1 = razz_wormCut;
 			lost = razz_worm;
 			pmc_end1 = razz_wormCut;
-			template = razz_worm.altis;
+			template = razz_worm.pmc_greece_lemnos;
 		};
 
 		class razz_wormCut: MissionDefault
@@ -1215,14 +1230,14 @@ class Campaign
 			end1 = silent_tarsier;
 			lost = silent_tarsier;
 			pmc_end1 = silent_tarsier;
-			template = razz_wormCut.altis;
+			template = razz_wormCut.pmc_greece_lemnos;
 		};
 		class silent_tarsier: MissionDefault
 		{
 			end1 = silent_tarsierCut;
 			lost = silent_tarsier;
 			pmc_end1 = silent_tarsierCut;
-			template = silent_tarsier.altis;
+			template = silent_tarsier.pmc_greece_lemnos;
 		};
 
 		class silent_tarsierCut: MissionDefault
@@ -1230,14 +1245,14 @@ class Campaign
 			end1 = ghost_jupiter;
 			lost = ghost_jupiter;
 			pmc_end1 = ghost_jupiter;
-			template = silent_tarsierCut.altis;
+			template = silent_tarsierCut.pmc_greece_lemnos;
 		};
 		class ghost_jupiter: MissionDefault
 		{
 			end1 = ghost_jupiterCut;
 			lost = ghost_jupiter;
 			pmc_end1 = ghost_jupiterCut;
-			template = ghost_jupiter.altis;
+			template = ghost_jupiter.pmc_greece_lemnos;
 		};
 
 		class ghost_jupiterCut: MissionDefault
@@ -1245,7 +1260,7 @@ class Campaign
 			end1 = unique_mouse;
 			lost = unique_mouse;
 			pmc_end1 = unique_mouse;
-			template = ghost_jupiterCut.altis;
+			template = ghost_jupiterCut.pmc_greece_lemnos;
 		};
 
 		class unique_mouse: MissionDefault
@@ -1253,7 +1268,7 @@ class Campaign
 			end1 = unique_mouseCut;
 			lost = unique_mouse;
 			pmc_end1 = unique_mouseCut;
-			template = unique_mouse.altis;
+			template = unique_mouse.pmc_greece_lemnos;
 		};
 
 		class unique_mouseCut: MissionDefault
@@ -1261,14 +1276,14 @@ class Campaign
 			end1 = barbaric_lobster;
 			lost = barbaric_lobster;
 			pmc_end1 = barbaric_lobster;
-			template = unique_mouseCut.altis;
+			template = unique_mouseCut.pmc_greece_lemnos;
 		};
 		class barbaric_lobster: MissionDefault
 		{
 			end1 = barbaric_lobsterCut;
 			lost = barbaric_lobster;
 			pmc_end1 = barbaric_lobsterCut;
-			template = barbaric_lobster.altis;
+			template = barbaric_lobster.pmc_greece_lemnos;
 		};
 
 		class barbaric_lobsterCut: MissionDefault
@@ -1276,14 +1291,14 @@ class Campaign
 			end1 = rare_sheep;
 			lost = rare_sheep;
 			pmc_end1 = rare_sheep;
-			template = barbaric_lobsterCut.altis;
+			template = barbaric_lobsterCut.pmc_greece_lemnos;
 		};
 		class rare_sheep: MissionDefault
 		{
 			end1 = rare_sheepCut;
 			lost = rare_sheep;
 			pmc_end1 = rare_sheepCut;
-			template = rare_sheep.altis;
+			template = rare_sheep.pmc_greece_lemnos;
 		};
 
 		class rare_sheepCut: MissionDefault
@@ -1291,14 +1306,14 @@ class Campaign
 			end1 = hot_pluto;
 			lost = hot_pluto;
 			pmc_end1 = hot_pluto;
-			template = rare_sheepCut.altis;
+			template = rare_sheepCut.pmc_greece_lemnos;
 		};
 		class hot_pluto: MissionDefault
 		{
 			end1 = hot_plutoCut;
 			lost = hot_pluto;
 			pmc_end1 = hot_plutoCut;
-			template = hot_pluto.altis;
+			template = hot_pluto.pmc_greece_lemnos;
 		};
 
 		class hot_plutoCut: MissionDefault
@@ -1306,14 +1321,14 @@ class Campaign
 			end1 = int_shrew;
 			lost = int_shrew;
 			pmc_end1 = int_shrew;
-			template = hot_plutoCut.altis;
+			template = hot_plutoCut.pmc_greece_lemnos;
 		};
 		class int_shrew: MissionDefault
 		{
 			end1 = int_shrewCut;
 			lost = int_shrew;
 			pmc_end1 = int_shrewCut;
-			template = int_shrew.altis;
+			template = int_shrew.pmc_greece_lemnos;
 		};
 
 		class int_shrewCut: MissionDefault
@@ -1321,14 +1336,14 @@ class Campaign
 			end1 = columbia_antelope;
 			lost = columbia_antelope;
 			pmc_end1 = columbia_antelope;
-			template = int_shrewCut.altis;
+			template = int_shrewCut.pmc_greece_lemnos;
 		};
 		class columbia_antelope: MissionDefault
 		{
 			end1 = columbia_antelopeCut;
 			lost = columbia_antelope;
 			pmc_end1 = columbia_antelopeCut;
-			template = columbia_antelope.altis;
+			template = columbia_antelope.pmc_greece_lemnos;
 		};
 
 		class columbia_antelopeCut: MissionDefault
@@ -1336,14 +1351,14 @@ class Campaign
 			end1 = umber_rabbit;
 			lost = umber_rabbit;
 			pmc_end1 = umber_rabbit;
-			template = columbia_antelopeCut.altis;
+			template = columbia_antelopeCut.pmc_greece_lemnos;
 		};
 		class umber_rabbit: MissionDefault
 		{
 			end1 = umber_rabbitCut;
 			lost = umber_rabbit;
 			pmc_end1 = umber_rabbitCut;
-			template = umber_rabbit.altis;
+			template = umber_rabbit.pmc_greece_lemnos;
 		};
 
 		class umber_rabbitCut: MissionDefault
@@ -1351,14 +1366,14 @@ class Campaign
 			end1 = tired_grass;
 			lost = tired_grass;
 			pmc_end1 = tired_grass;
-			template = umber_rabbitCut.altis;
+			template = umber_rabbitCut.pmc_greece_lemnos;
 		};
 		class tired_grass: MissionDefault
 		{
 			end1 = tired_grassCut;
 			lost = tired_grass;
 			pmc_end1 = tired_grassCut;
-			template = tired_grass.altis;
+			template = tired_grass.pmc_greece_lemnos;
 		};
 
 		class tired_grassCut: MissionDefault
@@ -1366,14 +1381,14 @@ class Campaign
 			end1 = silver_fly;
 			lost = silver_fly;
 			pmc_end1 = silver_fly;
-			template = tired_grassCut.altis;
+			template = tired_grassCut.pmc_greece_lemnos;
 		};
 		class silver_fly: MissionDefault
 		{
 			end1 = silver_flyCut;
 			lost = silver_fly;
 			pmc_end1 = silver_flyCut;
-			template = silver_fly.altis;
+			template = silver_fly.pmc_greece_lemnos;
 		};
 
 		class silver_flyCut: MissionDefault
@@ -1381,14 +1396,14 @@ class Campaign
 			end1 = occupied_fox;
 			lost = occupied_fox;
 			pmc_end1 = occupied_fox;
-			template = silver_flyCut.altis;
+			template = silver_flyCut.pmc_greece_lemnos;
 		};
 		class occupied_fox: MissionDefault
 		{
 			end1 = occupied_foxCut;
 			lost = occupied_fox;
 			pmc_end1 = occupied_foxCut;
-			template = occupied_fox.altis;
+			template = occupied_fox.pmc_greece_lemnos;
 		};
 
 		class occupied_foxCut: MissionDefault
@@ -1396,14 +1411,14 @@ class Campaign
 			end1 = forsaken_fall;
 			lost = forsaken_fall;
 			pmc_end1 = forsaken_fall;
-			template = occupied_foxCut.altis;
+			template = occupied_foxCut.pmc_greece_lemnos;
 		};
 		class forsaken_fall: MissionDefault
 		{
 			end1 = forsaken_fallCut;
 			lost = forsaken_fall;
 			pmc_end1 = forsaken_fallCut;
-			template = forsaken_fall.altis;
+			template = forsaken_fall.pmc_greece_lemnos;
 		};
 
 		class forsaken_fallCut: MissionDefault
@@ -1411,14 +1426,14 @@ class Campaign
 			end1 = yellow_wolf;
 			lost = yellow_wolf;
 			pmc_end1 = yellow_wolf;
-			template = forsaken_fallCut.altis;
+			template = forsaken_fallCut.pmc_greece_lemnos;
 		};
 		class yellow_wolf: MissionDefault
 		{
 			end1 = yellow_wolfCut;
 			lost = yellow_wolf;
 			pmc_end1 = yellow_wolfCut;
-			template = yellow_wolf.altis;
+			template = yellow_wolf.pmc_greece_lemnos;
 		};
 
 		class yellow_wolfCut: MissionDefault
@@ -1426,14 +1441,14 @@ class Campaign
 			end1 = king_street;
 			lost = king_street;
 			pmc_end1 = king_street;
-			template = yellow_wolfCut.altis;
+			template = yellow_wolfCut.pmc_greece_lemnos;
 		};
 		class king_street: MissionDefault
 		{
 			end1 = king_streetCut;
 			lost = king_street;
 			pmc_end1 = king_streetCut;
-			template = king_street.altis;
+			template = king_street.pmc_greece_lemnos;
 		};
 
 		class king_streetCut: MissionDefault
@@ -1441,14 +1456,14 @@ class Campaign
 			end1 = celestial_okapi;
 			lost = celestial_okapi;
 			pmc_end1 = celestial_okapi;
-			template = king_streetCut.altis;
+			template = king_streetCut.pmc_greece_lemnos;
 		};
 		class celestial_okapi: MissionDefault
 		{
 			end1 = celestial_okapiCut;
 			lost = celestial_okapi;
 			pmc_end1 = celestial_okapiCut;
-			template = celestial_okapi.altis;
+			template = celestial_okapi.pmc_greece_lemnos;
 		};
 
 		class celestial_okapiCut: MissionDefault
@@ -1456,14 +1471,14 @@ class Campaign
 			end1 = green_bee;
 			lost = green_bee;
 			pmc_end1 = green_bee;
-			template = celestial_okapiCut.altis;
+			template = celestial_okapiCut.pmc_greece_lemnos;
 		};
 		class green_bee: MissionDefault
 		{
 			end1 = green_beeCut;
 			lost = green_bee;
 			pmc_end1 = green_beeCut;
-			template = green_bee.altis;
+			template = green_bee.pmc_greece_lemnos;
 		};
 
 		class green_beeCut: MissionDefault
@@ -1471,14 +1486,14 @@ class Campaign
 			end1 = dying_victor;
 			lost = dying_victor;
 			pmc_end1 = dying_victor;
-			template = green_beeCut.altis;
+			template = green_beeCut.pmc_greece_lemnos;
 		};
 		class dying_victor: MissionDefault
 		{
 			end1 = dying_victorCut;
 			lost = dying_victor;
 			pmc_end1 = dying_victorCut;
-			template = dying_victor.altis;
+			template = dying_victor.pmc_greece_lemnos;
 		};
 
 		class dying_victorCut: MissionDefault
@@ -1486,14 +1501,14 @@ class Campaign
 			end1 = rough_zulu;
 			lost = rough_zulu;
 			pmc_end1 = rough_zulu;
-			template = dying_victorCut.altis;
+			template = dying_victorCut.pmc_greece_lemnos;
 		};
 		class rough_zulu: MissionDefault
 		{
 			end1 = rough_zuluCut;
 			lost = rough_zulu;
 			pmc_end1 = rough_zuluCut;
-			template = rough_zulu.altis;
+			template = rough_zulu.pmc_greece_lemnos;
 		};
 
 		class rough_zuluCut: MissionDefault
@@ -1501,14 +1516,14 @@ class Campaign
 			end1 = rust_street;
 			lost = rust_street;
 			pmc_end1 = rust_street;
-			template = rough_zuluCut.altis;
+			template = rough_zuluCut.pmc_greece_lemnos;
 		};
 		class rust_street: MissionDefault
 		{
 			end1 = rust_streetCut;
 			lost = rust_street;
 			pmc_end1 = rust_streetCut;
-			template = rust_street.altis;
+			template = rust_street.pmc_greece_lemnos;
 		};
 
 		class rust_streetCut: MissionDefault
@@ -1516,14 +1531,14 @@ class Campaign
 			end1 = dim_sky;
 			lost = dim_sky;
 			pmc_end1 = dim_sky;
-			template = rust_streetCut.altis;
+			template = rust_streetCut.pmc_greece_lemnos;
 		};
 		class dim_sky: MissionDefault
 		{
 			end1 = dim_skyCut;
 			lost = dim_sky;
 			pmc_end1 = dim_skyCut;
-			template = dim_sky.altis;
+			template = dim_sky.pmc_greece_lemnos;
 		};
 
 		class dim_skyCut: MissionDefault
@@ -1531,14 +1546,14 @@ class Campaign
 			end1 = boiling_dolphin;
 			lost = boiling_dolphin;
 			pmc_end1 = boiling_dolphin;
-			template = dim_skyCut.altis;
+			template = dim_skyCut.pmc_greece_lemnos;
 		};
 		class boiling_dolphin: MissionDefault
 		{
 			end1 = boiling_dolphinCut;
 			lost = boiling_dolphin;
 			pmc_end1 = boiling_dolphinCut;
-			template = boiling_dolphin.altis;
+			template = boiling_dolphin.pmc_greece_lemnos;
 		};
 
 		class boiling_dolphinCut: MissionDefault
@@ -1546,14 +1561,14 @@ class Campaign
 			end1 = pine_panther;
 			lost = pine_panther;
 			pmc_end1 = pine_panther;
-			template = boiling_dolphinCut.altis;
+			template = boiling_dolphinCut.pmc_greece_lemnos;
 		};
 		class pine_panther: MissionDefault
 		{
 			end1 = pine_pantherCut;
 			lost = pine_panther;
 			pmc_end1 = pine_pantherCut;
-			template = pine_panther.altis;
+			template = pine_panther.pmc_greece_lemnos;
 		};
 
 		class pine_pantherCut: MissionDefault
@@ -1561,14 +1576,14 @@ class Campaign
 			end1 = stuck_ant;
 			lost = stuck_ant;
 			pmc_end1 = stuck_ant;
-			template = pine_pantherCut.altis;
+			template = pine_pantherCut.pmc_greece_lemnos;
 		};
 		class stuck_ant: MissionDefault
 		{
 			end1 = stuck_antCut;
 			lost = stuck_ant;
 			pmc_end1 = stuck_antCut;
-			template = stuck_ant.altis;
+			template = stuck_ant.pmc_greece_lemnos;
 		};
 
 		class stuck_antCut: MissionDefault
@@ -1576,14 +1591,14 @@ class Campaign
 			end1 = ruby_peasant;
 			lost = ruby_peasant;
 			pmc_end1 = ruby_peasant;
-			template = stuck_antCut.altis;
+			template = stuck_antCut.pmc_greece_lemnos;
 		};
 		class ruby_peasant: MissionDefault
 		{
 			end1 = ruby_peasantCut;
 			lost = ruby_peasant;
 			pmc_end1 = ruby_peasantCut;
-			template = ruby_peasant.altis;
+			template = ruby_peasant.pmc_greece_lemnos;
 		};
 
 		class ruby_peasantCut: MissionDefault
@@ -1591,7 +1606,7 @@ class Campaign
 			end1 = pmc_tanoa;
 			lost = pmc_tanoa;
 			pmc_end1 = pmc_tanoa;
-			template = ruby_peasantCut.altis;
+			template = ruby_peasantCut.pmc_greece_lemnos;
 		};
 	};
 
@@ -1774,7 +1789,7 @@ class Campaign
 		// Campaign ending cutscene!
 		class cmp_powder_batEC: MissionDefault
 		{
-			template = cmp_powder_batEC.altis;
+			template = cmp_powder_batEC.pmc_greece_lemnos;
 		};
 	};
 };
@@ -1796,7 +1811,18 @@ class CfgCommunicationMenu
 	{
 		text = "Debug End Mission";
 		submenu = "";
-		expression = "pmc_opfordead1 = true; pmc_opfordead2 = true; pmc_opfordead3 = true; pmc_opfordead4 = true; pmc_opfordead5 = true; pmc_opfordead6 = true; pmc_opfordead7 = true;";
+		expression = "_this execVM 'PMC\PMC_DebugEndMission.sqf';";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+
+	class PMC_DebugEndDefenseMission
+	{
+		text = "Debug End DEFENSE Mission";
+		submenu = "";
+		expression = "_this execVM 'PMC\PMC_DebugEndDefenseMission.sqf';";
 		icon = "";
 		cursor = "";
 		enable = "1";

@@ -14,6 +14,7 @@ PMC_CurrentMissionDeaths = 0;
 
 [player, "PMC_WeatherForecast", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 [player, "PMC_DebugEndMission", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+[player, "PMC_DebugEndDefenseMission", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 [player, "PMC_DebugCampaignMsg", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 
 sleep 10;
@@ -21,7 +22,7 @@ sleep 10;
 /*
 https://community.bistudio.com/wiki/BIS_fnc_infoText
 ["Mission Time", (call PMC_Time_Used_Update), "Good luck"] spawn BIS_fnc_infoText;
-[ "Somewhere on Altis", format ["Year %1", date select 0], mapGridPosition player ] spawn BIS_fnc_infoText;
+[ "Somewhere on Lemnos", format ["Year %1", date select 0], mapGridPosition player ] spawn BIS_fnc_infoText;
 
 https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP
 [["line1",4,5],["line2",3,5,8]] spawn BIS_fnc_EXP_camp_SITREP;

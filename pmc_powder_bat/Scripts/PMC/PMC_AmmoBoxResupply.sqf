@@ -1,4 +1,5 @@
-// powder bat 3, ammo boxes in camp maxwell
+
+// powder bat m003, ammo boxes in camp maxwell
 private _v = _this select 0;
 
 // backpacks
@@ -7,6 +8,10 @@ _v addBackpackCargo ["CUP_B_AlicePack_Khaki", 2];
 // items
 _v addItemCargo ["CUP_Binocular_Vector", 1];
 _v addItemCargo ["CUP_NVG_PVS7", 2];
+_v addItemCargo ["Medikit", 10];
+_v addItemCargo ["FirstAidKit", 1];
+_v addItemCargo ["ToolKit", 1];
+_v addItemCargo ["MineDetector", 1];
 
 // magazines
 _v addMagazineCargo ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 5];
@@ -17,6 +22,7 @@ _v addMagazineCargo ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249", 5];
 _v addMagazineCargo ["CUP_20Rnd_762x51_DMR", 12];
 _v addMagazineCargo ["CUP_30Rnd_556x45_Stanag", 12];
 _v addMagazineCargo ["CUP_20Rnd_762x51_B_M110", 12];
+_v addMagazineCargo ["CUP_HandGrenade_M67", 12];
 
 // weapons
 _v addWeaponCargo ["Binocular", 1];

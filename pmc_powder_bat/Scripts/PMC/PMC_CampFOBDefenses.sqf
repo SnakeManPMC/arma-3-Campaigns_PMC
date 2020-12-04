@@ -1,5 +1,5 @@
 /* PMC_CampFOBDefenses.sqf
-create basic defensive mostly decorative units for Camp Maxwell and altis FOBs
+create basic defensive mostly decorative units for Camp Maxwell and Lemnos FOBs
 
 _grp = [_pos, WEST, (configFile >> "CfgGroups" >> "West" >> "CUP_B_USMC" >> "Infantry_FROG_DES" >> "CUP_B_USMC_InfSquad_FROG_DES")] call BIS_fnc_spawnGroup;
 _grp = [_pos, WEST, (configFile >> "CfgGroups" >> "West" >> "CUP_B_USMC" >> "Infantry_FROG_DES" >> "CUP_B_USMC_FireTeam_FROG_DES")] call BIS_fnc_spawnGroup;

@@ -13,6 +13,10 @@ _v addBackpackCargo ["CUP_B_AlicePack_Khaki", 2];
 
 _v addItemCargo ["CUP_Binocular_Vector", 1];
 _v addItemCargo ["CUP_NVG_PVS7", 2];
+_v addItemCargo ["Medikit", 10];
+_v addItemCargo ["FirstAidKit", 1];
+_v addItemCargo ["ToolKit", 1];
+_v addItemCargo ["MineDetector", 1];
 
 _v addMagazineCargo ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 5];
 _v addMagazineCargo ["CUP_10Rnd_127x99_M107", 12];
@@ -25,6 +29,7 @@ _v addMagazineCargo ["CUP_30Rnd_556x45_Stanag", 30];
 _v addMagazineCargo ["CUP_5Rnd_762x51_M24", 12];
 _v addMagazineCargo ["CUP_Mine_M", 10];
 _v addMagazineCargo ["CUP_PipeBomb_M", 10];
+_v addMagazineCargo ["CUP_HandGrenade_M67", 12];
 
 _v addWeaponCargo ["Binocular", 1];
 _v addWeaponCargo ["CUP_M107", 1];
