@@ -24,7 +24,7 @@ SEAL6 loadStatus "sea6_05";
 
 // some additional weapons
 addWeaponpool ["CUP_M4A1_AIM_SD_camo",1];
-addWeaponpool ["M4A1_HWS_GL_camo",1];
+addWeaponpool ["CUP_M4A1_HWS_GL_camo",1];
 addWeaponpool ["CUP_lmg_M249",1];
 addMagazinepool ["CUP_30Rnd_556x45_Stanag",18];
 addMagazinepool ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",18];

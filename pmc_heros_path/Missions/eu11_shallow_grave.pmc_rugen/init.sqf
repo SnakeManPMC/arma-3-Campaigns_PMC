@@ -14,16 +14,16 @@ addWeaponpool ["CUP_UZI_SD_EP1",3];
 addWeaponpool ["CUP_M9",6];
 addWeaponpool ["CUP_M9",6];
 // some anti tank stuff, need OK from Elvisdog.
-addWeaponpool ["M136",2];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addWeaponpool ["M136",2];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
+addWeaponpool ["CUP_launch_M136",2];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addWeaponpool ["CUP_launch_M136",2];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
 
 /*
 ;2 x M240B

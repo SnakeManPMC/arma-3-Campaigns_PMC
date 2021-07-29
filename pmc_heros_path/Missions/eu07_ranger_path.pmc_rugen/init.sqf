@@ -9,8 +9,8 @@ clearWeaponPool;
 // new LSR stuff, the cool stuff :)
 addWeaponpool ["CUP_M4A1_Aim",8];
 addWeaponpool ["CUP_M4A1_Aim",4];
-addWeaponpool ["M4A1_HWS_GL_camo",2];
-addWeaponpool ["M4A1_HWS_GL_camo",2];
+addWeaponpool ["CUP_M4A1_HWS_GL_camo",2];
+addWeaponpool ["CUP_M4A1_HWS_GL_camo",2];
 addWeaponpool ["CUP_M4SPR",1];
 addWeaponpool ["CUP_M40A3",1];
 addWeaponpool ["CUP_lmg_M249",2];
@@ -24,16 +24,16 @@ addWeaponpool ["CUP_M9SD",3];
 addWeaponpool ["CUP_M9SD",9];
 addWeaponpool ["CUP_M9SD",9];
 // some anti tank stuff, need OK from Elvisdog.
-addWeaponpool ["M136",2];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addWeaponpool ["M136",2];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
-addMagazinepool ["M136",8];
+addWeaponpool ["CUP_launch_M136",2];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addWeaponpool ["CUP_launch_M136",2];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
+addMagazinepool ["CUP_M136_M",8];
 
 /*
 ; formula to add magazines.

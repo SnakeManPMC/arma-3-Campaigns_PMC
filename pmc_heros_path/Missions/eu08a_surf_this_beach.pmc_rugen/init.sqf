@@ -29,7 +29,7 @@ addWeaponpool ["CUP_M4A1_AIM_SD_camo",2];
 addMagazinepool ["CUP_30Rnd_556x45_Stanag",20];
 addWeaponpool ["CUP_M40A3",2];
 addMagazinepool ["CUP_20Rnd_762x51_DMR",20];
-addWeaponpool ["M136",2];
-addMagazinepool ["M136",10];
+addWeaponpool ["CUP_launch_M136",2];
+addMagazinepool ["CUP_M136_M",10];
 
 //[] exec "\COC_Mines\scripts\InitMines.sqs"

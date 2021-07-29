@@ -17,7 +17,7 @@ addMagazinePool ["CUP_5Rnd_762x51_M24", 50];
 addMagazinePool ["CUP_15Rnd_9x19_M9", 50];
 addMagazinePool ["CUP_15Rnd_9x19_M9", 50];
 addMagazinePool ["CUP_10Rnd_127x99_M107", 50];
-//addMagazinePool ["M136", 50];
+//addMagazinepool ["CUP_M136_M", 50];
 //addMagazinePool ["JAVELIN", 50];
 //addMagazinePool ["CUP_Stinger_M", 50];
 // east
@@ -67,7 +67,7 @@ addWeaponPool ["CUP_M107", 12];
 addWeaponPool ["CUP_M9", 12];
 addWeaponPool ["CUP_M9SD", 12];
 /*
-addWeaponPool ["M136", 12];
+addWeaponpool ["CUP_launch_M136", 12];
 addWeaponPool ["JAVELIN", 12];
 addWeaponPool ["CUP_launch_FIM92Stinger", 12];
 */
