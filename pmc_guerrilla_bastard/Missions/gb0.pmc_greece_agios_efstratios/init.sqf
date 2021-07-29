@@ -1,6 +1,9 @@
+
+PMCHQ = [ West, "BASE" ];
+
 player setVariable ["BIS_enableRandomization", false];
 player setVariable ["BIS_noCoreConversations", true];
-[] execVM "PMC\PMC_weather.sqf";
+[1.1] execVM "PMC\PMC_weather_SP.sqf";
 
 /* DEBUG FOR PLAY TESTING, REMOVE THIS COMMENT WHEN RELEASING!
 // campaign init, remove war stuff from our guy
