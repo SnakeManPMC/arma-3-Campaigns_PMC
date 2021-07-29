@@ -11,8 +11,8 @@ addWeaponpool ["CUP_M4A1_Aim",3];
 addWeaponpool ["CUP_M16A4",3];
 addWeaponpool ["CUP_lmg_M249",2];
 addWeaponpool ["CUP_UZI_SD_EP1",3];
-addWeaponpool ["CUP_M9",6];
-addWeaponpool ["CUP_M9",6];
+addWeaponpool ["CUP_hgun_M9",6];
+addWeaponpool ["CUP_hgun_M9",6];
 // some anti tank stuff, need OK from Elvisdog.
 addWeaponpool ["CUP_launch_M136",2];
 addMagazinepool ["CUP_M136_M",8];

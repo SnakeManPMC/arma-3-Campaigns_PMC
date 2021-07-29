@@ -37,6 +37,6 @@ _v addWeaponCargo ["CUP_M110_NVG_EP1", 1];
 _v addWeaponCargo ["CUP_m240_scoped_EP1", 1];
 _v addWeaponCargo ["CUP_M249_EP1", 1];
 _v addWeaponCargo ["CUP_M4A1_AIM_SD_camo", 1];
-_v addWeaponCargo ["CUP_M9SD", 1];
+_v addWeaponCargo ["CUP_hgun_M9_snds", 1];
 _v addWeaponCargo ["CUP_srifle_DMR_LeupoldMk4",1];
 _v addWeaponCargo ["Rangefinder", 1];

@@ -63,8 +63,8 @@ solution: use ammo boxex, man ... :(
 	addWeaponPool ["CUP_M4A1_AIM_SD_camo", _x];
 	addWeaponPool ["CUP_M4SPR", _x];
 	addWeaponPool ["CUP_m8_SAW", _x];
-	addWeaponPool ["CUP_M9", _x];
-	addWeaponPool ["CUP_M9SD", _x];
+	addWeaponPool ["CUP_hgun_M9", _x];
+	addWeaponPool ["CUP_hgun_M9_snds", _x];
 	addWeaponPool ["CUP_MG36", _x];
 	addWeaponPool ["CUP_smg_MP5A5", _x];
 	addWeaponPool ["CUP_smg_MP5SD6", _x];

@@ -13,11 +13,11 @@ addWeaponpool ["CUP_M4A1_Aim",3];
 //addWeaponpool ["M24",1];
 addWeaponpool ["CUP_MP5A5",1];
 addWeaponpool ["CUP_lmg_M249",1];
-addWeaponpool ["CUP_M9SD",4];
+addWeaponpool ["CUP_hgun_M9_snds",4];
 addWeaponpool ["CUP_Colt1911",1];
-addWeaponpool ["CUP_M9",1];
-addWeaponpool ["CUP_M9",4];
-addWeaponpool ["CUP_M9SD",3];
+addWeaponpool ["CUP_hgun_M9",1];
+addWeaponpool ["CUP_hgun_M9",4];
+addWeaponpool ["CUP_hgun_M9_snds",3];
 addWeaponpool ["CUP_M16A2GL",2];
 
 /*
@@ -36,7 +36,7 @@ addMagazinePool ["CUP_5Rnd_762x51_M24",50];
 addMagazinePool ["CUP_30Rnd_9x19_MP5",36];
 addMagazinePool ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",40];
 addMagazinePool ["CUP_30Rnd_9x19_MP5",40];
-//addMagazinePool ["CUP_M9",96];
+//addMagazinePool ["CUP_hgun_M9",96];
 addMagazinePool ["CUP_15Rnd_9x19_M9",96];
 addMagazinePool ["CUP_15Rnd_9x19_M9",96];
 addMagazinePool ["CUP_7Rnd_45ACP_1911",96];

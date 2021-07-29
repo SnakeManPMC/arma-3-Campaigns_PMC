@@ -16,7 +16,7 @@ addWeaponPool ["CUP_30Rnd_9x19_MP5",5];
 addWeaponPool ["CUP_M40A3",5];
 //addWeaponPool ["M79_EP1",5];
 addWeaponPool ["CUP_launch_M136",5];
-addWeaponPool ["CUP_M9",5];
+addWeaponPool ["CUP_hgun_M9",5];
 addWeaponPool ["CUP_Glock17_EP1",5];
 //addWeaponPool ["AALauncher",5];
 addWeaponPool ["Binocular",5];
@@ -104,7 +104,7 @@ addWeaponPool ["LSR_JAM_m1911_sd",5];
 ; Magazines
 
 //addMagazinePool ["AALauncher",50];
-//addMagazinePool ["CUP_M9",50];
+//addMagazinePool ["CUP_hgun_M9",50];
 //addMagazinePool ["JAM_12Gauge_Shotgun_Mag",50];
 //addMagazinePool ["JAM_W127_10mag",50];
 //addMagazinePool ["JAM_W556_30SDHDmag",50];
