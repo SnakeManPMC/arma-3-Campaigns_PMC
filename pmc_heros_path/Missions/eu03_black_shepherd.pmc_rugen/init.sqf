@@ -56,4 +56,4 @@ addweaponPool ["CUP_NVG_PVS7",6];
 addweaponPool ["Binocular",6];
 addMagazinePool ["CUP_MineE_M",10];
 addMagazinePool ["CUP_PipeBomb_M",10];
-//addMagazinePool ["Timebomb",10];
+//addMagazinePool ["CUP_Timebomb_M",10];

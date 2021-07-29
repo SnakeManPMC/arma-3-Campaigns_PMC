@@ -144,7 +144,7 @@ addMagazinePool ["SmokeShell",12];
 addMagazinePool ["HandGrenade",12];
 addMagazinePool ["HandGrenade",12];
 addMagazinePool ["CUP_PipeBomb_M",12];
-addMagazinePool ["TimeBomb",12];
+addMagazinePool ["CUP_Timebomb_M",12];
 addMagazinePool ["CUP_MineE_M",12];
 addMagazinePool ["CUP_MineE_M",12];
 */

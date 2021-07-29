@@ -84,6 +84,6 @@ addweaponPool ["CUP_NVG_PVS7",9];
 addweaponPool ["Binocular",9];
 addMagazinePool ["CUP_MineE_M",10];
 addMagazinePool ["CUP_PipeBomb_M",10];
-addMagazinePool ["Timebomb",10];
+addMagazinePool ["CUP_Timebomb_M",10];
 
 //[] exec "\COC_Mines\scripts\InitMines.sqs"
