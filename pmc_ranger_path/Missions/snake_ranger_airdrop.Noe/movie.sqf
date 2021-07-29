@@ -21,7 +21,7 @@ _camera camSetPos [3070.47,6103.01,4.24];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["Track07_Last_Men_Standing",0];
+playmusic ["Track15_MainTheme",0];
 sleep 1;
 titletext["Nogova, near the airbase. July 22nd, 1130hrs.","plain",2];
 sleep 5;

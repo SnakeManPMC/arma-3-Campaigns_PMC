@@ -26,6 +26,6 @@ if (!alive s9) then { deletevehicle s9; };
 
 {_x moveInCargo helo1} foreach units assault1;
 
-playmusic ["Track07_Last_Men_Standing",0]
+playmusic ["Track15_MainTheme",0]
 
 GotHim = false;

@@ -13,7 +13,7 @@ _camera camSetRelPos [10,50,3];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-playmusic ["Track07_Last_Men_Standing",0];
+playmusic ["Track15_MainTheme",0];
 sleep 1;
 
 titlecut ["","BLACK IN",2];

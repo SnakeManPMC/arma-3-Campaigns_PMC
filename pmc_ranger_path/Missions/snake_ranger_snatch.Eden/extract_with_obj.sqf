@@ -33,7 +33,7 @@ _helo flyinheight 50;
 _helo sideradio "Rdustoff";
 
 0 fademusic 1;
-playmusic ["Track07_Last_Men_Standing",0]
+playmusic ["Track15_MainTheme",0]
 
 if (alive col1) then
 {
