@@ -39,7 +39,11 @@ _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
 // until hes in talking position
-@talker
+waitUntil
+{
+	sleep 0.5;
+	talker;
+};
 
 // assault 1 guy
 _camera camSetTarget leader assault1;
@@ -55,14 +59,14 @@ titletext["''(Gordon): Okay, what do you got for me?''","plain down",1];
 sleep 5;
 
 // recon guy
-_camera camSetTarget leader transp1
+_camera camSetTarget leader transp1;
 _camera camSetRelPos [-1,2,1];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 sleep 1;
 titletext["''(Recon): Bad news... incoming russian main battle tanks from the south.\nthis looks like some serious firepower on our way.''","plain down",1];
 _camera camSetRelPos [1,2,1];
-_camera camCommit 3.5
+_camera camCommit 3.5;
 waitUntil { (camCommitted _camera); };
 sleep 3.5;
 

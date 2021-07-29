@@ -10,7 +10,7 @@ clearWeaponPool;
 // new LSR stuff, the cool stuff :)
 addWeaponpool ["CUP_M4A1_Aim",2];
 addWeaponpool ["CUP_M4A1_Aim",3];
-addWeaponpool ["M24",1];
+//addWeaponpool ["M24",1];
 addWeaponpool ["CUP_MP5A5",1];
 addWeaponpool ["CUP_lmg_M249",1];
 addWeaponpool ["CUP_M9SD",4];
@@ -56,4 +56,4 @@ addweaponPool ["CUP_NVG_PVS7",6];
 addweaponPool ["Binocular",6];
 addMagazinePool ["CUP_MineE_M",10];
 addMagazinePool ["CUP_PipeBomb_M",10];
-addMagazinePool ["Timebomb",10];
+//addMagazinePool ["Timebomb",10];
