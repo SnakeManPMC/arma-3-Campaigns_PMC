@@ -68,7 +68,7 @@ waitUntil { (camCommitted _camera); };
 sleep 3;
 
 // pole1
-_camera camSetTarget pole1
+_camera camSetTarget pole1;
 _camera camSetRelPos [0,10,3];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
@@ -82,12 +82,12 @@ sleep 7;
 // assault1
 _camera camSetTarget leader assault1;
 _camera camSetRelPos [1,3,1.5];
-_camera camCommit 5
+_camera camCommit 5;
 waitUntil { (camCommitted _camera); };
 sleep 4;
 
 // ppilots1
-_camera camSetTarget leader ppilots1
+_camera camSetTarget leader ppilots1;
 _camera camSetRelPos [3,10,2];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
@@ -103,7 +103,7 @@ titletext["","plain down",0];
 sleep 0.5;
 
 // ccrew1
-_camera camSetTarget leader ccrew1
+_camera camSetTarget leader ccrew1;
 _camera camSetRelPos [0,7,3];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
@@ -119,7 +119,7 @@ titletext["","plain down",0];
 sleep 0.5;
 
 // mechs1
-_camera camSetTarget leader mechs1
+_camera camSetTarget leader mechs1;
 _camera camSetRelPos [-3,15,4];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
@@ -135,7 +135,7 @@ titletext["","plain down",0];
 sleep 0.5;
 
 // rangers1
-_camera camSetTarget leader rangers1
+_camera camSetTarget leader rangers1;
 _camera camSetRelPos [2,13,3];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
@@ -151,7 +151,7 @@ titletext["","plain down",0];
 sleep 0.5;
 
 // seals1
-_camera camSetTarget leader seals1
+_camera camSetTarget leader seals1;
 _camera camSetRelPos [-7,15,5];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };

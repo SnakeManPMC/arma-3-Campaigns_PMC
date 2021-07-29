@@ -63,7 +63,6 @@ addmagazinePool ["CUP_30Rnd_9x19_MP5",50];
 addMagazinepool ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",50];
 addMagazinePool ["CUP_20Rnd_762x51_DMR",75];
 addMagazinePool ["CUP_20Rnd_762x51_DMR",75];
-addMagazinepool ["CUP_hgun_M9",20];
 addMagazinepool ["CUP_15Rnd_9x19_M9",20];
 addMagazinepool ["CUP_15Rnd_9x19_M9",20];
 addMagazinepool ["CUP_7Rnd_45ACP_1911",20];
