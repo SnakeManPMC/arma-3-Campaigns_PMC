@@ -1,13 +1,8 @@
-respawn="group";
-
 // Title that appears on screen in briefing
 onLoadIntro=$STRD_Rmissname;
 
 // Title that appears on screen at beginning of mission
 onLoadMission=$STRL_Rload;
-
-// Show GPS system on the map
-ShowGPS=1;
 
 class CfgRadio
 {
@@ -99,17 +94,25 @@ class CfgRadio
 
 };
 
-/*
-<h2><a name="Debriefing:End1">VICTORY</a></h2>
-<br>
-<p>
-Excellent work. The mere fact that you survived is kind of amazing.<br><br>
-
-You guys need to share that 100-year-old scotch you found at the Castle. Remember, we shared the vodka we found back in Rozenburg.<br><br>
-
-You're temporarily off-duty, but don't get too drunk.
-*/
-
 #include "..\..\scripts\PMC\DescriptionExt_Backpacks.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Magazines.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Weapons.hpp"
+/*
+
+	Created at 2021-07-30T05:31:55Z with Mission Converter v0.0.1 by PMC
+
+*/
+
+overviewText = "H21. Rangers are helo inserted to raid the town of Wolsum plus the Castle.";
+overviewPicture = "\campaigns\pmc_heros_path\missions\eu21_dark_crown.pmc_rugen\overview_mission_ca.paa";
+author = "Snake Man, PMC.";
+onloadname = "";
+
+class CfgDebriefing
+{
+	class pmc_end1
+	{
+		title = "VICTORY";
+		description = "Excellent work. The mere fact that you survived is kind of amazing.<br><br>You guys need to share that 100-year-old scotch you found at the Castle. Remember, we shared the vodka we found back in Rozenburg.<br><br>You're temporarily off-duty, but don't get too drunk.";
+	};
+};

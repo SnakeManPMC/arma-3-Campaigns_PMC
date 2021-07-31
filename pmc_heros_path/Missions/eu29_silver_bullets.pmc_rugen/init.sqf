@@ -1,7 +1,8 @@
 
-[] execVM "briefing.sqf";
+[] execVM "PMC\PMC_Briefing.sqf";
+[] execVM "PMC\PMC_Tasks.sqf";
 
-PAPABEAR = [ West, "HQ" ];
+PAPABEAR = [ West, "BASE" ];
 
 /* this was commented out in init.sqf, wonder why? during port or from OFP times already?
 sleep 5;

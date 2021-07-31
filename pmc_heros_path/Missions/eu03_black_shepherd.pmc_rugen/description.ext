@@ -1,13 +1,8 @@
-respawn="group";
-
 // Title that appears on screen in briefing
 onLoadIntro=$STRD_Rmissname;
 
 // Title that appears on screen at beginning of mission
 onLoadMission=$STRL_Rload;
-
-// Show GPS system on the map
-ShowGPS=1;
 
 class CfgRadio
 {
@@ -29,15 +24,25 @@ class CfgRadio
 
 };
 
-/*
-<h2><a name="Debriefing:End1">SUCCESS</a></h2>
-<br>
-<p>
-Excellent work, Carlos. Those brave grunts you rescued are going to be a real asset. Mission accomplished.<br><br>
-
-Rest up during daylight hours; we need you to do an evening recon next.
-*/
-
 #include "..\..\scripts\PMC\DescriptionExt_Backpacks.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Magazines.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Weapons.hpp"
+/*
+
+	Created at 2021-07-30T05:31:55Z with Mission Converter v0.0.1 by PMC
+
+*/
+
+overviewText = "H3 Black Shepherd Navy SEALs extract a shot-up US Army squad from a hilltop.";
+overviewPicture = "\campaigns\pmc_heros_path\missions\eu03_black_shepherd.pmc_rugen\overview_mission_ca.paa";
+author = "Snake Man, PMC.";
+onloadname = "";
+
+class CfgDebriefing
+{
+	class pmc_end1
+	{
+		title = "SUCCESS";
+		description = "Excellent work, Carlos. Those brave grunts you rescued are going to be a real asset. Mission accomplished.<br><br>Rest up during daylight hours; we need you to do an evening recon next.";
+	};
+};

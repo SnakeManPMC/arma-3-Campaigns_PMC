@@ -1,7 +1,8 @@
 
-[] execVM "briefing.sqf";
+[] execVM "PMC\PMC_Briefing.sqf";
+[] execVM "PMC\PMC_Tasks.sqf";
 
-PAPABEAR = [ West, "HQ" ];
+PAPABEAR = [ West, "BASE" ];
 
 // army guys loadout
 addWeaponpool ["CUP_M16A2",6];

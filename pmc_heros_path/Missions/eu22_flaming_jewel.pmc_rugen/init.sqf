@@ -1,7 +1,8 @@
 
-[] execVM "briefing.sqf";
+[] execVM "PMC\PMC_Briefing.sqf";
+[] execVM "PMC\PMC_Tasks.sqf";
 
-PAPABEAR = [ West, "HQ" ];
+PAPABEAR = [ West, "BASE" ];
 
 // new LSR stuff, the cool stuff :)
 addWeaponpool ["CUP_M4A1_Aim",8];

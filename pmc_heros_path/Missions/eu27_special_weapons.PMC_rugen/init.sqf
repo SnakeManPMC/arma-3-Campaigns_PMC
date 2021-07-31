@@ -1,7 +1,8 @@
 
-[] execVM "briefing.sqf";
+[] execVM "PMC\PMC_Briefing.sqf";
+[] execVM "PMC\PMC_Tasks.sqf";
 
-PAPABEAR = [ West, "HQ" ];
+PAPABEAR = [ West, "BASE" ];
 
 SEAL1 loadStatus "sea1_06";
 SEAL2 loadStatus "sea2_06";

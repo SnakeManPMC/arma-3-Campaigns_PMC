@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7069.1367,12.957798,21875.334};
+		pos[]={7064.6489,16.61128,21872.432};
 		dir[]={0.80480689,-0.28553244,0.52034867};
 		up[]={0.23978135,0.95836663,0.15503113};
 		aside[]={0.54295188,2.0270818e-008,-0.83976698};
@@ -202,11 +202,11 @@ class Mission
 			class Attributes
 			{
 				text="eastdead 1";
-				condition="{alive _x} count units rusinf1 == 0 || {fleeing _x} count units rusinf1 == count units rusinf1";
-				onActivation="this = execVM ""PMC_Base_Has_Been_Cleared.sqf"";";
+				condition="call{{alive _x} count units rusinf1 == 0 || {fleeing _x} count units rusinf1 == count units rusinf1}";
+				onActivation="call{0 = execVM ""PMC\PMC_Base_Has_Been_Cleared.sqf"";}";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={0,10,15};
+				timeout[]={5,10,15};
 			};
 			id=4;
 			type="EmptyDetector";
@@ -215,12 +215,12 @@ class Mission
 		class Item3
 		{
 			dataType="Trigger";
-			position[]={5073.8164,15.974999,20559.17};
+			position[]={5073.8159,15.974999,20559.17};
 			class Attributes
 			{
-				text="hq reply 1";
+				text="eastdead 1 hq reply 1";
 				condition="eastdead1";
-				onActivation="PAPABEAR sideRadio ""Rhqreply1""; PMC_objective1 setTaskState ""SUCCEEDED""; this = [objNull, objNull, PMC_objective1, ""SUCCEEDED""] execVM ""CA\Modules\MP\data\scriptCommands\taskHint.sqf"";";
+				onActivation="0 = [] execVM ""PMC\PMC_Objective1.sqf"";";
 				sizeA=0;
 				sizeB=0;
 				timeout[]={0,15,25};
@@ -264,7 +264,7 @@ class Mission
 		class Item6
 		{
 			dataType="Trigger";
-			position[]={5093.7583,15.974999,20548.109};
+			position[]={5093.7578,15.974999,20548.109};
 			class Attributes
 			{
 				text="END";
@@ -272,7 +272,7 @@ class Mission
 				onActivation="0 = [] execVM ""PMC\PMC_movie-end.sqf"";";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={0,25,35};
+				timeout[]={5,25,35};
 				type="END1";
 			};
 			id=8;
@@ -282,15 +282,15 @@ class Mission
 		class Item7
 		{
 			dataType="Trigger";
-			position[]={5083.4126,15.974999,20554.459};
+			position[]={5083.4131,15.974999,20554.461};
 			class Attributes
 			{
-				text="all done";
+				text="eastdead 1 HQ declares victory";
 				condition="eastdead1";
 				onActivation="PAPABEAR sideRadio ""Rmcomplete""; mcomplete=true;";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={0,35,45};
+				timeout[]={5,35,45};
 			};
 			id=9;
 			type="EmptyDetector";
@@ -299,35 +299,35 @@ class Mission
 		class Item8
 		{
 			dataType="Trigger";
-			position[]={5025.7583,15.974999,20537.246};
+			position[]={5025.7578,15.974953,20537.246};
 			class Attributes
 			{
-				text="bravo calls";
+				text="bravo calls Gordon back";
 				condition="true";
-				onActivation="this = execVM ""PMC_Orders_Back_To_Base.sqf"";";
+				onActivation="this = execVM ""PMC\PMC_Orders_Back_To_Base.sqf"";";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={0,5,7};
+				timeout[]={3,5,7};
 			};
 			id=10;
 			type="EmptyDetector";
-			atlOffset=0.0080471039;
+			atlOffset=0.0080003738;
 		};
 		class Item9
 		{
 			dataType="Trigger";
-			position[]={5035.9658,15.974999,20532.709};
+			position[]={5035.9658,15.974765,20532.711};
 			class Attributes
 			{
-				text="join up";
-				condition="leader assault1 knowsAbout leader assault2 > 0.5";
-				onActivation="{[_x] join assault1} foreach units assault2;";
+				text="Gordon back at base";
+				condition="call{leader assault1 knowsAbout leader assault2 > 0.5}";
+				onActivation="call{0 = [] execVM ""PMC\PMC_Gordon_Back_At_Base.sqf"";}";
 				sizeA=0;
 				sizeB=0;
 			};
 			id=11;
 			type="EmptyDetector";
-			atlOffset=0.24031258;
+			atlOffset=0.23999977;
 		};
 		class Item10
 		{
@@ -753,8 +753,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7073.9775,10.981439,21876.502};
-						angles[]={0,6.1910295,0};
+						position[]={7073.3516,10.981439,21874.928};
+						angles[]={-0,6.1910295,0};
 					};
 					side="West";
 					flags=6;

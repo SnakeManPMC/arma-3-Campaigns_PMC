@@ -1,13 +1,8 @@
-respawn="group";
-
 // Title that appears on screen in briefing
 onLoadIntro=$STRD_Rmissname;
 
 // Title that appears on screen at beginning of mission
 onLoadMission=$STRL_Rload;
-
-// Show GPS system on the map
-ShowGPS=1;
 
 class CfgRadio
 {
@@ -85,15 +80,25 @@ class CfgRadio
 
 };
 
-/*
-<h2><a name="Debriefing:End1">SUCCESS</a></h2>
-<br>
-<p>
-That's the way to give 'em hell, Captain. Mission accomplished.<br><br>
-
-Grab some chow and a nap. Dawn mission upcoming.
-*/
-
 #include "..\..\scripts\PMC\DescriptionExt_Backpacks.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Magazines.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Weapons.hpp"
+/*
+
+	Created at 2021-07-30T05:31:55Z with Mission Converter v0.0.1 by PMC
+
+*/
+
+overviewText = "H16. A ""pink team"" of AH-64 Apache gunships plus LOH take on armored targets from Beckum to Charlois.";
+overviewPicture = "\campaigns\pmc_heros_path\missions\eu16_green_blades.pmc_rugen\overview_mission_ca.paa";
+author = "Snake Man, PMC.";
+onloadname = "";
+
+class CfgDebriefing
+{
+	class pmc_end1
+	{
+		title = "SUCCESS";
+		description = "That's the way to give 'em hell, Captain. Mission accomplished.<br><br>Grab some chow and a nap. Dawn mission upcoming.";
+	};
+};

@@ -1,13 +1,8 @@
-respawn="group";
-
 // Title that appears on screen in briefing
 onLoadIntro=$STRD_Rmissname;
 
 // Title that appears on screen at beginning of mission
 onLoadMission=$STRL_Rload;
-
-// Show GPS system on the map
-ShowGPS=1;
 
 class CfgRadio
 {
@@ -84,15 +79,25 @@ class CfgRadio
 	};
 };
 
-/*
-<h2><a name="Debriefing:End1">SUCCESS</a></h2>
-<br>
-<p>
-Uggh, you left a bloody, nasty, flyblown mess back there. Good job, Sergeant.<br><br>
-
-Witching hour mission coming. Get your silver bullets and wooden stakes ready.
-*/
-
 #include "..\..\scripts\PMC\DescriptionExt_Backpacks.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Magazines.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Weapons.hpp"
+/*
+
+	Created at 2021-07-30T05:31:55Z with Mission Converter v0.0.1 by PMC
+
+*/
+
+overviewText = "H9. Rangers are helo inserted and ambush a Russian supply convoy at Rozenburg.";
+overviewPicture = "\campaigns\pmc_heros_path\missions\eu09_hungry_bear.pmc_rugen\overview_mission_ca.paa";
+author = "Snake Man, PMC.";
+onloadname = "";
+
+class CfgDebriefing
+{
+	class pmc_end1
+	{
+		title = "SUCCESS";
+		description = "Uggh, you left a bloody, nasty, flyblown mess back there. Good job, Sergeant.<br><br>Witching hour mission coming. Get your silver bullets and wooden stakes ready.";
+	};
+};

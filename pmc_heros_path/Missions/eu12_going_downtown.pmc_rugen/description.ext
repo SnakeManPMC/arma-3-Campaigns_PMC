@@ -1,13 +1,8 @@
-respawn="group";
-
 // Title that appears on screen in briefing
 onLoadIntro=$STRD_Rmissname;
 
 // Title that appears on screen at beginning of mission
 onLoadMission=$STRL_Rload;
-
-// Show GPS system on the map
-ShowGPS=1;
 
 class CfgRadio
 {
@@ -50,15 +45,25 @@ class CfgRadio
 
 };
 
-/*
-<h2><a name="Debriefing:End1">VICTORY</a></h2>
-<br>
-<p>
-You've brought a whole new meaning to, "paint the town red." Red corpses hanging from lampposts. Red flames. And it looks like someone splashed buckets of red paint on the sides of the buildings.<br><br>
-
-Your next job: shut down the Red air bridge.
-*/
-
 #include "..\..\scripts\PMC\DescriptionExt_Backpacks.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Magazines.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Weapons.hpp"
+/*
+
+	Created at 2021-07-30T05:31:55Z with Mission Converter v0.0.1 by PMC
+
+*/
+
+overviewText = "H12. Army Regulars assault Alverna sea port because it's needed for unloading NATO supply ships (and to deny that ability to the Reds).";
+overviewPicture = "\campaigns\pmc_heros_path\missions\eu12_going_downtown.pmc_rugen\overview_mission_ca.paa";
+author = "Snake Man, PMC.";
+onloadname = "";
+
+class CfgDebriefing
+{
+	class pmc_end1
+	{
+		title = "VICTORY";
+		description = "You've brought a whole new meaning to, ""paint the town red."" Red corpses hanging from lampposts. Red flames. And it looks like someone splashed buckets of red paint on the sides of the buildings.<br><br>Your next job: shut down the Red air bridge.";
+	};
+};

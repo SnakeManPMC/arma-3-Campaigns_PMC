@@ -1,13 +1,8 @@
-respawn="group";
-
 // Title that appears on screen in briefing
 onLoadIntro=$STRD_Rmissname;
 
 // Title that appears on screen at beginning of mission
 onLoadMission=$STRL_Rload;
-
-// Show GPS system on the map
-ShowGPS=1;
 
 class CfgRadio
 {
@@ -29,15 +24,25 @@ class CfgRadio
 
 };
 
-/*
-<h2><a name="Debriefing:End1">YOU SURVIVED</a></h2>
-<br>
-<p>
-We're not going to panic here. Enemy tanks are coming, and everyone's fleeing, but we're not going to panic.<br><br>
-
-Head for the hills, it's time to leave. Now!
-*/
-
 #include "..\..\scripts\PMC\DescriptionExt_Backpacks.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Magazines.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Weapons.hpp"
+/*
+
+	Created at 2021-07-30T05:31:55Z with Mission Converter v0.0.1 by PMC
+
+*/
+
+overviewText = "H2. Army Regulars defend the main US Army base against Russian helo-borne troops.";
+overviewPicture = "\campaigns\pmc_heros_path\missions\eu02_lizard_tooth.pmc_rugen\overview_mission_ca.paa";
+onloadname = "";
+author = "Snake Man, PMC.";
+
+class CfgDebriefing
+{
+	class pmc_end1
+	{
+		title = "YOU SURVIVED";
+		description = "We're not going to panic here. Enemy tanks are coming, and everyone's fleeing, but we're not going to panic.<br><br>Head for the hills, it's time to leave. Now!";
+	};
+};

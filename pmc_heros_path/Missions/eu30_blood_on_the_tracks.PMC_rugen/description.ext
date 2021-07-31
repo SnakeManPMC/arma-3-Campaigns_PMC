@@ -1,13 +1,8 @@
-respawn="group";
-
 // Title that appears on screen in briefing
 onLoadIntro=$STRD_Rmissname;
 
 // Title that appears on screen at beginning of mission
 onLoadMission=$STRL_Rload;
-
-// Show GPS system on the map
-ShowGPS=1;
 
 class CfgRadio
 {
@@ -78,15 +73,25 @@ class CfgRadio
 
 };
 
-/*
-<h2><a name="Debriefing:End1">SUCCESS</a></h2>
-<br>
-<p>
-Nice work, Captain Ruby. The pillars of smoke from all the burning Soviet AFVs look like oil well fires.<br><br>
-
-Rest up. Tomorrow's mission will take you all the way to Haelen.
-*/
-
 #include "..\..\scripts\PMC\DescriptionExt_Backpacks.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Magazines.hpp"
 #include "..\..\scripts\PMC\DescriptionExt_Weapons.hpp"
+/*
+
+	Created at 2021-07-30T05:31:55Z with Mission Converter v0.0.1 by PMC
+
+*/
+
+overviewText = "H30. M1A1 Abrams tanks take on more enemy armor at Ritter Farm, some houses, Hoenig Farm, and Marum.";
+overviewPicture = "\campaigns\pmc_heros_path\missions\eu30_blood_on_the_tracks.pmc_rugen\overview_mission_ca.paa";
+author = "Snake Man, PMC.";
+onloadname = "";
+
+class CfgDebriefing
+{
+	class pmc_end1
+	{
+		title = "SUCCESS";
+		description = "Nice work, Captain Ruby. The pillars of smoke from all the burning Soviet AFVs look like oil well fires.<br><br>Rest up. Tomorrow's mission will take you all the way to Haelen.";
+	};
+};
