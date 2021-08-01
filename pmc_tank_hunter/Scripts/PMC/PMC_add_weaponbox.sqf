@@ -34,7 +34,7 @@ PMC_AmmoBox addMagazineCargo ["CUP_MineE_M", _ran];
 _ran = floor (2 + random 5);
 PMC_AmmoBox addMagazineCargo ["CUP_PipeBomb_M", _ran];
 
-PMC_AmmoBox addWeaponCargo ["M79_EP1",2];
+PMC_AmmoBox addWeaponCargo ["CUP_M79_EP1",2];
 PMC_AmmoBox addWeaponCargo ["CUP_lmg_M249",2];
 PMC_AmmoBox addWeaponCargo ["CUP_launch_M136",2];
 PMC_AmmoBox addWeaponCargo ["CUP_M40A3",4];

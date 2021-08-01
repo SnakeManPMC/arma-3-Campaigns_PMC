@@ -19,9 +19,8 @@ private _q = 1;
 
 while {_q < rollCall} do
 {
-	private _myGuy = "CUP_I_GUE_Soldier_AKSU" createUnit [getPosASL player, group player, "removeAllweapons this", 0, "private"];
+	"CUP_I_GUE_Soldier_AKSU" createUnit [position player, group player, "removeAllWeapons this", 0, "private"];
 	_q = _q + 1;
-	addSwitchableUnit _myGuy;
 };
 
 //#---load group status---

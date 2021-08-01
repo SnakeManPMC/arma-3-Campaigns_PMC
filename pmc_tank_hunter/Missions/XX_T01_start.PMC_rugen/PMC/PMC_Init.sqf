@@ -20,3 +20,6 @@ saveVar "PMCTrophyCount";
 // player as civilian character does not have a map, we need ItemMap
 player addItem "ItemMap";
 player assignItem "ItemMap";
+
+0 = [player, "PMC_DebugTeleport", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+0 = [player, "PMC_DebugDisableCutscenes", nil, nil, ""] call BIS_fnc_addCommMenuItem;
