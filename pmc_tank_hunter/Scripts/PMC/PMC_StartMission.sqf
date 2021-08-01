@@ -66,7 +66,7 @@ skipTime PMC_AllTimeUsed;
 [] execVM "PMC\PMC_GarageSetup.sqf";
 */
 // new city occupation colors
-/*
+
 "pmc1" setMarkerColor PMC_City01;
 ["pmc1"] execVM "PMC\PMC_add_defenses.sqf";
 "pmc2" setMarkerColor PMC_City02;
@@ -87,7 +87,6 @@ skipTime PMC_AllTimeUsed;
 ["pmc9"] execVM "PMC\PMC_add_defenses.sqf";
 "pmc10" setMarkerColor PMC_City10;
 ["pmc10"] execVM "PMC\PMC_add_defenses.sqf";
-*/
 
 sleep 5;
 if (PMC_debug) then
@@ -96,8 +95,8 @@ if (PMC_debug) then
 };
 // war scripts + weather
 [] execVM "PMC\PMC_add-civcars.sqf";
-//[] execVM "PMC\PMC_war.sqf";
-//[] execVM "PMC\PMC_moving.sqf";
+[] execVM "PMC\PMC_war.sqf";
+[] execVM "PMC\PMC_moving.sqf";
 [1.1] execVM "PMC\PMC_weather_SP.sqf";
 
 if (PMC_debug) then

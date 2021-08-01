@@ -114,6 +114,9 @@ while { true } do
 		sleep 1;
 		// helo insertion of troops
 		[] execVM "PMC\PMC_Create_BLUFOR_Helo_Reinf.sqf";
+
+		// small delay to avoid BLUFOR creation following too soon
+		sleep 10;
 	};
 
 	if ((count aiwest) < MaxWest) then
@@ -145,7 +148,8 @@ while { true } do
 		];
 	};
 
-	sleep 5;
+	// this was 5 seconds, lets bump it up to something very relaxed
+	sleep 60;
 	waitUntil
 	{
 		sleep 5;

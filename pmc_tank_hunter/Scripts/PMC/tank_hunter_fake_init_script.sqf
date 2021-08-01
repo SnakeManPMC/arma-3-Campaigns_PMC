@@ -1,6 +1,6 @@
 
 PMC_debug = true;
-pmcmoff = true;
+PMC_MoviesOff = true;
 rollCall = 0;
 PMC_passTime = 0;
 PMC_AllTimeUsed = 0;
