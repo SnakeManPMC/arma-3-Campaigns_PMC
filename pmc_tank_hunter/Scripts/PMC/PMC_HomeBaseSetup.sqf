@@ -2,6 +2,11 @@
 relocate the players hideout / base, position of new hideout
 */
 
+if (isNil "PMC_NewHideOut") then
+{
+	PMC_NewHideOut = getPos player;
+	saveVar "PMC_NewHideOut";
+};
 private _tmp = PMC_NewHideOut;
 
 // move the marker
@@ -9,7 +14,8 @@ private _tmp = PMC_NewHideOut;
 // move the tent, ammobox and campfire.
 HomeBase setPos _tmp;
 HomeBase setPos [(getPosASL HomeBase select 0), (getPosASL HomeBase select 1), 0];
-RockBox setPos [(_tmp select 0)+ 3 + random 6, (_tmp select 1)- 20 + random 15];
+RockBox setPos [(_tmp select 0)+ 3 + random 6, (_tmp select 1)- 10 + random 15];
+RockBox setDir random 360;
 cmpFire setPos [(_tmp select 0)- 15 + random 5, (_tmp select 1)- 10 + random 7];
 cmpFire setDir random 360;
 
@@ -26,7 +32,7 @@ PMC_VehList setpos _tmp;
 } forEach units assault1;
 
 // add extra ammobox
-RockBox2 = createVehicle ["CUP_USBasicAmmunitionBox", [(_tmp select 0), (_tmp select 1) + 10, 0], [], 0, "NONE"];
+RockBox2 = createVehicle ["CUP_USBasicAmmunitionBox", [(_tmp select 0), (_tmp select 1) + 7, 0], [], 0, "NONE"];
 clearMagazineCargo RockBox2;
 clearWeaponCargo RockBox2;
 

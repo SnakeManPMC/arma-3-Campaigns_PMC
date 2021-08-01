@@ -1,7 +1,4 @@
 
-// this was exit.sqf previously, had to rename it so it wont be ran twice. long story.
-[] execVM "end_of_mission.sqf";
-
 private ["_camera"];
 
 // camera basic initialization

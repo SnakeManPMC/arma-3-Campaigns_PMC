@@ -1,12 +1,16 @@
 
+0 = [player, "PMC_WeatherForecast", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+0 = [player, "PMC_DebugTeleport", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+0 = [player, "PMC_DebugDisableCutscenes", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+
 if (PMC_debug) then
 {
-	diag_log "PMC\PMC_StartMission.sqf executed.";
+	diag_log format["PMC\PMC_StartMission.sqf executed at %1", time];
 };
 
 // debug is ON, cutscenes off
 PMC_debug = true;
-pmcmoff = false;
+PMC_MoviesOff = true;
 
 if (PMC_debug) then
 {
@@ -57,9 +61,11 @@ skipTime PMC_AllTimeUsed;
 [] execVM "PMC\PMC_Vehicle_Arrays.sqf";
 [] execVM "PMC\PMC_HomeBaseSetup.sqf";
 [] execVM "PMC\PMC_RollCall.sqf";
+/* disabled as its just not ported properly yet 2021-08-01
 [] execVM "PMC\PMC_GarageSetup.sqf";
-
+*/
 // new city occupation colors
+/*
 "pmc1" setMarkerColor PMC_City01;
 ["pmc1"] execVM "PMC\PMC_add_defenses.sqf";
 "pmc2" setMarkerColor PMC_City02;
@@ -80,6 +86,7 @@ skipTime PMC_AllTimeUsed;
 ["pmc9"] execVM "PMC\PMC_add_defenses.sqf";
 "pmc10" setMarkerColor PMC_City10;
 ["pmc10"] execVM "PMC\PMC_add_defenses.sqf";
+*/
 
 sleep 5;
 if (PMC_debug) then
@@ -88,11 +95,11 @@ if (PMC_debug) then
 };
 // war scripts + weather
 [] execVM "PMC\PMC_add-civcars.sqf";
-[] execVM "PMC\PMC_war.sqf";
-[] execVM "PMC\PMC_moving.sqf";
-[] execVM "PMC\PMC_weather.sqf";
+//[] execVM "PMC\PMC_war.sqf";
+//[] execVM "PMC\PMC_moving.sqf";
+[1.1] execVM "PMC\PMC_weather_SP.sqf";
 
 if (PMC_debug) then
 {
-	diag_log "PMC\PMC_StartMission.sqf completed succesfully.";
+	diag_log format["PMC\PMC_StartMission.sqf finished at %1", time];
 };

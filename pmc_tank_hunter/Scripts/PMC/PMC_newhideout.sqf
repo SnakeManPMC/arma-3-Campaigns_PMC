@@ -1,10 +1,5 @@
 
-private
-[
-	"_locat"
-];
-
-_locat = _this select 0;
+private _locat = _this select 0;
 
 PMC_NewHideOut = [];
 PMC_NewHideOut = _locat;

@@ -16,9 +16,9 @@ waitUntil
 	camCommitted _camera;
 };
 
-if (pmcmoff) exitWith
+if (PMC_MoviesOff) exitWith
 {
-	// for the exit.sqf running on the background
+	// for the exit script running on the background
 	sleep 3;
 	
 	// destroy camera - if we use mission cutscene the end

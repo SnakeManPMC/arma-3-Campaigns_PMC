@@ -1,4 +1,10 @@
 
+private _playersMap = [player, "ItemMap"] call BIS_fnc_hasItem;
+if (!(_playersMap)) then
+{
+	player addItem "ItemMap";
+};
+
 private ["_camera","_timeh"];
 
 // camera basic initialization
@@ -12,8 +18,15 @@ waitUntil
 };
 
 // dumb check
-if (isNil "pmcmoff") then { pmcmoff = 0; };
-if (pmcmoff) exitWith
+if (isNil "PMC_MoviesOff") then
+{
+	PMC_MoviesOff = true;
+}
+else
+{
+	PMC_MoviesOff = false;
+};
+if (PMC_MoviesOff) exitWith
 {
 // no savegames its kind of gay
 //	saveGame;

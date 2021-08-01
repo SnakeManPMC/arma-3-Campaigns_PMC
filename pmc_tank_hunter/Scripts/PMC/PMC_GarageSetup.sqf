@@ -31,6 +31,7 @@ private _veh8pos = [(getPosASL player select 0)-50 + random 100, (getPosASL play
 private _veh9pos = [(getPosASL player select 0)-50 + random 100, (getPosASL player select 1)-50 + random 100];
 private _xVeh = objNull;
 
+if (isNil "numVehicles") then {numVehicles = 0};
 if (numVehicles >= 1) then
 {
 	_xVeh = veh0 createVehicle _veh0pos;

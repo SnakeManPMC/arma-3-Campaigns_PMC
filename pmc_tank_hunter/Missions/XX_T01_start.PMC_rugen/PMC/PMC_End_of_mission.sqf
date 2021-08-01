@@ -3,7 +3,7 @@ private ["_vehs","_clist","_newList","_theVeh","_f","_xVehType","_stuff","_q","_
 
 if (PMC_debug) then
 {
-	diag_log format["end_of_mission; xx_t01_start\end_of_mission.sqf executed at: %1", time];
+	diag_log format["PMC\PMC_End_of_mission; started at: %1", time];
 };
 
 //#---save "garage"---
@@ -715,6 +715,7 @@ deleteStatus "p10";
 deleteStatus "p11";
 deleteStatus "p12";
 
+/* 2021-08-01 this is not doing anything, player is alone hehe
 if (rollCall >= 1) then
 {
 	if (damage (_z select 1) > 0.9) then
@@ -810,6 +811,10 @@ if (rollCall >= 12) then
 		deleteVehicle (_z select 5);
 	};
 };
+*/
+
+player saveStatus "p0"; // if you enable rollCall, then remove this saveStatus
+/* 2021-08-01 disabled, nothing but problems with this one
 
 // had some problem with _sk before
 _sk = skill player;
@@ -904,7 +909,7 @@ if (rollCall >= 12) then
 	(_z select 12) setSkill (_sk + (0.1 + random 0.1));
 	(_z select 12) saveStatus "p12";
 };
-
+*/
 saveVar "rollCall";
 
 //#endfile
@@ -960,5 +965,5 @@ saveVar "PMC_City10";
 
 if (PMC_debug) then
 {
-	diag_log format["end_of_mission; xx_t01_start\end_of_mission.sqf succesfully completed at: %1", time];
+	diag_log format["PMC\PMC_End_of_mission; succesfully completed at: %1", time];
 };

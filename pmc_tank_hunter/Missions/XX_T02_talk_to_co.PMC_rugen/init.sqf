@@ -1,6 +1,7 @@
 
 [] execVM "briefing.sqf";
 
-PAPABEAR = [West,"HQ"];
+PMCHQ = [West,"HQ"];
+PMCHQ = [West,"HQ"];
 
 [] execVM "PMC\PMC_StartMission.sqf";

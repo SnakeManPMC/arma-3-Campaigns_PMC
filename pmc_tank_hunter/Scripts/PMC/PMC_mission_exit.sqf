@@ -1033,6 +1033,7 @@ I hope there is some limit for this so when skill reaches 1.0 or above, it trunc
 if not, then soon we end up units with skill 200 :)
 
 */
+/* disabled due not ported properly 2021-08-01
 if (rollCall >= 0) then
 {
 	_sk = (skill (_z select 0));
@@ -1123,7 +1124,7 @@ if (rollCall >= 12) then
 	(_z select 12) setSkill (_sk + (0.1 + random 0.1));
 	(_z select 12) saveStatus "p12";
 };
-
+*/
 saveVar "rollCall";
 
 //#endfile

@@ -3,7 +3,7 @@
 //
 
 exitScore = -100;
-weaponPool = true;
+weaponPool = 0;
 
 class MissionDefault
 {
@@ -23,8 +23,13 @@ class Campaign
 	briefingName = "PMC Tank Hunter v0.3.3";
 	author = "Snake Man, PMC.";
 	overviewText = "Hunt for Tokarev trophy pistols while killing as many Russians as you can. Terrains used: PMC Rugen.";
+	overviewPicture = "\campaigns\pmc_tank_hunter\PMC_Tank_Hunter_ca.paa";
 	firstBattle = Part1;
-
+/*
+PMC_Tank_Hunter_ca.paa
+This is PMC Tank Hunter resistance campaign on PMC Rugen island.
+v0.1 Jun 17th, 2007.
+*/
 	class Part1
 	{
         	name = "Lets Rock!";
@@ -373,5 +378,41 @@ class Campaign
 		{
 			template = XX_T29_cutscene1.PMC_rugen;
 		};
+	};
+};
+
+class CfgCommunicationMenu
+{
+	class PMC_WeatherForecast
+	{
+		text = "Weather Forecast";
+		submenu = "";
+		expression = "_this execVM 'PMC\PMC_weather_forecast_sp.sqf';";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+
+	class PMC_DebugTeleport
+	{
+		text = "PMC_DebugTeleport";
+		submenu = "";
+		expression = "_this execVM 'PMC\PMC_DebugTeleport.sqf';";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+
+	class PMC_DebugDisableCutscenes
+	{
+		text = "Debug Cutscenes On/Off";
+		submenu = "";
+		expression = "_this execVM 'PMC\PMC_DebugDisableCutscenes.sqf';";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
 	};
 };
