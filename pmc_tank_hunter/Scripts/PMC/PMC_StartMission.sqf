@@ -3,22 +3,23 @@
 0 = [player, "PMC_DebugTeleport", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 0 = [player, "PMC_DebugDisableCutscenes", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 
-if (PMC_debug) then
-{
-	diag_log format["PMC\PMC_StartMission.sqf executed at %1", time];
-};
-
 // debug is ON, cutscenes off
 PMC_debug = true;
 PMC_MoviesOff = true;
 
 if (PMC_debug) then
 {
-	hint "debug is on...";
+	diag_log format["PMC\PMC_StartMission.sqf executed at %1", time];
+};
+
+if (PMC_debug) then
+{
+	diag_log "PMC_StartMission: debug is on.";
 	10 setradiomsg "Debug off";
 }
 else
 {
+	diag_log "PMC_StartMission: debug is off.";
 	10 setradiomsg "Debug on";
 };
 

@@ -1,8 +1,13 @@
 
+diag_log format["PMC_movie: started, time: %1, PMC_MoviesOff: %2", time, PMC_MoviesOff];
+if (true) exitWith{};
+
 private _playersMap = [player, "ItemMap"] call BIS_fnc_hasItem;
 if (!(_playersMap)) then
 {
+	diag_log "PMC_movie: player had no ItemMap, so added it.";
 	player addItem "ItemMap";
+	player assignItem "ItemMap";
 };
 
 private ["_camera","_timeh"];

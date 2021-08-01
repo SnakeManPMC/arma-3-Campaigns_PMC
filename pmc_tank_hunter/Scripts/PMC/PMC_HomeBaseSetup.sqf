@@ -6,6 +6,7 @@ if (isNil "PMC_NewHideOut") then
 {
 	PMC_NewHideOut = getPos player;
 	saveVar "PMC_NewHideOut";
+	diag_log "PMC_HomeBaseSetup: PMC_NewHideOut is not detected, we set it players position.";
 };
 private _tmp = PMC_NewHideOut;
 
@@ -26,9 +27,9 @@ if (daytime < 7 || daytime > 18) then
 };
 
 // move the trigger too.
-PMC_VehList setpos _tmp;
+PMC_VehList setPos _tmp;
 {
-	_x setPos getPosASL PMC_VehList
+	_x setPos _tmp
 } forEach units assault1;
 
 // add extra ammobox
