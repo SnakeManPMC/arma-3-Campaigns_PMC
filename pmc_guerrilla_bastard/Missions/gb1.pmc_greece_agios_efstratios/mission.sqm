@@ -8,7 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=115;
+		nextID=116;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class Camera
 	{
@@ -22,17 +26,25 @@ binarizationWanted=0;
 sourceName="gb1";
 addons[]=
 {
-	"CUP_Creatures_Military_NAPA"
+	"CUP_Creatures_Military_NAPA",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			className="CUP_Creatures_Military_NAPA";
 			name="CUP_Creatures_Military_NAPA";
+		};
+		class Item1
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -89,15 +101,16 @@ class Mission
 	};
 	class Entities
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			dataType="Trigger";
-			position[]={3918.7664,8.0211391,371.33844};
+			position[]={3918.7661,8.0211239,371.33801};
 			class Attributes
 			{
 				text="End Mission";
-				onActivation="this = [] execVM ""PMC_endMission.sqf"";";
+				condition="call{this}";
+				onActivation="call{0 = execVM ""PMC_endMission.sqf"";}";
 				sizeA=0;
 				sizeB=0;
 				interuptable=1;
@@ -131,12 +144,24 @@ class Mission
 					};
 					id=114;
 					type="CUP_I_GUE_Soldier_AKSU";
+					atlOffset=4.7683716e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=113;
+			atlOffset=4.7683716e-007;
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={3916.125,7.8990002,361.61301};
+			name="pmc_marker_start";
+			type="mil_start";
+			colorName="ColorGreen";
+			id=115;
+			atlOffset=-0.00012683868;
 		};
 	};
 };
