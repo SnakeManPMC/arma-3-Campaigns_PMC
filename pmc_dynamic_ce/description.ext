@@ -2,7 +2,7 @@
 	PMC Dynamic CE
 */
 
-weaponPool = true;
+weaponPool = false;
 
 class MissionDefault
 {
@@ -20,7 +20,7 @@ class Campaign
 {
 	briefingName = "PMC Dynamic CE v0.1.1";
 	author = "Snake Man, PMC.";
-	overviewText = "OFP Chain of Command: Command Engine campaign. PMC Dynamic Command Engine Campaign. 2006-12-22 v0.3. Terrains used: PMC Rattler.";
+	overviewText = "OFP Chain of Command: Command Engine campaign. PMC Dynamic Command Engine Campaign. First release 2005-11-12. Terrains used: PMC Rattler.";
 	firstBattle = Part1;
 	
 	class Part1
@@ -38,25 +38,33 @@ class Campaign
 		end6 = ;
 		lost = ;
 		
+		// weaponPool init is not really needed as arma3 broke weaponPool, but this also includes some saveVars
 		class weaponpoolinit: MissionDefault
 		{
 			end1 = m001;
 			lost = m001;
 			template = weaponpoolinit.PMC_Rattler;
 		};
+
+		// first mission, generic, looping
 		class m001: MissionDefault
 		{
 			end1 = m002;
+			// this is the only way to END this campaign
 			end2 = cutscene2;
 			lost = m001;
 			template = m001.pmc_rattler;
 		};
+
+		// artillery hunt
 		class m002: MissionDefault
 		{
 			end1 = m001;
 			lost = m002;
 			template = m002.pmc_rattler;
 		};
+
+		// ending cutscene
 		class cutscene2: MissionDefault
 		{
 			template = cutscene2.PMC_Rattler;
