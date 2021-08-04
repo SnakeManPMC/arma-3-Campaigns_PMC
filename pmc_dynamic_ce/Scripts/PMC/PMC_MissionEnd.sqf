@@ -1,5 +1,8 @@
 
-// this was scripts\exit.sqf previously, which obviously wont work...
+// this bullshit is required because arma3 weaponPool is BROKEN and duplicates its contents on every mission load
+[] execVM "PMC\PMC_WeaponPoolClearEverything.sqf";
+sleep 1;
+[] execVM "PMC\PMC_WeaponPoolInit.sqf";
 
 // this is for the captured towns stuff.
 PMC_City01=getMarkerColor "pmc1";

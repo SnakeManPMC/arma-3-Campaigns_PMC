@@ -2,7 +2,8 @@
 // year, month, day, hour, minute
 setDate [1984, 4, 2, 6, 0];
 
-[] execVM "PMC\PMC_weaponPool.sqf";
+// borrowed from PMC Powder Bat
+[] execVM "PMC\PMC_WeaponPoolInit.sqf";
 
 // this is for the captured towns stuff.
 PMC_City01=getMarkerColor "pmc1";
