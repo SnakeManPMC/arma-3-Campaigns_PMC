@@ -1,3 +1,4 @@
+
 // camera basic initialization
 private _camera = "camera" camCreate [0,0,0];
 _camera cameraEffect ["internal","back"];

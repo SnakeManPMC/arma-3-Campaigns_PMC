@@ -2,6 +2,7 @@
 [] execVM "PMC\PMC_Briefing.sqf";
 [] execVM "PMC\PMC_Tasks.sqf";
 
+0 = [player, "PMC_DebugEndMission", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 0 = [player, "PMC_DebugCampaignMsg", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 
 PAPABEAR = [West, "HQ"];
@@ -79,6 +80,9 @@ units hqteam select 7 loadStatus "hqt8";
 units hqteam select 8 loadStatus "hqt9";
 
 skipTime PMC_AllTimeUsed;
+
+// mapview showing silly cutscene
+[] execVM "PMC\PMC_Movie.sqf";
 
 // weather script here
 

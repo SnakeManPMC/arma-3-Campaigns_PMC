@@ -41,26 +41,28 @@ class Campaign
 		// weaponPool init is not really needed as arma3 broke weaponPool, but this also includes some saveVars
 		class weaponpoolinit: MissionDefault
 		{
-			end1 = m001;
 			lost = m001;
+			pmc_end1 = m001;
 			template = weaponpoolinit.PMC_Rattler;
 		};
 
 		// first mission, generic, looping
 		class m001: MissionDefault
 		{
-			end1 = m002;
-			// this is the only way to END this campaign
-			end2 = cutscene2;
 			lost = m001;
+			pmc_end1 = m002;
+			// this is the only way to END this campaign
+			pmc_end2 = cutscene2;
 			template = m001.pmc_rattler;
 		};
 
 		// artillery hunt
 		class m002: MissionDefault
 		{
-			end1 = m001;
 			lost = m002;
+			pmc_end1 = m001;
+			// this is the only way to END this campaign
+			pmc_end2 = cutscene2;
 			template = m002.pmc_rattler;
 		};
 
@@ -74,6 +76,17 @@ class Campaign
 
 class CfgCommunicationMenu
 {
+	class PMC_DebugEndMission
+	{
+		text = "Debug End Mission";
+		submenu = "";
+		expression = "_this execVM 'PMC\PMC_DebugEndMission.sqf';";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+
 	class PMC_DebugCampaignMsg
 	{
 		text = "Debug Campaign Message";
@@ -83,22 +96,5 @@ class CfgCommunicationMenu
 		cursor = "";
 		enable = "1";
 		removeAfterExpressionCall = 0;
-	};
-};
-
-class CfgDebriefing
-{
-	class pmc_end1
-	{
-		title = "Mission Accomplished!";
-		description = "All insurgents killed or running for their lives, great job!";
-		subtitle = "";
-	};
-
-	class pmc_end2
-	{
-		title = "Mission Failed!";
-		description = "We lost...";
-		subtitle = "";
 	};
 };

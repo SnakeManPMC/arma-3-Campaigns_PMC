@@ -199,11 +199,4 @@ titlecut ["","BLACK OUT",3];
 3 fademusic 0;
 sleep 3;
 
-// destroy camera - if we use mission cutscene
-//_camera cameraEffect ["terminate","back"]
-
-// Destroy the camera
-camDestroy _camera;
-
-// end the intro
-endcut = true;
+"pmc_end1" call BIS_fnc_endMission;

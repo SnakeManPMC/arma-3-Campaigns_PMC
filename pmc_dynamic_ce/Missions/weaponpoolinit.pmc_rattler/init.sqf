@@ -175,4 +175,4 @@ PMC_Campaign_End = false;
 saveVar "PMC_Campaign_End";
 
 sleep 3;
-endcut = true;
+"pmc_end1" call BIS_fnc_endMission;

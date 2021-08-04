@@ -1,4 +1,7 @@
 
+0 = [player, "PMC_DebugEndMission", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+0 = [player, "PMC_DebugCampaignMsg", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+
 [] execVM "briefing.sqf";
 
 PAPABEAR = [West, "HQ"];
