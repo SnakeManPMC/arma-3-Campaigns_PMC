@@ -29,7 +29,7 @@ PMC_US_Forces =
 	_usdgrp setspeedmode "limited";
 	_usdgrp setformation "wedge";
 
-	{_x addEventHandler [{killed}, {_this exec "killed.sqs"}]} forEach units _usdgrp;
+	{_x addEventHandler ["killed", {_this execVM "PMC\PMC_killed.sqf"}]} forEach units _usdgrp;
 
 	private _usbox = "CUP_USBasicAmmunitionBox" createvehicle _city;
 	_ran = 2 + random 5;
@@ -58,7 +58,7 @@ PMC_US_Forces =
 	};
 	
 	private _m2a2 = (selectRandom PMC_WestTanks) createvehicle _city;
-	_m2a2 addEventHandler ["killed",{_this exec "killed.sqs"}];
+	_m2a2 addEventHandler ["killed",{_this execVM "PMC\PMC_killed.sqf"}];
 
 	"CUP_B_USMC_Crew" createunit [_city, _usdgrp, "this moveincommander _m2a2", 1, "PRIVATE"];
 	"CUP_B_USMC_Crew" createunit [_city, _usdgrp, "this moveingunner _m2a2", 1, "PRIVATE"];

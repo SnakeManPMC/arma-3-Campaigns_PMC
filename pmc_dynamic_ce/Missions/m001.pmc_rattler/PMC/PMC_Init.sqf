@@ -2,6 +2,8 @@
 [] execVM "PMC\PMC_Briefing.sqf";
 [] execVM "PMC\PMC_Tasks.sqf";
 
+0 = [player, "PMC_DebugCampaignMsg", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+
 PAPABEAR = [West, "HQ"];
 
 PMC_corpses = [];

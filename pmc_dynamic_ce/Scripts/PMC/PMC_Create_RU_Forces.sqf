@@ -29,7 +29,7 @@ PMC_Create_RU_Forces =
 	_rusdgrp setspeedmode "limited";
 	_rusdgrp setformation "wedge";
 
-	{_x addEventHandler [{killed}, {_this exec "killed.sqs"}]} forEach units _rusdgrp;
+	{_x addEventHandler ["killed", {_this execVM "PMC\PMC_killed.sqf"}]} forEach units _rusdgrp;
 
 	private _rusbox = "CUP_RUBasicAmmunitionBox" createvehicle _city;
 	_ran = 2 + random 5;
@@ -56,7 +56,7 @@ PMC_Create_RU_Forces =
 	};
 	
 	private _m2a2 = (selectRandom _PMC_EastTanks) createvehicle _city;
-	_m2a2 addEventHandler ["killed",{_this exec "killed.sqs"}];
+	_m2a2 addEventHandler ["killed",{_this execVM "PMC\PMC_killed.sqf"}];
 	
 	"CUP_O_RU_Crew" createunit [_city, _rusdgrp, "this moveincommander _m2a2", 1, "PRIVATE"];
 	"CUP_O_RU_Crew" createunit [_city, _rusdgrp, "this moveingunner _m2a2", 1, "PRIVATE"];

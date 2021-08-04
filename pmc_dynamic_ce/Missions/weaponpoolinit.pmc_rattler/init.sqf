@@ -164,12 +164,15 @@ PMC_passTime = 0;
 // this is the time used in this mission.
 // time = seconds. skiptime = hours.
 PMC_AllTimeUsed = 0;
-pmc_lastresupplytime = 0;
+PMC_LastResupplyTime = 0;
 saveVar "PMC_passTime";
 saveVar "PMC_AllTimeUsed";
-saveVar "pmc_lastresupplytime";
-pmc_resupplyday = 0;
-saveVar "pmc_resupplyday";
+saveVar "PMC_LastResupplyTime";
+PMC_ResupplyDay = 0;
+saveVar "PMC_ResupplyDay";
+// 2021-08-04T16:04:00Z why this is saveVar'red I have no clue ;)
+PMC_Campaign_End = false;
+saveVar "PMC_Campaign_End";
 
 sleep 3;
 endcut = true;
