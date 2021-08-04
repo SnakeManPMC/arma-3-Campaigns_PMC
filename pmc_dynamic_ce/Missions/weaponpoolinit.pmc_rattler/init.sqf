@@ -1,4 +1,7 @@
 
+// year, month, day, hour, minute
+setDate [1984, 4, 2, 6, 0];
+
 [] execVM "PMC\PMC_weaponPool.sqf";
 
 // this is for the captured towns stuff.
@@ -160,19 +163,18 @@ units hqteam select 7 saveStatus "hqt8";
 units hqteam select 8 saveStatus "hqt9";
 
 // time changes between missions.
-PMC_passTime = 0;
 // this is the time used in this mission.
 // time = seconds. skiptime = hours.
 PMC_AllTimeUsed = 0;
-PMC_LastResupplyTime = 0;
-saveVar "PMC_passTime";
-saveVar "PMC_AllTimeUsed";
-saveVar "PMC_LastResupplyTime";
-PMC_ResupplyDay = 0;
-saveVar "PMC_ResupplyDay";
-// 2021-08-04T16:04:00Z why this is saveVar'red I have no clue ;)
 PMC_Campaign_End = false;
+PMC_LastResupplyTime = 0;
+PMC_passTime = 0;
+PMC_ResupplyDay = 0;
+saveVar "PMC_AllTimeUsed";
 saveVar "PMC_Campaign_End";
+saveVar "PMC_LastResupplyTime";
+saveVar "PMC_passTime";
+saveVar "PMC_ResupplyDay";
 
 sleep 3;
 "pmc_end1" call BIS_fnc_endMission;
