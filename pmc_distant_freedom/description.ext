@@ -11,22 +11,29 @@ class Campaign
 	briefingName = "PMC Distant Freedom v0.0.1";
 	author = "Snake Man, PMC.";
 	overviewText = "High Command campaign, large scale combined arms action. Terrains used: PMC 51km Desert.";
-	firstBattle = Beginning;
-
-	class MissionDefault
+	firstBattle = pmc_chapter_one;
+	
+	class NoEndings
 	{
-		lives = -1;
-		lost = ;
+		cutscene = ;
 		end1 = ;
 		end2 = ;
 		end3 = ;
 		end4 = ;
 		end5 = ;
 		end6 = ;
+		lost = ;
 	};
-
-	// first chapter
-	class Beginning
+	
+	class MissionDefault: NoEndings
+	{
+		lives = -1;
+		// this allows you to jump across all these mission classes
+		// by calling them with BIS_fnc_endMission
+		df_001 = df_001;
+	};
+	
+	class pmc_chapter_one: NoEndings
 	{
 		name = "Beginning";
 		cutscene = ;
@@ -43,46 +50,46 @@ class Campaign
 
 		class df_001: MissionDefault
 		{
-			end1 = df_002;
+			pmc_end1 = df_002;
 			template = df_001.pmc_51km_desert;
 		};
 
 		class df_002: MissionDefault
 		{
-			end1 = df_003;
+			pmc_end1 = df_003;
 			template = df_002.pmc_51km_desert;
 		};
 
 		class df_003: MissionDefault
 		{
-			end1 = df_004;
+			pmc_end1 = df_004;
 			template = df_003.pmc_51km_desert;
 		};
 
 		class df_004: MissionDefault
 		{
-			end1 = df_005;
+			pmc_end1 = df_005;
 			template = df_004.pmc_51km_desert;
 		};
 
 		class df_005: MissionDefault
 		{
-			end1 = df_006;
+			pmc_end1 = df_006;
 			template = df_005.pmc_51km_desert;
 		};
 		class df_006: MissionDefault
 		{
-			end1 = df_007;
+			pmc_end1 = df_007;
 			template = df_006.pmc_51km_desert;
 		};
 		class df_007: MissionDefault
 		{
-			end1 = df_008;
+			pmc_end1 = df_008;
 			template = df_007.pmc_51km_desert;
 		};
 		class df_008: MissionDefault
 		{
-			end1 = ;
+			pmc_end1 = ;
 			template = df_008.pmc_51km_desert;
 		};
 	};
