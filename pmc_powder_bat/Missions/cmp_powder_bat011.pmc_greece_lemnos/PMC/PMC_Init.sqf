@@ -6,7 +6,7 @@ PMCHQ = [ West, "BASE" ];
 
 [] execVM "PMC\PMC_Briefing.sqf";
 [] execVM "PMC\PMC_Tasks.sqf";
-[1.1] execVM "PMC\PMC_weather_SP.sqf";
+[1.1] execVM "PMC\PMC_weather.sqf";
 
 // our v3s truck introductory mission and we want to clear its contents
 [pmc_truck1] execVM "PMC\PMC_ClearVehicleCargo.sqf";

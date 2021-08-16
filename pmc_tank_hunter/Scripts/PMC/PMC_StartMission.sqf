@@ -97,7 +97,7 @@ if (PMC_debug) then
 [] execVM "PMC\PMC_add-civcars.sqf";
 [] execVM "PMC\PMC_war.sqf";
 [] execVM "PMC\PMC_moving.sqf";
-[1.1] execVM "PMC\PMC_weather_SP.sqf";
+[1.1] execVM "PMC\PMC_weather.sqf";
 
 if (PMC_debug) then
 {

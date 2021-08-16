@@ -1,6 +1,6 @@
 player setVariable ["BIS_enableRandomization", false];
 player setVariable ["BIS_noCoreConversations", true];
-[1.1] execVM "PMC\PMC_weather_SP.sqf";
+[1.1] execVM "PMC\PMC_weather.sqf";
 
 private["_ok"];
 // his health status, weapons and gear
