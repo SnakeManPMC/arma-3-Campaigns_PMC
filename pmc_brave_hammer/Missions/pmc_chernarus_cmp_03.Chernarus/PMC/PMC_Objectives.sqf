@@ -1,11 +1,4 @@
 
-/*
-trigger: opfor dead
-type: seized by blufor
-condition: 
-on activation: leader mfr sideChat "We have eliminated all enemy resistance. Over."; pmc_opfordead1 = true; PMC_capture_airfield setTaskState "SUCCEEDED"; "target1" setMarkerType "mil_dot"; "target1" setMarkerColor "colorgreen";
-
-*/
 [] spawn
 {
 	sleep 60;
