@@ -5,6 +5,3 @@ player createDiaryRecord ["Diary", ["Execution", "Choose safe LZ, as close as po
 player createDiaryRecord ["Diary", ["Intel", "You know the positions and strenght of enemy forces in the airfield."]];
 player createDiaryRecord ["Diary", ["Mission", "Reconnaissance of safe landing zone on the preparation for air assault."]];
 player createDiaryRecord ["Diary", ["Situation", "You are our eyes and ears now, keep a note of everything going on around you."]];
-
-PMC_choose_lz = player createSimpleTask ["Choose LZ"];
-PMC_choose_lz setSimpleTaskDescription ["Your objective is to recon the area near airfield and choose safe landing zone (LZ) for the planned assault.", "Choose LZ", "Choose LZ"];

@@ -1,9 +1,41 @@
-/*
-"Debriefing:End1">LZ Selection successful
-You have successfully selected the Landing Zone.
-*/
 
 author = "Snake Man, PMC.";
-onLoadName = "PMC Brave Hammer 2";
+briefingName = "PMC Brave Hammer 2";
 onLoadMission = "Brave Hammer";
+onLoadName = "PMC Brave Hammer 2";
 overviewText = "PMC Brave Hammer Mission 2";
+
+class CfgDebriefing
+{
+	class PMC_end1
+	{
+		title = "LZ Selection successful";
+		subtitle = "";
+		description = "You have successfully selected the Landing Zone.";
+	};
+};
+
+class CfgCommunicationMenu
+{
+	class PMC_Choose_LZ
+	{
+		text = "Choose Landing Zone";
+		submenu = "";
+		expression = "_this execVM 'PMC\PMC_Choose_LZ.sqf';";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+
+	class PMC_EndThisMission
+	{
+		text = "End Mission";
+		submenu = "";
+		expression = "'pmc_end1' call BIS_fnc_endMission;";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+};
