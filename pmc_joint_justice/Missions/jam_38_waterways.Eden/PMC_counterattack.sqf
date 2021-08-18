@@ -30,8 +30,7 @@ leader assault1 sideRadio "Reastdead3";
 sleep 15;
 
 PAPABEAR sideRadio "Rhqreply3";
-objective3 setTaskState "SUCCEEDED";
-[ objNull, objNull, objective3, "SUCCEEDED"] execVM "CA\Modules\MP\data\scriptCommands\taskHint.sqf";
+["objective3", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
 "target3" setMarkerType "mil_dot";
 "target3" setMarkerColor "colorgreen";
 sleep 15;
