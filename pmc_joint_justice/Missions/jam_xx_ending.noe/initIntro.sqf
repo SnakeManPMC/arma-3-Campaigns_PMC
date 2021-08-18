@@ -12,7 +12,7 @@ _camera camSetFOV 0.700;
 // assault1 leader
 _camera camSetTarget leader assault1;
 _camera camSetRelPos [10,100,25];
-_camera camCommit 0
+_camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
 [] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";

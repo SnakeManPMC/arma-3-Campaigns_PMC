@@ -3,7 +3,7 @@
 "victory condition done" trigger
 activation: blufor, present
 condition: this
-on activation: player sidechat "We have sufficient intel information of the target. Over."; pmc_mcomplete = true; "target1" setMarkerColorLocal "colorgreen"; PMC_airfield_recon setTaskState "SUCCEEDED";
+on activation: player sidechat "We have sufficient intel information of the target. Over."; pmc_mcomplete = true; "target1" setMarkerColorLocal "colorgreen"; PMC_airfield_recon set.Task.State "SUCCEEDED";
 this trigger was located next to marker called: "gethere"
 */
 [] spawn
