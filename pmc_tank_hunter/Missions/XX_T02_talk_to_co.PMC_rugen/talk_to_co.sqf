@@ -1,7 +1,7 @@
 
 if (!alive PMC_co) exitWith
 {
-	PMC_objective1 setTaskState "FAILED";
+	["PMC_objective1", "FAILED", true] spawn BIS_fnc_taskSetState;
 	hint "The US CO is KIA.";
 };
 
@@ -17,4 +17,4 @@ sleep 5;
 PMC_co globalChat "We will contact you when we have more information. Until that, good luck.";
 sleep 5;
 
-PMC_objective1 setTaskState "SUCCEEDED";
+["PMC_objective1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
