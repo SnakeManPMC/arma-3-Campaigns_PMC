@@ -1,5 +1,4 @@
 
-"2" objStatus "HIDDEN";
 "target2" setMarkerType "empty";
 PMC_TimerRunOff = false;
 

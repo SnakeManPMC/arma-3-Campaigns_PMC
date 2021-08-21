@@ -14,7 +14,7 @@ leader assault2 sideChat "We are retreating to Somato. This is bravo, OUT.";
 sleep 3;
 
 // set objective 2 active, retake gulan
-"2" objStatus "ACTIVE";
+[player,["objective2"],["Bravo squad is retreating from Gulan. Your new orders are to retake <marker name = 'gulan'>Gulan</marker>!","Bravo squad is retreating from Gulan. Your new orders are to retake <marker name = 'gulan'>Gulan</marker>!","Bravo squad is retreating from Gulan. Your new orders are to retake <marker name = 'gulan'>Gulan</marker>!"],objNull,1,2,true] call BIS_fnc_taskCreate;
 // set the marker to objective
 "gulan" setMarkerTypeLocal "Flag";
 // variable to checked if enemies are dead, objective completed.
