@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "I get funny feeling about this one, maybe the enemy has something special awaiting for us today, so I guess its better to keep my act tight.<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Capture the <marker name = 'target1'>Corazol</marker> south side. Do not proceed north side of the town. Today your MLRS rocket system arrived, its available under support."]];

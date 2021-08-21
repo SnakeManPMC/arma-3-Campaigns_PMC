@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "Final hour ahead for the enemy. How do they take it?<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Capture <marker name = 'target1'>Isla Del Vassal</marker>, <marker name = 'target2'>Isla del Vida</marker>, <marker name = 'target3'>Antigua</marker> and <marker name = 'target4'>base</marker> objectives."]];

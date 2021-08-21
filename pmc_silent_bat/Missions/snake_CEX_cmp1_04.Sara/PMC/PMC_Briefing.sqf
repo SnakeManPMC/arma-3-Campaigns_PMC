@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "That's going to be interesting of hitting these targets, looking forward to it.<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Capture the <marker name = 'target1'>Tiberia</marker>, <marker name = 'target2'>Cayo</marker> and <marker name = 'target3'>Arcadia</marker> objectives. M252 mortars have been deployed to Rahmadi and they are available under Support."]];

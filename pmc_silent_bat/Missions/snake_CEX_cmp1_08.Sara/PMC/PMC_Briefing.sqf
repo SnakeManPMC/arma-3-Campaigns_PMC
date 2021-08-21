@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "So we have another large mission ahead of us, well that's why I joined the military...<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. <marker name = 'defend'>Defend</marker> Corazol south side against enemy <marker name = 'target1'>counter attack</marker> from the east and north west. Do not proceed into enemy territory under any circumstances."]];

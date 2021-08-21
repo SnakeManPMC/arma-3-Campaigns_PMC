@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "Hey, this actually is working pretty good, we make good advances and the enemy doesn't seem to be match to us. I like it.<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Conduct daring raid on <marker name = 'target1'>Benoma</marker> objective to capture it. Do not wander into enemy territory otherwise.<br/><br/>Use MH-6's to insert your troops, they are cleared to overfly the keepout areas, but your infantry or other vehicles are not to enter into this area."]];

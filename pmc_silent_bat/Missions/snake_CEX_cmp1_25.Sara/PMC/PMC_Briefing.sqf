@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "That last fight was intense, really intense. Everyone is like shook up after that fight.<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Capture <marker name = 'target1'>Pesadas</marker>, <marker name = 'target2'>Pacamac</marker>, <marker name = 'target3'>comms tower</marker> and <marker name = 'target4'>houses</marker> objectives."]];

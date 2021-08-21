@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "Today the war starts. So many things can go wrong... all the training, all the planning... what will happen in the next coming days?<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "Special Forces <marker name = 'start'>start</marker> at beach. Clear out all enemies in the <marker name = 'target1'>houses</marker> and in the <marker name = 'target2'>airstrip</marker>."]];

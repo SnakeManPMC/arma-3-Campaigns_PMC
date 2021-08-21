@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "Without my buddies I'm nothing, well more or less. With them I can do great things, like blowing up all the enemy forces that face me. Bring it on baby!<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Capture <marker name = 'target1'>Rashidah</marker>, <marker name = 'target2'>Corinto</marker>, <marker name = 'target3'>Bonanza</marker>, <marker name = 'target4'>Pesto</marker> objectives and clear <marker name = 'target5'>intersection</marker> on beach."]];

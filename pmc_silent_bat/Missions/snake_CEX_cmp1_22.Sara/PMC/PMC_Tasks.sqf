@@ -1,0 +1,3 @@
+[player,["objective3"],["Enemy counter attack spotted coming from Carmen into Bagango, your new orders are to <marker name = 'target3'>defend Bagango!</marker> at all cost.","Enemy counter attack spotted coming from Carmen into Bagango, your new orders are to <marker name = 'target3'>defend Bagango!</marker> at all cost.","Enemy counter attack spotted coming from Carmen into Bagango, your new orders are to <marker name = 'target3'>defend Bagango!</marker> at all cost."],objNull,1,2,true] call BIS_fnc_taskCreate;
+[player,["objective2"],["Capture Ixel","Capture Ixel","Capture Ixel"],objNull,1,2,true] call BIS_fnc_taskCreate;
+[player,["objective1"],["Capture Masbete","Capture Masbete","Capture Masbete"],objNull,1,2,true] call BIS_fnc_taskCreate;

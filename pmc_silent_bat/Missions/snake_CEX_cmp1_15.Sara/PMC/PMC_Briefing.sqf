@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "Another defend mission ahead of us, how much juice the enemy has got left?<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Defend <marker name = 'defend'>Corazol</marker> against enemy <marker name = 'target1'>counter attack</marker> from the north, north east.<br/><br/>Your support trucks (ammo, refuel and repair) as well as medics are located in <marker name = 'support'>here</marker>. Make good use of them and protect them from enemy assault."]];

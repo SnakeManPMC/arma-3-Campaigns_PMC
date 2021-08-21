@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "If I have to capture another set of cities I go outta my mind. Man I need some R and R...<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Capture <marker name = 'target1'>Corazol north</marker> and <marker name = 'target2'>Pita</marker> area (airstrip, town and harbor) objectives.<br/><br/>Make sure you do not enter into the <marker name = 'keepout1'>keep out</marker> area!"]];

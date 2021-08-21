@@ -1,0 +1,2 @@
+player createDiaryRecord ["Diary", ["Diary", "Hear the silence? I don't. I hear gunfire, explosions, screams and suffering. Hooayh! all caused by my troops, lets go and do some more damage!<br/>"]];
+player createDiaryRecord ["Diary", ["Mission", "<marker name = 'start'>HQ</marker> is at Rahmadi. Capture <marker name = 'target1'>Obregan</marker> and <marker name = 'target2'>Mercalillo</marker> objectives."]];
