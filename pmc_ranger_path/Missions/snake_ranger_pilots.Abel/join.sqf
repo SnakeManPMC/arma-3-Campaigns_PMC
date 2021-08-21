@@ -21,6 +21,6 @@ waitUntil
 	(!alive helo2);
 };
 
-"1" objstatus "DONE";
+["t1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
 "downed" setMarkerType "mil_dot";
 "downed" setMarkerColor "colorgreen";

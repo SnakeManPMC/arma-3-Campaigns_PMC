@@ -10,5 +10,5 @@
 */
 PAPABEAR sideradio "Rdeadreply";
  1 setRadioMsg "Call - Extract";
- "1" objStatus "FAILED";
+["t1", "FAILED", true] spawn BIS_fnc_taskSetState;
 

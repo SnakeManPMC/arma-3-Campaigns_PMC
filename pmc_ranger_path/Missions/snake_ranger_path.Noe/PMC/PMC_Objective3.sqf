@@ -9,7 +9,7 @@
 
 */
 leader assault1 sideradio "RpackageDead";
- "2" objStatus "FAILED";
- "3" objStatus "FAILED";
+ ["t2", "FAILED", true] spawn BIS_fnc_taskSetState;
+ ["t3", "FAILED", true] spawn BIS_fnc_taskSetState;
  endos1=true;
 

@@ -37,9 +37,9 @@ playmusic ["Track15_MainTheme",0]
 
 if (alive col1) then
 {
-	"2" objstatus "DONE";
+	["t2", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
 }
 else
 {
-	"2" objstatus "FAILED";
+	["t2", "FAILED", true] spawn BIS_fnc_taskSetState;
 };
