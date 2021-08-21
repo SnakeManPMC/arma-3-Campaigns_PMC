@@ -10,5 +10,4 @@
 */
 PMCHQ sideChat "Enemy counter attack to Bagango spotted. Defend it at all cost. Over.";
  "target3" setMarkerType "arrow";
- "3" objStatus "ACTIVE";
-
+[player,["t3"],["task 3","Taskname 3","textmarker"],[player],1,2,true] call BIS_fnc_taskCreate;

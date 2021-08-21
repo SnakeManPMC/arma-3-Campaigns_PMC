@@ -63,7 +63,7 @@ _PMC_SelectOPFORStartPosit =
 // then activate the objective and display marker.
 hint "Briefing updated!";
 player sideChat "Goddamn! We have enemy forces closing in Pita. Over.";
-"3" objStatus "ACTIVE";
+[player,["t3"],["task 3","Taskname 3","textmarker"],[player],1,2,true] call BIS_fnc_taskCreate;
 "target3" setMarkerType "Flag1";
 "keepout1" setMarkerPos [15072,14142];
 "keepout2" setMarkerPos [17368,11664];
