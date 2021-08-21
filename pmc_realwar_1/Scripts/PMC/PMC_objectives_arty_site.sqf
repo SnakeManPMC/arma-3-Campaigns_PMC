@@ -30,7 +30,7 @@ _PMC_CreateObjective =
 	_z = createTrigger ["EmptyDetector", _targetpoint];
 	_z setTriggerActivation ["GUER SEIZED", "PRESENT", true];
 	_z setTriggerArea [50, 50, 60, true];
-	_z setTriggerStatements ["this", "hint 'PMC_Marker_Arty: objective completed'; '1' objStatus 'DONE'; 'PMC_Marker_Arty' setMarkerColor 'ColorGreen'; 'PMC_Marker_Arty' setMarkerType 'dot'; opfordead1 = true; player sideChat 'Objective Artillery completed. Over'", ""];
+	_z setTriggerStatements ["this", "hint 'PMC_Marker_Arty: objective completed'; ['t1', 'SUCCEEDED', true] spawn BIS_fnc_taskSetState; 'PMC_Marker_Arty' setMarkerColor 'ColorGreen'; 'PMC_Marker_Arty' setMarkerType 'dot'; opfordead1 = true; player sideChat 'Objective Artillery completed. Over'", ""];
 };
 
 // choose random posit, then remove it from selection so next time

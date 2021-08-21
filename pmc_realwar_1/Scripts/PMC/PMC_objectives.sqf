@@ -1,7 +1,6 @@
 /*
 
 	Briefing.html objectives!
-	"1" ObjStatus!
 
 */
 
@@ -34,7 +33,7 @@ _PMC_CreateObjective =
 	_z = createTrigger ["EmptyDetector", _targetpoint];
 	_z setTriggerActivation ["GUER", "PRESENT", false];
 	_z setTriggerArea [400, 400, 0, true];
-	_z setTriggerStatements ["this", format ["hint 'PMC_Marker_%1: objective completed'; '%1' objStatus 'DONE'; 'PMC_Marker_%1' setMarkerColor 'ColorGreen'; 'PMC_Marker_%1' setMarkerType 'dot'; opfordead%1 = true; player sideChat 'Objective %1 completed. Over'",_a], ""];
+	_z setTriggerStatements ["this", format ["hint 'PMC_Marker_%1: objective completed'; [%1, 'SUCCEEDED', true] spawn BIS_fnc_taskSetState; 'PMC_Marker_%1' setMarkerColor 'ColorGreen'; 'PMC_Marker_%1' setMarkerType 'dot'; opfordead%1 = true; player sideChat 'Objective %1 completed. Over'",_a], ""];
 };
 
 /*
@@ -81,33 +80,32 @@ while { _a < _ObjCount || _a > (count PMC_targets) } do
 // hide not used objectives
 if (_ObjCount == 1) then
 {
-	"2" objStatus "HIDDEN"; opfordead2 = true;
-	"3" objStatus "HIDDEN"; opfordead3 = true;
-	"4" objStatus "HIDDEN"; opfordead4 = true;
-	"5" objStatus "HIDDEN"; opfordead5 = true;
+	opfordead2 = true;
+	opfordead3 = true;
+	opfordead4 = true;
+	opfordead5 = true;
 	player sideChat "_ObjCount == 1, made 4 objectives hidden.";
 };
 
 if (_ObjCount == 2) then
 {
-	"3" objStatus "HIDDEN"; opfordead3 = true;
-	"4" objStatus "HIDDEN"; opfordead4 = true;
-	"5" objStatus "HIDDEN"; opfordead5 = true;
+	opfordead3 = true;
+	opfordead4 = true;
+	opfordead5 = true;
 	player sideChat "_ObjCount == 2, made 3 objectives hidden.";
 };
 
 if (_ObjCount == 3) then
 {
-	"4" objStatus "HIDDEN"; opfordead4 = true;
-	"5" objStatus "HIDDEN"; opfordead5 = true;
+	opfordead4 = true;
+	opfordead5 = true;
 	player sideChat "_ObjCount == 3, made 2 objectives hidden.";
 };
 
 if (_ObjCount == 4) then
 {
-	"5" objStatus "HIDDEN"; opfordead5 = true;
+	opfordead5 = true;
 	player sideChat "_ObjCount == 4, made 1 objectives hidden.";
 };
 
 // sixth objective is now always hidden.
-"6" objStatus "HIDDEN";
