@@ -30,7 +30,7 @@ else
 // create the special ammo box there
 PMC_AmmoBox = "CUP_USBasicAmmunitionBox" createVehicle _city;
 _ran = floor (2 + random 5);
-PMC_AmmoBox addMagazineCargo ["CUP_MineE_M", _ran];
+PMC_AmmoBox addMagazineCargo ["CUP_MineE", _ran];
 _ran = floor (2 + random 5);
 PMC_AmmoBox addMagazineCargo ["CUP_PipeBomb_M", _ran];
 

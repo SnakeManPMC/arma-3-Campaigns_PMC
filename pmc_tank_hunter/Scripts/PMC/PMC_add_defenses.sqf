@@ -9,7 +9,7 @@ if (getMarkerColor _marker == "ColorRed") then
 {
 	_rusbox = "CUP_RUBasicAmmunitionBox" createVehicle _city;
 	_ran = floor (2 + random 5);
-	_rusbox addMagazineCargo ["CUP_MineE_M", _ran];
+	_rusbox addMagazineCargo ["CUP_MineE", _ran];
 	_ran = floor (2 + random 5);
 	_rusbox addMagazineCargo ["CUP_PipeBomb_M", _ran];
 
@@ -114,7 +114,7 @@ if (getMarkerColor _marker == "ColorGreen") then
 {
 	_usbox = "CUP_USBasicAmmunitionBox" createVehicle _city;
 	_ran = floor (2 + random 5);
-	_usbox addMagazineCargo ["CUP_MineE_M", _ran];
+	_usbox addMagazineCargo ["CUP_MineE", _ran];
 	_ran = floor (2 + random 5);
 	_usbox addMagazineCargo ["CUP_PipeBomb_M", _ran];
 

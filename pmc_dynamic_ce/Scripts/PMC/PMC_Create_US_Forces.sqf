@@ -34,7 +34,7 @@ PMC_US_Forces =
 	private _usbox = "CUP_USBasicAmmunitionBox" createvehicle _city;
 	_ran = 2 + random 5;
 	_ran = _ran - (_ran mod 1);
-	_usbox addMagazineCargo ["CUP_MineE_M", _ran];
+	_usbox addMagazineCargo ["CUP_MineE", _ran];
 	_ran = 2 + random 5;
 	_ran = _ran - (_ran mod 1);
 	_usbox addMagazineCargo ["CUP_PipeBomb_M", _ran];

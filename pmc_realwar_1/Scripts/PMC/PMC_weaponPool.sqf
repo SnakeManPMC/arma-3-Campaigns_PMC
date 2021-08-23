@@ -101,5 +101,5 @@ addMagazinePool ["HandGrenade", 12];
 */
 addMagazinePool ["CUP_PipeBomb_M", 12];
 //addMagazinePool ["CUP_Timebomb_M", 12];
-addMagazinePool ["CUP_MineE_M", 12];
-addMagazinePool ["CUP_MineE_M", 12];
+addMagazinePool ["CUP_MineE", 12];
+addMagazinePool ["CUP_MineE", 12];
