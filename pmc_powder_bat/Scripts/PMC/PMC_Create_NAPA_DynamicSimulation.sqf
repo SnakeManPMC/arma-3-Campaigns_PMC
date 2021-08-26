@@ -32,7 +32,7 @@ private _pmc_sentry =
 {
 	[_x, 30] call _pmc_sentry;
 	[_x, 100] call _pmc_sentry;
-} forEach [pmc_1, pmc2, pmc3, pmc4, pmc5, pmc6, pmc7, pmc8, pmc9, pmc10, pmc11, pmc12, pmc13, pmc14, pmc15, pmc16, pmc17, pmc18, pmc19, pmc20];
+} forEach [pmc_1, pmc_2, pmc_3, pmc_4, pmc_5, pmc_6, pmc_7, pmc_8, pmc_9, pmc_10, pmc_11, pmc_12, pmc_13, pmc_14, pmc_15, pmc_16, pmc_17, pmc_18, pmc_19, pmc_20];
 
 /*
 _grp = [getPos pmc_2] call PMC_Create_CUP_NAPA_Sniper_Team;
