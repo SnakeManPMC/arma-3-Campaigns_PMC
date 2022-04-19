@@ -70,7 +70,7 @@ while { _a < _ObjCount || _a > (count PMC_targets) } do
 	{
 		// create objective
 		[] call _PMC_CreateObjective;
-		// and add some defences there ;)
+		// and add some defenses there ;)
 		_tmp = [_targetpoint] execVM "PMC\PMC_objective_def_OPFOR.sqf";
 		// we wait until one objective defenses are done.
 		waitUntil {scriptDone _tmp};

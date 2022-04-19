@@ -92,9 +92,9 @@ sleep 5;
 [] execVM "PMC\PMC_War.sqf";
 sleep 10;
 [50] execVM "PMC\PMC_corpses.sqf";
-[artyleader] execVM "PMC\PMC_ArtyDefence.sqf";
+[artyleader] execVM "PMC\PMC_ArtyDefense.sqf";
 sleep 5;
-[mortarleader] execVM "PMC\PMC_ArtyDefence.sqf";
+[mortarleader] execVM "PMC\PMC_ArtyDefense.sqf";
 
 // objectives
 [] execVM "PMC\PMC_Objectives.sqf";

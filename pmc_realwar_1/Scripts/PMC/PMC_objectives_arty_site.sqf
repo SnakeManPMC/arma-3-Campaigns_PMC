@@ -55,5 +55,5 @@ waitUntil { scriptDone _tmp; };
 _tmp = [] execVM "PMC\PMC_MakeArtillerySiteOPFOR.sqf";
 waitUntil { scriptDone _tmp; };
 
-// and add some defences there ;)
+// and add some defenses there ;)
 [_targetpoint] execVM "PMC\PMC_objective_def_OPFOR.sqf";
