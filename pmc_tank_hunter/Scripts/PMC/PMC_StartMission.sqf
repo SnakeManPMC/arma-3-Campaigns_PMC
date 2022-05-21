@@ -61,6 +61,7 @@ skipTime PMC_AllTimeUsed;
 
 [] execVM "PMC\PMC_Vehicle_Arrays.sqf";
 [] execVM "PMC\PMC_HomeBaseSetup.sqf";
+[] execVM "PMC\PMC_HomeBaseSpotted.sqf";
 [] execVM "PMC\PMC_RollCall.sqf";
 /* disabled as its just not ported properly yet 2021-08-01
 [] execVM "PMC\PMC_GarageSetup.sqf";
