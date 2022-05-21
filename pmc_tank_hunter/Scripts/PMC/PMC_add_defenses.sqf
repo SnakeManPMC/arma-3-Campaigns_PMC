@@ -4,6 +4,12 @@ private ["_grp","_gun1","_r1","_rtmptnk","_rveh","_ran","_rusbox","_sv","_pos","
 _marker = _this select 0;
 _city = getMarkerPos _marker;
 
+// bottom of PMC_Vehicle_Arrays.sqf is PMC_WestPlane[] so we check that it exists before proceeding
+waitUntil
+{
+	(!isNil "PMC_WestPlane");
+};
+
 // Russians
 if (getMarkerColor _marker == "ColorRed") then
 {
