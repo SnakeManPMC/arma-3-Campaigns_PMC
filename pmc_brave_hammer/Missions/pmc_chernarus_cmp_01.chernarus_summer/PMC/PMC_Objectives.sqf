@@ -1,4 +1,6 @@
 
+pmc_mcomplete = false;
+
 /*
 "victory condition done" trigger
 activation: blufor, present
@@ -8,10 +10,12 @@ this trigger was located next to marker called: "gethere"
 */
 [] spawn
 {
+	//systemChat "PMC: gethere objective waitUntil started ...";
 	sleep 60;
 
 	waitUntil
 	{
+		//systemChat format["PMC: gethere objective waitUntil looping, player distance to marker: %1", (getPosATL player) distance (getMarkerPos "gethere")];
 		sleep 10;
 		((getPosATL player) distance (getMarkerPos "gethere") < 30);
 	};
@@ -32,19 +36,22 @@ on activation: {_x setBehaviour "stealth"; _x setCombatMode "green"; _x setPos g
 */
 [] spawn
 {
+	//systemChat "PMC player altitude check for group rejoin waitUntil started ...";
 	// beginning of mission sleep, no rush
 	sleep 60;
 
 	waitUntil
 	{
+		//systemChat format["PMC player altitude check for group rejoin waitUntil altitude: %1", (getPosATL player select 2)];
 		sleep 10;
-		(getPosASL player select 2) < 1;
+		(getPosATL player select 2) < 1;
 	};
 
+	//systemChat "PMC player altitude check for group rejoin waitUntil finished, we are now on the ground.";
 	{
-		_x setBehaviour "stealth";
-		_x setCombatMode "green";
-		_x setPos getPosASL player;
+		_x setBehaviour "STEALTH";
+		_x setCombatMode "GREEN";
+		_x setPos getPosATL player;
 		 [_x] join player;
 	} forEach units my_group;
 };
@@ -52,11 +59,13 @@ on activation: {_x setBehaviour "stealth"; _x setCombatMode "green"; _x setPos g
 // mission ending trigger was traditional END1 with condition: pmc_mcomplete
 [] spawn
 {
+	//systemChat "PMC pmc_mcomplete waitUtil started.";
 	// beginning of mission sleep, no rush
-	sleep 60*5;
+	sleep 60*1;
 
 	waitUntil
 	{
+		//systemChat "PMC pmc_mcomplete waitUtil looping...";
 		sleep 10;
 		pmc_mcomplete;
 	};
