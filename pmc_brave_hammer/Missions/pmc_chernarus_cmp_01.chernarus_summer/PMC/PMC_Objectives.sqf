@@ -1,6 +1,4 @@
 
-pmc_mcomplete = false;
-
 /*
 "victory condition done" trigger
 activation: blufor, present
@@ -21,11 +19,14 @@ this trigger was located next to marker called: "gethere"
 	};
 
 	player sidechat "We have sufficient intel information of the target. Over.";
-	sleep 7;
-
-	pmc_mcomplete = true;
 	"target1" setMarkerColorLocal "colorgreen";
 	["t1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+	sleep 7;
+
+	["t2", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+
+	sleep 5;
+	"pmc_end1" call BIS_fnc_endMission;
 };
 
 /*
@@ -54,22 +55,4 @@ on activation: {_x setBehaviour "stealth"; _x setCombatMode "green"; _x setPos g
 		_x setPos getPosATL player;
 		 [_x] join player;
 	} forEach units my_group;
-};
-
-// mission ending trigger was traditional END1 with condition: pmc_mcomplete
-[] spawn
-{
-	//systemChat "PMC pmc_mcomplete waitUtil started.";
-	// beginning of mission sleep, no rush
-	sleep 60*1;
-
-	waitUntil
-	{
-		//systemChat "PMC pmc_mcomplete waitUtil looping...";
-		sleep 10;
-		pmc_mcomplete;
-	};
-
-	sleep 7;
-	"pmc_end1" call BIS_fnc_endMission;
 };

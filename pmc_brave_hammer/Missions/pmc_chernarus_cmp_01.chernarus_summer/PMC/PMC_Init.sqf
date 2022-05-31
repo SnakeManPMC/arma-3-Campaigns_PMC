@@ -1,7 +1,8 @@
 
 [] execVM "PMC\PMC_Briefing.sqf";
+[] execVM "PMC\PMC_Tasks.sqf";
 
-BIS_player loadStatus "mfr1";
+player loadStatus "mfr1";
 mfr2 loadStatus "mfr2";
 mfr3 loadStatus "mfr3";
 mfr4 loadStatus "mfr4";
@@ -12,7 +13,7 @@ mfr6 loadStatus "mfr6";
 
 player addBackPack "B_Parachute";
 
-bis_MV22 setPosATL [getPosASL bis_MV22 select 0, getPosASL bis_MV22 select 1, 10000];
+bis_MV22 setPosATL [getPosATL bis_MV22 select 0, getPosATL bis_MV22 select 1, 10000];
 bis_MV22 flyInHeight 10000;
 player moveInCargo bis_MV22;
 
