@@ -1,7 +1,8 @@
 
 [] spawn
 {
-	sleep 60;
+	private _pmcmarker = "pmc_marker_airfield_area";
+	sleep 1;
 
 	waitUntil
 	{
@@ -14,8 +15,9 @@
 
 	pmc_opfordead1 = true;
 	["t1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
-	"target1" setMarkerType "mil_dot";
-	 "target1" setMarkerColor "colorgreen";
+	_pmcmarker setMarkerColor "colorgreen";
+	"target1" setMarkerTypeLocal "mil_dot";
+	"target1" setMarkerColor "colorgreen";
 	sleep 7;
 
 	"pmc_end1" call BIS_fnc_endMission;
