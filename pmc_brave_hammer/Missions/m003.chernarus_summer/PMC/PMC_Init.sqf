@@ -37,3 +37,19 @@ pmc_helopad_4 setPosATL [(_lz select 0) + 300, (_lz select 1), 0];
 [heloGrp2, 1] setWPPos getPosATL pmc_helopad_2;
 [heloGrp3, 1] setWPPos getPosATL pmc_helopad_3;
 [heloGrp4, 1] setWPPos getPosATL pmc_helopad_4;
+
+[] spawn
+{
+	sleep 7;
+	leader heloGrp1 sideChat "Commencing the assault, stand by Alpha.";
+	sleep 5;
+	leader heloGrp1 sideChat "All birds, report in. Over.";
+	sleep 5;
+	leader heloGrp2 sideChat "Reporting in. Over.";
+	sleep 5;
+	leader heloGrp3 sideChat "Good to go. Over.";
+	sleep 5;
+	leader heloGrp4 sideChat "Lets roll. Over.";
+	sleep 10;
+	leader heloGrp1 sideChat "Okay fly boys, lets keep it high and tight, I want to be back to base in time for supper. Out.";
+};
