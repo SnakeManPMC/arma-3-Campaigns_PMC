@@ -5,7 +5,3 @@ player createDiaryRecord ["Diary", ["Execution", "Your tasked to defend the capt
 player createDiaryRecord ["Diary", ["Intel", "You do not know the size of OPFOR whos attacking."]];
 player createDiaryRecord ["Diary", ["Mission", "Defend <marker name='target1'>airfield</marker>."]];
 player createDiaryRecord ["Diary", ["Situation", "We have just captured Chernarus airfield. This is the first major step in our operations in Chernarus."]];
-
-PMC_capture_airfield = player createSimpleTask ["Defend Airfield"];
-PMC_capture_airfield setSimpleTaskDescription ["Your objective is to defend airfield.", "Defend airfield", "Defend airfield"];
-PMC_capture_airfield setSimpleTaskDestination (getMarkerPos "target1");
