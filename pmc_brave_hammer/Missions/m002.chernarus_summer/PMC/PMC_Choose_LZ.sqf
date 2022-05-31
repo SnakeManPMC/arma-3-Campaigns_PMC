@@ -14,6 +14,7 @@ saveVar "PMC_lzy";
 sleep 7;
 
 ["t1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+[] execVM "PMC\PMC_SaveStatus.sqf";
 sleep 3;
 
 hint "End mission option added to Support menu.";

@@ -24,6 +24,7 @@ this trigger was located next to marker called: "gethere"
 	sleep 7;
 
 	["t2", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+	[] execVM "PMC\PMC_SaveStatus.sqf";
 
 	sleep 5;
 	"pmc_end1" call BIS_fnc_endMission;

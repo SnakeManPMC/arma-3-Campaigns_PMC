@@ -18,6 +18,7 @@
 	_pmcmarker setMarkerColor "colorgreen";
 	"target1" setMarkerTypeLocal "mil_dot";
 	"target1" setMarkerColor "colorgreen";
+	[] execVM "PMC\PMC_SaveStatus.sqf";
 	sleep 7;
 
 	"pmc_end1" call BIS_fnc_endMission;
