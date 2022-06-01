@@ -7,8 +7,8 @@
 // if you run this mission from mission editor, it's a debug thing.
 if (isNil "PMC_lzx") then
 {
-	PMC_lzx = getPosATL mfr1 select 0;
-	PMC_lzy = getPosATL mfr1 select 1;
+	PMC_lzx = getPosATL pmc_mfr1 select 0;
+	PMC_lzy = getPosATL pmc_mfr1 select 1;
 };
 
 private _lz = [PMC_lzx, PMC_lzy, 0];
@@ -17,7 +17,7 @@ private _lz = [PMC_lzx, PMC_lzy, 0];
 
 {
 	_x setPos _lz;
-} forEach units group mfr1;
+} forEach units group pmc_mfr1;
 
 // invisible helo pad
 pmc_helopad_1 setPos _lz;

@@ -4,7 +4,7 @@ PMC_mission_read_for_end = false;
 [] execVM "PMC\PMC_Briefing.sqf";
 [] execVM "PMC\PMC_Tasks.sqf";
 [] execVM "PMC\PMC_Objectives.sqf";
-//[] execVM "PMC\PMC_LoadStatus.sqf";
+[] execVM "PMC\PMC_LoadStatus.sqf";
 
 // CUP MQ-9 Reaper drone
 pmc_drone_reaper flyInHeightASL [2000, 2000, 2000];

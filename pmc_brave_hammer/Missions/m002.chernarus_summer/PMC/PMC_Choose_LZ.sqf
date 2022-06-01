@@ -4,7 +4,7 @@
 private _p = _this select 1;
 
 "lz" setMarkerPos _p;
-mfr1 groupChat "Okay the LZ marker is set to my chosen location.";
+pmc_mfr1 groupChat "Okay the LZ marker is set to my chosen location.";
 
 //2 setRadioMsg "End mission.";
 PMC_lzx = (getMarkerPos "lz" select 0);

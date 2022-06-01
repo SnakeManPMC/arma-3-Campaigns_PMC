@@ -56,4 +56,6 @@ on activation: {_x setBehaviour "stealth"; _x setCombatMode "green"; _x setPos g
 		_x setPos getPosATL player;
 		 [_x] join player;
 	} forEach units my_group;
+
+	deleteVehicle bis_MV22;
 };
