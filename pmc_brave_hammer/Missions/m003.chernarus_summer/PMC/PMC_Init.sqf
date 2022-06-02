@@ -34,6 +34,15 @@ pmc_helopad_4 setPosATL [(_lz select 0) + 300, (_lz select 1), 0];
 
 pmc_opfordead1 = false;
 
+{_x moveInCargo helo1} forEach units group pmc_usmc_squadleader1;
+{_x moveInCargo helo2} forEach units group pmc_usmc_squadleader2;
+{_x moveInCargo helo3} forEach units group pmc_usmc_squadleader3;
+{_x moveInCargo helo4} forEach units group pmc_usmc_squadleader4;
+
+{
+	[_x] execVM "PMC\PMC_CreateGroupTracker.sqf";
+} forEach [pmc_usmc_squadleader1, pmc_usmc_squadleader2, pmc_usmc_squadleader3, pmc_usmc_squadleader4];
+
 [] spawn
 {
 	sleep 7;
