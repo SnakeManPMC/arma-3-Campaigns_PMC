@@ -81,6 +81,8 @@ pmc_opfordead1 = true;
 
 	leader mfr sideChat "We have eliminated all enemy resistance. Over.";
 	sleep 7;
+	PMCHQ sideChat "Copy that Alpha, good job out there. Mission accomplished. HQ out.";
+	sleep 5;
 
 	["t1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
 	_pmcmarker setMarkerColor "colorgreen";

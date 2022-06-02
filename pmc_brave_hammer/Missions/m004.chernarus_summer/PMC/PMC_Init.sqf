@@ -14,3 +14,5 @@ private _wp = _grp addWaypoint [position player, 0];
 [_grp, 1] setWaypointType "LOITER";
 [_grp, 1] setWaypointLoiterRadius 2000;
 [_grp, 1] setWaypointLoiterType "CIRCLE";
+
+PMCHQ = [ West, "BASE" ];
