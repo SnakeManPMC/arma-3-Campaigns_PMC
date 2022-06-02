@@ -19,6 +19,9 @@ this trigger was located next to marker called: "gethere"
 	};
 
 	player sidechat "We have sufficient intel information of the target. Over.";
+	sleep 7;
+	PMCHQ sideChat "Roger that Alpha, looks like your mission is accomplished, good job. HQ out.";
+	sleep 5;
 	"target1" setMarkerColorLocal "colorgreen";
 	["t1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
 	sleep 7;
