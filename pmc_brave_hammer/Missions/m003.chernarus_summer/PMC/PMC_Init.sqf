@@ -32,6 +32,8 @@ pmc_helopad_4 setPosATL [(_lz select 0) + 300, (_lz select 1), 0];
 [heloGrp3, 1] setWPPos getPosATL pmc_helopad_3;
 [heloGrp4, 1] setWPPos getPosATL pmc_helopad_4;
 
+pmc_opfordead1 = false;
+
 [] spawn
 {
 	sleep 7;
