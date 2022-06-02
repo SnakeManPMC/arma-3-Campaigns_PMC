@@ -19,3 +19,5 @@ private _wp = _grp addWaypoint [position player, 0];
 [] spawn { sleep 3; pmc_drone_reaper flyInHeightASL [2000, 2000, 2000]; };
 
 PMCHQ = [ West, "BASE" ];
+
+[EAST,0,0,0.33,0.33] call BIS_fnc_EXP_camp_setSkill;

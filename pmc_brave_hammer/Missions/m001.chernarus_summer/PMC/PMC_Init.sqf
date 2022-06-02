@@ -43,3 +43,5 @@ pmc_ospreymv22 flyInHeightASL [8000,8000,8000];
 	};
 	setViewDistance -1;
 };
+
+[EAST,0,0,0.33,0.33] call BIS_fnc_EXP_camp_setSkill;

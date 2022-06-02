@@ -58,3 +58,5 @@ pmc_opfordead1 = false;
 	sleep 10;
 	leader heloGrp1 sideChat "Okay fly boys, lets keep it high and tight, I want to be back to base in time for supper. Out.";
 };
+
+[EAST,0,0,0.33,0.33] call BIS_fnc_EXP_camp_setSkill;

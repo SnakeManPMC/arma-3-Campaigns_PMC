@@ -11,3 +11,5 @@ mfr = group pmc_mfr1;
 
 [player, "PMC_ReconDamDone", nil, nil, ""] call BIS_fnc_addCommMenuItem;
 [player, "PMC_ReconAirstripDone", nil, nil, ""] call BIS_fnc_addCommMenuItem;
+
+[EAST,0,0,0.33,0.33] call BIS_fnc_EXP_camp_setSkill;
