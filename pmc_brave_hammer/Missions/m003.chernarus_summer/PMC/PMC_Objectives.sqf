@@ -19,6 +19,8 @@
 
 	leader mfr sideChat "Objective T1 Child 1 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "Copy that Alpha. Over.";
+	sleep 5;
 
 	pmc_opfordead_t1c1 = true;
 	["t1_child1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -46,6 +48,8 @@
 
 	leader mfr sideChat "Objective T1 Child 2 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "Understood. Over.";
+	sleep 5;
 
 	pmc_opfordead_t1c2 = true;
 	["t1_child2", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -73,6 +77,8 @@
 
 	leader mfr sideChat "Objective T1 Child 3 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "We copy Alpha. HQ out.";
+	sleep 5;
 
 	pmc_opfordead_t1c3 = true;
 	["t1_child3", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -100,6 +106,8 @@
 
 	leader mfr sideChat "Objective T1 Child 4 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "Roger that Alpha. Over.";
+	sleep 5;
 
 	pmc_opfordead_t1c4 = true;
 	["t1_child4", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -127,6 +135,8 @@
 
 	leader mfr sideChat "Objective T1 Child 5 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "Alpha we copy. HQ out.";
+	sleep 5;
 
 	pmc_opfordead_t1c5 = true;
 	["t1_child5", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -154,6 +164,8 @@
 
 	leader mfr sideChat "Objective T1 Child 6 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "Good work Alpha. Over.";
+	sleep 5;
 
 	pmc_opfordead_t1c6 = true;
 	["t1_child6", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -181,6 +193,8 @@
 
 	leader mfr sideChat "Objective T1 Child 7 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "Acknowledged. Over.";
+	sleep 5;
 
 	pmc_opfordead_t1c7 = true;
 	["t1_child7", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -208,6 +222,8 @@
 
 	leader mfr sideChat "Objective T1 Child 8 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "Roger, understood. HQ out.";
+	sleep 5;
 
 	pmc_opfordead_t1c8 = true;
 	["t1_child8", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -235,6 +251,8 @@
 
 	leader mfr sideChat "Objective T1 Child 9 cleared. Over.";
 	sleep 7;
+	PMCHQ sideChat "Received Alpha. Over.";
+	sleep 5;
 
 	pmc_opfordead_t1c9 = true;
 	["t1_child9", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
@@ -265,6 +283,8 @@
 
 	leader mfr sideChat "We have eliminated all enemy resistance. Over.";
 	sleep 7;
+	PMCHQ sideChat "Excellent work everyone, job well done. Mission is accomplished. HQ out.";
+	sleep 5;
 
 	pmc_opfordead1 = true;
 	["t1", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
