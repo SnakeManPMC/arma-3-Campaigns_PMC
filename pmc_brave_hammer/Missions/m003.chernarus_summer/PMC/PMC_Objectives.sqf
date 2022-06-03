@@ -161,6 +161,87 @@
 	_pmcmarker setMarkerTypeLocal "mil_dot";
 };
 
+// t1 child 7
+[] spawn
+{
+	private _pmcmarker = "pmc_marker_t1_child7";
+	sleep 60*5;
+	sleep random 5;
+
+	while { (count (units west inAreaArray _pmcmarker) == 0) } do
+	{
+		sleep 10;
+	};
+
+	waitUntil
+	{
+		sleep 5;
+		(count (units EAST inAreaArray _pmcmarker) == 0);
+	};
+
+	leader mfr sideChat "Objective T1 Child 7 cleared. Over.";
+	sleep 7;
+
+	pmc_opfordead_t1c7 = true;
+	["t1_child7", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+	_pmcmarker setMarkerColorLocal "colorgreen";
+	_pmcmarker setMarkerTypeLocal "mil_dot";
+};
+
+// t1 child 8
+[] spawn
+{
+	private _pmcmarker = "pmc_marker_t1_child8";
+	sleep 60*5;
+	sleep random 5;
+
+	while { (count (units west inAreaArray _pmcmarker) == 0) } do
+	{
+		sleep 10;
+	};
+
+	waitUntil
+	{
+		sleep 5;
+		(count (units EAST inAreaArray _pmcmarker) == 0);
+	};
+
+	leader mfr sideChat "Objective T1 Child 8 cleared. Over.";
+	sleep 7;
+
+	pmc_opfordead_t1c8 = true;
+	["t1_child8", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+	_pmcmarker setMarkerColorLocal "colorgreen";
+	_pmcmarker setMarkerTypeLocal "mil_dot";
+};
+
+// t1 child 9
+[] spawn
+{
+	private _pmcmarker = "pmc_marker_t1_child9";
+	sleep 60*5;
+	sleep random 5;
+
+	while { (count (units west inAreaArray _pmcmarker) == 0) } do
+	{
+		sleep 10;
+	};
+
+	waitUntil
+	{
+		sleep 5;
+		(count (units EAST inAreaArray _pmcmarker) == 0);
+	};
+
+	leader mfr sideChat "Objective T1 Child 9 cleared. Over.";
+	sleep 7;
+
+	pmc_opfordead_t1c9 = true;
+	["t1_child9", "SUCCEEDED", true] spawn BIS_fnc_taskSetState;
+	_pmcmarker setMarkerColorLocal "colorgreen";
+	_pmcmarker setMarkerTypeLocal "mil_dot";
+};
+
 // all objectives complete, mission is over, hooyah!
 [] spawn
 {
