@@ -60,3 +60,7 @@ pmc_opfordead1 = false;
 };
 
 [EAST,0,0,0.33,0.33] call BIS_fnc_EXP_camp_setSkill;
+
+{
+	_x flyInHeightASL [500, 500, 500];
+} forEach [pmc_f351, pmc_f352, pmc_f353, pmc_f354];
