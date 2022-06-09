@@ -14,4 +14,5 @@ waitUntil
 	(pmc_objective1 && pmc_objective2);
 };
 
-"pmc_end1" call BIS_fnc_endMission;
+hintSilent "Call end to combat operations by using 'End Mission' from support 0-8 menu.";
+[player, "PMC_CommsEndMission", nil, nil, ""] call BIS_fnc_addCommMenuItem;
