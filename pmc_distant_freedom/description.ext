@@ -28,25 +28,13 @@ class Campaign
 	class MissionDefault: NoEndings
 	{
 		lives = -1;
-		// this allows you to jump across all these mission classes
-		// by calling them with BIS_fnc_endMission
 		df_001 = df_001;
 	};
 	
 	class pmc_chapter_one: NoEndings
 	{
 		name = "Beginning";
-		cutscene = ;
 		firstMission = df_001;
-		end1 = ;
-		end2 = ;
-		end3 = ;
-		end4 = ;
-		end5 = ;
-		end6 = ;
-		lost = ;
-
-		// campaign missions
 
 		class df_001: MissionDefault
 		{
@@ -102,5 +90,19 @@ class Campaign
 			pmc_end1 = ;
 			template = df_010.pmc_51km_desert;
 		};
+	};
+};
+
+class CfgCommunicationMenu
+{
+	class PMC_ViewDistanceHardcoded
+	{
+		text = "View Distance 7000m";
+		submenu = "";
+		expression = "setViewDistance 7000; setObjectViewDistance [5000, 100];";
+		icon = "";
+		cursor = "";
+		enable = "1";
+		removeAfterExpressionCall = 0;
 	};
 };
