@@ -17,7 +17,7 @@ class MissionDefault
 
 class Campaign
 {
-	briefingName = "PMC Brave Hammer v0.1.6";
+	briefingName = "PMC Brave Hammer v0.1.7";
 	author = "Snake Man, PMC.";
 	overviewText = "PMC Brave Hammer Marine Force Recon campaign. First ArmA 2 Campaign from PMC, Chernarus marine force recon stuff. Terrains used: Chernarus, Utes.";
 	firstBattle = Beginning;
@@ -65,9 +65,16 @@ class Campaign
 
 		class pmc4: MissionDefault
 		{
-			PMC_end1 = pmc5;
+			PMC_end1 = hub_airfield;
 			lost = pmc4;
 			template = m004.chernarus_summer;
+		};
+
+		class hub_airfield: MissionDefault
+		{
+			end1 = pmc5;
+			lost = pmc5;
+			template = hub_airfield.chernarus_summer;
 		};
 
 		class pmc5: MissionDefault

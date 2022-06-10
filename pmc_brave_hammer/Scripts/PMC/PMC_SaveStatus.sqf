@@ -12,3 +12,8 @@ pmc_mfr3 saveStatus "PMC_saveStatus_MFR3";
 pmc_mfr4 saveStatus "PMC_saveStatus_MFR4";
 pmc_mfr5 saveStatus "PMC_saveStatus_MFR5";
 pmc_mfr6 saveStatus "PMC_saveStatus_MFR6";
+
+if (!isNil pmc_ammobox_airfield_1) then
+{
+	[] execVM "PMC\PMC_AmmoBoxSaveStatusAirfield.sqf";
+};

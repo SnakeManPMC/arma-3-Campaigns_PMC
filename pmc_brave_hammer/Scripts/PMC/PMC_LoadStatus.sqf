@@ -12,3 +12,8 @@ pmc_mfr6 loadStatus "PMC_saveStatus_MFR6";
 		deleteVehicle _x;
 	};
 } forEach units (group player);
+
+if (!isNil pmc_ammobox_airfield_1) then
+{
+	[] execVM "PMC\PMC_AmmoBoxLoadStatusAirfield.sqf";
+};

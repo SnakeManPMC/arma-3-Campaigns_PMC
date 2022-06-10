@@ -1,0 +1,21 @@
+
+pmc_ammobox_airfield_1 saveStatus "PMC_StatusAmmoBoxAirfield_1";
+pmc_ammobox_airfield_2 saveStatus "PMC_StatusAmmoBoxAirfield_2";
+pmc_ammobox_airfield_3 saveStatus "PMC_StatusAmmoBoxAirfield_3";
+pmc_ammobox_airfield_4 saveStatus "PMC_StatusAmmoBoxAirfield_4";
+pmc_ammobox_airfield_5 saveStatus "PMC_StatusAmmoBoxAirfield_5";
+pmc_ammobox_airfield_6 saveStatus "PMC_StatusAmmoBoxAirfield_6";
+pmc_ammobox_airfield_7 saveStatus "PMC_StatusAmmoBoxAirfield_7";
+pmc_ammobox_airfield_8 saveStatus "PMC_StatusAmmoBoxAirfield_8";
+pmc_ammobox_airfield_9 saveStatus "PMC_StatusAmmoBoxAirfield_9";
+pmc_ammobox_airfield_10 saveStatus "PMC_StatusAmmoBoxAirfield_10";
+pmc_ammobox_airfield_11 saveStatus "PMC_StatusAmmoBoxAirfield_11";
+pmc_ammobox_airfield_12 saveStatus "PMC_StatusAmmoBoxAirfield_12";
+pmc_ammobox_airfield_13 saveStatus "PMC_StatusAmmoBoxAirfield_13";
+pmc_ammobox_airfield_14 saveStatus "PMC_StatusAmmoBoxAirfield_14";
+pmc_ammobox_airfield_15 saveStatus "PMC_StatusAmmoBoxAirfield_15";
+pmc_ammobox_airfield_16 saveStatus "PMC_StatusAmmoBoxAirfield_16";
+pmc_ammobox_airfield_17 saveStatus "PMC_StatusAmmoBoxAirfield_17";
+pmc_ammobox_airfield_18 saveStatus "PMC_StatusAmmoBoxAirfield_18";
+pmc_ammobox_airfield_19 saveStatus "PMC_StatusAmmoBoxAirfield_19";
+pmc_ammobox_airfield_20 saveStatus "PMC_StatusAmmoBoxAirfield_20";
