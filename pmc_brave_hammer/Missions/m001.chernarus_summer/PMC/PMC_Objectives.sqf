@@ -56,7 +56,8 @@ on activation: {_x setBehaviour "stealth"; _x setCombatMode "green"; _x setPos g
 	{
 		_x setBehaviour "STEALTH";
 		_x setCombatMode "GREEN";
-		_x setPos getPosATL player;
+		private _pos = [(getPosATL player), 3, 15, 5, 0, 0, 0] call BIS_fnc_findSafePos;
+		_x setPos _pos;
 		 [_x] join player;
 	} forEach units my_group;
 
