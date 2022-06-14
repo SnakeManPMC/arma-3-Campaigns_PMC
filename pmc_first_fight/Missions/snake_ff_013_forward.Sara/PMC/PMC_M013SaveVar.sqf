@@ -1,4 +1,7 @@
 
+// 2022-06-14T03:13:00Z
+// stuff moved from obsolete exit.sqf event script, vehicle position stuff is not working.
+
 x = PMC_army1 saveStatus "army1_13";
 x = PMC_army2 saveStatus "army2_13";
 x = PMC_army3 saveStatus "army3_13";
