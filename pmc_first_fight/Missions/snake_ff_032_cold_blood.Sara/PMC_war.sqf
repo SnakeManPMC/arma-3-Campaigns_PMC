@@ -7,10 +7,9 @@ if (!isServer) exitWith{};
 PMC_corpses = [];
 [50] execVM "PMC\PMC_corpses.sqf";
 
-private[
-	"_targetpoint","PMC_opfor_vehicle_heavy","PMC_opfor_vehicle_car_armed",
-	"PMC_opfor_vehicle_car_unarmed","_maxOPFORA","_maxOPFORA2",
-	"_maxOPFORB"
+private
+[
+	"_targetpoint","_maxOPFORA","_maxOPFORA2", "_maxOPFORB"
 ];
 
 // we are running the scripts, just some debug stuff which should be removed.
@@ -24,7 +23,7 @@ PMC_targets = [];
 // this is the US HQ
 _targetpoint = getPos usflag;
 // waypoint random position radius
-_waypointRanPosit = 50;
+private _waypointRanPosit = 50;
 
 PMC_opfor_vehicle_heavy = ["CUP_O_BMP2_CHDKZ","CUP_O_BMP2_CHDKZ","CUP_O_ZSU23_ChDKZ","CUP_O_T72_RU","CUP_O_T72_RU"];
 PMC_opfor_vehicle_car_armed = ["CUP_O_UAZ_AGS30_RU","CUP_O_UAZ_MG_CHDKZ","CUP_O_BRDM2_CHDKZ","CUP_O_BRDM2_ATGM_CHDKZ"];
@@ -36,13 +35,13 @@ _maxOPFORB = count PMC_opfor_vehicle_car_unarmed;
 /*
 	Make BMP, ZSU or T72
 */
-_PMC_MakeTankOPFOR =
+private _PMC_MakeTankOPFOR =
 {
-	_myVec = (PMC_opfor_vehicle_heavy select round random (_maxOPFORA - 1));
-	_vcl = _myVec createVehicle _respawnpoint;
+	private _myVec = (PMC_opfor_vehicle_heavy select round random (_maxOPFORA - 1));
+	private _vcl = _myVec createVehicle _respawnpoint;
 	_vcl addEventHandler ["killed", {handle = _this execVM "PMC\PMC_killed.sqf"}];
 	_vcl setPos _respawnpoint;
-	_grp = objNull;
+	private _grp = objNull;
 	waitUntil
 	{
 		_grp = createGroup (east);
@@ -70,7 +69,7 @@ _PMC_MakeTankOPFOR =
 	_grp setSpeedMode "FULL";
 	_grp setFormation "WEDGE";
 
-	_wp = 1;
+	private _wp = 1;
 
 	_grp addWaypoint [_targetpoint, _waypointRanPosit];
 	[_grp, _wp] setWaypointBehaviour "AWARE";
@@ -83,13 +82,13 @@ _PMC_MakeTankOPFOR =
 /*
 	Make 4 x BMP, ZSU or T72
 */
-_PMC_MakeTankOPFORHeavy =
+private _PMC_MakeTankOPFORHeavy =
 {
-	_myVec = (PMC_opfor_vehicle_heavy select round random (_maxOPFORA - 1));
-	_vcl = _myVec createVehicle _respawnpoint;
+	private _myVec = (PMC_opfor_vehicle_heavy select round random (_maxOPFORA - 1));
+	private _vcl = _myVec createVehicle _respawnpoint;
 	_vcl addEventHandler ["killed", {handle = _this execVM "PMC\PMC_killed.sqf"}];
 	_vcl setPos _respawnpoint;
-	_grp = objNull;
+	private _grp = objNull;
 	waitUntil
 	{
 		_grp = createGroup (east);
@@ -151,7 +150,7 @@ _PMC_MakeTankOPFORHeavy =
 	_grp setSpeedMode "FULL";
 	_grp setFormation "WEDGE";
 
-	_wp = 1;
+	private _wp = 1;
 
 	_grp addWaypoint [_targetpoint, _waypointRanPosit];
 	[_grp, _wp] setWaypointBehaviour "AWARE";
@@ -161,9 +160,9 @@ _PMC_MakeTankOPFORHeavy =
 	[_grp, _wp] setWaypointType "GUARD";
 };
 
-_PMC_MakeGuardInfOPFOR =
+private _PMC_MakeGuardInfOPFOR =
 {
-	_grp = objNull;
+	private _grp = objNull;
 	waitUntil
 	{
 		_grp = createGroup (east);
@@ -199,8 +198,8 @@ _PMC_MakeGuardInfOPFOR =
 };
 
 // choose new digit for the gamelogic "pmc_*"
-_a = 1;
-_p = call compile format["pmc_%1",_a];
+private _a = 1;
+private _p = call compile format["pmc_%1",_a];
 
 // loop until we have no gamelogics left, it then should return 0.
 while {(getPos _p select 0) != 0} do
@@ -216,12 +215,12 @@ while {(getPos _p select 0) != 0} do
 	_p = call compile format["pmc_%1",_a];
 };
 
-_targetNum = count PMC_targets;
+private _targetNum = count PMC_targets;
 
 // create units
 while {PMC_opfor < 500} do
 {
-	_respawnpoint = getPos (PMC_targets select round random (_targetNum - 1));
+	private _respawnpoint = getPos (PMC_targets select round random (_targetNum - 1));
 	if (count opforunits < 75) then
 	{
 		[] call _PMC_MakeGuardInfOPFOR;
