@@ -12,18 +12,18 @@ PMC_running = 1;
 publicVariable "PMC_running";
 
 // enemy force levels, how many will be created.
-_enemyForceLevel = 200;
+private _enemyForceLevel = 200;
 // counter for enemies.
 PMC_opfor = 0;
 publicVariable "PMC_opfor";
 // starting location array, yeah used the wrong name but lazy to change.
 PMC_targets = [];
 // where they attack in your location.
-_targetpoint = getPos usflag;
+private _targetpoint = getPos usflag;
 
 PMC_MakeGuardInfOPFOR =
 {
-	_grp = objNull;
+	private _grp = objNull;
 	waitUntil
 	{
 		_grp = createGroup (east);
@@ -61,8 +61,8 @@ PMC_MakeGuardInfOPFOR =
 };
 
 // choose new digit for the gamelogic "pmc_*"
-_a = 1;
-_p = call compile format["pmc_%1",_a];
+private _a = 1;
+private _p = call compile format["pmc_%1",_a];
 
 // loop until we have no gamelogics left, it then should return 0.
 while {(getPos _p select 0) != 0} do
@@ -78,12 +78,12 @@ while {(getPos _p select 0) != 0} do
 	_p = call compile format["pmc_%1",_a];
 };
 
-_targetNum = count PMC_targets;
+private _targetNum = count PMC_targets;
 
 // create units
 while {PMC_opfor < _enemyForceLevel} do
 {
-	_respawnpoint = getPos (PMC_targets select round random (_targetNum - 1));
+	private _respawnpoint = getPos (PMC_targets select round random (_targetNum - 1));
 	if (count opforunits < 50) then 
 	{
 		[] call PMC_MakeGuardInfOPFOR;
