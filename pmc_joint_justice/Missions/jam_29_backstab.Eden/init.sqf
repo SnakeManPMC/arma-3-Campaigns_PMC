@@ -27,4 +27,8 @@ PMC_wave7 = false;
 PMC_wave8 = false;
 PMC_BodyCount = 0;
 
+waitUntil
+{
+	(!isNil "aieast");
+};
 {_x addEventHandler ["killed", {_this execVM "PMC\PMC_JointJusticeKilled.sqf"}]} forEach aieast;
