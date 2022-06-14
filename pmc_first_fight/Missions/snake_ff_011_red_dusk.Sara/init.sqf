@@ -1,6 +1,6 @@
 
 PMC_sf1 loadStatus "sf1_10";
-PMC_army1 setDamage 0;
+PMC_sf1 setDamage 0;
 PMC_sf2 loadStatus "sf2_10";
 PMC_sf3 loadStatus "sf3_10";
 PMC_sf4 loadStatus "sf4_10";
