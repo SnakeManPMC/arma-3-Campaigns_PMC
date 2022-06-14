@@ -21,7 +21,7 @@ _camera camSetFOV 0.700;
 _camera camSetTarget leader assault1;
 _camera camSetRelPos [2,-30,3];
 _camera camCommit 0;
-waitUntil { (camCommitted _camera); };;
+waitUntil { (camCommitted _camera); };
 
 [] execVM "PMC\PMC_ArmA_Default_Music.sqf";
 
@@ -34,7 +34,7 @@ titletext["Special Operations Forces conducting recon.","plain down",2];
 _camera camSetTarget leader assault1;
 _camera camSetRelPos [-1,-3,1.3];
 _camera camCommit 10;
-waitUntil { (camCommitted _camera); };;
+waitUntil { (camCommitted _camera); };
 sleep 3;
 
 titletext["Its quite tense in the enemy territory, but thats why they call us SF!","plain down",2];
