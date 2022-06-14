@@ -13,11 +13,11 @@ publicVariable "PMC_running";
 
 PMC_opfor = 0;
 PMC_targets = [];
-_targetpoint = getPos usflag;
+private _targetpoint = getPos usflag;
 
 PMC_MakeGuardInfOPFOR =
 {
-	_grp = objNull;
+	private _grp = objNull;
 	waitUntil
 	{
 		_grp = createGroup (east);
@@ -51,8 +51,8 @@ PMC_MakeGuardInfOPFOR =
 };
 
 // choose new digit for the gamelogic "pmc_*"
-_a = 1;
-_p = call compile format["pmc_%1",_a];
+private _a = 1;
+private _p = call compile format["pmc_%1", _a];
 
 // loop until we have no gamelogics left, it then should return 0.
 while {(getPos _p select 0) != 0} do
@@ -68,12 +68,12 @@ while {(getPos _p select 0) != 0} do
 	_p = call compile format["pmc_%1",_a];
 };
 
-_targetNum = count PMC_targets;
+private _targetNum = count PMC_targets;
 
 // create units
 while {PMC_opfor < 200} do
 {
-	_respawnpoint = getPos (PMC_targets select round random (_targetNum - 1));
+	private _respawnpoint = getPos (PMC_targets select round random (_targetNum - 1));
 	if (count opforunits < 50) then 
 	{
 		[] call PMC_MakeGuardInfOPFOR;
