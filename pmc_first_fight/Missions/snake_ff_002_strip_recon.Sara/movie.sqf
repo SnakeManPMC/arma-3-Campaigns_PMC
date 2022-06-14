@@ -18,7 +18,7 @@ _camera camSetRelPos [5,20,5];
 _camera camCommit 0;
 waitUntil { (camCommitted _camera); };
 
-[] execVM "PMC\PMC_ArmA_Default_Music.sqf";
+[] execVM "PMC\PMC_Music_Jukebox_ArmA3_Default_Tracks.sqf";
 
 titlecut ["","BLACK IN",2];
 sleep 2;
