@@ -94,7 +94,7 @@ if ("Man" countType _tmp == 1) then
 	_group setbehaviour (_behav select _r1);
 	
 	_r1 = floor (random (count _speed));
-	_group setspeedmode (_behav select _r1);
+	_group setspeedmode (_speed select _r1);
 	
 	_r1 = floor (random (count _comba));
 	_group setcombatmode (_comba select _r1);
