@@ -11,8 +11,8 @@ waitUntil
 	!(isNull _heloGrp);
 };
 
-"CUP_B_USMC_Pilot" createUnit [getPosASL west_helostart, _heloGrp, "", 1, "SERGEANT"];
-"CUP_B_USMC_Pilot" createUnit [getPosASL west_helostart, _heloGrp, "", 1, "CORPORAL"];
+"CUP_B_USMC_Pilot" createUnit [getPosATL west_helostart, _heloGrp, "", 1, "SERGEANT"];
+"CUP_B_USMC_Pilot" createUnit [getPosATL west_helostart, _heloGrp, "", 1, "CORPORAL"];
 
 _poo = ["CUP_B_MH60S_USMC", "CUP_B_UH60M_US", "CUP_B_CH47F_USA"];
 _r1 = floor (random count _poo);
@@ -24,7 +24,7 @@ if (PMC_debug) then
 	diag_log format["PMC_Create_BLUFOR_Helo_Reinf; is now running! - %1", _rtmptnk];
 };
 
-_helo = _rtmptnk createVehicle getPosASL west_helostart;
+_helo = _rtmptnk createVehicle getPosATL west_helostart;
 _helo addEventHandler ["killed",{_this execVM "PMC\PMC_killed.sqf"}];
 clearMagazineCargo _helo;
 clearWeaponCargo _helo;
@@ -54,11 +54,11 @@ waitUntil
 	!(isNull _grp1);
 };
 _ran = random(1);
-"CUP_B_USMC_Soldier" createUnit [getPosASL west_helostart, _grp1, "", _ran, "SERGEANT"];
+"CUP_B_USMC_Soldier" createUnit [getPosATL west_helostart, _grp1, "", _ran, "SERGEANT"];
 _ran = random(1);
-"CUP_B_USMC_Soldier_AT" createUnit [getPosASL west_helostart, _grp1, "", _ran, "CORPORAL"];
+"CUP_B_USMC_Soldier_AT" createUnit [getPosATL west_helostart, _grp1, "", _ran, "CORPORAL"];
 _ran = random(1);
-"CUP_B_USMC_Soldier_AT" createUnit [getPosASL west_helostart, _grp1, "", _ran, "CORPORAL"];
+"CUP_B_USMC_Soldier_AT" createUnit [getPosATL west_helostart, _grp1, "", _ran, "CORPORAL"];
 
 {
 	_x addEventHandler ["killed", {_this execVM "PMC\PMC_killed.sqf"}];
@@ -83,11 +83,11 @@ waitUntil
 	!(isNull _grp2);
 };
 _ran = random(1);
-"CUP_B_USMC_Soldier" createUnit [getPosASL west_helostart, _grp2, "", _ran, "SERGEANT"];
+"CUP_B_USMC_Soldier" createUnit [getPosATL west_helostart, _grp2, "", _ran, "SERGEANT"];
 _ran = random(1);
-"CUP_B_USMC_Soldier_AA" createUnit [getPosASL west_helostart, _grp2, "", _ran, "CORPORAL"];
+"CUP_B_USMC_Soldier_AA" createUnit [getPosATL west_helostart, _grp2, "", _ran, "CORPORAL"];
 _ran = random(1);
-"CUP_B_USMC_Soldier_AA" createUnit [getPosASL west_helostart, _grp2, "", _ran, "CORPORAL"];
+"CUP_B_USMC_Soldier_AA" createUnit [getPosATL west_helostart, _grp2, "", _ran, "CORPORAL"];
 
 {
 	_x addEventHandler ["killed", {_this execVM "PMC\PMC_killed.sqf"}];
@@ -116,11 +116,11 @@ waitUntil
 	!(isNull _grp3);
 };
 _ran = random(1);
-"CUP_B_USMC_Soldier" createUnit [getPosASL west_helostart, _grp3, "", _ran, "SERGEANT"];
+"CUP_B_USMC_Soldier" createUnit [getPosATL west_helostart, _grp3, "", _ran, "SERGEANT"];
 _ran = random(1);
-"CUP_B_USMC_Soldier_AT" createUnit [getPosASL west_helostart, _grp3, "", _ran, "CORPORAL"];
+"CUP_B_USMC_Soldier_AT" createUnit [getPosATL west_helostart, _grp3, "", _ran, "CORPORAL"];
 _ran = random(1);
-"CUP_B_USMC_Soldier_AT" createUnit [getPosASL west_helostart, _grp3, "", _ran, "CORPORAL"];
+"CUP_B_USMC_Soldier_AT" createUnit [getPosATL west_helostart, _grp3, "", _ran, "CORPORAL"];
 
 {
 	_x addEventHandler ["killed", {_this execVM "PMC\PMC_killed.sqf"}];
@@ -145,11 +145,11 @@ waitUntil
 	!(isNull _grp4);
 };
 _ran = random(1);
-"CUP_B_USMC_Soldier" createUnit [getPosASL west_helostart, _grp4, "", _ran, "SERGEANT"];
+"CUP_B_USMC_Soldier" createUnit [getPosATL west_helostart, _grp4, "", _ran, "SERGEANT"];
 _ran = random(1);
-"CUP_B_USMC_Soldier_AA" createUnit [getPosASL west_helostart, _grp4, "", _ran, "CORPORAL"];
+"CUP_B_USMC_Soldier_AA" createUnit [getPosATL west_helostart, _grp4, "", _ran, "CORPORAL"];
 _ran = random(1);
-"CUP_B_USMC_Soldier_AA" createUnit [getPosASL west_helostart, _grp4, "", _ran, "CORPORAL"];
+"CUP_B_USMC_Soldier_AA" createUnit [getPosATL west_helostart, _grp4, "", _ran, "CORPORAL"];
 
 {
 	_x addEventHandler ["killed", {_this execVM "PMC\PMC_killed.sqf"}];
@@ -165,7 +165,7 @@ leader _grp4 sidechat "Anti air blackhawk squad 2 here. Ready to engage. Over.";
 
 //--- NEW! ---
 _helo_dest = PMC_targets select floor (random (count PMC_targets));
-_fish = getPosASL _helo_dest;
+_fish = getPosATL _helo_dest;
 
 if (PMC_debug) then
 {
@@ -195,8 +195,8 @@ if (!alive _helo) exitWith
 
 waitUntil
 {
-	sleep 0.3;
-	(getPosASL _helo select 2 < 2);
+	sleep 1;
+	(getPosATL _helo select 2 < 2);
 };
 
 // this causes stutter?
@@ -208,7 +208,7 @@ waitUntil
 PMC_groups = PMC_groups + [_grp1, _grp2, _grp3, _grp4];
 westguys = westguys + 12;
 
-leader _heloGrp move (getPosASL west_helostart);
+leader _heloGrp move (getPosATL west_helostart);
 
 if (PMC_debug) then
 {
