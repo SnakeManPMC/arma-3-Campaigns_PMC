@@ -18,7 +18,7 @@ while { _f < _q } do
 	_newList = [_theList select _f];
 	_theVeh = _theList select _f;
 
-        if (PMC_debug) then
+	if (PMC_debug) then
 	{
 		player sidechat format
 		[
@@ -1032,99 +1032,160 @@ if (rollCall >= 12) then
 I hope there is some limit for this so when skill reaches 1.0 or above, it truncates to 1.0 ...
 if not, then soon we end up units with skill 200 :)
 
+2026-01-06T00:36:51Z includes also the very important campaign saveStatus.
+
 */
-/* disabled due not ported properly 2021-08-01
-if (rollCall >= 0) then
+
+if (PMC_debug) then
 {
-	_sk = (skill (_z select 0));
-	(_z select 0) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 0) saveStatus "p0";
+		diag_log format["PMC_mission_exit; rollCall: %1", rollCall];
 };
 
+// (rollCall >= 1) is player character, its meaningless to add skill improvement to him
+// however private variable _z is an array of players group units, it begins from ZERO (0), so its math thingy instead of 1,2,3 etc ;)
 if (rollCall >= 1) then
 {
-	_sk = (skill (_z select 1));
-	(_z select 1) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 1) saveStatus "p1";
+	private _theGuy = (_z select 0);
+	_theGuy saveStatus "p1";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 1 is true, saveStatus p1 executed. _z select 0 skill: %1", (skill _theGuy)];
+	};
 };
 
+// (rollCall >= 2) is the first group member, ie soldier 2
 if (rollCall >= 2) then
 {
-	_sk = (skill (_z select 2));
-	(_z select 2) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 2) saveStatus "p2";
+	private _theGuy = (_z select 1);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p2";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 2 is true, saveStatus p2 executed. _z select 1 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 3) then
 {
-	_sk = (skill (_z select 3));
-	(_z select 3) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 3) saveStatus "p3";
+	private _theGuy = (_z select 2);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p3";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 3 is true, saveStatus p3 executed. _z select 2 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 4) then
 {
-	_sk = (skill (_z select 4));
-	(_z select 4) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 4) saveStatus "p4";
+	private _theGuy = (_z select 3);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p4";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 4 is true, saveStatus p4 executed. _z select 3 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 5) then
 {
-	_sk = (skill (_z select 5));
-	(_z select 5) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 5) saveStatus "p5";
+	private _theGuy = (_z select 4);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p5";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 5 is true, saveStatus p5 executed. _z select 4 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 6) then
 {
-	_sk = (skill (_z select 6));
-	(_z select 6) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 6) saveStatus "p6";
+	private _theGuy = (_z select 5);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p6";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 6 is true, saveStatus p6 executed. _z select 5 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 7) then
 {
-	_sk = (skill (_z select 7));
-	(_z select 7) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 7) saveStatus "p7";
+	private _theGuy = (_z select 6);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p7";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 7 is true, saveStatus p7 executed. _z select 6 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 8) then
 {
-	_sk = (skill (_z select 8));
-	(_z select 8) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 8) saveStatus "p8";
+	private _theGuy = (_z select 7);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p8";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 8 is true, saveStatus p8 executed. _z select 7 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 9) then
 {
-	_sk = (skill (_z select 9));
-	(_z select 9) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 9) saveStatus "p9";
+	private _theGuy = (_z select 8);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p9";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 9 is true, saveStatus p9 executed. _z select 8 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 10) then
 {
-	_sk = (skill (_z select 10));
-	(_z select 10) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 10) saveStatus "p10";
+	private _theGuy = (_z select 9);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p10";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 10 is true, saveStatus p10 executed. _z select 9 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 11) then
 {
-	_sk = (skill (_z select 11));
-	(_z select 11) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 11) saveStatus "p11";
+	private _theGuy = (_z select 10);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p11";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 11 is true, saveStatus p11 executed. _z select 10 skill: %1", (skill _theGuy)];
+	};
 };
 
 if (rollCall >= 12) then
 {
-	_sk = (skill (_z select 12));
-	(_z select 12) setSkill (_sk + (0.1 + random 0.1));
-	(_z select 12) saveStatus "p12";
+	private _theGuy = (_z select 11);
+	_sk = (skill _theGuy);
+	_theGuy setSkill (_sk + (0.1 + random 0.1));
+	_theGuy saveStatus "p12";
+	if (PMC_debug) then
+	{
+			diag_log format["PMC_mission_exit; rollCall >= 12 is true, saveStatus p12 executed. _z select 11 skill: %1", (skill _theGuy)];
+	};
 };
-*/
+
 saveVar "rollCall";
 
 //#endfile

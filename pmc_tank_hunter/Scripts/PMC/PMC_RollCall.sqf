@@ -1,5 +1,4 @@
 
-//---- weaponpool stuff
 // stupid check
 if (isNil "rollCall") then
 {
@@ -15,6 +14,11 @@ if (isNil "rollCall") then
 		diag_log format["PMC_RollCall; rollCall was fixed to: %1, alles goed?", rollCall];
 	};
 };
+if (PMC_debug) then
+{
+	diag_log format["PMC_RollCall; rollCall: %1", rollCall];
+};
+
 private _q = 1;
 
 while {_q < rollCall} do
@@ -23,72 +27,66 @@ while {_q < rollCall} do
 	_q = _q + 1;
 };
 
-//#---load group status---
 private _z = units group player;
-
-if (rollCall >= 0) then
-{
-	(_z select 0) loadStatus "p0";
-};
 
 if (rollCall >= 1) then
 {
-	(_z select 1) loadStatus "p1";
+	(_z select 0) loadStatus "p1";
 };
 
 if (rollCall >= 2) then
 {
-	(_z select 2) loadStatus "p2";
+	(_z select 1) loadStatus "p2";
 };
 
 if (rollCall >= 3) then
 {
-	(_z select 3) loadStatus "p3";
+	(_z select 2) loadStatus "p3";
 };
 
 if (rollCall >= 4) then
 {
-	(_z select 4) loadStatus "p4";
+	(_z select 3) loadStatus "p4";
 };
 
 if (rollCall >= 5) then
 {
-	(_z select 5) loadStatus "p5";
+	(_z select 4) loadStatus "p5";
 };
 
 if (rollCall >= 6) then
 {
-	(_z select 6) loadStatus "p6";
+	(_z select 5) loadStatus "p6";
 };
 
 if (rollCall >= 7) then
 {
-	(_z select 7) loadStatus "p7";
+	(_z select 6) loadStatus "p7";
 };
 
 if (rollCall >= 8) then
 {
-	(_z select 8) loadStatus "p8";
+	(_z select 7) loadStatus "p8";
 };
 
 if (rollCall >= 9) then
 {
-	(_z select 9) loadStatus "p9";
+	(_z select 8) loadStatus "p9";
 };
 
 if (rollCall >= 10) then
 {
-	(_z select 10) loadStatus "p10";
+	(_z select 9) loadStatus "p10";
 };
 
 if (rollCall >= 11) then
 {
-	(_z select 11) loadStatus "p11";
+	(_z select 10) loadStatus "p11";
 };
 
 if (rollCall >= 12) then
 {
-	(_z select 12) loadStatus "p12";
+	(_z select 11) loadStatus "p12";
 };
 
 private _c = 0;
