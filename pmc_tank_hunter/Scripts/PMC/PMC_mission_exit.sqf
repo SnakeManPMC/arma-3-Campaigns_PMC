@@ -973,7 +973,7 @@ if (rollCall >= 6) then
 {
 	if (damage (_z select 6) > 0.9) then
 	{
-		deleteVehicle (_z select 1);
+		deleteVehicle (_z select 6);
 	};
 };
 
@@ -981,7 +981,7 @@ if (rollCall >= 7) then
 {
 	if (damage (_z select 7) > 0.9) then
 	{
-		deleteVehicle (_z select 2);
+		deleteVehicle (_z select 7);
 	};
 };
 
@@ -989,7 +989,7 @@ if (rollCall >= 8) then
 {
 	if (damage (_z select 8) > 0.9) then
 	{
-		deleteVehicle (_z select 3);
+		deleteVehicle (_z select 8);
 	};
 };
 
@@ -997,7 +997,7 @@ if (rollCall >= 9) then
 {
 	if (damage (_z select 9) > 0.9) then
 	{
-		deleteVehicle (_z select 4);
+		deleteVehicle (_z select 9);
 	};
 };
 
@@ -1005,7 +1005,7 @@ if (rollCall >= 10) then
 {
 	if (damage (_z select 10) > 0.9) then
 	{
-		deleteVehicle (_z select 5);
+		deleteVehicle (_z select 10);
 	};
 };
 
@@ -1013,7 +1013,7 @@ if (rollCall >= 11) then
 {
 	if (damage (_z select 11) > 0.9) then
 	{
-		deleteVehicle (_z select 4);
+		deleteVehicle (_z select 11);
 	};
 };
 
@@ -1021,7 +1021,7 @@ if (rollCall >= 12) then
 {
 	if (damage (_z select 12) > 0.9) then
 	{
-		deleteVehicle (_z select 5);
+		deleteVehicle (_z select 12);
 	};
 };
 
