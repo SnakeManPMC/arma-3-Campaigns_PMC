@@ -37,56 +37,67 @@ if (rollCall >= 1) then
 if (rollCall >= 2) then
 {
 	(_z select 1) loadStatus "p2";
+	(_z select 1) loadIdentity "PMC_GroupMemberID2";
 };
 
 if (rollCall >= 3) then
 {
 	(_z select 2) loadStatus "p3";
+	(_z select 2) loadIdentity "PMC_GroupMemberID3";
 };
 
 if (rollCall >= 4) then
 {
 	(_z select 3) loadStatus "p4";
+	(_z select 3) loadIdentity "PMC_GroupMemberID4";
 };
 
 if (rollCall >= 5) then
 {
 	(_z select 4) loadStatus "p5";
+	(_z select 4) loadIdentity "PMC_GroupMemberID5";
 };
 
 if (rollCall >= 6) then
 {
 	(_z select 5) loadStatus "p6";
+	(_z select 5) loadIdentity "PMC_GroupMemberID6";
 };
 
 if (rollCall >= 7) then
 {
 	(_z select 6) loadStatus "p7";
+	(_z select 6) loadIdentity "PMC_GroupMemberID7";
 };
 
 if (rollCall >= 8) then
 {
 	(_z select 7) loadStatus "p8";
+	(_z select 7) loadIdentity "PMC_GroupMemberID8";
 };
 
 if (rollCall >= 9) then
 {
 	(_z select 8) loadStatus "p9";
+	(_z select 8) loadIdentity "PMC_GroupMemberID9";
 };
 
 if (rollCall >= 10) then
 {
 	(_z select 9) loadStatus "p10";
+	(_z select 9) loadIdentity "PMC_GroupMemberID10";
 };
 
 if (rollCall >= 11) then
 {
 	(_z select 10) loadStatus "p11";
+	(_z select 10) loadIdentity "PMC_GroupMemberID11";
 };
 
 if (rollCall >= 12) then
 {
 	(_z select 11) loadStatus "p12";
+	(_z select 11) loadIdentity "PMC_GroupMemberID12";
 };
 
 private _c = 0;

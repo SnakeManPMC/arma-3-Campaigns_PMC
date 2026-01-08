@@ -54,6 +54,8 @@ if (isNil 'PMC_AllTimeUsed') then
 	PMC_AllTimeUsed = 0;
 };
 
+[1] execVM "PMC\PMC_weather.sqf";
+
 // adjust the time of day
 skipTime PMC_AllTimeUsed;
 //skiptime (((paramsarray select 0) - daytime + 24) % 24);
@@ -98,7 +100,6 @@ if (PMC_debug) then
 [] execVM "PMC\PMC_add-civcars.sqf";
 [] execVM "PMC\PMC_war.sqf";
 [] execVM "PMC\PMC_moving.sqf";
-[1.1] execVM "PMC\PMC_weather.sqf";
 
 if (PMC_debug) then
 {

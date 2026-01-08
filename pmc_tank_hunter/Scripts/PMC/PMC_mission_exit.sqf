@@ -929,6 +929,20 @@ deleteStatus "p10";
 deleteStatus "p11";
 deleteStatus "p12";
 
+// 2026-01-08T06:11:03Z not sure if deleting existing identities is needed?
+// note that player doesn't have identity, he is player ;)
+deleteIdentity "PMC_GroupMemberID2";
+deleteIdentity "PMC_GroupMemberID3";
+deleteIdentity "PMC_GroupMemberID4";
+deleteIdentity "PMC_GroupMemberID5";
+deleteIdentity "PMC_GroupMemberID6";
+deleteIdentity "PMC_GroupMemberID7";
+deleteIdentity "PMC_GroupMemberID8";
+deleteIdentity "PMC_GroupMemberID9";
+deleteIdentity "PMC_GroupMemberID10";
+deleteIdentity "PMC_GroupMemberID11";
+deleteIdentity "PMC_GroupMemberID12";
+
 if (rollCall >= 1) then
 {
 	if (damage (_z select 1) > 0.9) then
@@ -1060,6 +1074,7 @@ if (rollCall >= 2) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p2";
+	_theGuy saveIdentity "PMC_GroupMemberID2";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 2 is true, saveStatus p2 executed. _z select 1 skill: %1", (skill _theGuy)];
@@ -1072,6 +1087,7 @@ if (rollCall >= 3) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p3";
+	_theGuy saveIdentity "PMC_GroupMemberID3";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 3 is true, saveStatus p3 executed. _z select 2 skill: %1", (skill _theGuy)];
@@ -1084,6 +1100,7 @@ if (rollCall >= 4) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p4";
+	_theGuy saveIdentity "PMC_GroupMemberID4";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 4 is true, saveStatus p4 executed. _z select 3 skill: %1", (skill _theGuy)];
@@ -1096,6 +1113,7 @@ if (rollCall >= 5) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p5";
+	_theGuy saveIdentity "PMC_GroupMemberID5";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 5 is true, saveStatus p5 executed. _z select 4 skill: %1", (skill _theGuy)];
@@ -1108,6 +1126,7 @@ if (rollCall >= 6) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p6";
+	_theGuy saveIdentity "PMC_GroupMemberID6";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 6 is true, saveStatus p6 executed. _z select 5 skill: %1", (skill _theGuy)];
@@ -1120,6 +1139,7 @@ if (rollCall >= 7) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p7";
+	_theGuy saveIdentity "PMC_GroupMemberID7";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 7 is true, saveStatus p7 executed. _z select 6 skill: %1", (skill _theGuy)];
@@ -1132,6 +1152,7 @@ if (rollCall >= 8) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p8";
+	_theGuy saveIdentity "PMC_GroupMemberID8";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 8 is true, saveStatus p8 executed. _z select 7 skill: %1", (skill _theGuy)];
@@ -1144,6 +1165,7 @@ if (rollCall >= 9) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p9";
+	_theGuy saveIdentity "PMC_GroupMemberID9";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 9 is true, saveStatus p9 executed. _z select 8 skill: %1", (skill _theGuy)];
@@ -1156,6 +1178,7 @@ if (rollCall >= 10) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p10";
+	_theGuy saveIdentity "PMC_GroupMemberID10";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 10 is true, saveStatus p10 executed. _z select 9 skill: %1", (skill _theGuy)];
@@ -1168,6 +1191,7 @@ if (rollCall >= 11) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p11";
+	_theGuy saveIdentity "PMC_GroupMemberID11";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 11 is true, saveStatus p11 executed. _z select 10 skill: %1", (skill _theGuy)];
@@ -1180,6 +1204,7 @@ if (rollCall >= 12) then
 	_sk = (skill _theGuy);
 	_theGuy setSkill (_sk + (0.1 + random 0.1));
 	_theGuy saveStatus "p12";
+	_theGuy saveIdentity "PMC_GroupMemberID12";
 	if (PMC_debug) then
 	{
 			diag_log format["PMC_mission_exit; rollCall >= 12 is true, saveStatus p12 executed. _z select 11 skill: %1", (skill _theGuy)];
