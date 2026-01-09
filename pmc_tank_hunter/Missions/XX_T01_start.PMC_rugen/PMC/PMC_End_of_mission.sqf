@@ -688,8 +688,9 @@ while {_q < numVehicles} do
 	_q = _q + 1;
 };
 
+// 2026-01-08T23:41:11Z disabled due weaponPool multiplying its contents on mission changes
 // ammo box too
-pickWeaponPool RockBox;
+//pickWeaponPool RockBox;
 
 // remove the tokarevs from all squad members.
 // because in ArmA 2 Russian loadouts you got makarovs ;)

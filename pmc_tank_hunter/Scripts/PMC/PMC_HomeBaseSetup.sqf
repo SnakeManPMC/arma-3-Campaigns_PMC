@@ -33,12 +33,16 @@ PMC_VehList setPos _tmp;
 } forEach units assault1;
 
 // add extra ammobox
-RockBox2 = createVehicle ["CUP_USBasicAmmunitionBox", [(_tmp select 0), (_tmp select 1) + 7, 0], [], 0, "NONE"];
+RockBox2 = createVehicle ["CUP_LocalBasicWeaponsBox", [(_tmp select 0), (_tmp select 1) + 7, 0], [], 0, "NONE"];
 clearMagazineCargo RockBox2;
 clearWeaponCargo RockBox2;
 
 // Transfers weapons and magazines from the weapon pool (used in campaigns to transfer weapons to the next mission) into the cargo space of object obj.
-putWeaponPool RockBox2;
+// 2026-01-08T23:22:37Z commented out due stuff multiplying issue
+//putWeaponPool RockBox2;
+
+RockBox loadStatus "PMC_RockBox";
+RockBox2 loadStatus "PMC_RockBox2";
 
 // add clutter cutter there. nice box around the tent with 4 cutters.
 createVehicle ["ClutterCutter_EP1", [(_tmp select 0) + 10, (_tmp select 1), 0], [], 0, "NONE"];

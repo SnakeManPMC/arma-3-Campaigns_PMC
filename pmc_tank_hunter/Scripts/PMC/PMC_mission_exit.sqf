@@ -876,14 +876,18 @@ _q = 0;
 while {_q < numVehicles} do
 {
         _stuff = (_clist select _q);
-	pickWeaponPool _stuff;
+	//pickWeaponPool _stuff; // PMCTODO 2026-01-08T23:37:05Z this doesn't work in the first place so its fine, but weaponPool multiplies crap on mission changes and should not be used.
 	_q = _q + 1;
 };
 
+// 2026-01-08T23:36:15Z both disabled because weaponPool will multiply contents on mission change
 // ammo box to weaponPool
-pickWeaponPool RockBox;
+//pickWeaponPool RockBox;
 // and the createvehicle box from PMC_StartMission.sqf
-pickWeaponPool RockBox2;
+//pickWeaponPool RockBox2;
+
+RockBox saveStatus "PMC_RockBox";
+RockBox2 saveStatus "PMC_RockBox2";
 
 /*
 	blah you must put makarov into weaponPool to have it seen in the pmctrophycount :(
@@ -909,7 +913,8 @@ if ( (queryWeaponPool "CUP_Makarov") > 0) then
 };
 
 */
-PMCTrophyCount = queryWeaponPool "CUP_Makarov";
+//PMCTrophyCount = queryWeaponPool "CUP_Makarov"; // PMCTODO 2026-01-09T00:03:42Z not using weaponPool anymore...
+PMCTrophyCount = 0; // disabled until find a way to handle this better.
 saveVar "PMCTrophyCount";
 
 //#---save status---
